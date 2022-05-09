@@ -57,7 +57,7 @@ IEEE floating číslo, které má přesnost menší, než požadavky na někter�
 námi vyvíjené systémy. Proto je typ decimal realizována externí js knihovnou,
 která umožňuje pracovat s velmi vysokou přesností. Problémem může být
 komunikace s externími systémy, které prostě takovou přesnost neumí. 
-Proto lze v [Project settings](/cs/project-structure#project-options.md) nastavit,
+Proto lze v [Project settings](/cs/project-structure.md#project-options.md) nastavit,
 zda je datový typ Decimal serializován standardně v jako číslo, nebo jako String.
 
 ## Meta typ

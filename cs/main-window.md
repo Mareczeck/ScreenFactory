@@ -109,7 +109,7 @@ Více viz [Akce](actions.md).
 
 ## Test data designer
 
-Pro [form designer](/cs/main-window#form-designer.md) je důležité, aby existovala
+Pro [form designer](/cs/main-window.md#form-designer) je důležité, aby existovala
 testovací data. Jednak si díky nim si vývojář lépe představí, jak bude
 formulář vypadat, ale hlavně, bez nich by komponenty, které jsou
 navázány na kolekce záznamů jako jsou Repeater či DataTable, vypadaly
