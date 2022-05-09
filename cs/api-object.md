@@ -28,7 +28,7 @@ API objekty svou funkcionalitu zpřístupňují dvěma způsoby
 Některé API objekty lze dávat pouze na formulář, některé pouze jako
 globální. Některé jsou speciální a nelze je vytvářet vůbec.
 
-Většina API objektů je externí a je obsažena v projektu [sffw](sffw). Za
+Většina API objektů je externí a je obsažena v projektu [sffw](sffw.md). Za
 zmínku však stojí interní API objekt ConfigValue.
 
 ## ConfigValue

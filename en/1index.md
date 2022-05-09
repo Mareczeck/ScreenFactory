@@ -18,22 +18,22 @@ A tool that will increase the efficiency of design, development and deployment o
   - [Tool windows](tool-windows.md)
 - Artefacts
   - [Project structure](project-structure.md)
-  - [Resources](resources)
-  - [Global actions, attributes and API objects](globals)
-  - [Forms](forms)
-  - [Data](data)
-  - [Expressions](expressions)
-  - [API objects](api-object)
-  - [Actions](actions)
+  - [Resources](resources.md)
+  - [Global actions, attributes and API objects](globals.md)
+  - [Forms](forms.md)
+  - [Data](data.md)
+  - [Expressions](expressions.md)
+  - [API objects](api-object.md)
+  - [Actions](actions.md)
 - Other principles and functions
-  - [Localization](localization)
-  - [Testing actions](action-tests)
-  - [Accessibility](accessibility)
-  - [Searching for unused objects](unused-objects)
-- [Application model](application-model)
-- [FAQ](faq)
-- [List of standard components](standard-components)
-- [List of standard functions](standard-functions)
+  - [Localization](localization.md)
+  - [Testing actions](action-tests.md)
+  - [Accessibility](accessibility.md)
+  - [Searching for unused objects](unused-objects.md)
+- [Application model](application-model.md)
+- [FAQ](faq.md)
+- [List of standard components](standard-components.md)
+- [List of standard functions](standard-functions.md)
 
 _Note: Some functions and components are developed as separate part in
-[sffw](sffw) project._
+[sffw](sffw.md) project._

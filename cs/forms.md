@@ -20,7 +20,7 @@ Pozn: V současnosti je povolena pouze jedna master page, a jeden
 placeholder, počítáme s možností rozšíření.
 
 Přehled komponent naleznete v [Seznam standardních
-komponent](/cs/standard-components).
+komponent](/cs/standard-components.md).
 
 ## Kontejnery
 
@@ -124,7 +124,7 @@ Příklad css souboru:
 Ikony jsou na webu často implementovány pomocí fontů. Jeden takový font
 je přímo zabudován ve ScreenFactory a může být přidán do projektu
 následujícím postupem. Dalšími možnostmi je buď použití FontAwesome z
-[sffw](sffw) projektu nebo jiných pomocí vlastních resources.
+[sffw](sffw.md) projektu nebo jiných pomocí vlastních resources.
 
 Font, který je zabudován přímo do ScreenFactory lze přidat pomocí
 dialogu _Project – Add – New Item… - Icons_. Poté budou na tlačítkách k
@@ -196,7 +196,7 @@ _address.name_), jejich speciální vlastnosti (např.
 _address.name.isValid()_) a přechody mezi kontextem. Na začátku výrazu
 lze zapsat negaci, pomocí klíčového slova _not_, např. _not IsDirty_.
 Binding je malá podmnožina jazyka, který se používá ve výrazech,
-detailní vysvětlení lze nalézt v [Expressions](Expressions).
+detailní vysvětlení lze nalézt v [Expressions](Expressions.md).
 
 Speciální vlastnosti a metody
 

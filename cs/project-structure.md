@@ -35,7 +35,7 @@ Pro testování a deployment celého projektu je potřeba provést sestavení
 _User options_ je možné specifikovat výstupní adresář, kam se výsledný
 projekt nakopíruje a odkud se případně otevírá z prohlížeče.
 
-Složitějších deployment scénářů lze dosáhnout pomocí [PostBuildCommand](/cs/resources/PostBuildCommand)
+Složitějších deployment scénářů lze dosáhnout pomocí [PostBuildCommand](/cs/resources/PostBuildCommand.md)
 
 ### sfcmd.exe – ovládání z příkazové řádky
 

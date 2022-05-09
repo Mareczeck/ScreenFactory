@@ -57,7 +57,7 @@ IEEE floating číslo, které má přesnost menší, než požadavky na někter�
 námi vyvíjené systémy. Proto je typ decimal realizována externí js knihovnou,
 která umožňuje pracovat s velmi vysokou přesností. Problémem může být
 komunikace s externími systémy, které prostě takovou přesnost neumí. 
-Proto lze v [Project settings](/cs/project-structure#project-options) nastavit,
+Proto lze v [Project settings](/cs/project-structure#project-options.md) nastavit,
 zda je datový typ Decimal serializován standardně v jako číslo, nebo jako String.
 
 ## Meta typ
@@ -158,7 +158,7 @@ validace se provede rekurzivně směrem dolů.
 
 Validace se spouští teprve při první změně atributu (nebo struktury),
 taková data jsou interně nastavena do stavu „touched“, tento stav lze
-programově ovládat (viz [setTouched](/cs/expressions#akční-metody)).
+programově ovládat (viz [setTouched](/cs/expressions.md#akční-metody)).
 
 ## Variables (Action, Form, Global) – proměnné
 

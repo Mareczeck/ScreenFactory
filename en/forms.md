@@ -19,7 +19,7 @@ component.
 NOTE: At the moment we support only one master page and one placeholder.
 
 For list of components see [List of standard
-components](standard-components).
+components](standard-components.md).
 
 ## Containers
 
@@ -71,7 +71,7 @@ as well.
 they cannot be chosen from the menu and they are not available in all
 situations. They generate validation warning F9999.
 
-Other components are available in [sffw](sffw) project that is not part
+Other components are available in [sffw](sffw.md) project that is not part
 of standard IDE.
 
 ## Custom components
@@ -133,7 +133,7 @@ Css file example
 
 Common way how to add icons on the web is with the help of icon fonts.
 One such font is integrated in ScreenFactory and may be added through
-following way. Another option is to use FontAwesome from [sffw](sffw) or
+following way. Another option is to use FontAwesome from [sffw](sffw.md) or
 anything else through custom resources.
 
 The way that is built in SF is implemented through css classes. First,
@@ -192,7 +192,7 @@ Important feature is that part of data may be automatically computed.
 Computed attribute is not a "storage" for some literal value as standard
 attributes but instead it has an expression that is recalculated every
 time inputs change and result of this computation is the value of the
-attribute. (see [Expressions](Expressions), Computed attribute). In case
+attribute. (see [Expressions](Expressions.md), Computed attribute). In case
 the computed attributes are not sufficient it is possible to use
 standard attribute a do the calculation in an action.
 
@@ -215,7 +215,7 @@ of data elements (ie. _address.name_), its special properties (ie.
 _address.name.isValid()_) and it is possible to change context. At the
 beginning of the expression it is possible to use negation with keyword
 _not_ (ie. _not IsDirty_). Binding is using small subset of language
-that is available in [expressions](expressions). Detail explanation can
+that is available in [expressions](expressions.md). Detail explanation can
 be found there.
 
 Special properties and methods

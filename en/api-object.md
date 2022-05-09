@@ -25,7 +25,7 @@ API objects provide functionality in two different ways
   actions and handlers by describing the interface of these methods in
   its manifest and providing javascript implementation.
 
-Most API objects are external and contained in project [sffw](sffw). But
+Most API objects are external and contained in project [sffw](sffw.md). But
 is worth mentioning internal API object ConfigValue.
 
 ## ConfigValue

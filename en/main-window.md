@@ -47,11 +47,11 @@ use Panel as this child and in it you may stack multiple other
 components.
 
 It is possible to set default properties of the components in
-defaults.ini (see [Resources](Resources)).
+defaults.ini (see [Resources](Resources.md)).
 
 Most of the time the development of the form involves work with windows
 Variables, Properties, Actions and API objects (see [Tool
-windows](tool-windows)).
+windows](tool-windows.md)).
 
 ![test](../media/image13.png "Test")
 
@@ -71,7 +71,7 @@ key.
 
 ## Data designer
 
-[Data entities](data#Data Entity) can be created and edited in data
+[Data entities](data.md#Data Entity) can be created and edited in data
 designer. It is possible to add data attributes, complexes, collections
 and references through context menu or by dragging them from toolbox. It
 is possible to rearrange them by using mouse and drag&drop.
@@ -104,7 +104,7 @@ the data designer will create
 
 ### Action designer
 
-This editor allows you to write [handlers and actions](actions). It
+This editor allows you to write [handlers and actions](actions.md). It
 allows to write tests for them as well in similar fashion as unit tests
 work in other technologies.
 
@@ -130,7 +130,7 @@ JSON, new data will be automatically generated instead.
 It is as well possible to regenerate the data by using right click
 option _Regenerate test data_. String values respect not only maximum
 length of the attribute but there is as well a limit in [Project
-options](project-structure#Project options) for their length. Default is
+options](project-structure.md#Project options) for their length. Default is
 60 characters.
 
 [HOME](1index.md)

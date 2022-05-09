@@ -151,7 +151,7 @@ V režimu edit je možné datovou strukturu modifikovat, dokonce i
 Variables).
 
 Přetažením z variables na formulář lze docílit automatického
-vygenerování formuláře (viz [Data-to-Form](main-window#Data-to-form)).
+vygenerování formuláře (viz [Data-to-Form](main-window.md#Data-to-form)).
 V kontextové menu lze do variables přidávat nové hodnoty, validátory a
 události (a to v různé hloubce stromu). Pomocí „Copy as binding path“
 lze do schránky vložit cestu použitelnou v bindingu.

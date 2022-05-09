@@ -3,6 +3,6 @@
 
 SFFW projekt rozšiřuje ScreenFactory o komponenty a API objekty. Obsahuje také příklady použití těchto komponent (projekt examples/sffwExamples.sfproj).
 
-- [CodelistGroup](CodelistGroup)
-- [ComplexEditor](ComplexEditor)
-- [FilteredCodelist](FilteredCodelist)
+- [CodelistGroup](CodelistGroup.md)
+- [ComplexEditor](ComplexEditor.md)
+- [FilteredCodelist](FilteredCodelist.md)

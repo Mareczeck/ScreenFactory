@@ -80,7 +80,7 @@ as how to set its value from some JSON string.
 
 **Q: Where do I find component X?**  
 A: Some components are available internally and you find them in the
-toolbox. If they are not there, check the [sffw](sffw) project that has
+toolbox. If they are not there, check the [sffw](sffw.md) project that has
 more than 50 more. If you don't find what are you looking for, you may
 contact ScreenFactory developers to either recommend some substitution,
 workaround or even get the new component created.

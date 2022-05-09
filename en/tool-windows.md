@@ -157,7 +157,7 @@ omitted and data structure is shown in its final form.
 
 It is possible to automatically generate form components by draging and
 attribute (even subtree) from variables window on the form (see
-[Data-to-Form](main-window#Data-to-form)). In context menu it is
+[Data-to-Form](main-window.md#Data-to-form)). In context menu it is
 possible to add new attributes to variables, validators and events (in
 any tree depth). It is possible to copy binding path in the clipboard by
 using "Copy as binding path".

@@ -222,7 +222,7 @@ použít.
 | .removeMe()                 |        | Odstraní prvek z kolekce                                                                                                                                      |
 
 [1] Viz např.
-[hmathiasbynens.be/notes/reserved-keywords](http://mathiasbynens.be/notes/reserved-keywords)
+[hmathiasbynens.be/notes/reserved-keywords](http://mathiasbynens.be/notes/reserved-keywords.md)
 
 [2] Klíčová slova actionLang: var, and, or, not, in, true, false
 

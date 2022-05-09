@@ -144,7 +144,7 @@ structure.
 
 Included content may contain validators, events and other metadata, but
 it may as well be slightly extended with more validators and events (see
-[variable modifiers](data#Variable modifiers)).
+[variable modifiers](data.md#Variable modifiers)).
 
 ### Example – object Transporter
 
@@ -156,7 +156,7 @@ it may as well be slightly extended with more validators and events (see
 
 Individual data elements (attributes, collections etc.) have the ability
 to have validators. It is a list of conditions defined by
-[expressions](expressions) in property _IsValid_ and error messages in
+[expressions](expressions.md) in property _IsValid_ and error messages in
 property _Error message_. The expression should return true if the data
 is valid. If it returns something elese (_false_ or _null_), data
 element is considered invalid, validation error is potentially shown in

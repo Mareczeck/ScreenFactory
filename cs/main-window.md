@@ -46,14 +46,14 @@ Dostupné příkazy (ne vždy jsou dostupné všechny)
 
 Některé komponenty mohou obsahovat pouze jednu další – pak je možné sem
 umístit jiný kontejner (např. Panel) a do něj již lze vkládat další
-komponenty. V defaults.ini (viz [Resources](Resources)) lze nastavit
+komponenty. V defaults.ini (viz [Resources](Resources.md)) lze nastavit
 výchozí vlastnosti komponent při jejich vytváření.
 
 Zobrazení designéru lze přepnout do stromového zobrazení hierarchie
 komponent, zde lze poté v kontextovém menu vytvářet i nové komponenty.
 
 Při vývoji formuláře jsou typicky používána i okna Variables,
-Properties, Actions and API objects (viz [Pomocná okna](tool-windows)).
+Properties, Actions and API objects (viz [Pomocná okna](tool-windows.md)).
 
 ![overview.png](/.attachments/image-c1befcf3-ef82-46cf-a502-0c7799214585.png)
 
@@ -105,11 +105,11 @@ Poznámka: tato funkcionalita byla dříve vizuální, nyní pouze textová.
 
 Vytváření a úprava akcí pomocí textového jazyka ActionLang nebo
 javascript. V záložce tests lze definovat „unit testy“ pro danou akci.
-Více viz [Akce](actions).
+Více viz [Akce](actions.md).
 
 ## Test data designer
 
-Pro [form designer](/cs/main-window#form-designer) je důležité, aby existovala
+Pro [form designer](/cs/main-window#form-designer.md) je důležité, aby existovala
 testovací data. Jednak si díky nim si vývojář lépe představí, jak bude
 formulář vypadat, ale hlavně, bez nich by komponenty, které jsou
 navázány na kolekce záznamů jako jsou Repeater či DataTable, vypadaly
@@ -126,7 +126,7 @@ data nová.
 
 Pravým tlačítkem _Regenerate test data_ lze data přegenerovat. Pro
 generované texty se uplatňuje omezení maximální délky nastavitelné ve
-[vlastnostech projektu](project-structure#Project options), defaultní
+[vlastnostech projektu](project-structure.md#Project options), defaultní
 hodnota je 60 znaků.
 
 [HOME](/index.md)

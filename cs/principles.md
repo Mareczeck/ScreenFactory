@@ -13,12 +13,12 @@ Z pohledu vývojáře:
   vytvářím, WYSIWYG). Některé chování se definuje pomocí výrazů
   (podobně jako vzorce v Excelu).
 - Některé chování se definuje pomocí akcí zapsaných v
-   [ActionLangu](ActionLang) (stejný jako je použit v jiném nástroji -
+   [ActionLangu](ActionLang.md) (stejný jako je použit v jiném nástroji -
   MetaSystému)
 - Pokročilé vlastnosti a nové komponenty lze doprogramovat
   (programátorem)
 
-viz také [Aplikační model](/cs/application-model)
+viz také [Aplikační model](/cs/application-model.md)
 
 ## Co je HTML5 + javascript
 

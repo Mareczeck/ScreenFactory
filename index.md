@@ -1,9 +1,9 @@
 # Obsah
 
-- [Principy](cs/principles)
-- [IDE](cs/ide)
-  - [Hlavní okno a záložky](cs/main-window)
-  - [Pomocná okna](cs/tool-windows)
+- [Principy](cs/principles.md)
+- [IDE](cs/ide.md)
+  - [Hlavní okno a záložky](cs/main-window.md)
+  - [Pomocná okna](cs/tool-windows.md)
 - Artefakty
   - [Projekt a package](cs/project-structure.md)
   - [Resources](cs/resources.md)
@@ -18,7 +18,7 @@
   - [Testování akcí](/cs/actions/action-tests.md)
   - [Přístupnost (accessibility)](cs/accessibility.md)
   - [Hledání nepoužitých objektů](cs/misc/unused-objects.md)
-- [SFFW](cs/sffw/sffw)
+- [SFFW](cs/sffw/sffw.md)
   - [CodelistGroup](cs/sffw/CodelistGroup.md)
 - Různé
   - [Import collection validatoru z MTS](/cs/misc/import-of-collection-validators.md)

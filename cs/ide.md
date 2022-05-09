@@ -44,6 +44,6 @@ nastavit některé vlastnosti, mezi ty důležitější patří:
 - **Editor options** – jak má vypadat designer formulářů. Pro
   zrychlení práce s IDE lze zvolit „only tree“.
 
-Kromě nastavení IDE ještě existuje [nastavení projektu](/cs/project-structure#project-options).
+Kromě nastavení IDE ještě existuje [nastavení projektu](/cs/project-structure#project-options.md).
 
 [HOME](/index.md)
