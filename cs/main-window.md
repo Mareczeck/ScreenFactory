@@ -46,7 +46,7 @@ Dostupné příkazy (ne vždy jsou dostupné všechny)
 
 Některé komponenty mohou obsahovat pouze jednu další – pak je možné sem
 umístit jiný kontejner (např. Panel) a do něj již lze vkládat další
-komponenty. V defaults.ini (viz [Resources](Resources.md)) lze nastavit
+komponenty. V defaults.ini (viz [Resources](resources.md)) lze nastavit
 výchozí vlastnosti komponent při jejich vytváření.
 
 Zobrazení designéru lze přepnout do stromového zobrazení hierarchie

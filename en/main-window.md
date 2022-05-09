@@ -47,7 +47,7 @@ use Panel as this child and in it you may stack multiple other
 components.
 
 It is possible to set default properties of the components in
-defaults.ini (see [Resources](Resources.md)).
+defaults.ini (see [Resources](resources.md)).
 
 Most of the time the development of the form involves work with windows
 Variables, Properties, Actions and API objects (see [Tool
