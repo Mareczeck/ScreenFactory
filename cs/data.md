@@ -223,4 +223,4 @@ instancích entit).
 | OnItemAdded            | DataCollection                                                        | data : added item                                                                                          | Occurs when item is added to this collection.                                                                                                                                                              |
 | OnItemRemoved          | DataCollection                                                        | data : collection                                                                                          | Occurs when item is removed from this collection.                                                                                                                                                          |
 
-[HOME](/index)
+[HOME](/index.md)

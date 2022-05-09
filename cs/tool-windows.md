@@ -172,4 +172,4 @@ Okna s ladícími výpisy a výstupy generátoru. Slouží pro vývojářské
 
 [1] Rozšiřování šablon uživatelem není zatím podporováno.
 
-[HOME](/index)
+[HOME](/index.md)

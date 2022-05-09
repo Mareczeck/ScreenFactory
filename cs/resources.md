@@ -46,4 +46,4 @@ potřeby přenačtení projektu v IDE. Pokud dojde ke konfliktu (změna v IDE
 i na disku), zobrazí se při ukládání dialog, kde lze problémy ručně
 vyřešit.
 
-[HOME](/index)
+[HOME](/index.md)

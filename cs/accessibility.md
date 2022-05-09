@@ -11,4 +11,4 @@ _/Tools/More_ jsou přístupné příkazy:
 - _Accessibility report_ – zobrazí seznam všech komponent, které mají
   tyto vlastnosti nastavení
 
-[HOME](/index)
+[HOME](/index.md)

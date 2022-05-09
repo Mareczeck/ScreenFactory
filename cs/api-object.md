@@ -38,4 +38,4 @@ poté přístupná z akcí a javascriptu. Účelem tohoto objektu je právě to
 aby bylo možné tuto hodnotu změnit později např. v rámci nasazení na
 prostředí.
 
-[HOME](/index)
+[HOME](/index.md)

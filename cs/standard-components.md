@@ -93,4 +93,4 @@ collection.
 Text editor for entering any string values. Can be used for numbers,
 strings, passwords and multiline strings.
 
-[HOME](/index)
+[HOME](/index.md)

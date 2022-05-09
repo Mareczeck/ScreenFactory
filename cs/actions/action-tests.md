@@ -17,4 +17,4 @@ testy v projektu“
 Během spouštění testů API objekty neexistují. Pokud je třeba testovat
 akci, která obsahuje api objekty, je třeba je mockovat.
 
-[HOME](/index)
+[HOME](/index.md)

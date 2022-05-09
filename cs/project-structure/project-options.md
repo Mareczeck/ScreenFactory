@@ -14,7 +14,7 @@ záložek, kterými lze řídit detailní nastavení projektu.
 
 **Project**
 nastavení sdílené v rámci projektu, povolení lokalizace, některé experimentální nastavení, parametry generování testovacích dat.
-Default decimal serialization - viz [Decimal a přesnost](/cs/data#decimal-a-velká-přesnost)
+Default decimal serialization - viz [Decimal a přesnost](/cs/data.md#decimal-a-velká-přesnost)
 ![image.png](/.attachments/image-f442a535-669c-4630-9d64-387c84777176.png =400x)
 
 **Visual settings**

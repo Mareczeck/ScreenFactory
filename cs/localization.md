@@ -163,4 +163,4 @@ component_ z kontextového menu ve _Form designeru_.
 
 ![test](../media/image30.png "Test")
 
-[HOME](/index)
+[HOME](/index.md)

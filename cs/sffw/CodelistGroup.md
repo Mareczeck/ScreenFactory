@@ -1,4 +1,4 @@
-[HOME](/index)
+[HOME](/index.md)
 # CodelistGroup
 
 CodelistGroup slouží pro načtení více číselníků najednou. Využívá pro to [OData Batch Processing](https://www.odata.org/documentation/odata-version-3-0/batch-processing/). Načtení tak proběhne jednou request/response výměnou narozdíl od scénáře, kdy by se Codelisty načítaly jeden po druhém samostatnými requesty. CodelistGroup tak má při načtení dat lepší performance a může vést i k lepší přehlednosti kódu.

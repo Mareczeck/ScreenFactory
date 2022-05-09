@@ -73,4 +73,4 @@ aplikace. Některé komponenty naleznete v balíku sffw (není součástí
 distribuce SF).
 
 
-[HOME](/index)
+[HOME](/index.md)

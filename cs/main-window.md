@@ -72,7 +72,7 @@ naopak potřeba dialog zobrazit, stačí podržet tlačítko ALT.
 ## Data designer – návrh datových struktur
 
 Stromový návrh znovu použitelných datových struktur (viz [Data
-entity](/cs/data)). Do entity lze vkládat další struktury pomocí
+entity](/cs/data.md)). Do entity lze vkládat další struktury pomocí
 kontextového menu nebo z toolboxu, data lze přeskládat tažením myši ve
 stromu.
 
@@ -129,4 +129,4 @@ generované texty se uplatňuje omezení maximální délky nastavitelné ve
 [vlastnostech projektu](project-structure#Project options), defaultní
 hodnota je 60 znaků.
 
-[HOME](/index)
+[HOME](/index.md)

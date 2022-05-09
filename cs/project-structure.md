@@ -56,4 +56,4 @@ Packages obsahují verzi. Každý projekt se ukládá s číslem verze a při
 načítání projektu se zobrazuje varování, pokud package na disku
 neodpovídá verzi, se kterou byl projekt uložen.
 
-[HOME](/index)
+[HOME](/index.md)

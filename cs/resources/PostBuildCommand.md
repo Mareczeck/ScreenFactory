@@ -28,4 +28,4 @@ v okně Output/Build
 Jako šablonu lze použít pravý klik na _Package –_ _Add -_ _New Item_ _–
 Other – Post build command_.
 
-[HOME](/index)
+[HOME](/index.md)

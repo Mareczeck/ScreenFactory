@@ -41,4 +41,4 @@ formulářů, typicky tedy nemá smysl stejnou aplikaci spouštět na malém
 displeji mobilního telefonu, a zároveň velkém HD monitoru.
 
 
-[HOME](/index)
+[HOME](/index.md)

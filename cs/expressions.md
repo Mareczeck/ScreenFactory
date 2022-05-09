@@ -226,4 +226,4 @@ použít.
 
 [2] Klíčová slova actionLang: var, and, or, not, in, true, false
 
-[HOME](/index)
+[HOME](/index.md)

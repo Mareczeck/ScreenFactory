@@ -46,4 +46,4 @@ nastavit některé vlastnosti, mezi ty důležitější patří:
 
 Kromě nastavení IDE ještě existuje [nastavení projektu](/cs/project-structure#project-options).
 
-[HOME](/index)
+[HOME](/index.md)

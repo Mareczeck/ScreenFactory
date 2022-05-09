@@ -64,4 +64,4 @@ komponenty různý. Např. slider reaguje na posun myši okamžitě, data
 z textboxu se však přenesou do ViewModelu až po opuštění pole (nebo
 stisku Enter)
 
-[HOME](/index)
+[HOME](/index.md)

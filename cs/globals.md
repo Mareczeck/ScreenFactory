@@ -5,4 +5,4 @@ proměnné, api objekty). Jejich fungování je popsáno jinde, přidávají se
 do projektu jako každý jiný artefakt, globální proměnné lze vytvořit 
 i v okně Variables apod.
 
-[HOME](/index)
+[HOME](/index.md)

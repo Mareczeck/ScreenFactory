@@ -223,4 +223,4 @@ Pokud je potřeba s hodnotou provést nějakou, byť triviální operaci, je
 vždy nutné vytvořit nový počítaný atribut. Zvažujeme možnost obohatit
 jednosměrné bindování o triviální transformace.
 
-[HOME](/index)
+[HOME](/index.md)

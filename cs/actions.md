@@ -225,4 +225,4 @@ neskončí.
 
 Pozn.: While ještě není v generátoru implementován.
 
-[HOME](/index)
+[HOME](/index.md)
