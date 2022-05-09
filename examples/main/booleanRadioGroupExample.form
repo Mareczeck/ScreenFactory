@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="booleanRadioGroupExample" />
+  <Caption value="Boolean radio group example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <CustomHtml>
+          <Name value="customHtml1" />
+          <HtmlMarkup><![CDATA[<p>BooleanRadioGroup can be used as boolean value editor instead checkbox. It is useful in cases when user is required to explicitly choose True or False instead leaving the Checkbox untouched (which is visually same as setting to False)</p>
+<p>BooleanRadioGroup does not need its own component css file. It reuses the same markup and css classes as builtin EnumRadioGroup component. If any customization is needed, component wrapper element is decorated  with "booleanradiogroup" class to be targeted with css selectors.</p>
+<p>BooleanRadioGroup supports project option setting &quot;IconStyleRadios&quot; and can generate icon style radio buttons same as EnumRadioGroup.</p>
+<p>Reusing EnumRadioGroup css is working only in <b>SF >= 1.104</b> so using BooleanRadioGroup is recommended only from this version of IDE.</p>]]></HtmlMarkup>
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-customhtml" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CustomHtml>
+        <BooleanRadioGroup identity="BooleanRadioGroup.de0e18f561d946ab8e2be9b1b64cfff7">
+          <Name value="booleanRadioGroup1" />
+          <CaptionPosition value="Top" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="boolValue" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="boolValue.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="boolValue.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-booleanradiogroup" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </BooleanRadioGroup>
+        <CheckBox>
+          <Name value="checkBox1" />
+          <CaptionPosition value="Right" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="boolValue" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="boolValue.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="boolValue.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-checkbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CheckBox>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="boolValue" />
+          <Caption value="Bool value" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+</Form>

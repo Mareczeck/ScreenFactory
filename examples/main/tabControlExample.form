@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="tabControlExample" />
+  <Caption value="Tab control example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Href value="#" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <TabControl identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+          <Name value="mainMenu" />
+          <ActivateAutomatically value="True" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <OnTabClick>
+            <ActionEvent ReferencedAction="~handler_mainMenu_OnTabClick" />
+          </OnTabClick>
+          <Bindings>
+            <Binding SourceProperty="SelectedTab" Expression="form.Tabs.SelectedTab" />
+          </Bindings>
+          <Tabs>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="tab01" />
+              <AriaControls value="panel2" />
+              <OnTabClick>
+                <ActionEvent ReferencedAction="~clickTab01" />
+              </OnTabClick>
+              <Bindings>
+                <Binding SourceProperty="Title" Expression="localized.Tab01" />
+                <Binding SourceProperty="Visible" Expression="form.Tabs.Tab01.Visible" />
+                <Binding SourceProperty="CustomCssClass" Expression="form.Tabs.Tab01.CustomCssClass" />
+              </Bindings>
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="tab02" />
+              <AriaControls value="panel3" />
+              <CustomCssClass value="sffw-my-tab-2" />
+              <Title value="Odesilatel a příjemce" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="tab03" />
+              <Title value="Celní úřady" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="tab04" />
+              <Title value="Přeprava" />
+              <OnTabClick>
+                <ActionEvent ReferencedAction="~clickTab04" />
+              </OnTabClick>
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="tab05" />
+              <Title value="Vybrané výrobky" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="tab06" />
+              <Title value="Zajištění přepravy" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="tab07" />
+              <Title value="Hlášení o přijetí" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="tab08" />
+              <Title value="Rozhodnutí" />
+            </tab>
+          </Tabs>
+        </TabControl>
+        <TextBox>
+          <Name value="textBox2" />
+          <IsEnabled value="False" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="tabs.selectedTab" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="tabs.selectedTab.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="tabs.selectedTab.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <Panel>
+          <Name value="panel2" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="IsVisible" Expression="form.Tabs.Tab01.IsSelected" />
+          </Bindings>
+          <Children>
+            <GroupBox>
+              <Name value="groupBox1" />
+              <Caption value="Group box 1" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Content>
+                <Panel>
+                  <Name value="panel4" />
+                  <Orientation value="Vertical" />
+                  <Children>
+                    <Label>
+                      <Name value="label3" />
+                      <Data value="Obsah panelu k záložce 01" />
+                      <Heading value="h1" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <Label>
+                      <Name value="label4" />
+                      <Data value="Vzhled záložky byl předefinován v tabControlExampleCustom.css - viz. sekce /*my-tab-1*/" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-groupbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </GroupBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel3" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="IsVisible" Expression="form.Tabs.Tab02.IsSelected" />
+          </Bindings>
+          <Children>
+            <GroupBox>
+              <Name value="groupBox2" />
+              <Caption value="Group box 2" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Content>
+                <Panel>
+                  <Name value="panel5" />
+                  <Orientation value="Vertical" />
+                  <Children>
+                    <Label>
+                      <Name value="label2" />
+                      <Data value="Obsah panelu k záložce 02" />
+                      <Heading value="h1" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <Label>
+                      <Name value="label1" />
+                      <Data value="Vzhled záložky byl předefinován v tabControlExampleCustom.css - viz. sekce /*my-tab-2*/" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-groupbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </GroupBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Complex>
+          <Name value="Tabs" />
+          <Caption value="Tabs" />
+          <Children>
+            <Attribute>
+              <Name value="SelectedTab" />
+              <Caption value="Selected tab" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Complex>
+              <Name value="Tab01" />
+              <Caption value="Tab 01" />
+              <Children>
+                <Attribute>
+                  <Name value="Title" />
+                  <Caption value="Title" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="Visible" />
+                  <Caption value="Visible" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <BaseType value="Bool" />
+                    </AttributeType>
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="CustomCssClass" />
+                  <Caption value="Custom css class" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Computed>
+                  <Name value="IsSelected" />
+                  <Caption value="Is selected" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA[this.owner().SelectedTab = 1 ? true : false]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
+              </Children>
+            </Complex>
+            <Complex>
+              <Name value="Tab02" />
+              <Caption value="Tab 02" />
+              <Children>
+                <Computed>
+                  <Name value="IsSelected" />
+                  <Caption value="Is selected" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA[this.owner().SelectedTab = 2 ? true : false]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
+              </Children>
+            </Complex>
+          </Children>
+        </Complex>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.Tabs.Tab01.Title = "Hlavička"
+form.Tabs.Tab01.Visible = true
+form.Tabs.Tab01.CustomCssClass = "sffw-my-tab-1"
+form.Tabs.SelectedTab = 0]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_mainMenu_OnTabClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var tab = params.clickedTab
+system.console(toString(getdatetime()) + ": " + "OnTabClick:" + toString(tab))
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="clickTab01" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console(toString(getdatetime()) + ": Tab01:OnTabClick")
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="clickTab04" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console(toString(getdatetime()) + ": Tab04:OnTabClick")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

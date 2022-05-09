@@ -1,0 +1,39 @@
+{
+    "_navigationTree": {
+        "indexGoodsShipment": -769179737,
+        "indexGoodsItem": "dictum risus elit sit nec et enim Cras justo nec sem tristi",
+        "isSummaryActive": false,
+        "isHeaderActive": true,
+        "isGoodsShipmentActive": false,
+        "isGoodsShipmentItemActive": "tellus nibh",
+        "isGoodsItemActive": true,
+        "isGoodsItemItemActive": true,
+        "isParticipantsActive": true,
+        "isCommunicationActive": "Morbi lacinia leo congue nec volutpat"
+    },
+    "Declaration": {
+        "Header": {
+            "MRN": "mauris dapibus"
+        },
+        "Subjects": {
+            "Consignor": {
+                "TIN": "dui erat vulputate est amet amet molestie pellentesque Etiam"
+            },
+            "Consignee": {
+                "TIN": "vulputate vel sit condimentum ornare Quisque"
+            }
+        },
+        "GoodsShipment": {
+            "GoodsItem": [
+                {
+                    "Description": "Nullam"
+                },
+                {
+                    "Description": "augue"
+                }
+            ]
+        }
+    },
+    "goToItem": -228508291,
+    "lastSelectedNodeId": "Suspendisse Cras et sit lorem lectus"
+}

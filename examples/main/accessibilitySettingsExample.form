@@ -1,0 +1,693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="accessibilitySettingsExample" />
+  <Caption value="Accessibility settings example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <CheckBox>
+          <Name value="checkBox3" />
+          <CaptionPosition value="Right" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="panel2.isEnabled" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="panel2.isEnabled.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="panel2.isEnabled.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-checkbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CheckBox>
+        <HyperLink>
+          <Name value="hyperLink1" />
+          <Data value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <GroupBox>
+          <Name value="groupbox1" />
+          <Caption value="Accessible disabled editors" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Panel>
+              <Name value="panel2" />
+              <Orientation value="Vertical" />
+              <Bindings>
+                <Binding SourceProperty="IsEnabled" Expression="panel2.isEnabled" />
+              </Bindings>
+              <Children>
+                <CustomHtml>
+                  <Name value="customHtml1" />
+                  <HtmlMarkup><![CDATA[<p>
+Changing this setting, behavior of components, that support this setting, is changed. If IsEnabled is set to false on these components (or parent containers), they will appear readonly instead of disabled when accessibleDisabledEditors is set to True.
+This allows users to reach these components via keyboard/mouse.
+<p>]]></HtmlMarkup>
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-customhtml" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CustomHtml>
+                <CheckBox>
+                  <Name value="checkBox1" />
+                  <CaptionPosition value="Right" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="globals.accessibilitySettings.accessibleDisabledEditors" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="globals.accessibilitySettings.accessibleDisabledEditors.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="globals.accessibilitySettings.accessibleDisabledEditors.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-checkbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CheckBox>
+                <CheckBox>
+                  <Name value="checkBox2" />
+                  <CaptionPosition value="Right" />
+                  <Panel.Height value="#" />
+                  <Panel.VerticalAlignment value="Bottom" />
+                  <Panel.Width value="150px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="textbox1.isEnabled" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="textbox1.isEnabled.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="textbox1.isEnabled.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-checkbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CheckBox>
+                <Panel>
+                  <Name value="panel3" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <TextBox>
+                      <Name value="textBox1" />
+                      <Caption value="Textbox with IsEnabled binding" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="textbox1.value" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="textbox1.value.isRequired()" />
+                        <Binding SourceProperty="IsEnabled" Expression="form.textbox1.isEnabled" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <TextBox>
+                  <Name value="textBox2" />
+                  <Caption value="Textbox w/o IsEnabled binding (always non-editable)" />
+                  <CaptionPosition value="Top" />
+                  <InputType value="Multiline" />
+                  <IsEnabled value="False" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="textbox2.value" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="textbox2.value.isRequired()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+                <CheckBox>
+                  <Name value="checkBox6" />
+                  <CaptionPosition value="Right" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="datePicker1.Enabled" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="datePicker1.Enabled.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="datePicker1.Enabled.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-checkbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CheckBox>
+                <DatePicker>
+                  <Name value="datePicker1" />
+                  <CaptionPosition value="Top" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="datePicker1.value" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="datePicker1.value.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="datePicker1.caption()" />
+                    <Binding SourceProperty="IsEnabled" Expression="datePicker1.Enabled" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-datepicker" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </DatePicker>
+                <CheckBox>
+                  <Name value="checkBox11" />
+                  <CaptionPosition value="Right" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="200px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="referenceLookup1.Enabled" />
+                    <Binding SourceProperty="Caption" Expression="referenceLookup1.Enabled.caption()" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="referenceLookup1.Enabled.isRequired()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-checkbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CheckBox>
+                <Panel>
+                  <Name value="pnlReferenceLookup" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="*" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <ReferenceLookup identity="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e">
+                      <Name value="referenceLookup1" />
+                      <CaptionPosition value="Top" />
+                      <DataApiObject reference="~Customers" />
+                      <DisplayMember value="_description" />
+                      <IsRequiredMarkVisible value="True" />
+                      <MinChars value="0" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="500px" />
+                      <useContains value="False" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Customers" />
+                        <Binding SourceProperty="Caption" Expression="Customers.caption()" />
+                        <Binding SourceProperty="IsEnabled" Expression="referenceLookup1.Enabled" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-referencelookup" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </ReferenceLookup>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="m8-panel" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <CheckBox>
+                  <Name value="checkBox4" />
+                  <CaptionPosition value="Right" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="referenceComboPlus1.Enabled" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="referenceComboPlus1.Enabled.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="referenceComboPlus1.Enabled.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-checkbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CheckBox>
+                <Panel>
+                  <Name value="pnlReferenceComboPlus" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <ReferenceComboPlus identity="ReferenceComboPlus.f226cb7867c34aa5acaae01850cbf771">
+                      <Name value="referenceComboPlus1" />
+                      <Caption value="Product (default server sort)" />
+                      <CaptionPosition value="Top" />
+                      <DisplayMember value="_description" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <ReferenceList reference="~Products" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Product" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Product.isRequired()" />
+                        <Binding SourceProperty="IsEnabled" Expression="referenceComboPlus1.Enabled" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-referencecomboplus" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </ReferenceComboPlus>
+                    <ReferenceComboPlus identity="ReferenceComboPlus.f226cb7867c34aa5acaae01850cbf771">
+                      <Name value="referenceComboPlus2" />
+                      <Caption value="Product (preferedTop sort w/ group headings)" />
+                      <CaptionPosition value="Top" />
+                      <DisplayMember value="_description" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <ReferenceList reference="~ProductsWithPrefered" />
+                      <ResultSorting value="preferedTop" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Product" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Product.isRequired()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-referencecomboplus" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </ReferenceComboPlus>
+                    <ReferenceComboPlus identity="ReferenceComboPlus.f226cb7867c34aa5acaae01850cbf771">
+                      <Name value="referenceComboPlus3" />
+                      <Caption value="Product (preferedTop sort w/o group headings)" />
+                      <CaptionPosition value="Top" />
+                      <CreateGroupHeadings value="False" />
+                      <DisplayMember value="_description" />
+                      <IsEnabled value="False" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <ReferenceList reference="~ProductsWithPrefered" />
+                      <ResultSorting value="preferedTop" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Product" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Product.isRequired()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-referencecomboplus" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </ReferenceComboPlus>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <CheckBox>
+                  <Name value="checkBox5" />
+                  <CaptionPosition value="Right" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="fileReader1.Enabled" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="fileReader1.Enabled.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="fileReader1.Enabled.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-checkbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CheckBox>
+                <FileReader identity="FileReader.f457f0445b7e44b7a3a1134647eff385">
+                  <Name value="fileReader1" />
+                  <Caption value="File reader" />
+                  <Filter value=".xml" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="FileContent" Expression="fileReader1.fileContent" />
+                    <Binding SourceProperty="FileType" Expression="fileReader1.fileType" />
+                    <Binding SourceProperty="IsEnabled" Expression="fileReader1.Enabled" />
+                    <Binding SourceProperty="FileName" Expression="fileReader1.fileName" />
+                  </Bindings>
+                </FileReader>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-groupbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </GroupBox>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Complex>
+          <Name value="textbox1" />
+          <Caption value="Textbox 1" />
+          <Children>
+            <Attribute>
+              <Name value="value" />
+              <Caption value="Value" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isEnabled" />
+              <Caption value="Textbox enabled" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="textbox2" />
+          <Caption value="Textbox 2" />
+          <Children>
+            <Attribute>
+              <Name value="value" />
+              <Caption value="Value" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="panel2" />
+          <Caption value="Panel 2" />
+          <Children>
+            <Attribute>
+              <Name value="isEnabled" />
+              <Caption value="Is enabled" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="datePicker1" />
+          <Caption value="Date picker" />
+          <Children>
+            <Attribute>
+              <Name value="value" />
+              <Caption value="Value" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Date" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Enabled" />
+              <Caption value="Date picker enabled" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Reference>
+          <Name value="Customers" />
+          <Caption value="Customers" />
+          <Children>
+            <Attribute>
+              <Name value="CompanyName" />
+              <Caption value="Company name" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="CustomerID" />
+              <Caption value="Customer ID" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="_description" />
+              <Caption value="_ description" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[this.CompanyName.hasValue() ? (tostring(this.CustomerID) + " - " + this.CompanyName) : tostring(this.CustomerID)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Reference>
+        <Complex>
+          <Name value="referenceLookup1" />
+          <Caption value="Reference lookup 1" />
+          <Children>
+            <Attribute>
+              <Name value="Enabled" />
+              <Caption value="Customers enabled" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Reference>
+          <Name value="Product" />
+          <Caption value="Product" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.NorthwindProduct" />
+            </Include>
+            <Attribute>
+              <Name value="_description" />
+              <Caption value="_ description" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="IsPrefered" />
+              <Caption value="Is prefered" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Reference>
+        <Complex>
+          <Name value="referenceComboPlus1" />
+          <Caption value="Reference combo plus 1" />
+          <Children>
+            <Attribute>
+              <Name value="Enabled" />
+              <Caption value="Product (default server sort) enabled" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="fileReader1" />
+          <Caption value="File reader 1" />
+          <Children>
+            <Attribute>
+              <Name value="Enabled" />
+              <Caption value="File reader enabled" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="fileContent" />
+              <Caption value="File content" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="fileName" />
+              <Caption value="File name" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="fileType" />
+              <Caption value="File type" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.referenceLookup1.Enabled = true
+form.textbox1.isEnabled = true
+form.textbox2.value = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam faucibus mi quis velit. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Aenean vel massa quis mauris vehicula lacinia. Nunc dapibus tortor vel mi dapibus sollicitudin. Aliquam ornare wisi eu metus."
+
+form.apiobjects.Products.loadDataAsync(getDateTime())
+form.apiobjects.ProductsWithPrefered.fillFromJson("[{\"ProductID\":1,\"ProductName\":\"Chai\",\"CategoryID\":1,\"ReorderLevel\":10,\"IsPrefered\":false},{\"ProductID\":2,\"ProductName\":\"Chang\",\"CategoryID\":1,\"ReorderLevel\":25,\"IsPrefered\":false},{\"ProductID\":3,\"ProductName\":\"Aniseed Syrup\",\"CategoryID\":2,\"ReorderLevel\":25,\"IsPrefered\":false},{\"ProductID\":4,\"ProductName\":\"Chef Anton's Cajun Seasoning\",\"CategoryID\":2,\"ReorderLevel\":0,\"IsPrefered\":false},{\"ProductID\":5,\"ProductName\":\"Chef Anton's Gumbo Mix\",\"CategoryID\":2,\"ReorderLevel\":0,\"IsPrefered\":true},{\"ProductID\":6,\"ProductName\":\"Grandma's Boysenberry Spread\",\"CategoryID\":2,\"ReorderLevel\":25,\"IsPrefered\":false},{\"ProductID\":7,\"ProductName\":\"Uncle Bob's Organic Dried Pears\",\"CategoryID\":7,\"ReorderLevel\":10,\"IsPrefered\":false},{\"ProductID\":8,\"ProductName\":\"Northwoods Cranberry Sauce\",\"CategoryID\":2,\"ReorderLevel\":0,\"IsPrefered\":true},{\"ProductID\":9,\"ProductName\":\"Mishi Kobe Niku\",\"CategoryID\":6,\"ReorderLevel\":0,\"IsPrefered\":false},{\"ProductID\":10,\"ProductName\":\"Ikura\",\"CategoryID\":8,\"ReorderLevel\":0,\"IsPrefered\":false},{\"ProductID\":11,\"ProductName\":\"Queso Cabrales\",\"CategoryID\":4,\"ReorderLevel\":30,\"IsPrefered\":false},{\"ProductID\":12,\"ProductName\":\"Queso Manchego La Pastora\",\"CategoryID\":4,\"ReorderLevel\":0,\"IsPrefered\":false},{\"ProductID\":13,\"ProductName\":\"Konbu\",\"CategoryID\":8,\"ReorderLevel\":5,\"IsPrefered\":false},{\"ProductID\":14,\"ProductName\":\"Tofu\",\"CategoryID\":7,\"ReorderLevel\":0,\"IsPrefered\":false},{\"ProductID\":15,\"ProductName\":\"Genen Shouyu\",\"CategoryID\":2,\"ReorderLevel\":5,\"IsPrefered\":true},{\"ProductID\":16,\"ProductName\":\"Pavlova\",\"CategoryID\":3,\"ReorderLevel\":10,\"IsPrefered\":false},{\"ProductID\":17,\"ProductName\":\"Alice Mutton\",\"CategoryID\":6,\"ReorderLevel\":0,\"IsPrefered\":false},{\"ProductID\":18,\"ProductName\":\"Carnarvon Tigers\",\"CategoryID\":8,\"ReorderLevel\":0,\"IsPrefered\":true},{\"ProductID\":19,\"ProductName\":\"Teatime Chocolate Biscuits\",\"CategoryID\":3,\"ReorderLevel\":5,\"IsPrefered\":false},{\"ProductID\":20,\"ProductName\":\"Sir Rodney's Marmalade\",\"CategoryID\":3,\"ReorderLevel\":0,\"IsPrefered\":true}]
+")
+form.referenceComboPlus1.Enabled = true
+form.fileReader1.Enabled = true
+form.datePicker1.Enabled = true
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="Customers" />
+      <name value="Customers" />
+      <server reference="+GlobalApiObjects.northwind" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="CustomerID" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="CompanyName" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="Products" />
+      <name value="Products" />
+      <server reference="+GlobalApiObjects.northwind" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ProductID" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ProductName" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="CategoryID" />
+          <dataType value="integer" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ReorderLevel" />
+          <dataType value="integer" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="ProductsWithPrefered" />
+      <name value="ProductsWithPrefered" />
+      <server reference="+GlobalApiObjects.northwind" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ProductID" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ProductName" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="CategoryID" />
+          <dataType value="integer" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ReorderLevel" />
+          <dataType value="integer" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="IsPrefered" />
+          <dataType value="boolean" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+  </ApiObjects>
+</Form>

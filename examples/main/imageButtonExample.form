@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="imageButtonExample" />
+  <Caption value="Image button example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
+          <Name value="imageButton1" />
+          <Caption value="something {fa-file-text} or {fa-address-card} something else" />
+          <Panel.Height value="#" />
+          <Panel.Width value="250px" />
+          <Tooltip value="This is button. You can click on it." />
+          <OnClick>
+            <ActionEvent ReferencedAction="~handler_imageButton1_onClick" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-imagebutton" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </ImageButton>
+        <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
+          <Name value="imageButton3" />
+          <Caption value="{fa-address-card} button without m8 style" />
+          <Panel.Height value="#" />
+          <Panel.Width value="250px" />
+          <Tooltip value="This is button as well. You can click on it too." />
+          <OnClick>
+            <ActionEvent ReferencedAction="~action1" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-imagebutton" />
+              <Condition value="False" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </ImageButton>
+        <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
+          <Name value="imageButton4" />
+          <Caption value="{fa-address-card} disabled button" />
+          <IsEnabled value="False" />
+          <Panel.Height value="#" />
+          <Panel.Width value="250px" />
+          <Tooltip value="This is button as well. You can click on it too." />
+          <OnClick>
+            <ActionEvent ReferencedAction="~action2" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-imagebutton" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </ImageButton>
+        <CheckBox>
+          <Name value="checkBox1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="IsEnabled" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="IsEnabled.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="IsEnabled.Caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-checkbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CheckBox>
+        <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
+          <Name value="conditionallyEnabled" />
+          <Caption value="{fa-address-card} disabled through binding" />
+          <Panel.Height value="#" />
+          <Panel.Width value="250px" />
+          <Bindings>
+            <Binding SourceProperty="IsEnabled" Expression="form.IsEnabled" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-imagebutton" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </ImageButton>
+        <Button>
+          <Name value="btnChangeDynamicContent" />
+          <Caption value="Change dynamic content" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~handler_button2_OnClick" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
+          <Name value="dynamicContent" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Caption" Expression="form.dynamicContent" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-imagebutton" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </ImageButton>
+        <Panel>
+          <Name value="button1_parent" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="100%" />
+          <Children>
+            <Button>
+              <Name value="cs" />
+              <Caption value="Cs" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~action3" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Button>
+              <Name value="en" />
+              <Caption value="En" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~action4" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
+          <Name value="localizedButton" />
+          <Panel.Height value="#" />
+          <Panel.Width value="250px" />
+          <Bindings>
+            <Binding SourceProperty="Caption" Expression="localized.localizedButtonText" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-imagebutton" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </ImageButton>
+        <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
+          <Name value="imageButton5" />
+          <Caption value="button with {img-&lt;resources&gt;/pat&amp;mat.png} image" />
+          <Panel.Height value="#" />
+          <Panel.Width value="400px" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-imagebutton" />
+              <Condition value="False" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </ImageButton>
+        <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
+          <Name value="imageButton6" />
+          <AriaLabel value="Button with Pat &amp; Mat image" />
+          <Caption value="button with {img-&lt;resources&gt;/pat&amp;mat.png|Buurman en Buurman} image and alt text" />
+          <Panel.Height value="#" />
+          <Panel.Width value="400px" />
+          <Tooltip value="... and tooltip" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-imagebutton" />
+              <Condition value="False" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </ImageButton>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="IsEnabled" />
+          <Caption value="Is enabled" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="dynamicContent" />
+          <Caption value="Dynamic content" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~handler_imageButtonExample_OnCreate" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="handler_imageButtonExample_OnCreate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var url = apiobjects.urlRouter.findFormUrl(navigation.main.imageButtonExample.fullName)
+url.updatePageUrl()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_imageButton1_onClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("first imageButton click")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action1" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("second imageButton click")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action2" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("disabled imageButton click - this should not happen")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button2_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.dynamicContent = toString(getDateTime()) + " {fa-address-card}"]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action3" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.page1.setLang("cs")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action4" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.page1.setLang("en")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <Page identity="Page.f7aa0c151c64407daef13910dcf7b72a">
+      <Name value="page1" />
+    </Page>
+  </ApiObjects>
+</Form>

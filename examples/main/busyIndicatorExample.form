@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="busyIndicatorExample" />
+  <Caption value="busyIndicatorExample" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="1050px" />
+      <Panel.Width value="*" />
+      <Children>
+        <Panel>
+          <Name value="panel6" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <HyperLink>
+              <Name value="back" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel5" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <CustomHtml>
+              <Name value="customHtml1" />
+              <HtmlMarkup><![CDATA[<p>
+<b>BusyIndicator</b> slouží pro zobrazení informace že aplikace provádí nějákou akci. Pomocí vlastností <b>IsVisible</b> lze zobrazit/skrýt indikátor, <b>StatusText</b> přiřadit text který se má v indikátoru zobrazit, defaultní je "Loading, please wait...", <b>LoadingImageSource</b> cesta k obrázku který se má v indikátoru zobrazit. <b>IconCssClass</b> slouží pro přiřazení obrázků pomocí css třídy. Pokud není žádná cesta/třída vyplněna zobrazí se základní gif z <b>font-awesome</b>. Pozadí inikátoru, barvu textu atd. lze měnit pomocí tříd  <b>.sffw-busy-indicator</b> <b>.sffw-busy-indicator-content-body</b> <b>.sffw-busy-indicator-loadingimage</b> <b>.sffw-busy-indicator-statustext</b>
+</p>]]></HtmlMarkup>
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-customhtml" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CustomHtml>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Button>
+          <Name value="button3" />
+          <Caption value="Show busy indicator" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~handler_button3_OnClick" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Panel>
+          <Name value="panel2" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <CheckBox>
+              <Name value="checkBox1" />
+              <Caption value="Is loading" />
+              <CaptionPosition value="Top" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="IsVisible" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="IsVisible.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+            <TextBox>
+              <Name value="textBox1" />
+              <Caption value="Text zobrazený v busy Indikátoru" />
+              <CaptionPosition value="Top" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="statusText" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="statusText.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel3" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <CustomHtml>
+              <Name value="customHtml2" />
+              <HtmlMarkup><![CDATA[<p>Tento formulář má nastavenou velikost na 1050px pro názornou ukázku překrytí celého formuláře indikátorem.</p>]]></HtmlMarkup>
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-customhtml" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CustomHtml>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel4" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <BusyIndicator identity="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e">
+              <Name value="busyIndicator1" />
+              <IconCssClass value="fa fa-refresh fa-spin" />
+              <LoadingImageSource value="&lt;resources&gt;/loader-fallback.gif" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="IsVisible" Expression="IsVisible" />
+              </Bindings>
+            </BusyIndicator>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel7" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Label>
+              <Name value="label21" />
+              <Data value="In-content busy indicator" />
+              <Heading value="h5" />
+              <Panel.Height value="#" />
+              <Panel.Width value="300px" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+            <CheckBox>
+              <Name value="checkBox2" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="isLoading" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="isLoading.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="isLoading.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+            <Button>
+              <Name value="button2" />
+              <Caption value="Simulate some data loading..." />
+              <Panel.Height value="#" />
+              <Panel.Width value="200px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~handler_button2_OnClick" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <InContentBusyIndicator identity="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e">
+              <Name value="inContentBusyIndicator1" />
+              <Panel.Height value="#" />
+              <Panel.Width value="200px" />
+              <Content>
+                <Panel>
+                  <Name value="panel8" />
+                  <Orientation value="Vertical" />
+                  <Children>
+                    <Panel>
+                      <Name value="panel10" />
+                      <Orientation value="Horizontal" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Children>
+                        <Label>
+                          <Name value="label1" />
+                          <Data value="Label 1" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-label" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Label>
+                        <Button>
+                          <Name value="button1" />
+                          <Caption value="Button 1" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                    <Panel>
+                      <Name value="panel9" />
+                      <Orientation value="Vertical" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Children>
+                        <TextBox>
+                          <Name value="textBox2" />
+                          <CaptionPosition value="Top" />
+                          <InputType value="Multiline" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="fetchedData" />
+                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="fetchedData.isRequired()" />
+                            <Binding SourceProperty="Caption" Expression="fetchedData.caption()" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-textbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </TextBox>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <Bindings>
+                <Binding SourceProperty="isLoading" Expression="form.isLoading" />
+              </Bindings>
+            </InContentBusyIndicator>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel11" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="50%" />
+          <Children>
+            <Label>
+              <Name value="label2" />
+              <Data value="In-content busy indicator in collection" />
+              <Heading value="h5" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+            <Button>
+              <Name value="button4" />
+              <Caption value="SwitchLoading" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~handler_button4_OnClick" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Repeater>
+              <Name value="repeater1" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Content>
+                <InContentBusyIndicator identity="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e">
+                  <Name value="inContentBusyIndicator2" />
+                  <Content>
+                    <TextBox>
+                      <Name value="textBox3" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="this.someAttribute" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="this.someAttribute.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="this.someAttribute.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Content>
+                  <Bindings>
+                    <Binding SourceProperty="isLoading" Expression="form.isSthLoading " />
+                  </Bindings>
+                </InContentBusyIndicator>
+              </Content>
+              <Bindings>
+                <Binding SourceProperty="DataItems" Expression="form.dataCollection" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-repeater" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Repeater>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <OnCreate>
+        <ActionEvent ReferencedAction="+UiParts.busyIndicatorExample.memoryCheck" />
+      </OnCreate>
+      <Children>
+        <Attribute>
+          <Name value="IsVisible" />
+          <Caption value="Is visible" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="statusText" />
+          <Caption value="Status text" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="isLoading" />
+          <Caption value="Is loading" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="fetchedData" />
+          <Caption value="Fetched data" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Collection>
+          <Name value="dataCollection" />
+          <Caption value="Data collection" />
+          <Children>
+            <Attribute>
+              <Name value="someAttribute" />
+              <Caption value="Some attribute" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Collection>
+        <Attribute>
+          <Name value="isSthLoading" />
+          <Caption value="Is sth loading" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnActivate>
+    <ActionEvent ReferencedAction="~initForm" />
+  </OnActivate>
+  <Actions>
+    <ActionBlock>
+      <Name value="memoryCheck" />
+      <IsJavascript value="True" />
+      <Script><![CDATA[this.blob = new MemoryMonitoringBlob();]]></Script>
+      <ActionLangBody IsValid="True" />
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="initForm" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.statusText = "Nový status text"
+form.dataCollection.addItem()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button2_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[timer1.start()
+form.isLoading = true]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_timer1_OnTick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.fetchedData = "ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD ABCD"
+form.isLoading = false
+timer1.stop()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button3_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[timer2.start()
+form.IsVisible = true]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_timer2_OnTick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.IsVisible = false
+timer2.stop()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button4_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.isSthLoading = form.isSthLoading ? false : true]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <Timer identity="Timer.cee6b8357b9240469bd5d89cf64b0c9a">
+      <Name value="timer1" />
+      <interval value="2000" />
+      <OnTick>
+        <ActionEvent ReferencedAction="~handler_timer1_OnTick" />
+      </OnTick>
+    </Timer>
+    <Timer identity="Timer.cee6b8357b9240469bd5d89cf64b0c9a">
+      <Name value="timer2" />
+      <interval value="5000" />
+      <OnTick>
+        <ActionEvent ReferencedAction="~handler_timer2_OnTick" />
+      </OnTick>
+    </Timer>
+  </ApiObjects>
+</Form>

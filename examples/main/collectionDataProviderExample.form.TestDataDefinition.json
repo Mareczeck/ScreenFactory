@@ -1,0 +1,31 @@
+{
+    "dataCollection": [
+        {
+            "CustomerID": "Nam dapibus lectus lorem condimentum odio id vel",
+            "ShipVia": 201731733,
+            "ShipCountry": "odio Suspendisse vel facilisis id sodales turpis sodales"
+        },
+        {
+            "CustomerID": "eros metus ultrices varius Maecenas commodo",
+            "ShipVia": -576586427,
+            "ShipCountry": "feugiat volutpat ut elit adipiscing in"
+        }
+    ],
+    "sourceDataCollection": [
+        {
+            "CustomerID": "Donec ac",
+            "ShipVia": 215846009,
+            "ShipCountry": "at Suspendisse"
+        },
+        {
+            "CustomerID": "tellus Ut Praesent sem massa Pellentesque feugiat",
+            "ShipVia": 1309811517,
+            "ShipCountry": "sodales Cras"
+        }
+    ],
+    "reference1": {
+        "CustomerID": "in nec non eget id lectus",
+        "ShipVia": 1775792070,
+        "ShipCountry": "nulla felis vehicula nisi condimentum augue Praesent"
+    }
+}

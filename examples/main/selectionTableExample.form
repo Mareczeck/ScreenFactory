@@ -1,0 +1,898 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="selectionTableExample" />
+  <Caption value="Custom table example" />
+  <Content>
+    <Panel>
+      <Name value="pnlMain" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="hyperLink1" />
+          <Data value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Panel>
+          <Name value="pnlCheck" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <CheckBox>
+              <Name value="cbDataTable" />
+              <Caption value="Show DataTable for comparsion" />
+              <CaptionPosition value="Right" />
+              <Panel.Height value="#" />
+              <Panel.Width value="220px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="showDataTable" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="showDataTable.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+            <CheckBox>
+              <Name value="cbShowSelector" />
+              <Caption value="Show indicator for selected row" />
+              <CaptionPosition value="Right" />
+              <Panel.Height value="#" />
+              <Panel.Width value="250px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="showSelector" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+            <CheckBox>
+              <Name value="cbInvisible" />
+              <Caption value="Show invisible column" />
+              <CaptionPosition value="Right" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="showInvisible" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="showInvisible.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+            <CheckBox>
+              <Name value="cbBoldForSelected" />
+              <Caption value="Bold text for selected row (selectionTableExample.css)" />
+              <CaptionPosition value="Right" />
+              <Panel.Height value="#" />
+              <Panel.Width value="350px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="boldForSelected" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+            <CheckBox>
+              <Name value="cbScrollable" />
+              <Caption value="Scrollable" />
+              <CaptionPosition value="Right" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="scrollable" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+            <CheckBox>
+              <Name value="cbSelectable" />
+              <Caption value="Selectable" />
+              <CaptionPosition value="Right" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="selectable" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <CheckBox>
+          <Name value="checkBox3" />
+          <CaptionPosition value="Right" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="italicHeaderStyle" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="italicHeaderStyle.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="italicHeaderStyle.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-checkbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CheckBox>
+        <Panel>
+          <Name value="pnlCheck2" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <CheckBox>
+              <Name value="cbDisableTables" />
+              <Caption value="Enables / Disables SelectionTable and DataTable via pnlTables.IsEnabled property (works only in SF with gen v.2 support)" />
+              <CaptionPosition value="Right" />
+              <Panel.Height value="#" />
+              <Panel.Width value="700px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="tablesDisabled" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+            <CheckBox>
+              <Name value="showExtraPanel" />
+              <CaptionPosition value="Right" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="extraPanel" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="extraPanel.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="extraPanel.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="pnlTables" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="IsEnabled" Expression="form.tablesDisabled" />
+          </Bindings>
+          <Children>
+            <Panel>
+              <Name value="pnlSelectionTable" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="800px" />
+              <Children>
+                <PagingRepeaterCtrl identity="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4">
+                  <Name value="prcCars" />
+                  <AllowAdd value="True" />
+                  <AllowRemove value="True" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="cars" />
+                    <Binding SourceProperty="Index" Expression="selected" />
+                  </Bindings>
+                </PagingRepeaterCtrl>
+                <Panel>
+                  <Name value="stCars_parent" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Panel>
+                      <Name value="pnlExtra" />
+                      <Orientation value="Horizontal" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="displayNone" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="not extraPanel" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="minWidth-200" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                    <SelectionTable identity="SelectionTable.cc32b616f4094d929bc32891cf024bb9">
+                      <Name value="stCars" />
+                      <Accessibility.AriaLabel value="" />
+                      <Accessibility.Role value="" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnRowClick>
+                        <ActionEvent ReferencedAction="~handler_stCars_OnRowClick" />
+                      </OnRowClick>
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="cars" />
+                        <Binding SourceProperty="Index" Expression="selected" />
+                        <Binding SourceProperty="ShowSelector" Expression="showSelector" />
+                        <Binding SourceProperty="IsScrollable" Expression="scrollable" />
+                        <Binding SourceProperty="SelectionEnabled" Expression="selectable" />
+                        <Binding SourceProperty="AriaLabel" Expression="localized.Description" />
+                      </Bindings>
+                      <Columns>
+                        <SelectionTableColumn identity="SelectionTable.cc32b616f4094d929bc32891cf024bb9">
+                          <Name value="stcNazev" />
+                          <Content>
+                            <Label>
+                              <Name value="lblNazev" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="nazev" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-label" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Label>
+                          </Content>
+                          <Bindings>
+                            <Binding SourceProperty="Caption" Expression="nazev.caption()" />
+                            <Binding SourceProperty="Tooltip" Expression="localized.tooltip1" />
+                            <Binding SourceProperty="TooltipButtonAriaLabel" Expression="localized.instructions" />
+                          </Bindings>
+                          <HeaderCssClass>
+                            <CssClassConditional>
+                              <ClassName value="column-header-italic" />
+                              <Bindings>
+                                <Binding SourceProperty="Condition" Expression="form.italicHeaderStyle" />
+                              </Bindings>
+                            </CssClassConditional>
+                          </HeaderCssClass>
+                        </SelectionTableColumn>
+                        <SelectionTableColumn identity="SelectionTable.cc32b616f4094d929bc32891cf024bb9">
+                          <Name value="stcCena" />
+                          <ColumnWidth value="25%" />
+                          <Content>
+                            <TextBox>
+                              <Name value="tbCena" />
+                              <CaptionPosition value="Hide" />
+                              <InputType value="Numeric" />
+                              <TextAlign value="Right" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="cena" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="cena.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="cena.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-textbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </TextBox>
+                          </Content>
+                          <Bindings>
+                            <Binding SourceProperty="Caption" Expression="cena.caption()" />
+                          </Bindings>
+                        </SelectionTableColumn>
+                        <SelectionTableColumn identity="SelectionTable.cc32b616f4094d929bc32891cf024bb9">
+                          <Name value="stcCheckbox" />
+                          <Caption value="Check ST (na rozdil od DT funguje)" />
+                          <Content>
+                            <CheckBox>
+                              <Name value="checkBox1" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="checkST" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="checkST.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="checkST.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-checkbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value=".z-index-1" />
+                                  <Condition value="False" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </CheckBox>
+                          </Content>
+                        </SelectionTableColumn>
+                        <SelectionTableColumn identity="SelectionTable.cc32b616f4094d929bc32891cf024bb9">
+                          <Name value="stcSelected" />
+                          <Caption value="Akce" />
+                          <ColumnWidth value="150px" />
+                          <Content>
+                            <Button>
+                              <Name value="button1" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~handler_button1_OnClick" />
+                              </OnClick>
+                              <Bindings>
+                                <Binding SourceProperty="Caption" Expression="nazev" />
+                                <Binding SourceProperty="IsVisible" Expression="isSelected" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
+                          </Content>
+                        </SelectionTableColumn>
+                        <SelectionTableColumn identity="SelectionTable.cc32b616f4094d929bc32891cf024bb9">
+                          <Name value="stcInvis" />
+                          <Caption value="Ctc invis" />
+                          <Content>
+                            <Label>
+                              <Name value="label3" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="Invis" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-label" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Label>
+                          </Content>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form.showInvisible" />
+                          </Bindings>
+                        </SelectionTableColumn>
+                      </Columns>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-selectiontable" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="bold-selected" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.boldForSelected" />
+                          </Bindings>
+                        </CssClassConditional>
+                      </CssClass>
+                    </SelectionTable>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="pnlSpacing" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="50px" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="pnlDataTable" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="800px" />
+              <Bindings>
+                <Binding SourceProperty="IsVisible" Expression="showDataTable" />
+              </Bindings>
+              <Children>
+                <DataTable>
+                  <Name value="dtCars" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <OnRowActivate>
+                    <ActionEvent ReferencedAction="~handler_dtCars_OnRowActivate" />
+                  </OnRowActivate>
+                  <Bindings>
+                    <Binding SourceProperty="DataItems" Expression="cars" />
+                  </Bindings>
+                  <Columns>
+                    <DataColumn>
+                      <Name value="dcNazev" />
+                      <Content>
+                        <Label>
+                          <Name value="label1" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="nazev" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-label" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Label>
+                      </Content>
+                      <Bindings>
+                        <Binding SourceProperty="Caption" Expression="nazev.caption()" />
+                        <Binding SourceProperty="Tooltip" Expression="localized.tooltip1" />
+                      </Bindings>
+                      <HeaderCssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-datacolumn" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </HeaderCssClass>
+                    </DataColumn>
+                    <DataColumn>
+                      <Name value="dcCena" />
+                      <Width value="25%" />
+                      <Content>
+                        <TextBox>
+                          <Name value="textBox1" />
+                          <CaptionPosition value="Hide" />
+                          <InputType value="Numeric" />
+                          <TextAlign value="Right" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="cena" />
+                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="cena.isRequired()" />
+                            <Binding SourceProperty="Caption" Expression="cena.caption()" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-textbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </TextBox>
+                      </Content>
+                      <Bindings>
+                        <Binding SourceProperty="Caption" Expression="cena.caption()" />
+                      </Bindings>
+                      <HeaderCssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-datacolumn" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </HeaderCssClass>
+                    </DataColumn>
+                    <DataColumn>
+                      <Name value="dcCheckbox" />
+                      <Caption value="Check DT (nefunguje pokud je nastaveno OnRowActivate)" />
+                      <Content>
+                        <CheckBox>
+                          <Name value="checkBox2" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="checkDT" />
+                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="checkDT.isRequired()" />
+                            <Binding SourceProperty="Caption" Expression="checkDT.caption()" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-checkbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </CheckBox>
+                      </Content>
+                      <HeaderCssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-datacolumn" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </HeaderCssClass>
+                    </DataColumn>
+                    <DataColumn>
+                      <Name value="dtAkce" />
+                      <Caption value="Dt akce" />
+                      <Content>
+                        <Button>
+                          <Name value="button2" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_button2_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="Caption" Expression="Nazev" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                      </Content>
+                      <HeaderCssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-datacolumn" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </HeaderCssClass>
+                    </DataColumn>
+                    <DataColumn>
+                      <Name value="dcInvis" />
+                      <Caption value="Dc invis" />
+                      <Content>
+                        <Label>
+                          <Name value="label2" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="Invis" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-label" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Label>
+                      </Content>
+                      <Bindings>
+                        <Binding SourceProperty="IsVisible" Expression="form.showInvisible" />
+                      </Bindings>
+                      <HeaderCssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-datacolumn" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </HeaderCssClass>
+                    </DataColumn>
+                  </Columns>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-datatable" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </DataTable>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Collection>
+          <Name value="cars" />
+          <Caption value="Cars" />
+          <Children>
+            <Attribute>
+              <Name value="Nazev" />
+              <Caption value="Nazev" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Cena" />
+              <Caption value="Cena" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Invis" />
+              <Caption value="Invis" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="isSelected" />
+              <Caption value="Is selected" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[this.index() = form.selected]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Attribute>
+              <Name value="checkST" />
+              <Caption value="Check ST" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="checkDT" />
+              <Caption value="Check DT" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Collection>
+        <Attribute>
+          <Name value="selected" />
+          <Caption value="Selected" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="showInvisible" />
+          <Caption value="Show invisible" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="showDataTable" />
+          <Caption value="Show data table" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="showSelector" />
+          <Caption value="Show selector" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="boldForSelected" />
+          <Caption value="Bold for selected" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="scrollable" />
+          <Caption value="Scrollable" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="selectable" />
+          <Caption value="Selectable" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="tablesDisabled" />
+          <Caption value="Tables disabled" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="italicHeaderStyle" />
+          <Caption value="Italic header style" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="extraPanel" />
+          <Caption value="Extra panel" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnActivate>
+    <ActionEvent ReferencedAction="~handler_selectionTableExample_OnActivate" />
+  </OnActivate>
+  <Actions>
+    <ActionBlock>
+      <Name value="handler_selectionTableExample_OnActivate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.showSelector = true
+form.selectable = true
+form.extraPanel = false
+
+var car = form.cars.addItem()
+car.Nazev = "Audi"
+car.Cena = 480000
+car.Invis = "invisible"
+
+car.Nazev = "BMW"
+car.Cena = 823000
+car.Invis = "invisible"
+
+car = form.cars.addItem()
+car.Nazev = "Honda"
+car.Cena = 780000
+car.Invis = "invisible"
+
+car = form.cars.addItem()
+car.Nazev = "Mazda"
+car.Cena = 3240000
+car.Invis = "invisible"
+
+car = form.cars.addItem()
+car.Nazev = "Mercedes"
+car.Cena = 2450000
+car.Invis = "invisible"
+
+car = form.cars.addItem()
+car.Nazev = "Seat"
+car.Cena = 499000
+car.Invis = "invisible"
+
+car = form.cars.addItem()
+car.Nazev = "Škoda"
+car.Cena = 435000
+car.Invis = "invisible"
+
+car = form.cars.addItem()
+car.Nazev = "Volvo"
+car.Cena = 640000
+car.Invis = "invisible"
+
+system.console("Pocet aut: " + toString(form.cars.count()))
+
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button1_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.alert(params.data.toJson())]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button2_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.alert(params.data.toJson())]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_dtCars_OnRowActivate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console(stringFormat("DataTable row '{0}' clicked!", toString(params.data.index())))]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_stCars_OnRowClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console(stringFormat("SelectionTable row '{0}' clicked!", toString(params.data.index())))
+
+if isFalse(form.selectable) then
+	system.alert("Different row can't be selected while doing whatever operation!")
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_stCars_OnRowActivate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("SelectionTable row clicked!")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

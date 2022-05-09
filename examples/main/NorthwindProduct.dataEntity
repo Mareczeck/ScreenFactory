@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="NorthwindProduct" />
+  <Caption value="Northwind product" />
+  <Children>
+    <Attribute>
+      <Name value="ProductID" />
+      <Caption value="Product ID" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Integer" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="ProductName" />
+      <Caption value="Product name" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="SupplierID" />
+      <Caption value="Supplier ID" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Integer" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="CategoryID" />
+      <Caption value="Category ID" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Integer" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="QuantityPerUnit" />
+      <Caption value="Quantity per unit" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="UnitPrice" />
+      <Caption value="Unit price" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+  </Children>
+</DataEntity>

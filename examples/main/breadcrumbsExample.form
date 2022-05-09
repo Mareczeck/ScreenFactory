@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="breadcrumbsExample" />
+  <Caption value="Breadcrumbs example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Href value="#" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Label>
+          <Name value="label1" />
+          <Data value="Default appearance" />
+          <Heading value="h5" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Breadcrumbs identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
+          <Name value="breadcrumbsDefault" />
+          <controller reference="+GlobalApiObjects.breadcrumbsCtrl" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+        </Breadcrumbs>
+        <Label>
+          <Name value="label2" />
+          <Data value="Default appearance with modification (defined in breadcrumbsExample.css)" />
+          <Heading value="h5" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Breadcrumbs identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
+          <Name value="breadcrumbsDefaultModified" />
+          <controller reference="+GlobalApiObjects.breadcrumbsCtrl" />
+          <cssClass value="breadcrumb breadcrumb-default-modified" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+        </Breadcrumbs>
+        <Label>
+          <Name value="label3" />
+          <Data value="Use of css arrows (defined in breadcrumbsExample.css)" />
+          <Heading value="h5" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Breadcrumbs identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
+          <Name value="breadcrumbsArrows" />
+          <controller reference="+GlobalApiObjects.breadcrumbsCtrl" />
+          <cssClass value="breadcrumb breadcrumb-arrows" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+        </Breadcrumbs>
+        <Label>
+          <Name value="label4" />
+          <Data value="Custom appearance (defined in breadcrumbsExample.css)" />
+          <Heading value="h5" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <CustomHtml>
+          <Name value="customHtml1" />
+          <HtmlMarkup><![CDATA[<p>Složitější komunikaci (např. mezi master formulářem a vnitřním formulářem masteru) lze zajistit pomocí dvojice apiobjektů EventDispatcher.<p>
+<p>Každý EventDispatcher může odebírat zprávy vytvořené jiným EventDispatcher, a to i mají-li jiný DataContext - komunikační kanál je sdílený.<p>
+<p>Použití je ukázáno na ošetření události "On item click" níže vložené komponenty Breadcrumbs.<p>]]></HtmlMarkup>
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-customhtml" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CustomHtml>
+        <Breadcrumbs identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
+          <Name value="breadcrumbsCustom" />
+          <controller reference="+GlobalApiObjects.breadcrumbsCtrl" />
+          <cssClass value="breadcrumb-custom" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <OnItemClick>
+            <ActionEvent ReferencedAction="~handler_breadcrumbs1_OnItemClick" />
+          </OnItemClick>
+        </Breadcrumbs>
+        <Panel>
+          <Name value="panel3" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <TextBox>
+              <Name value="textBox1" />
+              <CaptionPosition value="Top" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="id" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="id.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="id.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <TextBox>
+              <Name value="textBox2" />
+              <CaptionPosition value="Top" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="title" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="title.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="title.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <CheckBox>
+              <Name value="checkBox1" />
+              <CaptionPosition value="Top" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="clickable" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="clickable.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="clickable.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+            <TextBox>
+              <Name value="textBox3" />
+              <CaptionPosition value="Top" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="url" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="url.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="url.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <TextBox>
+              <Name value="textBox4" />
+              <CaptionPosition value="Top" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="data" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="data.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="data.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Button>
+          <Name value="btnAdd" />
+          <Caption value="Add" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~add" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Panel>
+          <Name value="panel2" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="btnRemoveLast" />
+              <Caption value="Remove last" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~removeLast" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Button>
+              <Name value="btnRemoveAll" />
+              <Caption value="Remove all" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~removeAll" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Button>
+              <Name value="btnRemoveTo" />
+              <Caption value="Remove to (index)" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~removeTo" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <TextBox>
+              <Name value="textBox6" />
+              <CaptionPosition value="Hide" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="removeTo" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="removeTo.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="removeTo.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Button>
+          <Name value="btnCount" />
+          <Caption value="Count (to console)" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~count" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Button>
+          <Name value="btnGetAll" />
+          <Caption value="Get all (to console)" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~getAll" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Panel>
+          <Name value="panel4" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <TextBox>
+              <Name value="textBox5" />
+              <CaptionPosition value="Hide" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="itemIndex" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="itemIndex.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="itemIndex.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <Button>
+              <Name value="btnGetItem" />
+              <Caption value="Get item by index (to console)" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~getItem" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="id" />
+          <Caption value="Id" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="title" />
+          <Caption value="Title" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="url" />
+          <Caption value="Url" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="data" />
+          <Caption value="Data" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="itemIndex" />
+          <Caption value="Item index" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="removeTo" />
+          <Caption value="Remove to" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="clickable" />
+          <Caption value="Clickable" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~create" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="add" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.breadcrumbsCtrl.addBreadcrumb(form.id, form.title, form.url, form.data, form.clickable)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="removeAll" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.breadcrumbsCtrl.removeAll()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="removeLast" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.breadcrumbsCtrl.removeLast()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_breadcrumbs1_OnItemClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var breadcrumb = apiobjects.breadcrumbsCtrl.getItem(params.index)
+system.console("Item clicked: " + params.title)
+system.console("Clicked item index: " + toString(breadcrumb.getIndex()))
+system.console("Clicked item id: " + toString(breadcrumb.getId()))
+system.console("Fullpath: " + toString(params.fullPath))
+
+var param = toString(breadcrumb.getId())
+form.apiobjects.eventDispatcher2.sendMessage("breadcrumbsCustom", "OnItemClick", param)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="count" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var count = apiobjects.breadcrumbsCtrl.count()
+system.console("Breadcrumbs count: " + toString(count))]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="getItem" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var itemJson = apiobjects.breadcrumbsCtrl.getItemJson(form.itemIndex)
+system.console("Breadcrumb index=" + toString(form.itemIndex) + ": " + itemJson)
+
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="getAll" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var json = apiobjects.breadcrumbsCtrl.getAllJson()
+system.console("Breadcrumbs: " + json)
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="create" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.breadcrumbsCtrl.init("main::_breadcrumbsCtrlStruct")
+if apiobjects.breadcrumbsCtrl.count() = 0 then
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("Home", "homeTitle", defaultString(), defaultString(), defaultBool())
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("Breadcrumbs example", "level2Title", "", defaultString(), true)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="removeTo" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.breadcrumbsCtrl.removeTo(form.removeTo)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_eventDispatcher1_OnMessage" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("source:" + params.source)
+system.console("type:" + params.type)
+system.console("data:" + params.data)
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <EventDispatcher identity="EventDispatcher.eb764ceb30274f1e9a3d051d512d6b26">
+      <Name value="eventDispatcher1" />
+      <OnMessage>
+        <ActionEvent ReferencedAction="~handler_eventDispatcher1_OnMessage" />
+      </OnMessage>
+    </EventDispatcher>
+    <EventDispatcher identity="EventDispatcher.eb764ceb30274f1e9a3d051d512d6b26">
+      <Name value="eventDispatcher2" />
+    </EventDispatcher>
+  </ApiObjects>
+</Form>

@@ -1,0 +1,11 @@
+{
+    "Enabled": true,
+    "mockReference": {
+        "Key": "Maecenas Sed Morbi sem dictum Maecenas mauris",
+        "Description": "eleifend nec Nulla mauris sodales"
+    },
+    "Customers": {
+        "CompanyName": "Vivamus Vivamus",
+        "CustomerID": "porta tellus"
+    }
+}

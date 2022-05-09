@@ -1,0 +1,825 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="errorSummaryExample" />
+  <Caption value="Error summary example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Data value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <CheckBox>
+          <Name value="checkBox1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="isSummaryVisible" />
+            <Binding SourceProperty="Caption" Expression="isSummaryVisible.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="isSummaryVisible.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-checkbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CheckBox>
+        <TextBox>
+          <Name value="textBox1" />
+          <CaptionPosition value="Top" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="dataRoot.a" />
+            <Binding SourceProperty="Caption" Expression="dataRoot.a.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="dataRoot.a.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <TextBox>
+          <Name value="textBox2" />
+          <CaptionPosition value="Top" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="dataRoot.grpX.b" />
+            <Binding SourceProperty="Caption" Expression="dataRoot.grpX.b.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="dataRoot.grpX.b.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <GroupBox>
+          <Name value="groupBox1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Repeater>
+              <Name value="repeater1" />
+              <Content>
+                <Panel>
+                  <Name value="panel2" />
+                  <Orientation value="Horizontal" />
+                  <Children>
+                    <Panel>
+                      <Name value="panel3" />
+                      <Orientation value="Vertical" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Children>
+                        <TextBox>
+                          <Name value="textBox3" />
+                          <CaptionPosition value="Top" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="300px" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="grpY.c" />
+                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="grpY.c.isRequired()" />
+                            <Binding SourceProperty="Caption" Expression="grpY.c.caption()" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-textbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </TextBox>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                    <Panel>
+                      <Name value="panel4" />
+                      <Orientation value="Vertical" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Children>
+                        <TextBox>
+                          <Name value="textBox4" />
+                          <CaptionPosition value="Top" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="300px" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="grpZ.d" />
+                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="grpZ.d.isRequired()" />
+                            <Binding SourceProperty="Caption" Expression="grpZ.d.caption()" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-textbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </TextBox>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                    <Panel>
+                      <Name value="panel5" />
+                      <Orientation value="Vertical" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Children>
+                        <Panel>
+                          <Name value="referenceLookup1_parent" />
+                          <Orientation value="Horizontal" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Children>
+                            <ReferenceLookup identity="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e">
+                              <Name value="referenceLookup1" />
+                              <CaptionPosition value="Top" />
+                              <DataApiObject reference="~Country" />
+                              <DisplayMember value="_description" />
+                              <MinChars value="0" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="300px" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="referenceD" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="referenceD.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="localized.referenceD" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-referencelookup" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </ReferenceLookup>
+                            <Button>
+                              <Name value="button2" />
+                              <Caption value="Focus Country" />
+                              <Panel.Height value="#" />
+                              <Panel.VerticalAlignment value="Bottom" />
+                              <Panel.Width value="150px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~handler_button2_OnClick" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <Bindings>
+                <Binding SourceProperty="DataItems" Expression="dataRoot.collection1" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-repeater" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Repeater>
+          </Content>
+          <Bindings>
+            <Binding SourceProperty="Caption" Expression="dataRoot.collection1.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-groupbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </GroupBox>
+        <CustomHtml>
+          <Name value="customHtml1" />
+          <HtmlMarkup><![CDATA[<p>One of commonly used <b>accessibility techniques</b> is to <b>set focus to the first field with an error</b>, when some validation errors occured on submit or page validation. To inform the user via screen reader, that we have some validation error, <b>write first some general message to aria-live region</b>. <b>Do not programatically focus the first errorneous input immediately after writing general error message</b>, because screen reader would start reading focused element and general error message would be "eaten". <b>Rather use some extra button/hyperlink that is immediately after Submit button and will navigate user to the first errorneous input</b>.</p>]]></HtmlMarkup>
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-customhtml" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CustomHtml>
+        <Panel>
+          <Name value="button1_parent" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="button1" />
+              <Caption value="Submit" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~handler_button1_OnClick" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <HyperLink>
+              <Name value="hyperLink1" />
+              <Data value="go to the first errorneous input" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~handler_hyperLink1_OnClick" />
+              </OnClick>
+              <Bindings>
+                <Binding SourceProperty="IsVisible" Expression="showHyperlink" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <ErrorSummary identity="errorSummary.18906f81e9c84384b3ed7eec38b2ef24">
+          <Name value="errorSummary1" />
+          <DescriptionCodelist reference="~fcError" />
+          <DescriptionColumn value="_description" />
+          <DescriptionSeparator value=" - " />
+          <errorPointerMap reference="~errorPointerMap" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <OnItemClick>
+            <ActionEvent ReferencedAction="~handler_errorSummary1_OnItemClick" />
+          </OnItemClick>
+          <Bindings>
+            <Binding SourceProperty="isVisible" Expression="isSummaryVisible" />
+            <Binding SourceProperty="root" Expression="dataRoot" />
+            <Binding SourceProperty="serverValidationErrors" Expression="validationErrors" />
+          </Bindings>
+        </ErrorSummary>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <OnCreate>
+        <ActionEvent ReferencedAction="+UiParts.errorSummaryExample.init" />
+      </OnCreate>
+      <Children>
+        <Complex>
+          <Name value="notInErrorSummary" />
+          <Caption value="Not in error summary" />
+          <Children>
+            <Attribute>
+              <Name value="attribute1" />
+              <Caption value="Attribute 1" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="dataRoot" />
+          <Caption value="Data root" />
+          <IsRequired value="True" />
+          <Children>
+            <Attribute>
+              <Name value="a" />
+              <Caption value="Element a" />
+              <IsRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.eleA" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Complex>
+              <Name value="grpX" />
+              <Caption value="Group X" />
+              <IsRequired value="True" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.grpX" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+              <Children>
+                <Attribute>
+                  <Name value="b" />
+                  <Caption value="Element b" />
+                  <IsRequired value="True" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <StrMinLength value="5" />
+                    </AttributeType>
+                  </DeclaredType>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.eleB" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
+                </Attribute>
+              </Children>
+            </Complex>
+            <Collection>
+              <Name value="collection1" />
+              <Caption value="Collection ABC" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.col1" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+              <Children>
+                <Complex>
+                  <Name value="grpY" />
+                  <Caption value="Group Y" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.grpY" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
+                  <Children>
+                    <Attribute>
+                      <Name value="c" />
+                      <Caption value="Element c" />
+                      <DeclaredType>
+                        <AttributeType>
+                          <StrMinLength value="10" />
+                        </AttributeType>
+                      </DeclaredType>
+                      <PropertyLocalizationData.PropertyLocalizations>
+                        <PropertyLocalizationData>
+                          <LocalizedProperties>
+                            <LocalizedProperty>
+                              <Localization reference="+Localizations.eleC" />
+                              <PropertyName value="Caption" />
+                            </LocalizedProperty>
+                          </LocalizedProperties>
+                        </PropertyLocalizationData>
+                      </PropertyLocalizationData.PropertyLocalizations>
+                    </Attribute>
+                  </Children>
+                </Complex>
+                <Complex>
+                  <Name value="grpZ" />
+                  <Caption value="Grp Z" />
+                  <Children>
+                    <Attribute>
+                      <Name value="d" />
+                      <Caption value="Element d" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                  </Children>
+                </Complex>
+                <Reference>
+                  <Name value="referenceD" />
+                  <Caption value="Reference D" />
+                  <IsRequired value="True" />
+                  <Children>
+                    <Attribute>
+                      <Name value="Key" />
+                      <Caption value="Key" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                    <Attribute>
+                      <Name value="Description" />
+                      <Caption value="Description" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                    <Attribute>
+                      <Name value="_description" />
+                      <Caption value="_ description" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                  </Children>
+                </Reference>
+              </Children>
+            </Collection>
+          </Children>
+        </Complex>
+        <Attribute>
+          <Name value="isSummaryVisible" />
+          <Caption value="Is summary visible" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Collection>
+          <Name value="validationErrors" />
+          <Caption value="Validation errors" />
+          <Children>
+            <Complex>
+              <Name value="Code" />
+              <Caption value="Code" />
+              <Children>
+                <Attribute>
+                  <Name value="code" />
+                  <Caption value="Code" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="description" />
+                  <Caption value="Description" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Computed>
+                  <Name value="_description" />
+                  <Caption value="_ description" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA[code.hasValue() ? description.hasValue() ? code + " - " + description : code : description.hasValue() ? description : defaultString() ]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
+              </Children>
+            </Complex>
+            <Attribute>
+              <Name value="Reason" />
+              <Caption value="Reason" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Pointer" />
+              <Caption value="Pointer" />
+              <DeclaredType>
+                <AttributeType>
+                  <StrMaxLength value="200" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Complex>
+              <Name value="ReasonCodelist" />
+              <Caption value="Reason codelist" />
+              <Children>
+                <Attribute>
+                  <Name value="code" />
+                  <Caption value="Code" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="description" />
+                  <Caption value="Description" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Computed>
+                  <Name value="_description" />
+                  <Caption value="_ description" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA[code.hasValue() ? description.hasValue() ? code + " - " + description : code : description.hasValue() ? description : defaultString()]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
+              </Children>
+            </Complex>
+          </Children>
+        </Collection>
+        <Computed>
+          <Name value="showHyperlink" />
+          <Caption value="Show hyperlink" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[isTrue(isToouched) and isFalse(form.isValid())]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </Expression>
+        </Computed>
+        <Attribute>
+          <Name value="isToouched" />
+          <Caption value="Is toouched" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.cError.fillFromJson("[{\"code\":\"001\",\"description\":\"description 001\"},{\"code\":\"002\",\"description\":\"description 002\"}]")
+
+form.dataRoot.grpX.b = "abc"
+var item1 = form.dataRoot.collection1.addItem()
+item1.grpY.c = "xyz"
+
+var item2 = form.dataRoot.collection1.addItem()
+item2.grpY.c = "xyz2"
+
+form.validationErrors.fromJson("[{\"Code\": {\"code\":\"001\",\"description\":\"description 001\"}, \"Reason\": \"Reason 001\", \"Pointer\": \"grpX/b\"}, {\"Code\": {\"code\":\"002\",\"description\":\"description 002\"}, \"Reason\": \"R002\", \"ReasonCodelist\": {\"code\":\"R002\",\"description\":\"R002 description\"}, \"Pointer\": \"collection1[1]\"}]")
+
+form.isSummaryVisible = true
+form.actions.memoryCheck()
+
+form.actions.logErrorPointers()
+
+form.apiobjects.Country.fillFromJson("[{\"Country\":\"AD\",\"Description\":\"Andorra\"}, {\"Country\":\"CN\",\"Description\":\"China\"}, {\"Country\":\"CZ\",\"Description\":\"Czech Republic\"}]")
+
+// example of getPointerMapItem method usage
+var pointer = "grpX/b"
+system.console("Calling getPointerMapItem(" + pointer + ")")
+var item = form.apiobjects.errorPointerMap.getPointerMapItem(pointer)
+
+if(isFalse(item.isEmpty())) then
+	var caption = item.getCaptionString(pointer)
+	var component = item.getComponent()
+	var form = item.getForm()
+	var treeNode = item.getNavigationTreeNode()
+	
+	system.console("Item data:")
+	system.console("caption: " + caption)
+	system.console("component: " + component)
+	system.console("form: " + form)
+	system.console("treeNode: " + treeNode)
+endif
+
+var manualCaption = form.apiobjects.errorPointerMap.getPointerCaption(pointer)
+system.console("Manually translated caption: " + manualCaption)
+
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="memoryCheck" />
+      <IsJavascript value="True" />
+      <Script><![CDATA[this.blob = new MemoryMonitoringBlob();]]></Script>
+      <ActionLangBody IsValid="True" />
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="logErrorPointers" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var path1 = form.apiobjects.errorPointerMap.getPointerCaption("grpX/b")
+system.console(path1)
+
+var path2 = form.apiobjects.errorPointerMap.getPointerCaption("collection1[1]/grpY/c")
+system.console(path2)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_errorSummary1_OnItemClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if length(params.errorSourceForm) > 0 then
+	actions.goToForm(params.errorSourceForm, params.errorSourceComponent, params.pointer, params.navigationTreeNode)
+	else if length(params.errorSourceComponent) > 0 then
+		page.focusControl(params.errorSourceComponent, params.pointer)
+		// or only scroll to component
+		// page.scrollTo(params.errorSourceComponent, params.pointer)
+	endif
+endif
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button1_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.setTouched(true)
+form.isToouched = true
+if not form.isValid() then
+	apiobjects.ariaLiveRegion.appendMessage("Form has some validation errors. Please use following link to go to the first errorneous input element.")
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink1_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.page.focusFirstInvalidInput()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button2_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[page.focusControl("referenceLookup1", params.data.index())]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <ErrorPointerMap identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+      <Name value="errorPointerMap" />
+      <items>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_main$$grpX} &gt; ${L_main$$eleB}" />
+          <errorSourceComponent value="textBox5" />
+          <errorSourceForm value="codelistExample" />
+          <navigationTreeNode value="node1" />
+          <pointerPath value="grpX/b" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_main$$col1} ${IX_collection1} &gt; ${L_main$$grpY} &gt; ${L_main$$eleC}" />
+          <errorSourceComponent value="textBox3" />
+          <navigationTreeNode value="node2" />
+          <pointerPath value="collection1/grpY/c" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_main$$col1} ${IX_collection1}" />
+          <navigationTreeNode value="node3" />
+          <pointerPath value="collection1" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_main$$eleA}" />
+          <errorSourceComponent value="textBox1" />
+          <navigationTreeNode value="node2" />
+          <pointerPath value="a" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_main$$col1} ${IX_collection1} &gt; ${L_main$$referenceD}" />
+          <errorSourceComponent value="referenceLookup1" />
+          <pointerPath value="collection1/referenceD" />
+        </ErrorPointerMapItem>
+      </items>
+    </ErrorPointerMap>
+    <Page identity="Page.f7aa0c151c64407daef13910dcf7b72a">
+      <Name value="page" />
+    </Page>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="cError" />
+      <name value="cError" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="startDate" />
+          <columnRole value="ValidityStart" />
+          <dataType value="date" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="endDate" />
+          <columnRole value="ValidityEnd" />
+          <dataType value="date" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <FilteredCodelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="fcError" />
+      <codelistSource reference="~cError" />
+    </FilteredCodelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="Country" />
+      <name value="Country" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Country" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+  </ApiObjects>
+</Form>

@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="codelistGroupExample" />
+  <Caption value="Codelist group example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="hyperLink1" />
+          <Data value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Button>
+          <Name value="btnLoadCodelistsAsync" />
+          <Caption value="Load codelists async" />
+          <Panel.Height value="#" />
+          <Panel.Width value="250px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~loadCodelistsAsync" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <ReferenceCombo>
+          <Name value="referenceCombo1" />
+          <DisplayMember value="Description" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <ReferenceList reference="~DeclarationType" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="DeclarationType" />
+            <Binding SourceProperty="Caption" Expression="DeclarationType.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="DeclarationType.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-referencecombo" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </ReferenceCombo>
+        <ReferenceCombo>
+          <Name value="referenceCombo2" />
+          <DisplayMember value="Description" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <ReferenceList reference="~KindOfPackages" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="KindOfPackages" />
+            <Binding SourceProperty="Caption" Expression="KindOfPackages.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="KindOfPackages.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-referencecombo" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </ReferenceCombo>
+        <Button>
+          <Name value="btnStartBackgroundLoading" />
+          <Caption value="Start background loading" />
+          <Panel.Height value="#" />
+          <Panel.Width value="250px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~handler_btnStartBackgroundLoading_OnClick" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Button>
+          <Name value="btnFinishBackgroundLoading" />
+          <Caption value="FinishBackgroundLoading" />
+          <Panel.Height value="#" />
+          <Panel.Width value="250px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~handler_btnFinishBackgroundLoading_OnClick" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <GroupBox>
+          <Name value="panel2_parent" />
+          <Caption value="Loading result" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Panel>
+              <Name value="panel2" />
+              <Orientation value="Vertical" />
+              <Children>
+                <TextBox>
+                  <Name value="textBox2" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="loadingResult.isError" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="loadingResult.isError.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="loadingResult.isError.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+                <TextBox>
+                  <Name value="textBox1" />
+                  <CaptionVAlign value="Middle" />
+                  <InputType value="Multiline" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="loadingResult.errorMessage" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="loadingResult.errorMessage.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="loadingResult.errorMessage.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+                <Button>
+                  <Name value="button1" />
+                  <Caption value="Clear" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~handler_button1_OnClick" />
+                  </OnClick>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-groupbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </GroupBox>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Reference>
+          <Name value="DeclarationType" />
+          <Caption value="Declaration type" />
+          <Children>
+            <Attribute>
+              <Name value="Code" />
+              <Caption value="Code" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Description" />
+              <Caption value="Description" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Reference>
+        <Reference>
+          <Name value="KindOfPackages" />
+          <Caption value="Kind of packages" />
+          <Children>
+            <Attribute>
+              <Name value="Code" />
+              <Caption value="Code" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Description" />
+              <Caption value="Description" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Reference>
+        <Complex>
+          <Name value="loadingResult" />
+          <Caption value="Loading result" />
+          <Children>
+            <Attribute>
+              <Name value="isError" />
+              <Caption value="Is error" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="errorMessage" />
+              <Caption value="Error message" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <Actions>
+    <ActionBlock>
+      <Name value="loadCodelistsAsync" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var loadingResult = form.apiobjects.codelistGroup1.loadDataAsync(getDateTime())
+form.loadingResult.isError = loadingResult.isError()
+form.loadingResult.errorMessage = loadingResult.getErrorMessage()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btnStartBackgroundLoading_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[System.console("before startBackgroundLoading")
+codelistGroup1.startBackgroundLoading(getDateTime())
+System.console("after startBackgroundLoading")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btnFinishBackgroundLoading_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[System.console("before finishBackgroundLoadingAsync")
+
+var loadingResult = codelistGroup1.finishBackgroundLoadingAsync()
+form.loadingResult.isError = loadingResult.isError()
+form.loadingResult.errorMessage = loadingResult.getErrorMessage()
+
+System.console("after finishBackgroundLoadingAsync")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_codelistGroup1_OnBackgroundLoadingFinished" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[System.console("OnBackgroundLoadingFinished triggered")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button1_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.loadingResult.clear()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <CodelistGroup identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="codelistGroup1" />
+      <server reference="~nctsMeConnection" />
+      <OnBackgroundLoadingFinished>
+        <ActionEvent ReferencedAction="~handler_codelistGroup1_OnBackgroundLoadingFinished" />
+      </OnBackgroundLoadingFinished>
+      <codelists>
+        <CodelistGroupMember identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <codelist reference="~DeclarationType" />
+        </CodelistGroupMember>
+        <CodelistGroupMember identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <codelist reference="~KindOfPackages" />
+        </CodelistGroupMember>
+        <CodelistGroupMember identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <codelist reference="~codelistThatDoesNotExist" />
+        </CodelistGroupMember>
+      </codelists>
+    </CodelistGroup>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="DeclarationType" />
+      <createDescriptionOnClient value="No" />
+      <name value="DeclarationType" />
+      <server reference="~nctsMeConnection" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="KindOfPackages" />
+      <language value="ME" />
+      <name value="KindOfPackages" />
+      <server reference="~nctsMeConnection" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <ServerConnection identity="ServerConnection.db7b3eef075548988df768923691922c">
+      <Name value="nctsMeConnection" />
+      <rootUrl value="http://vm-me-ndfe2.ad2003.aquasoft.inside/NCTSMEIntFEDevel/RESTService.svc/" />
+    </ServerConnection>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="codelistThatDoesNotExist" />
+      <createDescriptionOnClient value="No" />
+      <name value="codelistThatDoesNotExist" />
+      <server reference="~nctsMeConnection" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Key" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+  </ApiObjects>
+</Form>

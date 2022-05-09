@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="textBoxPlusExample" />
+  <Caption value="Text box plus example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <CustomHtml>
+          <Name value="customHtml1" />
+          <HtmlMarkup><![CDATA[<p>TextBoxPlus is single line editor (input) for entering string values (does not support input type="Password"). Can be used for numbers and strings. Supports numeric and currency value formatting.
+</p>
+<p>
+Formatting is determined by currently selected language or application default language.
+</p>]]></HtmlMarkup>
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-customhtml" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CustomHtml>
+        <ReferenceCombo>
+          <Name value="referenceCombo1" />
+          <CaptionPosition value="Top" />
+          <DisplayMember value="Code" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <ReferenceList reference="~Language" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="referenceCombo1.language" />
+            <Binding SourceProperty="Caption" Expression="referenceCombo1.language.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="referenceCombo1.language.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-referencecombo" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </ReferenceCombo>
+        <GroupBox>
+          <Name value="grpTextBoxPlus1" />
+          <Caption value="TextBoxPlus with currency formatting and currency symbol + enabled binding" />
+          <Panel.Height value="#" />
+          <Panel.Width value="50%" />
+          <Content>
+            <Panel>
+              <Name value="panel2" />
+              <Orientation value="Vertical" />
+              <Children>
+                <CheckBox>
+                  <Name value="checkBox1" />
+                  <Caption value="Enabled" />
+                  <CaptionPosition value="Right" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="textBoxPlus.isEnabled" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="textBoxPlus.isEnabled.isRequired()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-checkbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CheckBox>
+                <Panel>
+                  <Name value="panel21" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <TextBoxPlus identity="TextBoxPlus.f021f91b4dcd481f9313ce94bc0b8a18">
+                      <Name value="textBoxPlus1" />
+                      <Caption value="TextBoxPlus" />
+                      <CaptionPosition value="Top" />
+                      <IsCurrency value="True" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <Bindings>
+                        <Binding SourceProperty="IsEnabled" Expression="textBoxPlus.isEnabled" />
+                        <Binding SourceProperty="Data" Expression="textBoxPlus.value" />
+                        <Binding SourceProperty="CurrencySymbol" Expression="textBoxPlus.currencySymbol" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textboxplus" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBoxPlus>
+                    <TextBox>
+                      <Name value="textBox1" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="textBoxPlus.currencySymbol" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="textBoxPlus.currencySymbol.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="textBoxPlus.currencySymbol.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-groupbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </GroupBox>
+        <GroupBox>
+          <Name value="grpTextBoxPlus2" />
+          <Caption value="TextBoxPlus with amount formatting" />
+          <Panel.Height value="#" />
+          <Panel.Width value="50%" />
+          <Content>
+            <Panel>
+              <Name value="panel3" />
+              <Orientation value="Vertical" />
+              <Children>
+                <Panel>
+                  <Name value="panel31" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <TextBoxPlus identity="TextBoxPlus.f021f91b4dcd481f9313ce94bc0b8a18">
+                      <Name value="textBoxPlus2" />
+                      <Caption value="TextBoxPlus" />
+                      <CaptionPosition value="Top" />
+                      <IsAmount value="True" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <Bindings>
+                        <Binding SourceProperty="IsEnabled" Expression="textBoxPlus.isEnabled" />
+                        <Binding SourceProperty="Data" Expression="textBoxPlus.value" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textboxplus" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBoxPlus>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-groupbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </GroupBox>
+        <GroupBox>
+          <Name value="grpTextBoxPlus3" />
+          <Caption value="TextBoxPlus with amount formatting + min. 2 decimal places" />
+          <Panel.Height value="#" />
+          <Panel.Width value="50%" />
+          <Content>
+            <Panel>
+              <Name value="panel4" />
+              <Orientation value="Vertical" />
+              <Children>
+                <Panel>
+                  <Name value="panel41" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <TextBoxPlus identity="TextBoxPlus.f021f91b4dcd481f9313ce94bc0b8a18">
+                      <Name value="textBoxPlus3" />
+                      <Caption value="TextBoxPlus" />
+                      <CaptionPosition value="Top" />
+                      <IsAmount value="True" />
+                      <MinDecimalPlaces value="2" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <Bindings>
+                        <Binding SourceProperty="IsEnabled" Expression="textBoxPlus.isEnabled" />
+                        <Binding SourceProperty="Data" Expression="textBoxPlus.value" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textboxplus" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBoxPlus>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-groupbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </GroupBox>
+        <GroupBox>
+          <Name value="grpTextBoxPlus4" />
+          <Caption value="TextBoxPlus with no special formatting" />
+          <Panel.Height value="#" />
+          <Panel.Width value="50%" />
+          <Content>
+            <Panel>
+              <Name value="panel5" />
+              <Orientation value="Vertical" />
+              <Children>
+                <Panel>
+                  <Name value="panel51" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <TextBoxPlus identity="TextBoxPlus.f021f91b4dcd481f9313ce94bc0b8a18">
+                      <Name value="textBoxPlus4" />
+                      <Caption value="TextBoxPlus" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <Bindings>
+                        <Binding SourceProperty="IsEnabled" Expression="textBoxPlus.isEnabled" />
+                        <Binding SourceProperty="Data" Expression="textBoxPlus.value" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textboxplus" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBoxPlus>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-groupbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </GroupBox>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <OnCreate>
+        <ActionEvent ReferencedAction="+UiParts.textBoxPlusExample.handler_dataContext1_OnCreate" />
+      </OnCreate>
+      <Children>
+        <Complex>
+          <Name value="textBoxPlus" />
+          <Caption value="Text box plus" />
+          <Children>
+            <Attribute>
+              <Name value="value" />
+              <Caption value="Value" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Decimal" />
+                </AttributeType>
+              </DeclaredType>
+              <OnChange>
+                <ActionEvent ReferencedAction="+UiParts.textBoxPlusExample.handler_value_OnChange" />
+              </OnChange>
+            </Attribute>
+            <Attribute>
+              <Name value="isEnabled" />
+              <Caption value="Textbox enabled" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="currencySymbol" />
+              <Caption value="Currency symbol" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="referenceCombo1" />
+          <Caption value="Reference combo 1" />
+          <Children>
+            <Reference>
+              <Name value="language" />
+              <Caption value="Language" />
+              <OnUserChange>
+                <ActionEvent ReferencedAction="+UiParts.textBoxPlusExample.handler_language_OnUserChange" />
+              </OnUserChange>
+              <Children>
+                <Attribute>
+                  <Name value="Code" />
+                  <Caption value="Code" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+              </Children>
+            </Reference>
+          </Children>
+        </Complex>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <Actions>
+    <ActionBlock>
+      <Name value="handler_value_OnChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console(toString(params.data.value))]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_dataContext1_OnCreate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.textBoxPlus.value = 1499.90
+form.textBoxPlus.isEnabled = true
+form.apiobjects.Language.fillFromJson("[{\"Code\":\"cs\",\"Description\":\"cs\"}, {\"Code\":\"en\",\"Description\":\"en\"}]")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_language_OnUserChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.page.setLang(params.data.language.Code)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <Page identity="Page.f7aa0c151c64407daef13910dcf7b72a">
+      <Name value="page" />
+    </Page>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="Language" />
+      <createDescriptionOnClient value="DescriptionOrKey" />
+      <filterByDate value="False" />
+      <name value="Language" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+  </ApiObjects>
+</Form>

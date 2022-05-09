@@ -1,0 +1,11 @@
+{
+    "complex1": {
+        "str": "ut tellus ligula vel et mauris diam et augue",
+        "integer": 873978131,
+        "bool": true,
+        "date": "2016-08-08T07:54:15Z",
+        "datetime": "2016-03-13T07:54:15Z",
+        "decimal": 0.000900471858633902,
+        "currency": 0.0000569013147879864
+    }
+}

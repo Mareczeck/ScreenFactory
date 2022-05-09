@@ -1,0 +1,69 @@
+{
+    "Category": {
+        "CategoryID": 1148145035,
+        "CategoryName": "lacus aliquam eget"
+    },
+    "DynamicCategory": {
+        "CategoryID": 2019165564,
+        "CategoryName": "tristique"
+    },
+    "categoriesAsJson": "Nunc faucibus urna eros sit vel Nunc tellus tortor Fusce",
+    "Product": {
+        "ProductID": -97380379,
+        "ProductName": "laoreet facilisis",
+        "SupplierID": -2020157573,
+        "CategoryID": -1179089667,
+        "QuantityPerUnit": "magna eleifend hendrerit",
+        "UnitPrice": "Donec pellentesque risus porta vel"
+    },
+    "searchByInt": {
+        "columnName": "molestie eget mi quis sollicitudin",
+        "columnValue": 616335309,
+        "resultColumnName": "velit pellentesque sit Suspendisse porttitor",
+        "result": "porta urna",
+        "performedServerQuery": false,
+        "requeryIfNotFound": true,
+        "jsonString": "dignissim rutrum eros blandit",
+        "errorMessage": "neque eros sagittis",
+        "isFound": false
+    },
+    "searchByString": {
+        "columnName": "ipsum facilisis",
+        "columnValue": "Vivamus velit",
+        "resultColumnName": "dignissim fermentum sapien Sed",
+        "result": "ut enim nec Pellentesque nisl pulvinar sapien",
+        "performedServerQuery": false
+    },
+    "CategoryNameTooltip": "metus himenaeos Nulla blandit sit consectetur",
+    "dynCatReplaceValue": [
+        {
+            "DescriptionParameter": [
+                {
+                    "Code": 959995468,
+                    "Value": "Nulla dapibus quam adipiscing"
+                },
+                {
+                    "Code": -352747995,
+                    "Value": "condimentum"
+                }
+            ],
+            "CodeParameter": "Duis nisl metus"
+        },
+        {
+            "DescriptionParameter": [
+                {
+                    "Code": -1059476758,
+                    "Value": "purus"
+                },
+                {
+                    "Code": -554451881,
+                    "Value": "sit sollicitudin"
+                }
+            ],
+            "CodeParameter": "in diam lobortis"
+        }
+    ],
+    "dynCatReplaceValueJson": "eu risus Donec vitae",
+    "errorSourceComponent": "ante In purus Fusce neque vulputate nisl condimentum interd",
+    "errorPointer": "ipsum ut Donec a nisi non"
+}

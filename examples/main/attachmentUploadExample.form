@@ -1,0 +1,660 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="attachmentUploadExample" />
+  <Caption value="Attachment upload example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Label>
+          <Name value="label2" />
+          <Data value="Attachment upload" />
+          <Heading value="h4" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Panel>
+          <Name value="attachmentUploaderViewer_parent" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="attachmentUploaderViewer_parent1" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+              <Children>
+                <Label>
+                  <Name value="label1" />
+                  <Data value="Edit mode" />
+                  <Heading value="h5" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+                <ReferenceCombo>
+                  <Name value="referenceCombo1" />
+                  <DisplayMember value="_description" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <ReferenceList reference="~declarationKind" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="declarationKind" />
+                    <Binding SourceProperty="Caption" Expression="declarationKind.caption()" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="declarationKind.isRequired()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-referencecombo" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </ReferenceCombo>
+                <CheckBox>
+                  <Name value="checkBox1" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="requiredByCustoms" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="requiredByCustoms.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="requiredByCustoms.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-checkbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CheckBox>
+                <CheckBox>
+                  <Name value="checkBox2" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="cwar" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="cwar.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="cwar.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-checkbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CheckBox>
+                <CheckBox>
+                  <Name value="checkBox3" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="canBeRemoved" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="canBeRemoved.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="canBeRemoved.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-checkbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CheckBox>
+                <TextBox>
+                  <Name value="textBox1" />
+                  <CaptionVAlign value="Middle" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="mrn" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="mrn.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="mrn.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+                <AttachmentUploaderViewer identity="AttachmentUpload.284f714f2c0c4a4b8dfacca37052a11b">
+                  <Name value="attachmentUploaderViewer" />
+                  <documentTypeCodelist reference="~documentType" />
+                  <fileTypeFilter value=".pdf, .png, .jpg, .jpeg, .tiff" />
+                  <modalDialog reference="~modalDialog" />
+                  <notificationsController reference="~notificationsCtrl" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <server reference="~cicConnection" />
+                  <OnAttachmentOpenClick>
+                    <ActionEvent ReferencedAction="~handler_attachmentUploaderViewer_OnAttachmentOpenClick" />
+                  </OnAttachmentOpenClick>
+                  <OnUploadFinished>
+                    <ActionEvent ReferencedAction="~handler_attachmentUploaderViewer_OnUploadFinished" />
+                  </OnUploadFinished>
+                  <Bindings>
+                    <Binding SourceProperty="attachmentsCollection" Expression="form.attachmentUploaderViewer.UploadedAttachments" />
+                    <Binding SourceProperty="newAttachmentsCollection" Expression="form.attachmentUploaderViewer.NewAttachments" />
+                    <Binding SourceProperty="declarationKind" Expression="form.declarationKind" />
+                    <Binding SourceProperty="requiredByCustoms" Expression="form.requiredByCustoms" />
+                    <Binding SourceProperty="cwar" Expression="form.cwar" />
+                    <Binding SourceProperty="mrn" Expression="form.mrn" />
+                    <Binding SourceProperty="canBeRemoved" Expression="form.canBeRemoved" />
+                  </Bindings>
+                </AttachmentUploaderViewer>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="attachmentUploaderViewer1_parent" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Label>
+                  <Name value="label3" />
+                  <Data value="Display mode" />
+                  <Heading value="h5" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+                <AttachmentUploaderViewer identity="AttachmentUpload.284f714f2c0c4a4b8dfacca37052a11b">
+                  <Name value="attachmentUploaderViewer1" />
+                  <allowMultipleFiles value="False" />
+                  <documentTypeCodelist reference="~documentType" />
+                  <isEditMode value="False" />
+                  <modalDialog reference="~modalDialog" />
+                  <notificationsController reference="~notificationsCtrl" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <server reference="~cicConnection" />
+                  <Bindings>
+                    <Binding SourceProperty="attachmentsCollection" Expression="form.attachmentUploaderViewer1.UploadedAttachments" />
+                    <Binding SourceProperty="newAttachmentsCollection" Expression="form.attachmentUploaderViewer1.NewAttachments" />
+                    <Binding SourceProperty="declarationKind" Expression="form.declarationKind" />
+                    <Binding SourceProperty="requiredByCustoms" Expression="form.requiredByCustoms" />
+                  </Bindings>
+                </AttachmentUploaderViewer>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="labeledText1_parent" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="50%" />
+          <Children>
+            <Label>
+              <Name value="label6" />
+              <Data value="Which scenarios SF developer has to take care about:" />
+              <Heading value="h5" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+            <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+              <Name value="labeledText1" />
+              <CaptionLength value="90%" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="attachmentUploaderViewer.WeHaveSelectedAttachmentsThatWereNotUploaded" />
+                <Binding SourceProperty="Caption" Expression="attachmentUploaderViewer.WeHaveSelectedAttachmentsThatWereNotUploaded.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-labeledtext" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </LabeledText>
+            <Label>
+              <Name value="label4" />
+              <Data value="If Yes, before navigation away user has to upload them or remove them." />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+            <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+              <Name value="labeledText2" />
+              <CaptionLength value="90%" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="attachmentUploaderViewer.WeHaveUploadedAttachmentsThatHaveToBeSavedWithDeclaration" />
+                <Binding SourceProperty="Caption" Expression="attachmentUploaderViewer.WeHaveUploadedAttachmentsThatHaveToBeSavedWithDeclaration.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-labeledtext" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </LabeledText>
+            <Label>
+              <Name value="label5" />
+              <Data value="If Yes, before navigation away user has to save then with declaration or remove them." />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+            <CssClassConditional>
+              <ClassName value="info-panel" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <GrowlNotification identity="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc">
+          <Name value="growlNotification1" />
+          <controller reference="~notificationsCtrl" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+        </GrowlNotification>
+        <NotificationPanel identity="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc">
+          <Name value="notificationPanel1" />
+          <controller reference="~notificationsCtrl" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+        </NotificationPanel>
+        <NotificationPanelStatusIcon identity="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc">
+          <Name value="notificationPanelStatusIcon1" />
+          <controller reference="~notificationsCtrl" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+        </NotificationPanelStatusIcon>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Complex>
+          <Name value="attachmentUploaderViewer" />
+          <Caption value="Attachment uploader viewer" />
+          <Children>
+            <Collection>
+              <Name value="NewAttachments" />
+              <Caption value="New attachments" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.NewAttachment" />
+                </Include>
+              </Children>
+            </Collection>
+            <Collection>
+              <Name value="UploadedAttachments" />
+              <Caption value="Uploaded attachments" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.UploadedAttachment" />
+                </Include>
+                <Computed>
+                  <Name value="sequenceNumber" />
+                  <Caption value="Sequence number" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA[this.index()]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Integer" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
+                <Attribute>
+                  <Name value="isNew" />
+                  <Caption value="Is new" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <BaseType value="Bool" />
+                    </AttributeType>
+                  </DeclaredType>
+                </Attribute>
+                <Computed>
+                  <Name value="documentLink" />
+                  <Caption value="Document link" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA["https://vm-w2012-n1.ad2003.aquasoft.inside/MOCK.SFFW.BE/api/getDocument?documentId={" + this.documentId + "}&extraparam=" + (this.extraDocumentLinkParam.hasValue() ? this.extraDocumentLinkParam : "")]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
+                <Attribute>
+                  <Name value="extraDocumentLinkParam" />
+                  <Caption value="Extra document link param" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+              </Children>
+            </Collection>
+            <Computed>
+              <Name value="WeHaveSelectedAttachmentsThatWereNotUploaded" />
+              <Caption value="We have selected attachments that were not uploaded" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[NewAttachments.count() > 0]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="WeHaveUploadedAttachmentsThatHaveToBeSavedWithDeclaration" />
+              <Caption value="We have uploaded attachments that have to be saved with declaration" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[UploadedAttachments.count(isTrue(Current.isNew)) > 0]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="attachmentUploaderViewer1" />
+          <Caption value="Attachment uploader viewer 1" />
+          <Children>
+            <Collection>
+              <Name value="NewAttachments" />
+              <Caption value="New attachments" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.NewAttachment" />
+                </Include>
+              </Children>
+            </Collection>
+            <Collection>
+              <Name value="UploadedAttachments" />
+              <Caption value="Uploaded attachments" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.UploadedAttachment" />
+                </Include>
+                <Computed>
+                  <Name value="sequenceNumber" />
+                  <Caption value="Sequence number" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA[this.index()]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Integer" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
+                <Attribute>
+                  <Name value="isNew" />
+                  <Caption value="Is new" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <BaseType value="Bool" />
+                    </AttributeType>
+                  </DeclaredType>
+                </Attribute>
+                <Computed>
+                  <Name value="documentLink" />
+                  <Caption value="Document link" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA["https://vm-w2012-n1.ad2003.aquasoft.inside/MOCK.SFFW.BE/api/getDocument?documentId={" + this.documentId + "}"]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
+              </Children>
+            </Collection>
+          </Children>
+        </Complex>
+        <Reference>
+          <Name value="declarationKind" />
+          <Caption value="Declaration kind" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.DeclarationKind" />
+            </Include>
+          </Children>
+        </Reference>
+        <Attribute>
+          <Name value="requiredByCustoms" />
+          <Caption value="Required by customs" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="cwar" />
+          <Caption value="Cwar" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="mrn" />
+          <Caption value="MRN for documents" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+          <Validators>
+            <Validator Name="regex">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{13}[0-9F]$") : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+        <Attribute>
+          <Name value="canBeRemoved" />
+          <Caption value="Can be removed" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnActivate>
+    <ActionEvent ReferencedAction="~onActivate" />
+  </OnActivate>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~onCreate" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="onCreate" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.documentType.fillFromJson("[{ \"Key\": \"1\", \"Description\": \"Invoice\" }, { \"Key\": \"2\", \"Description\": \"Power of attorney\" }]")
+
+form.apiobjects.declarationKind.fillFromJson("[{ \"Key\": \"1\", \"Description\": \"Kind 1\" }, { \"Key\": \"2\", \"Description\": \"Kind 2\" }]")
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="onActivate" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.attachmentUploaderViewer.UploadedAttachments.fromJson("[{\"fileName\":\"SINGER.pdf\",\"description\":\"SINGER\",\"documentType\":{ \"Key\": \"1\", \"Description\": \"Invoice\" }, \"documentId\":\"4dc6bec6-d1e6-4a88-be2c-1047b6a422da\"}]")
+
+form.attachmentUploaderViewer1.UploadedAttachments.fromJson("[{\"fileName\":\"SINGER.pdf\",\"description\":\"SINGER\",\"documentType\":{ \"Key\": \"1\", \"Description\": \"Invoice\" }, \"documentId\":\"4dc6bec6-d1e6-4a88-be2c-1047b6a422da\"}]")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_attachmentUploaderViewer_OnAttachmentOpenClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// call this as one of the first methods as it has to be in direct response to user action
+var tab = form.apiobjects.page.openNewTab()
+
+var documentId = params.documentId
+// .. do something time consuming like getting the parameters from the server
+var response = apiobjects.northwind.getAsync("Categories?$select=CategoryID,CategoryName")
+
+// navigate the tab to the url you want
+if not response.isError() then
+	if form.attachmentUploaderViewer.UploadedAttachments.exists(Current.documentId = documentId) then
+		var item = form.attachmentUploaderViewer.UploadedAttachments.selectFirst(Current.documentId = documentId)
+		item.extraDocumentLinkParam = toRawString(getDateTime())
+		tab.setUrl(item.documentLink)
+	endif
+else
+	form.apiobjects.notificationsCtrl.addError(response.getErrorMessage())
+	tab.close()
+endif
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_attachmentUploaderViewer_OnUploadFinished" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("some file(s) have(s) been uploaded")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="documentType" />
+      <filterByDate value="False" />
+      <name value="DocumentType" />
+      <server reference="~cicConnection" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Key" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <NotificationsCtrl identity="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc">
+      <Name value="notificationsCtrl" />
+    </NotificationsCtrl>
+    <ServerConnection identity="ServerConnection.db7b3eef075548988df768923691922c">
+      <Name value="cicConnection" />
+      <rootUrl value="http://w2012.ad2003.aquasoft.inside/MOCK.SFFW.BE/api/" />
+    </ServerConnection>
+    <ModalDialog identity="ModalDialog.94570be80952477cb3e636ab95b79441">
+      <Name value="modalDialog" />
+    </ModalDialog>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="declarationKind" />
+      <filterByDate value="False" />
+      <name value="DeclarationKind" />
+      <server reference="~cicConnection" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Key" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Page identity="Page.f7aa0c151c64407daef13910dcf7b72a">
+      <Name value="page" />
+    </Page>
+  </ApiObjects>
+</Form>

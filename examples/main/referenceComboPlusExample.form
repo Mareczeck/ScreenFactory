@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="referenceComboPlusExample" />
+  <Caption value="Reference combo plus example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <CustomHtml>
+          <Name value="customHtml1" />
+          <HtmlMarkup><![CDATA[<p>Reference combo with extended functionality:
+<ul>
+<li>possibility of "preferedTop" options sorting -  reference list items with IsPrefered=true are always first</li>
+<li>possibility of creating group "headings" for option groups created by preferedTop sorting</li>
+</ul>
+</p>]]></HtmlMarkup>
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-customhtml" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CustomHtml>
+        <CheckBox>
+          <Name value="checkBox11" />
+          <CaptionPosition value="Right" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="globals.accessibilitySettings.accessibleDisabledEditors" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="globals.accessibilitySettings.accessibleDisabledEditors.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="globals.accessibilitySettings.accessibleDisabledEditors.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-checkbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CheckBox>
+        <CheckBox>
+          <Name value="checkBox1" />
+          <CaptionPosition value="Right" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="isEnabled" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="isEnabled.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="isEnabled.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-checkbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CheckBox>
+        <Panel>
+          <Name value="referenceComboPlus1_parent" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <ReferenceComboPlus identity="ReferenceComboPlus.f226cb7867c34aa5acaae01850cbf771">
+              <Name value="referenceComboPlus1" />
+              <Caption value="Product (default server sort)" />
+              <CaptionPosition value="Top" />
+              <DisplayMember value="_description" />
+              <Panel.Height value="#" />
+              <Panel.Width value="300px" />
+              <ReferenceList reference="~Products" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="Product" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="Product.isRequired()" />
+                <Binding SourceProperty="IsEnabled" Expression="isEnabled" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-referencecomboplus" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </ReferenceComboPlus>
+            <ReferenceComboPlus identity="ReferenceComboPlus.f226cb7867c34aa5acaae01850cbf771">
+              <Name value="referenceComboPlus2" />
+              <Caption value="Product (preferedTop sort w/ group headings)" />
+              <CaptionPosition value="Top" />
+              <DisplayMember value="_description" />
+              <Panel.Height value="#" />
+              <Panel.Width value="300px" />
+              <ReferenceList reference="~ProductsWithPrefered" />
+              <ResultSorting value="preferedTop" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="Product" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="Product.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-referencecomboplus" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </ReferenceComboPlus>
+            <ReferenceComboPlus identity="ReferenceComboPlus.f226cb7867c34aa5acaae01850cbf771">
+              <Name value="referenceComboPlus3" />
+              <Caption value="Product (preferedTop sort w/o group headings)" />
+              <CaptionPosition value="Top" />
+              <CreateGroupHeadings value="False" />
+              <DisplayMember value="_description" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="300px" />
+              <ReferenceList reference="~ProductsWithPrefered" />
+              <ResultSorting value="preferedTop" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="Product" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="Product.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-referencecomboplus" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </ReferenceComboPlus>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <OnCreate>
+        <ActionEvent ReferencedAction="+UiParts.referenceComboPlusExample.init" />
+      </OnCreate>
+      <Children>
+        <Reference>
+          <Name value="Product" />
+          <Caption value="Product" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.NorthwindProduct" />
+            </Include>
+            <Attribute>
+              <Name value="_description" />
+              <Caption value="_ description" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="IsPrefered" />
+              <Caption value="Is prefered" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Reference>
+        <Attribute>
+          <Name value="isEnabled" />
+          <Caption value="Is enabled" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.Products.loadDataAsync(getDateTime())
+form.apiobjects.ProductsWithPrefered.fillFromJson("[{\"ProductID\":1,\"ProductName\":\"Chai\",\"CategoryID\":1,\"ReorderLevel\":10,\"IsPrefered\":false},{\"ProductID\":2,\"ProductName\":\"Chang\",\"CategoryID\":1,\"ReorderLevel\":25,\"IsPrefered\":false},{\"ProductID\":3,\"ProductName\":\"Aniseed Syrup\",\"CategoryID\":2,\"ReorderLevel\":25,\"IsPrefered\":false},{\"ProductID\":4,\"ProductName\":\"Chef Anton's Cajun Seasoning\",\"CategoryID\":2,\"ReorderLevel\":0,\"IsPrefered\":false},{\"ProductID\":5,\"ProductName\":\"Chef Anton's Gumbo Mix\",\"CategoryID\":2,\"ReorderLevel\":0,\"IsPrefered\":true},{\"ProductID\":6,\"ProductName\":\"Grandma's Boysenberry Spread\",\"CategoryID\":2,\"ReorderLevel\":25,\"IsPrefered\":false},{\"ProductID\":7,\"ProductName\":\"Uncle Bob's Organic Dried Pears\",\"CategoryID\":7,\"ReorderLevel\":10,\"IsPrefered\":false},{\"ProductID\":8,\"ProductName\":\"Northwoods Cranberry Sauce\",\"CategoryID\":2,\"ReorderLevel\":0,\"IsPrefered\":true},{\"ProductID\":9,\"ProductName\":\"Mishi Kobe Niku\",\"CategoryID\":6,\"ReorderLevel\":0,\"IsPrefered\":false},{\"ProductID\":10,\"ProductName\":\"Ikura\",\"CategoryID\":8,\"ReorderLevel\":0,\"IsPrefered\":false},{\"ProductID\":11,\"ProductName\":\"Queso Cabrales\",\"CategoryID\":4,\"ReorderLevel\":30,\"IsPrefered\":false},{\"ProductID\":12,\"ProductName\":\"Queso Manchego La Pastora\",\"CategoryID\":4,\"ReorderLevel\":0,\"IsPrefered\":false},{\"ProductID\":13,\"ProductName\":\"Konbu\",\"CategoryID\":8,\"ReorderLevel\":5,\"IsPrefered\":false},{\"ProductID\":14,\"ProductName\":\"Tofu\",\"CategoryID\":7,\"ReorderLevel\":0,\"IsPrefered\":false},{\"ProductID\":15,\"ProductName\":\"Genen Shouyu\",\"CategoryID\":2,\"ReorderLevel\":5,\"IsPrefered\":true},{\"ProductID\":16,\"ProductName\":\"Pavlova\",\"CategoryID\":3,\"ReorderLevel\":10,\"IsPrefered\":false},{\"ProductID\":17,\"ProductName\":\"Alice Mutton\",\"CategoryID\":6,\"ReorderLevel\":0,\"IsPrefered\":false},{\"ProductID\":18,\"ProductName\":\"Carnarvon Tigers\",\"CategoryID\":8,\"ReorderLevel\":0,\"IsPrefered\":true},{\"ProductID\":19,\"ProductName\":\"Teatime Chocolate Biscuits\",\"CategoryID\":3,\"ReorderLevel\":5,\"IsPrefered\":false},{\"ProductID\":20,\"ProductName\":\"Sir Rodney's Marmalade\",\"CategoryID\":3,\"ReorderLevel\":0,\"IsPrefered\":true}]
+")
+form.isEnabled = true]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="Products" />
+      <name value="Products" />
+      <server reference="+GlobalApiObjects.northwind" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ProductID" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ProductName" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="CategoryID" />
+          <dataType value="integer" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ReorderLevel" />
+          <dataType value="integer" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="ProductsWithPrefered" />
+      <name value="ProductsWithPrefered" />
+      <server reference="+GlobalApiObjects.northwind" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ProductID" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ProductName" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="CategoryID" />
+          <dataType value="integer" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ReorderLevel" />
+          <dataType value="integer" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="IsPrefered" />
+          <dataType value="boolean" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+  </ApiObjects>
+</Form>

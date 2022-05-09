@@ -1,0 +1,1339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="collectionDataProvider2Example" />
+  <Caption value="collectionDataProvider2Example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="1000px" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Data value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Panel>
+          <Name value="panel3" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <TextBox>
+              <Name value="textBox3" />
+              <CaptionPosition value="Hide" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="lang" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="lang.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="lang.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <Button>
+              <Name value="btnSetLang" />
+              <Caption value="Set lang" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~setLang" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Button>
+              <Name value="FlipCollections" />
+              <Caption value="Flip collections" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~handler_FlipCollections_OnClick" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Label>
+              <Name value="label9" />
+              <Data value="&lt;-- tady lze za běhu prohodit kolekce" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel5" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Label>
+              <Name value="label1" />
+              <Data value="Clicked actionbutton name:" />
+              <Panel.Height value="#" />
+              <Panel.Width value="250px" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+            <Label>
+              <Name value="clickedBtn" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="clickedActionButtonName" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <viewSettings identity="ListGridViewSettings.13c6ca769c344553aaa727b591042920">
+          <Name value="viewSettings1" />
+          <controller reference="~listCtrl" />
+          <iconDownClass value="fa fa-arrow-down" />
+          <iconLockClass value="fa fa-lock" />
+          <iconTrashClass value="fa fa-trash" />
+          <iconUpClass value="fa fa-arrow-up" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+        </viewSettings>
+        <Panel>
+          <Name value="panel4" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <ListGrid2 identity="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb">
+              <Name value="listGrid2" />
+              <allowFilterClearIcon value="True" />
+              <allowSelectAll value="True" />
+              <controller reference="~listCtrl" />
+              <isMultiselect value="True" />
+              <listName value="Orders" />
+              <pagingTemplate value="$first|$previous|$next|$last|$refresh|$editableCurrentPage|$records|$pageSize|$viewSettings|$clearFilters" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <OnButtonClicked>
+                <ActionEvent ReferencedAction="~handler_listGrid2_OnButtonClicked" />
+              </OnButtonClicked>
+              <OnRowClicked>
+                <ActionEvent ReferencedAction="~rowClickedAction" />
+              </OnRowClicked>
+              <actionButtons>
+                <gridActionButton identity="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb">
+                  <ButtonCaption value="Test button" />
+                  <ButtonClass value="fa fa-arrow-right" />
+                  <ButtonName value="btnTest" />
+                  <IsEnabled value="btn1Enabled" />
+                  <IsVisible value="btn1Visible" />
+                  <Bindings>
+                    <Binding SourceProperty="TitleText" Expression="localized.tooltip1" />
+                  </Bindings>
+                </gridActionButton>
+                <gridActionButton identity="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb">
+                  <ButtonCaption value="Open file" />
+                  <ButtonName value="btnFile" />
+                  <ButtonType value="link" />
+                  <IsEnabled value="btn2Enabled" />
+                  <IsVisible value="btn2Visible" />
+                  <LinkHref value="btn2Href" />
+                  <LinkTarget value="btn2Target" />
+                </gridActionButton>
+              </actionButtons>
+              <Bindings>
+                <Binding SourceProperty="lastClickedRow" Expression="reference1" />
+                <Binding SourceProperty="showCheckboxes" Expression="ShowCheckboxes" />
+                <Binding SourceProperty="lastActionButtonClickedName" Expression="clickedActionButtonName" />
+                <Binding SourceProperty="dataCollection" Expression="dataCollection" />
+                <Binding SourceProperty="savedState" Expression="globals.collectionDataProvider2State" />
+                <Binding SourceProperty="savedColumns" Expression="globals.collectionDataProvider2Columns" />
+              </Bindings>
+              <columns>
+                <gridColumn identity="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb">
+                  <Name value="gridColumn1" />
+                  <ColumnName value="Status" />
+                  <DataType value="string" />
+                  <DisableRemove value="True" />
+                  <IsHtml value="True" />
+                  <UnderlyingColumnName value="CustomerID" />
+                  <Bindings>
+                    <Binding SourceProperty="Caption" Expression="form.localizedColumn" />
+                  </Bindings>
+                </gridColumn>
+                <gridColumn identity="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb">
+                  <Name value="gridColumn2" />
+                  <Caption value="Ship Via" />
+                  <ColumnName value="ShipVia" />
+                  <ColumnWidth value="10%" />
+                  <DataType value="integer" />
+                  <IsHtml value="True" />
+                  <filterOptions>
+                    <filterOption identity="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb">
+                      <value value="1" />
+                      <Bindings>
+                        <Binding SourceProperty="text" Expression="localized.foShipVia1" />
+                      </Bindings>
+                    </filterOption>
+                    <filterOption identity="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb">
+                      <value value="2" />
+                      <Bindings>
+                        <Binding SourceProperty="text" Expression="localized.foShipVia2" />
+                      </Bindings>
+                    </filterOption>
+                  </filterOptions>
+                </gridColumn>
+                <gridColumn identity="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb">
+                  <Name value="gridColumn3" />
+                  <ColumnName value="Freight" />
+                  <ColumnWidth value="150px" />
+                  <DataType value="decimal" />
+                  <EnableFilter value="False" />
+                  <Bindings>
+                    <Binding SourceProperty="Caption" Expression="localized.Freight" />
+                  </Bindings>
+                </gridColumn>
+                <gridColumn identity="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb">
+                  <Name value="gridColumn4" />
+                  <Caption value="Ship Country" />
+                  <ColumnName value="ShipCountry" />
+                  <DataType value="string" />
+                  <filterOptions>
+                    <filterOption identity="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb">
+                      <text value="France" />
+                      <value value="France" />
+                    </filterOption>
+                    <filterOption identity="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb">
+                      <text value="Austria" />
+                      <value value="Austria" />
+                    </filterOption>
+                  </filterOptions>
+                </gridColumn>
+                <gridColumn identity="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb">
+                  <Name value="gridColumn5" />
+                  <Caption value="Order Date" />
+                  <ColumnName value="OrderDate" />
+                  <DataType value="date" />
+                </gridColumn>
+                <gridColumn identity="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb">
+                  <Name value="gridColumn6" />
+                  <Caption value="Has checkbox" />
+                  <ColumnName value="HasCheckbox" />
+                  <DataType value="bool" />
+                </gridColumn>
+              </columns>
+            </ListGrid2>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <CheckBox>
+          <Name value="checkBox1" />
+          <CaptionPosition value="Top" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="ShowCheckboxes" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="ShowCheckboxes.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="ShowCheckboxes.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-checkbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CheckBox>
+        <Panel>
+          <Name value="panel6" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Label>
+              <Name value="label6" />
+              <Data value="Selected rows" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+            <Label>
+              <Name value="label7" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="reference1.CustomerID" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+            <Label>
+              <Name value="label2" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="reference1.ShipVia" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+            <Label>
+              <Name value="label3" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="reference1.Freight" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+            <Label>
+              <Name value="label5" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="reference1.OrderDate" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+            <Label>
+              <Name value="label4" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="reference1._idxStr" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel2" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <TextBox>
+              <Name value="textBox1" />
+              <CaptionPosition value="Top" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="recordsCount" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="recordsCount.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="recordsCount.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <TextBox>
+              <Name value="textBox2" />
+              <CaptionPosition value="Top" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="displayedRecords" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="displayedRecords.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="displayedRecords.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <Button>
+              <Name value="btnRefreshCounts" />
+              <Caption value="Get actual" />
+              <Panel.Height value="#" />
+              <Panel.VerticalAlignment value="Bottom" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~getCounts" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <TextBox>
+          <Name value="textBox4" />
+          <CaptionVAlign value="Middle" />
+          <InputType value="Multiline" />
+          <IsEnabled value="False" />
+          <Panel.Height value="#" />
+          <Panel.Width value="50%" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="globals.collectionDataProvider2State" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="globals.collectionDataProvider2State.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="globals.collectionDataProvider2State.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <TextBox>
+          <Name value="textBox5" />
+          <CaptionVAlign value="Middle" />
+          <InputType value="Multiline" />
+          <IsEnabled value="False" />
+          <Panel.Height value="#" />
+          <Panel.Width value="50%" />
+          <Rows value="2" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="globals.collectionDataProvider2Columns" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="globals.collectionDataProvider2Columns.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="globals.collectionDataProvider2Columns.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <Panel>
+          <Name value="panel7" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <GroupBox>
+              <Name value="groupBox1" />
+              <Caption value="Listgrid uvnitř pagingrepeaterctrl - prohazují kolekce za běhu, ale jsou to kolekce vnořené" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Content>
+                <Panel>
+                  <Name value="panel8" />
+                  <Orientation value="Vertical" />
+                  <Children>
+                    <PagingRepeaterCtrl identity="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4">
+                      <Name value="pagingRepeaterCtrl1" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="complex1.pagerCollectionSource" />
+                        <Binding SourceProperty="Index" Expression="collectionIndex" />
+                      </Bindings>
+                    </PagingRepeaterCtrl>
+                    <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
+                      <Name value="pagingRepeater1" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Content>
+                        <Panel>
+                          <Name value="panel10" />
+                          <Orientation value="Vertical" />
+                          <Children>
+                            <Label>
+                              <Name value="label8" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="150px" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="collectionName" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-label" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Label>
+                            <ListGrid2 identity="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb">
+                              <Name value="listGrid21" />
+                              <controller reference="~pagerListCtrl" />
+                              <pagingTemplate value="$first|$previous|$next|$last|$refresh|$editableCurrentPage|$records|$pageSize" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="savedColumns" Expression="" />
+                                <Binding SourceProperty="savedState" Expression="" />
+                                <Binding SourceProperty="dataCollection" Expression="form.pagerCollection" />
+                              </Bindings>
+                              <columns>
+                                <gridColumn identity="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb">
+                                  <Name value="gridColumn7" />
+                                  <Caption value="Item N.o" />
+                                  <ColumnName value="attribute1" />
+                                  <DataType value="string" />
+                                </gridColumn>
+                              </columns>
+                            </ListGrid2>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Content>
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="complex1.pagerCollectionSource" />
+                        <Binding SourceProperty="Index" Expression="collectionIndex" />
+                      </Bindings>
+                    </PagingRepeater>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-groupbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </GroupBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <OnCreate>
+        <ActionEvent ReferencedAction="+UiParts.collectionDataProvider2Example.handler_dataContext1_OnCreate" />
+      </OnCreate>
+      <Children>
+        <Collection>
+          <Name value="sourceDataCollection" />
+          <Caption value="Source data collection" />
+          <Children>
+            <Attribute>
+              <Name value="CustomerID" />
+              <Caption value="Customer ID" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="ShipVia" />
+              <Caption value="Ship via" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Freight" />
+              <Caption value="Freight" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="ShipCountry" />
+              <Caption value="Ship country" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="OrderDate" />
+              <Caption value="Order date" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="DateTime" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="HasCheckbox" />
+              <Caption value="Has checkbox" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="_idxStr" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[toString(this.index())]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Collection>
+        <Collection>
+          <Name value="dataCollection" />
+          <Caption value="Data collection" />
+          <DataContextParameter.IsInput value="True" />
+          <ItemCaption value="{" />
+          <Children>
+            <Attribute>
+              <Name value="CustomerID" />
+              <Caption value="Customer ID" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="ShipVia" />
+              <Caption value="Ship via" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Freight" />
+              <Caption value="Freight" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="ShipCountry" />
+              <Caption value="Ship country" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="computed1" />
+              <Caption value="Computed 1" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="computed2" />
+              <Caption value="Computed 2" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="computed3" />
+              <Caption value="Computed 3" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Attribute>
+              <Name value="_selected" />
+              <Caption value="_ selected" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="Status" />
+              <Caption value="Status" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[isTrueOrDefault(this.CustomerID <> "VICTE") ? toString(this.CustomerID) : "<span class=\"fa fa-exclamation-triangle\" style=\"margin-right: 5px;\"></span>" + toString(this.CustomerID)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="btn1Enabled" />
+              <Caption value="Btn 1 enabled" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="btn1Visible" />
+              <Caption value="Btn 1 visible" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Attribute>
+              <Name value="OrderDate" />
+              <Caption value="Order date" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="DateTime" />
+                  <TimePrecision value="Minutes" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="HasCheckbox" />
+              <Caption value="Has checkbox" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="_idxStr" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[toString(this.index())]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="btn2Enabled" />
+              <Caption value="Btn 2 enabled" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="btn2Visible" />
+              <Caption value="Btn 2 visible" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="btn2Href" />
+              <Caption value="Btn 2 href" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA["https://www.seznam.cz/" + toString(ShipVia)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="btn2Target" />
+              <Caption value="Btn 2 target" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA["_new"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="_checkbox" />
+              <Caption value="_ checkbox" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[this.HasCheckbox.hasValue() ? this.HasCheckbox : false]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Collection>
+        <Attribute>
+          <Name value="clickedActionButtonName" />
+          <Caption value="Clicked action button name" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Reference>
+          <Name value="reference1" />
+          <Caption value="Reference 1" />
+          <Children>
+            <Attribute>
+              <Name value="CustomerID" />
+              <Caption value="Customer ID" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="ShipVia" />
+              <Caption value="Ship via" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Freight" />
+              <Caption value="Freight" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="_idxStr" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="OrderDate" />
+              <Caption value="Order date" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="DateTime" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Reference>
+        <Attribute>
+          <Name value="ShowCheckboxes" />
+          <Caption value="Show checkboxes" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="recordsCount" />
+          <Caption value="Records count" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="displayedRecords" />
+          <Caption value="Page size" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="localizedColumn" />
+          <Caption value="Localized column" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="recordsCountOData" />
+          <Caption value="Records count O data" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="lang" />
+          <Caption value="Lang" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Collection>
+          <Name value="pagerCollection" />
+          <Caption value="Pager collection" />
+          <Children>
+            <Attribute>
+              <Name value="attribute1" />
+              <Caption value="Attribute 1" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Collection>
+        <Attribute>
+          <Name value="isCollection1Active" />
+          <Caption value="Is collection 1 active" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="collectionIndex" />
+          <Caption value="Collection index" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+          <OnChange>
+            <ActionEvent ReferencedAction="+UiParts.collectionDataProvider2Example.handler_collectionIndex_OnChange" />
+          </OnChange>
+        </Attribute>
+        <Complex>
+          <Name value="complex1" />
+          <Caption value="Complex 1" />
+          <Children>
+            <Collection>
+              <Name value="collection2" />
+              <Caption value="Collection 2" />
+              <Children>
+                <Attribute>
+                  <Name value="CustomerID" />
+                  <Caption value="Customer ID" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="ShipVia" />
+                  <Caption value="Ship via" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="Freight" />
+                  <Caption value="Freight" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="ShipCountry" />
+                  <Caption value="Ship country" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="OrderDate" />
+                  <Caption value="Order date" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <BaseType value="DateTime" />
+                    </AttributeType>
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="HasCheckbox" />
+                  <Caption value="Has checkbox" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <BaseType value="Bool" />
+                    </AttributeType>
+                  </DeclaredType>
+                </Attribute>
+                <Computed>
+                  <Name value="_idxStr" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA[toString(this.index())]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
+              </Children>
+            </Collection>
+            <Collection>
+              <Name value="collection1" />
+              <Caption value="Collection 1" />
+              <Children>
+                <Attribute>
+                  <Name value="CustomerID" />
+                  <Caption value="Customer ID" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="ShipVia" />
+                  <Caption value="Ship via" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="Freight" />
+                  <Caption value="Freight" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="ShipCountry" />
+                  <Caption value="Ship country" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="OrderDate" />
+                  <Caption value="Order date" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <BaseType value="DateTime" />
+                    </AttributeType>
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="HasCheckbox" />
+                  <Caption value="Has checkbox" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <BaseType value="Bool" />
+                    </AttributeType>
+                  </DeclaredType>
+                </Attribute>
+                <Computed>
+                  <Name value="_idxStr" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA[toString(this.index())]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
+              </Children>
+            </Collection>
+            <Collection>
+              <Name value="pagerCollectionSource" />
+              <Caption value="Pager collection source" />
+              <Children>
+                <Attribute>
+                  <Name value="collectionName" />
+                  <Caption value="Collection name" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Collection>
+                  <Name value="innerCollection" />
+                  <Caption value="Inner collection" />
+                  <Children>
+                    <Attribute>
+                      <Name value="attribute1" />
+                      <Caption value="Attribute 1" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                  </Children>
+                </Collection>
+              </Children>
+            </Collection>
+          </Children>
+        </Complex>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnActivate>
+    <ActionEvent ReferencedAction="~InitializeGrid" />
+  </OnActivate>
+  <Actions>
+    <ActionBlock>
+      <Name value="InitializeGrid" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[
+pagerListCtrl.setPageSize(5)
+
+form.isCollection1Active = true
+form.sourceDataCollection.fromJson(form.complex1.collection1.toJson())
+
+if form.sourceDataCollection.count() > 0 then
+	var first = form.sourceDataCollection.selectFirst()
+	first.OrderDate = getDateTime()
+endif
+
+form.localizedColumn = "Muj sloupec"
+
+if globals.collectionDataProvider2State = defaultString() then
+	// set defaults
+	form.apiobjects.listCtrl.setSorting("OrderDate:desc")
+
+	var dt = toDate("1996-01-01", getdate())
+	form.apiobjects.listCtrl.setDateRangeFilter("OrderDate", dt, defaultDate())
+
+	form.apiobjects.listCtrl.setTextFilter("ShipCountry", "France,Austria")
+	form.apiobjects.listCtrl.focusFirstRecord()
+endif
+
+form.apiobjects.listCtrl.setReady(true)
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="rowClickedAction" />
+      <IsJavascript value="True" />
+      <Script><![CDATA[console.log(this.reference1.CustomerID.$value());]]></Script>
+      <ActionLangBody>
+        <Script><![CDATA[alert("Row clicked")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="getCounts" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.recordsCount = form.apiobjects.listCtrl.getRowCount()
+form.displayedRecords = form.apiobjects.listCtrl.getPageSize()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setLang" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.lang.hasValue() then
+	form.apiobjects.page.setLang(form.lang)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_listCtrl_OnDataRowsChanged" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var cnt = form.apiobjects.listCtrl.getRowCount()
+system.console("Rows loaded: " + toString(cnt) + " rows")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_listGrid2_OnButtonClicked" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console(form.clickedActionButtonName + " clicked!")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_listCtrl_OnColumnsChanged" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("Visible columns: " + listCtrl.getVisibleColumns())
+listCtrl.clearInvisibleColumnsFilters()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_FlipCollections_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.isCollection1Active = form.isCollection1Active ? false : true
+
+listCtrl.setReady(false)
+
+var activateCollection = form.isCollection1Active ? "complex1.collection1" : "complex1.collection2"
+collectionDataProvider2.setCollection(activateCollection)
+
+
+listCtrl.setReady(true)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_collectionIndex_OnChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if(form.collectionIndex.hasValue() and (form.collectionIndex > 0)) then
+	pagerListCtrl.setReady(false)
+	pagerCollectionProvider.setCollection("complex1.pagerCollectionSource[" + toString(form.collectionIndex) + "].innerCollection")
+	pagerListCtrl.setReady(true)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_dataContext1_OnCreate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.collection1.fromJson("[{\"CustomerID\":\"VINET\",\"ShipVia\":3,\"Freight\":\"32.3800\",\"ShipCountry\":\"France\",\"OrderDate\":\"2019-03-13T11:24:29.412\",\"HasCheckbox\":true,\"_idxStr\":\"1\"},{\"CustomerID\":\"TOMSP\",\"ShipVia\":1,\"Freight\":\"11.6100\",\"ShipCountry\":\"Germany\",\"OrderDate\":\"1996-07-05T00:00:00.000\",\"_idxStr\":\"2\"},{\"CustomerID\":\"HANAR\",\"ShipVia\":2,\"Freight\":\"65.8300\",\"ShipCountry\":\"Brazil\",\"OrderDate\":\"1996-07-08T00:00:00.000\",\"HasCheckbox\":true,\"_idxStr\":\"3\"},{\"CustomerID\":\"VICTE\",\"ShipVia\":1,\"Freight\":\"41.3400\",\"ShipCountry\":\"France\",\"OrderDate\":\"1996-07-08T00:00:00.000\",\"_idxStr\":\"4\"},{\"CustomerID\":\"SUPRD\",\"ShipVia\":2,\"Freight\":\"51.3000\",\"ShipCountry\":\"Belgium\",\"OrderDate\":\"1996-07-09T00:00:00.000\",\"HasCheckbox\":true,\"_idxStr\":\"5\"},{\"CustomerID\":\"HANAR\",\"ShipVia\":2,\"Freight\":\"58.1700\",\"ShipCountry\":\"Brazil\",\"OrderDate\":\"1996-07-10T00:00:00.000\",\"_idxStr\":\"6\"},{\"CustomerID\":\"CHOPS\",\"ShipVia\":2,\"Freight\":\"22.9800\",\"ShipCountry\":\"Switzerland\",\"OrderDate\":\"1996-07-11T00:00:00.000\",\"HasCheckbox\":true,\"_idxStr\":\"7\"},{\"CustomerID\":\"RICSU\",\"ShipVia\":3,\"Freight\":\"148.3300\",\"ShipCountry\":\"Switzerland\",\"OrderDate\":\"1996-07-12T00:00:00.000\",\"_idxStr\":\"8\"},{\"CustomerID\":\"WELLI\",\"ShipVia\":2,\"Freight\":\"13.9700\",\"ShipCountry\":\"Brazil\",\"OrderDate\":\"1996-07-15T00:00:00.000\",\"HasCheckbox\":true,\"_idxStr\":\"9\"},{\"CustomerID\":\"HILAA\",\"ShipVia\":3,\"Freight\":\"81.9100\",\"ShipCountry\":\"Venezuela\",\"OrderDate\":\"1996-07-16T00:00:00.000\",\"_idxStr\":\"10\"},{\"CustomerID\":\"ERNSH\",\"ShipVia\":1,\"Freight\":\"140.5100\",\"ShipCountry\":\"Austria\",\"OrderDate\":\"1996-07-17T00:00:00.000\",\"HasCheckbox\":true,\"_idxStr\":\"11\"},{\"CustomerID\":\"CENTC\",\"ShipVia\":3,\"Freight\":\"3.2500\",\"ShipCountry\":\"Mexico\",\"OrderDate\":\"1996-07-18T00:00:00.000\",\"_idxStr\":\"12\"},{\"CustomerID\":\"OTTIK\",\"ShipVia\":1,\"Freight\":\"55.0900\",\"ShipCountry\":\"Germany\",\"OrderDate\":\"1996-07-19T00:00:00.000\",\"HasCheckbox\":true,\"_idxStr\":\"13\"},{\"CustomerID\":\"QUEDE\",\"ShipVia\":2,\"Freight\":\"3.0500\",\"ShipCountry\":\"Brazil\",\"OrderDate\":\"1996-07-19T00:00:00.000\",\"_idxStr\":\"14\"},{\"CustomerID\":\"RATTC\",\"ShipVia\":3,\"Freight\":\"48.2900\",\"ShipCountry\":\"USA\",\"OrderDate\":\"1996-07-22T00:00:00.000\",\"HasCheckbox\":true,\"_idxStr\":\"15\"},{\"CustomerID\":\"ERNSH\",\"ShipVia\":3,\"Freight\":\"146.0600\",\"ShipCountry\":\"Austria\",\"OrderDate\":\"1996-07-23T00:00:00.000\",\"_idxStr\":\"16\"},{\"CustomerID\":\"FOLKO\",\"ShipVia\":3,\"Freight\":\"3.6700\",\"ShipCountry\":\"Sweden\",\"OrderDate\":\"1996-07-24T00:00:00.000\",\"HasCheckbox\":true,\"_idxStr\":\"17\"},{\"CustomerID\":\"BLONP\",\"ShipVia\":1,\"Freight\":\"55.2800\",\"ShipCountry\":\"France\",\"OrderDate\":\"1996-07-25T00:00:00.000\",\"_idxStr\":\"18\"},{\"CustomerID\":\"WARTH\",\"ShipVia\":3,\"Freight\":\"25.7300\",\"ShipCountry\":\"Finland\",\"OrderDate\":\"1996-07-26T00:00:00.000\",\"HasCheckbox\":true,\"_idxStr\":\"19\"},{\"CustomerID\":\"FRANK\",\"ShipVia\":1,\"Freight\":\"208.5800\",\"ShipCountry\":\"Germany\",\"OrderDate\":\"1996-07-29T00:00:00.000\",\"_idxStr\":\"20\"}]")
+
+form.complex1.collection2.fromJson("[{\"CustomerID\":\"RANDOM\",\"ShipVia\":2,\"Freight\":\"65.8300\",\"ShipCountry\":\"England\",\"OrderDate\":\"1996-07-08T00:00:00.000\",\"HasCheckbox\":false,\"_idxStr\":\"3\"},{\"CustomerID\":\"RANDOM\",\"ShipVia\":1,\"Freight\":\"41.3400\",\"ShipCountry\":\"Czechia\",\"OrderDate\":\"1996-07-08T00:00:00.000\",\"_idxStr\":\"4\"},{\"CustomerID\":\"RANDOM\",\"ShipVia\":2,\"Freight\":\"51.3000\",\"ShipCountry\":\"Belgium\",\"OrderDate\":\"1996-07-09T00:00:00.000\",\"HasCheckbox\":false,\"_idxStr\":\"5\"},{\"CustomerID\":\"RANDOM\",\"ShipVia\":2,\"Freight\":\"32.3800\",\"ShipCountry\":\"France\",\"OrderDate\":\"2019-03-13T11:24:29.412\",\"HasCheckbox\":true,\"_idxStr\":\"1\"},{\"CustomerID\":\"RANDOM\",\"ShipVia\":1,\"Freight\":\"11.6100\",\"ShipCountry\":\"Germany\",\"OrderDate\":\"1996-07-05T00:00:00.000\",\"_idxStr\":\"2\"}]")
+
+form.complex1.pagerCollectionSource.fromJson("[{\"collectionName\":\"Collection1\",\"innerCollection\":[{\"attribute1\":\"Item 11\"},{\"attribute1\":\"Item 11\"},{\"attribute1\":\"Item 11\"},{\"attribute1\":\"Item 11\"},{\"attribute1\":\"Item 11\"},{\"attribute1\":\"Item 11\"},{\"attribute1\":\"Item 11\"},{\"attribute1\":\"Item 11\"},{\"attribute1\":\"Item 11\"},{\"attribute1\":\"Item 11\"},{\"attribute1\":\"Item 11\"},{\"attribute1\":\"Item 11\"},{\"attribute1\":\"Item 11\"},{\"attribute1\":\"Item 11\"},{\"attribute1\":\"Item 12\"},{\"attribute1\":\"Item 13\"}]},{\"collectionName\":\"Collection2\",\"innerCollection\":[{\"attribute1\":\"Item 21\"},{\"attribute1\":\"Item 22\"},{\"attribute1\":\"Item 23\"},{\"attribute1\":\"Item 24\"}]},{\"collectionName\":\"Collection3\",\"innerCollection\":[{\"attribute1\":\"Item 31\"},{\"attribute1\":\"Item 31\"},{\"attribute1\":\"Item 31\"},{\"attribute1\":\"Item 31\"},{\"attribute1\":\"Item 31\"},{\"attribute1\":\"Item 31\"},{\"attribute1\":\"Item 31\"},{\"attribute1\":\"Item 31\"},{\"attribute1\":\"Item 31\"},{\"attribute1\":\"Item 31\"},{\"attribute1\":\"Item 31\"},{\"attribute1\":\"Item 32\"},{\"attribute1\":\"Item 33\"}]},{\"collectionName\":\"Collection4\",\"innerCollection\":[{\"attribute1\":\"Item 41\"}]}]")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <ListCtrl identity="ListCtrl.459ff3780ab145df985191cfc1336ce1">
+      <Name value="listCtrl" />
+      <dataProvider reference="~collectionDataProvider2" />
+      <server reference="+GlobalApiObjects.northwind" />
+      <OnColumnsChanged>
+        <ActionEvent ReferencedAction="~handler_listCtrl_OnColumnsChanged" />
+      </OnColumnsChanged>
+      <OnDataRowsChanged>
+        <ActionEvent ReferencedAction="~handler_listCtrl_OnDataRowsChanged" />
+      </OnDataRowsChanged>
+    </ListCtrl>
+    <CollectionDataProvider2 identity="CollectionDataProvider2.796ba28ddaf44db78bd2cdf0b9f3628c">
+      <Name value="collectionDataProvider2" />
+      <dataSourceCollectionReference value="sourceDataCollection" />
+    </CollectionDataProvider2>
+    <Page identity="Page.f7aa0c151c64407daef13910dcf7b72a">
+      <Name value="page" />
+    </Page>
+    <CollectionDataProvider2 identity="CollectionDataProvider2.796ba28ddaf44db78bd2cdf0b9f3628c">
+      <Name value="pagerCollectionProvider" />
+      <dataSourceCollectionReference value="complex1.collection1" />
+    </CollectionDataProvider2>
+    <ListCtrl identity="ListCtrl.459ff3780ab145df985191cfc1336ce1">
+      <Name value="pagerListCtrl" />
+      <dataProvider reference="~pagerCollectionProvider" />
+      <server reference="+GlobalApiObjects.northwind" />
+    </ListCtrl>
+  </ApiObjects>
+</Form>

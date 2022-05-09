@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="activeXSignerExample" />
+  <Caption value="Active X signer example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Href value="#" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Label>
+          <Name value="label1" />
+          <Data value="ActiveXSigner is a component for signing XML files using ActiveX component. It works only in IE." />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <TextBox>
+          <Name value="textBox3" />
+          <CaptionVAlign value="Middle" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="xmlToSign" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="xmlToSign.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="xmlToSign.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <Button>
+          <Name value="btnSign" />
+          <Caption value="Btn sign" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~sign" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Panel>
+          <Name value="panel2" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <TextBox>
+              <Name value="textBox1" />
+              <CaptionVAlign value="Middle" />
+              <InputType value="Multiline" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Rows value="10" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="result.signedXml" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="result.signedXml.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="result.signedXml.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <CheckBox>
+              <Name value="checkBox1" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="300px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="result.signingSuccessful" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="result.signingSuccessful.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="result.signingSuccessful.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+            <CheckBox>
+              <Name value="checkBox2" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="300px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="result.activeXFound" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="result.activeXFound.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="result.activeXFound.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+            <CheckBox>
+              <Name value="checkBox3" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="300px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="result.certificateSelected" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="result.certificateSelected.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="result.certificateSelected.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+            <TextBox>
+              <Name value="textBox2" />
+              <CaptionVAlign value="Middle" />
+              <InputType value="Multiline" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Rows value="10" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="result.otherErrorMessage" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="result.otherErrorMessage.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="result.otherErrorMessage.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Complex>
+          <Name value="result" />
+          <Caption value="Result" />
+          <Children>
+            <Attribute>
+              <Name value="signedXml" />
+              <Caption value="Signed xml" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="signingSuccessful" />
+              <Caption value="Signing successful" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="activeXFound" />
+              <Caption value="Active X found" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="certificateSelected" />
+              <Caption value="Certificate selected" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="otherErrorMessage" />
+              <Caption value="Other error message" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Attribute>
+          <Name value="xmlToSign" />
+          <Caption value="Xml to sign" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="sign" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var signResult = form.apiobjects.activeXSigner1.signXml(form.xmlToSign)
+
+form.result.signedXml = signResult.getSignedXml()
+form.result.signingSuccessful = signResult.wasSigningSuccessful()
+form.result.activeXFound = signResult.wasActiveXFound()
+form.result.certificateSelected = signResult.wasCertificateSelected()
+form.result.otherErrorMessage = signResult.getOtherErrorMessage()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.xmlToSign = "<?xml version=\"1.0\"?><root>hello</root>"]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <ActiveXSigner identity="ActiveXSigner.88015d04baac4e2fa67ffcff720d66ad">
+      <Name value="activeXSigner1" />
+      <algorithm value="sha512" />
+    </ActiveXSigner>
+  </ApiObjects>
+</Form>

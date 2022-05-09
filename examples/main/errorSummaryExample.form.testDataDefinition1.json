@@ -1,0 +1,56 @@
+{
+    "notInErrorSummary": {
+        "attribute1": "sollicitudin"
+    },
+    "dataRoot": {
+        "a": "Nunc nibh leo Nunc aliquet id et Donec a arcu tempus",
+        "grpX": {
+            "b": "accumsan"
+        },
+        "collection1": [
+            {
+                "grpY": {
+                    "c": "tempor non"
+                },
+                "grpZ": {
+                    "d": "lorem Suspendisse"
+                }
+            },
+            {
+                "grpY": {
+                    "c": "ut Aliquam tellus non felis"
+                },
+                "grpZ": {
+                    "d": "Sed ullamcorper"
+                }
+            }
+        ]
+    },
+    "isSummaryVisible": false,
+    "validationErrors": [
+        {
+            "Code": {
+                "code": "suscipit Vestibulum",
+                "description": "vitae leo suscipit"
+            },
+            "Reason": "vel litora dictum nibh massa nec",
+            "Pointer": "ultricies mollis erat vehicula vel Aliquam augue consequat",
+            "ReasonCodelist": {
+                "code": "dictum elit adipiscing leo id quam sapien",
+                "description": "sapien sed amet dolor tempor Nam pellentesque"
+            }
+        },
+        {
+            "Code": {
+                "code": "odio",
+                "description": "sit porta odio erat"
+            },
+            "Reason": "consectetur quis egestas sit Suspendisse nunc Nunc pretium",
+            "Pointer": "Aenean quam elit metus dapibus amet",
+            "ReasonCodelist": {
+                "code": "tempus vehicula dictum",
+                "description": "ligula quis pulvinar nulla Quisque porttitor Nam vulputate"
+            }
+        }
+    ]
+}

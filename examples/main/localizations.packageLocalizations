@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="Tab01">
+      <Values>
+        <LocaleValue Lang="en" Value="Header" />
+        <LocaleValue Lang="cs" Value="Hlavička" />
+        <LocaleValue Lang="sv" Value="Header" />
+        <LocaleValue Lang="fi" Value="Otsikko" />
+        <LocaleValue Lang="sr" Value="Zaglavlje" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Freight">
+      <Values>
+        <LocaleValue Lang="en" Value="Freight" />
+        <LocaleValue Lang="sr" Value="Teretni" />
+        <LocaleValue Lang="cs" Value="Náklad" />
+        <LocaleValue Lang="fi" Value="Rahti" />
+        <LocaleValue Lang="sv" Value="Frakt" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="eleA">
+      <Values>
+        <LocaleValue Lang="cs" Value="Prvek a" />
+        <LocaleValue Lang="en" Value="Element a" />
+        <LocaleValue Lang="fi" Value="Elementti a" />
+        <LocaleValue Lang="sv" Value="Elementet a" />
+        <LocaleValue Lang="sr" Value="Element a" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="grpX">
+      <Values>
+        <LocaleValue Lang="cs" Value="Skupina X" />
+        <LocaleValue Lang="en" Value="Group X" />
+        <LocaleValue Lang="fi" Value="Työryhmä X" />
+        <LocaleValue Lang="sv" Value="Grupp X" />
+        <LocaleValue Lang="sr" Value="Grupa X" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="eleB">
+      <Values>
+        <LocaleValue Lang="cs" Value="Prvek b" />
+        <LocaleValue Lang="en" Value="Element b" />
+        <LocaleValue Lang="fi" Value="Osa b" />
+        <LocaleValue Lang="sv" Value="Element b" />
+        <LocaleValue Lang="sr" Value="Element b" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="col1">
+      <Values>
+        <LocaleValue Lang="cs" Value="Kolekce ABC" />
+        <LocaleValue Lang="en" Value="Collection ABC" />
+        <LocaleValue Lang="fi" Value="Kokoelma ABC" />
+        <LocaleValue Lang="sv" Value="Samlingen ABC" />
+        <LocaleValue Lang="sr" Value="Kolekcija ABC" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="grpY">
+      <Values>
+        <LocaleValue Lang="cs" Value="Skupina Y" />
+        <LocaleValue Lang="en" Value="Group Y" />
+        <LocaleValue Lang="fi" Value="Ryhmä Y" />
+        <LocaleValue Lang="sv" Value="Grupp Y" />
+        <LocaleValue Lang="sr" Value="Grupu Y" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="eleC">
+      <Values>
+        <LocaleValue Lang="cs" Value="Prvek c" />
+        <LocaleValue Lang="en" Value="Element c" />
+        <LocaleValue Lang="fi" Value="Elementin c" />
+        <LocaleValue Lang="sv" Value="Del c" />
+        <LocaleValue Lang="sr" Value="Element c" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="tooltip1">
+      <Values>
+        <LocaleValue Lang="en" Value="Localized tooltip" />
+        <LocaleValue Lang="cs" Value="Lokalizovaný tooltip" />
+        <LocaleValue Lang="fi" Value="Lokalisoitu tooltip" />
+        <LocaleValue Lang="sv" Value="Lokaliserade tooltip" />
+        <LocaleValue Lang="sr" Value="Lokalizovane opis alatke" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="foShipVia1">
+      <Values>
+        <LocaleValue Lang="en" Value="ShipVia - 1" />
+        <LocaleValue Lang="cs" Value="ShipVia - 1" />
+        <LocaleValue Lang="sv" Value="Speditörsnamn - 1" />
+        <LocaleValue Lang="fi" Value="Toimittajien - 1" />
+        <LocaleValue Lang="sr" Value="ShipVia - 1" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="foShipVia2">
+      <Values>
+        <LocaleValue Lang="en" Value="ShipVia - 2" />
+        <LocaleValue Lang="cs" Value="ShipVia - 2" />
+        <LocaleValue Lang="sv" Value="Speditörsnamn - 2" />
+        <LocaleValue Lang="fi" Value="Toimittajien - 2" />
+        <LocaleValue Lang="sr" Value="ShipVia - 2" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="bcLevel1">
+      <Values>
+        <LocaleValue Lang="en" Value="Home" />
+        <LocaleValue Lang="cs" Value="Domů" />
+        <LocaleValue Lang="fi" Value="Etusivu" />
+        <LocaleValue Lang="sv" Value="Hem" />
+        <LocaleValue Lang="sr" Value="Dom" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="bcLevel2">
+      <Values>
+        <LocaleValue Lang="en" Value="Breadcrumbs example" />
+        <LocaleValue Lang="cs" Value="Příklad na breadcrumbs" />
+        <LocaleValue Lang="fi" Value="Korppujauhoja esimerkki" />
+        <LocaleValue Lang="sv" Value="Ströbröd exempel" />
+        <LocaleValue Lang="sr" Value="Primer mrvica hleba" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="newDocument">
+      <Values>
+        <LocaleValue Lang="en" Value="New document" />
+        <LocaleValue Lang="cs" Value="Nový dokument" />
+        <LocaleValue Lang="fi" Value="New document - FI" />
+        <LocaleValue Lang="sv" Value="New document - SV" />
+        <LocaleValue Lang="sr" Value="New document - SR" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="editDocument">
+      <Values>
+        <LocaleValue Lang="en" Value="Edit document" />
+        <LocaleValue Lang="cs" Value="Upravit dokument" />
+        <LocaleValue Lang="fi" Value="Edit document - FI" />
+        <LocaleValue Lang="sv" Value="Edit document - SV" />
+        <LocaleValue Lang="sr" Value="Edit document - SR" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ordersList">
+      <Values>
+        <LocaleValue Lang="en" Value="Orders list" />
+        <LocaleValue Lang="cs" Value="Seznam objednávek" />
+        <LocaleValue Lang="fi" Value="Orders list - FI" />
+        <LocaleValue Lang="sv" Value="Orders list - SV" />
+        <LocaleValue Lang="sr" Value="Orders list - SR" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SomeActionButtons">
+      <Values>
+        <LocaleValue Lang="en" Value="Actions" />
+        <LocaleValue Lang="cs" Value="Akce" />
+        <LocaleValue Lang="fi" Value="Toiminnot" />
+        <LocaleValue Lang="sv" Value="Åtgärder" />
+        <LocaleValue Lang="sr" Value="Radnje" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Code">
+      <Values>
+        <LocaleValue Lang="en" Value="Code" />
+        <LocaleValue Lang="cs" Value="Kód" />
+        <LocaleValue Lang="fi" Value="Koodi" />
+        <LocaleValue Lang="sv" Value="Koden" />
+        <LocaleValue Lang="sr" Value="Šifru" />
+        <LocaleValue Lang="me" Value="Šifra" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Description">
+      <Values>
+        <LocaleValue Lang="en" Value="Description" />
+        <LocaleValue Lang="cs" Value="Popis" />
+        <LocaleValue Lang="fi" Value="Kuvaus" />
+        <LocaleValue Lang="sv" Value="Beskrivning" />
+        <LocaleValue Lang="sr" Value="Opis" />
+        <LocaleValue Lang="me" Value="Opis" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Pointer">
+      <Values>
+        <LocaleValue Lang="en" Value="Pointer" />
+        <LocaleValue Lang="cs" Value="Ukazatel" />
+        <LocaleValue Lang="fi" Value="Osoitin" />
+        <LocaleValue Lang="sv" Value="Pekaren" />
+        <LocaleValue Lang="sr" Value="Pokazivač" />
+        <LocaleValue Lang="me" Value="Pokazivač" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="LocalizedButtonText">
+      <Values>
+        <LocaleValue Lang="en" Value="Localized {fa-refresh} button" />
+        <LocaleValue Lang="cs" Value="Lokalizované {fa-address-card} tlačítko" />
+        <LocaleValue Lang="fi" Value="Lokalisoitu {FA-Refresh}-painike" />
+        <LocaleValue Lang="sv" Value="Lokaliserad {FA-Refresh}-knapp" />
+        <LocaleValue Lang="sr" Value="Lokalizovani {OS-osvežavanje} dugme" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="payHere">
+      <Values>
+        <LocaleValue Lang="en" Value="Pay here" />
+        <LocaleValue Lang="cs" Value="Zaplaťte zde" />
+        <LocaleValue Lang="fi" Value="Maksa tästä" />
+        <LocaleValue Lang="sv" Value="Betala här" />
+        <LocaleValue Lang="sr" Value="Plati ovde" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="referenceD">
+      <Values>
+        <LocaleValue Lang="en" Value="Country" />
+        <LocaleValue Lang="cs" Value="Země" />
+        <LocaleValue Lang="fi" Value="Maa" />
+        <LocaleValue Lang="sv" Value="Land" />
+        <LocaleValue Lang="sr" Value="Zemlja" />
+        <LocaleValue Lang="me" Value="Zemlja" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="instructions">
+      <Values>
+        <LocaleValue Lang="en" Value="Instructions" />
+        <LocaleValue Lang="cs" Value="Instrukce" />
+        <LocaleValue Lang="fi" Value="Ohjeet" />
+        <LocaleValue Lang="sv" Value="Instruktioner" />
+        <LocaleValue Lang="sr" Value="Uputstva" />
+        <LocaleValue Lang="me" Value="Uputstva" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

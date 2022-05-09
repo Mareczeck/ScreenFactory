@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="UploadedAttachment" />
+  <Caption value="Uploaded attachment" />
+  <Children>
+    <Attribute>
+      <Name value="fileName" />
+      <Caption value="File name" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Reference>
+      <Name value="documentType" />
+      <Caption value="Document type" />
+      <Children>
+        <Include>
+          <Include reference="+DataEntities.DocumentType" />
+        </Include>
+      </Children>
+    </Reference>
+    <Attribute>
+      <Name value="documentId" />
+      <Caption value="Document id" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="checkSum" />
+      <Caption value="Check sum" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="description" />
+      <Caption value="Description" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+  </Children>
+</DataEntity>

@@ -1,0 +1,27 @@
+{
+    "complex1": {
+        "att2": "eget quam augue dignissim"
+    },
+    "att1": "sem",
+    "collection1": [
+        {
+            "att3": "vel vitae Vivamus metus"
+        },
+        {
+            "att3": "nec vestibulum aliquet id nec Nulla suscipit ut tempus Donec"
+        }
+    ],
+    "complex2": {
+        "valFilterEntityAtt": "id"
+    },
+    "collection2": [
+        {
+            "valFilterEntityAtt": "ac"
+        },
+        {
+            "valFilterEntityAtt": "ac"
+        }
+    ],
+    "validatorsFilterConfig": "urna eu condimentum augue eget interdum mauris gravida",
+    "setConfigSuccessful": false
+}

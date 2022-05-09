@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="labeledTextExample" />
+  <Caption value="Labeled text example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="goBack" />
+          <Data value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Panel>
+          <Name value="panel2" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+              <Name value="labeledText1" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex1.str" />
+                <Binding SourceProperty="Caption" Expression="complex1.str.caption()" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.str.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-labeledText" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </LabeledText>
+            <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+              <Name value="labeledText2" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex1.integer" />
+                <Binding SourceProperty="Caption" Expression="complex1.integer.caption()" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.integer.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-labeledText" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </LabeledText>
+            <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+              <Name value="labeledText3" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex1.bool" />
+                <Binding SourceProperty="Caption" Expression="complex1.bool.caption()" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.bool.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-labeledText" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </LabeledText>
+            <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+              <Name value="labeledText4" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex1.date" />
+                <Binding SourceProperty="Caption" Expression="complex1.date.caption()" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.date.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-labeledText" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </LabeledText>
+            <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+              <Name value="labeledText5" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex1.datetime" />
+                <Binding SourceProperty="Caption" Expression="complex1.datetime.caption()" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.datetime.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-labeledText" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </LabeledText>
+            <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+              <Name value="labeledText6" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex1.decimal" />
+                <Binding SourceProperty="Caption" Expression="complex1.decimal.caption()" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.decimal.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-labeledText" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </LabeledText>
+            <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+              <Name value="labeledText7" />
+              <IsCurrency value="True" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex1.currency" />
+                <Binding SourceProperty="Caption" Expression="complex1.currency.caption()" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.currency.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-labeledtext" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </LabeledText>
+            <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+              <Name value="labeledText9" />
+              <Caption value="Amount" />
+              <IsAmount value="True" />
+              <Panel.Height value="#" />
+              <Panel.Width value="300px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex1.currency" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.currency.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-labeledtext" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </LabeledText>
+            <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+              <Name value="labeledText8" />
+              <Caption value="IsNotCurrency" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="complex1.currency" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.currency.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-labeledtext" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </LabeledText>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel3" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="setTouched" />
+              <Caption value="Set touched" />
+              <Panel.Height value="#" />
+              <Panel.Width value="200px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~onSetTouched" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Button>
+              <Name value="setUntouched" />
+              <Caption value="Set untouched" />
+              <Panel.Height value="#" />
+              <Panel.Width value="200px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~onSetUntouched" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <OnCreate>
+        <ActionEvent ReferencedAction="+UiParts.labeledTextExample.init" />
+      </OnCreate>
+      <Children>
+        <Complex>
+          <Name value="complex1" />
+          <Caption value="Complex 1" />
+          <Children>
+            <Attribute>
+              <Name value="str" />
+              <Caption value="Str" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="integer" />
+              <Caption value="Integer" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                  <IntMin value="50" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="bool" />
+              <Caption value="Bool" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="date" />
+              <Caption value="Date" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Date" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="datetime" />
+              <Caption value="Datetime" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="DateTime" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="decimal" />
+              <Caption value="Decimal" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Decimal" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="currency" />
+              <Caption value="Currency" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Decimal" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[/* !js
+console.log('hello world');
+*/
+
+// abcd
+
+form.complex1.str = "Hello world"
+form.complex1.integer = 42
+form.complex1.bool = true
+form.complex1.date = ToDate("2017-12-31", defaultDate())
+form.complex1.datetime = ToDateTime("2017-12-31 12:01", defaultDateTime())
+form.complex1.decimal = 1.2
+form.complex1.currency = 111255.355
+
+// form.actions.addBaggage()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+      <Tests>
+        <ActionTest>
+          <Name value="test1" />
+          <ActionLangBody IsValid="True">
+            <Script><![CDATA[/* Arrange */
+form.complex1.str = defaultString()
+form.complex1.integer = defaultInt()
+form.complex1.bool = true
+form.complex1.date = ToDate("2017-12-31", defaultDate())
+form.complex1.datetime = ToDateTime("2017-12-31 12:01", defaultDateTime())
+form.complex1.decimal = 1.2
+
+/* Act */
+form.actions.init()
+
+/* Assert */
+assert.equal(form.complex1.str, "Hello world")
+assert.equal(form.complex1.str, "Hello world")
+assert.equal(form.complex1.integer, 42)
+assert.equal(form.complex1.bool, true)
+assert.isTrue(form.complex1.date = ToDate("2017-12-31", defaultDate()))
+assert.isTrue(form.complex1.datetime = ToDateTime("2017-12-31 12:01", defaultDateTime()))
+assert.equal(form.complex1.decimal, 1.2)]]></Script>
+          </ActionLangBody>
+        </ActionTest>
+      </Tests>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="onSetTouched" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.setTouched(true)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="onSetUntouched" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.complex1.setTouched(false)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

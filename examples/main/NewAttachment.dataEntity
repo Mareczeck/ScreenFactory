@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="NewAttachment" />
+  <Caption value="New attachment" />
+  <Children>
+    <Attribute>
+      <Name value="fileName" />
+      <Caption value="File name" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Reference>
+      <Name value="documentType" />
+      <Caption value="Document type" />
+      <Children>
+        <Include>
+          <Include reference="+DataEntities.DocumentType" />
+        </Include>
+      </Children>
+    </Reference>
+    <Attribute>
+      <Name value="newAttachmentStatus" />
+      <Caption value="New attachment status" />
+      <MetaType reference="/(AttachmentUpload.284f714f2c0c4a4b8dfacca37052a11b)+MetaTypes.NewAttachmentStatus" />
+    </Attribute>
+    <Attribute>
+      <Name value="description" />
+      <Caption value="Description" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+  </Children>
+</DataEntity>

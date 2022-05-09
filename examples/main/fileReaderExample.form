@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="fileReaderExample" />
+  <Caption value="File reader example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Href value="#" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <FileReader identity="FileReader.f457f0445b7e44b7a3a1134647eff385">
+          <Name value="fileReader1" />
+          <Caption value="Nějaká caption" />
+          <Filter value=".xml" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <OnChange>
+            <ActionEvent ReferencedAction="~onFileChange" />
+          </OnChange>
+          <Bindings>
+            <Binding SourceProperty="FileContent" Expression="form.fileContent" />
+            <Binding SourceProperty="FileType" Expression="form.fileType" />
+            <Binding SourceProperty="IsVisible" Expression="form.visible" />
+            <Binding SourceProperty="IsEnabled" Expression="form.enabled" />
+            <Binding SourceProperty="FileName" Expression="form.fileName" />
+          </Bindings>
+        </FileReader>
+        <CheckBox>
+          <Name value="checkBox1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="eventTriggered" />
+            <Binding SourceProperty="Caption" Expression="eventTriggered.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="eventTriggered.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-checkbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CheckBox>
+        <TextBox>
+          <Name value="textBox2" />
+          <IsEnabled value="False" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="fileName" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="fileName.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="fileName.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <TextBox>
+          <Name value="textBox3" />
+          <IsEnabled value="False" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="fileType" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="fileType.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="fileType.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <TextBox>
+          <Name value="textBox1" />
+          <Caption value="Base64" />
+          <CaptionPosition value="Top" />
+          <InputType value="Multiline" />
+          <IsEnabled value="False" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Rows value="10" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="fileContent" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="fileContent.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <CheckBox>
+          <Name value="checkBox2" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="enabled" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="enabled.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="enabled.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-checkbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CheckBox>
+        <CheckBox>
+          <Name value="checkBox3" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="visible" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="visible.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="visible.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-checkbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CheckBox>
+        <Button>
+          <Name value="button1" />
+          <Caption value="clear" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~handler_button1_OnClick" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="fileContent" />
+          <Caption value="File content" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="eventTriggered" />
+          <Caption value="Event triggered" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="fileName" />
+          <Caption value="File name" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="fileType" />
+          <Caption value="File type" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="enabled" />
+          <Caption value="Enabled" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="visible" />
+          <Caption value="Visible" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="onFileChange" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.eventTriggered = true]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.enabled = true
+form.visible = true]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button1_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// to clear the file field, set the filename to empty string
+
+form.fileName = ""]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

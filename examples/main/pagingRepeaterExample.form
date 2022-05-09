@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="pagingRepeaterExample" />
+  <Caption value="Paging repeater example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Data value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <GroupBox>
+          <Name value="groupBox1" />
+          <Caption value="Standard repeater" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Repeater>
+              <Name value="repeater1" />
+              <Content>
+                <Panel>
+                  <Name value="panel3" />
+                  <Orientation value="Vertical" />
+                  <Children>
+                    <TextBox>
+                      <Name value="textBox3" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="attribute1" />
+                        <Binding SourceProperty="Caption" Expression="attribute1.caption()" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="attribute1.isRequired()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox4" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="attribute2" />
+                        <Binding SourceProperty="Caption" Expression="attribute2.caption()" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="attribute2.isRequired()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <Bindings>
+                <Binding SourceProperty="DataItems" Expression="collection1" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-repeater" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Repeater>
+          </Content>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-groupbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </GroupBox>
+        <Label>
+          <Name value="label1" />
+          <Data value="PagingRepeater zobrazuje jen jednu položku. Která to je, se řídí atributem Index. V tomto příkladu je navázaný na textbox, ale typicky byste ho řídili z akcí nebo jinou komponentou." />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Label>
+          <Name value="label2" />
+          <Data value="Index musí být v této chvíli typu string, protože jinak nejde udělat binding. Ale to pořešíme a v budoucnu to bude integer. Obsahovat by samozřejmě měl pouze celá čísla, první položka má index 1 a pokud bude obsahovat položku mimo range, repeater nezobrazí nic." />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <TextBox>
+          <Name value="textBox5" />
+          <InputType value="Numeric" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <TextAlign value="Right" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="Index" />
+            <Binding SourceProperty="Caption" Expression="Index.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="Index.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <GroupBox>
+          <Name value="groupBox2" />
+          <Caption value="Paging repeater" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
+              <Name value="pagingRepeater1" />
+              <Content>
+                <Panel>
+                  <Name value="panel2" />
+                  <Orientation value="Vertical" />
+                  <Children>
+                    <TextBox>
+                      <Name value="textBox1" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="attribute1" />
+                        <Binding SourceProperty="Caption" Expression="attribute1.caption()" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="attribute1.isRequired()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox2" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="attribute2" />
+                        <Binding SourceProperty="Caption" Expression="attribute2.caption()" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="attribute2.isRequired()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="collection1" />
+                <Binding SourceProperty="Index" Expression="Index" />
+              </Bindings>
+            </PagingRepeater>
+          </Content>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-groupbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </GroupBox>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Collection>
+          <Name value="collection1" />
+          <Caption value="Collection 1" />
+          <Children>
+            <Attribute>
+              <Name value="attribute1" />
+              <Caption value="Attribute 1" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="attribute2" />
+              <Caption value="Attribute 2" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Collection>
+        <Attribute>
+          <Name value="Index" />
+          <Caption value="Index" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var item = form.collection1.addItem()
+item.attribute1 = "a"
+item.attribute2 = "aa"
+
+item = form.collection1.addItem()
+item.attribute1 = "b"
+item.attribute2 = "bb"
+
+item = form.collection1.addItem()
+item.attribute1 = "c"
+item.attribute2 = "cc"
+
+form.actions.memoryCheck()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="memoryCheck" />
+      <IsJavascript value="True" />
+      <Script><![CDATA[this.blob = new MemoryMonitoringBlob();]]></Script>
+      <ActionLangBody IsValid="True" />
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

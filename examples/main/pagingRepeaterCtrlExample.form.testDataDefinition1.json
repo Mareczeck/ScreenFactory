@@ -1,0 +1,37 @@
+{
+    "Index": -1382058147,
+    "collection1": [
+        {
+            "FirstName": "Nullam id vel congue vel eu Nullam",
+            "LastName": "semper rhoncus vitae mi tincidunt turpis facilisis feugiat",
+            "Index": 1363188363,
+            "subcollection1": [
+                {
+                    "ChildFirstName": "vulputate sapien",
+                    "ChildLastName": "ac venenatis sed egestas"
+                },
+                {
+                    "ChildFirstName": "Vivamus elementum lacus facilisis molestie tempus",
+                    "ChildLastName": "sodales nisl fringilla pellentesque"
+                }
+            ]
+        },
+        {
+            "FirstName": "potenti dapibus in eleifend",
+            "LastName": "dapibus semper tincidunt",
+            "Index": -284462369,
+            "subcollection1": [
+                {
+                    "ChildFirstName": "tellus lobortis vulputate ac massa mollis pharetra mi eleif",
+                    "ChildLastName": "ac Praesent augue Sed tortor bibendum ante commodo"
+                },
+                {
+                    "ChildFirstName": "",
+                    "ChildLastName": "Sed nec Nam Sed ligula convallis Pellentesque amet"
+                }
+            ]
+        }
+    ],
+    "allowAdd": false,
+    "allowRemove": true
+}

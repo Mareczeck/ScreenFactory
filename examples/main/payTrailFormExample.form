@@ -1,0 +1,896 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="payTrailFormExample" />
+  <Caption value="Pay trail form example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Panel>
+          <Name value="panel2" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <GroupBox>
+              <Name value="grpRequired" />
+              <Caption value="Required fields" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+              <Content>
+                <Panel>
+                  <Name value="panel3" />
+                  <Orientation value="Vertical" />
+                  <Children>
+                    <TextBox>
+                      <Name value="textBox1" />
+                      <CaptionPosition value="Top" />
+                      <IsEnabled value="False" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.MERCHANT_ID" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.MERCHANT_ID.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.MERCHANT_ID.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox2" />
+                      <CaptionPosition value="Top" />
+                      <IsEnabled value="False" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.URL_SUCCESS" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.URL_SUCCESS.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.URL_SUCCESS.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox3" />
+                      <CaptionPosition value="Top" />
+                      <IsEnabled value="False" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.URL_CANCEL" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.URL_CANCEL.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.URL_CANCEL.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox4" />
+                      <CaptionPosition value="Top" />
+                      <IsEnabled value="False" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.ORDER_NUMBER" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.ORDER_NUMBER.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.ORDER_NUMBER.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox5" />
+                      <CaptionPosition value="Top" />
+                      <IsEnabled value="False" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.PARAMS_IN" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.PARAMS_IN.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.PARAMS_IN.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox6" />
+                      <CaptionPosition value="Top" />
+                      <IsEnabled value="False" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.PARAMS_OUT" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.PARAMS_OUT.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.PARAMS_OUT.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox7" />
+                      <CaptionPosition value="Top" />
+                      <IsEnabled value="False" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.AMOUNT" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.AMOUNT.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.AMOUNT.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <Label>
+                      <Name value="label4" />
+                      <Data value="Before redirecting to gateway, get AUTHCODE from CIC." />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <Label>
+                      <Name value="label1" />
+                      <Data value="AUTHCODE is calculated by joining all fields listed in PARAMS_IN. Fields are joined by placing the &quot;|&quot; character (pipe, vertical bar) between each two fields. AUTHCODE is formed from this string by calculating a sum using SHA-256. This sum is converted to its 64 character hexadecimal form and lowercase letters are capitalized." />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <Label>
+                      <Name value="label5" />
+                      <Data value="Optional hidden fields, that are not included in PARAMS_IN, are not rendered inside payTrailForm component and therefore not posted to PayTrail." />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <Label>
+                      <Name value="label2" />
+                      <Data value="Now the string to be used for AUTHCODE calculation is formed by joining the fields above (the first part is &quot;Merchant authentication hash&quot; and IC should know it):" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <Label>
+                      <Name value="label3" />
+                      <Data value="6pKF4jkv97zmqBJ3ZL8gUw5DfT2NMQ|13466|http://www.example.com/success|http://www.example.com/cancel|123456|MERCHANT_ID,URL_SUCCESS,URL_CANCEL,ORDER_NUMBER,PARAMS_IN,PARAMS_OUT,AMOUNT|PAYMENT_ID,TIMESTAMP,STATUS|350.00" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="600px" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="label-break" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <TextBox>
+                      <Name value="textBox8" />
+                      <CaptionPosition value="Top" />
+                      <IsEnabled value="False" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.AUTHCODE" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.AUTHCODE.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.AUTHCODE.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-groupbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </GroupBox>
+            <GroupBox>
+              <Name value="grpOptional" />
+              <Caption value="Optional fields" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Content>
+                <Panel>
+                  <Name value="panel4" />
+                  <Orientation value="Vertical" />
+                  <Children>
+                    <TextBox>
+                      <Name value="textBox9" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.MSG_UI_MERCHANT_PANEL" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.MSG_UI_MERCHANT_PANEL.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.MSG_UI_MERCHANT_PANEL.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox10" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.URL_NOTIFY" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.URL_NOTIFY.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.URL_NOTIFY.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox11" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.LOCALE" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.LOCALE.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.LOCALE.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox12" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.REFERENCE_NUMBER" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.REFERENCE_NUMBER.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.REFERENCE_NUMBER.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox13" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.PAYER_PERSON_PHONE" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.PAYER_PERSON_PHONE.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.PAYER_PERSON_PHONE.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox14" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.PAYER_PERSON_EMAIL" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.PAYER_PERSON_EMAIL.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.PAYER_PERSON_EMAIL.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox15" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.PAYER_PERSON_FIRSTNAME" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.PAYER_PERSON_FIRSTNAME.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.PAYER_PERSON_FIRSTNAME.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox16" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.PAYER_PERSON_LASTNAME" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.PAYER_PERSON_LASTNAME.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.PAYER_PERSON_LASTNAME.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox17" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.PAYER_COMPANY_NAME" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.PAYER_COMPANY_NAME.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.PAYER_COMPANY_NAME.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox18" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.PAYER_PERSON_ADDR_STREET" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.PAYER_PERSON_ADDR_STREET.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.PAYER_PERSON_ADDR_STREET.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox19" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.PAYER_PERSON_ADDR_POSTAL_CODE" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.PAYER_PERSON_ADDR_POSTAL_CODE.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.PAYER_PERSON_ADDR_POSTAL_CODE.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox20" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.PAYER_PERSON_ADDR_TOWN" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.PAYER_PERSON_ADDR_TOWN.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.PAYER_PERSON_ADDR_TOWN.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox21" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="paymentData.PAYER_PERSON_ADDR_COUNTRY" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="paymentData.PAYER_PERSON_ADDR_COUNTRY.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="paymentData.PAYER_PERSON_ADDR_COUNTRY.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-groupbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </GroupBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel7" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="panel5" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+              <Children>
+                <TextBox>
+                  <Name value="textBox22" />
+                  <Caption value="Async request on 'northwind' ServerConnection to make during OnSubmit" />
+                  <CaptionPosition value="Top" />
+                  <CaptionVAlign value="Middle" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="onSubmitAsyncRequest" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="onSubmitAsyncRequest.isRequired()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+                <Label>
+                  <Name value="lblPayTrailForm1" />
+                  <Data value="Redirect to payment gateway using builtin payTrailForm submit button (if OnSubmit does not return false):" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+                <payTrailForm identity="PayTrailForm.75d8c04d1a41484e9d2ba41296a1acd5">
+                  <Name value="payTrailForm1" />
+                  <AUTHCODE value="BBDF8997A56F97DC0A46C99C88C2EEF9D541AAD59CFF2695D0DD9AF474086D71" />
+                  <LOCALE value="en_US" />
+                  <MSG_UI_MERCHANT_PANEL value="Ahoj|Ahoj" />
+                  <ORDER_NUMBER value="123456" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <PARAMS_IN value="MERCHANT_ID,URL_SUCCESS,URL_CANCEL,ORDER_NUMBER,PARAMS_IN,PARAMS_OUT,AMOUNT" />
+                  <PARAMS_OUT value="PAYMENT_ID,TIMESTAMP,STATUS" />
+                  <URL_CANCEL value="http://www.example.com/cancel" />
+                  <URL_SUCCESS value="http://www.example.com/success" />
+                  <OnSubmit>
+                    <ActionEvent ReferencedAction="~handler_payTrailForm1_OnSubmit" />
+                  </OnSubmit>
+                  <Bindings>
+                    <Binding SourceProperty="MERCHANT_ID" Expression="form.paymentData.MERCHANT_ID" />
+                    <Binding SourceProperty="URL_SUCCESS" Expression="form.paymentData.URL_SUCCESS" />
+                    <Binding SourceProperty="URL_CANCEL" Expression="form.paymentData.URL_CANCEL" />
+                    <Binding SourceProperty="ORDER_NUMBER" Expression="form.paymentData.ORDER_NUMBER" />
+                    <Binding SourceProperty="PARAMS_IN" Expression="form.paymentData.PARAMS_IN" />
+                    <Binding SourceProperty="PARAMS_OUT" Expression="form.paymentData.PARAMS_OUT" />
+                    <Binding SourceProperty="AMOUNT" Expression="form.paymentData.AMOUNT" />
+                    <Binding SourceProperty="AUTHCODE" Expression="form.paymentData.AUTHCODE" />
+                    <Binding SourceProperty="MSG_UI_MERCHANT_PANEL" Expression="form.paymentData.MSG_UI_MERCHANT_PANEL" />
+                    <Binding SourceProperty="URL_NOTIFY" Expression="form.paymentData.URL_NOTIFY" />
+                    <Binding SourceProperty="LOCALE" Expression="form.paymentData.LOCALE" />
+                    <Binding SourceProperty="REFERENCE_NUMBER" Expression="form.paymentData.REFERENCE_NUMBER" />
+                    <Binding SourceProperty="PAYER_PERSON_PHONE" Expression="form.paymentData.PAYER_PERSON_PHONE" />
+                    <Binding SourceProperty="PAYER_PERSON_EMAIL" Expression="form.paymentData.PAYER_PERSON_EMAIL" />
+                    <Binding SourceProperty="PAYER_PERSON_FIRSTNAME" Expression="form.paymentData.PAYER_PERSON_FIRSTNAME" />
+                    <Binding SourceProperty="PAYER_PERSON_LASTNAME" Expression="form.paymentData.PAYER_PERSON_LASTNAME" />
+                    <Binding SourceProperty="PAYER_COMPANY_NAME" Expression="form.paymentData.PAYER_COMPANY_NAME" />
+                    <Binding SourceProperty="PAYER_PERSON_ADDR_STREET" Expression="form.paymentData.PAYER_PERSON_ADDR_STREET" />
+                    <Binding SourceProperty="PAYER_PERSON_ADDR_POSTAL_CODE" Expression="form.paymentData.PAYER_PERSON_ADDR_POSTAL_CODE" />
+                    <Binding SourceProperty="PAYER_PERSON_ADDR_TOWN" Expression="form.paymentData.PAYER_PERSON_ADDR_TOWN" />
+                    <Binding SourceProperty="PAYER_PERSON_ADDR_COUNTRY" Expression="form.paymentData.PAYER_PERSON_ADDR_COUNTRY" />
+                    <Binding SourceProperty="buttonCaption" Expression="localized.payHere" />
+                  </Bindings>
+                </payTrailForm>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <OnCreate>
+        <ActionEvent ReferencedAction="+UiParts.payTrailFormExample.handler_dataContext1_OnCreate" />
+      </OnCreate>
+      <Children>
+        <Complex>
+          <Name value="paymentData" />
+          <Caption value="Payment data" />
+          <Children>
+            <Attribute>
+              <Name value="MERCHANT_ID" />
+              <Caption value="MERCHANT_ID - Merchant identification number given by Paytrail" />
+              <Description value="Merchant ID is the merchant identification number given by Paytrail." />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="URL_SUCCESS" />
+              <Caption value="URL_SUCCESS - URL to redirect after successful payment" />
+              <Description value="URL where customer is redirected after successful payment." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="URL_CANCEL" />
+              <Caption value="URL_CANCEL - URL to redirect after failed or cancelled payment" />
+              <Description value="URL where customer is redirected after failed or cancelled payment." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="ORDER_NUMBER" />
+              <Caption value="ORDER_NUMBER - Order number" />
+              <Description value="Order number is used to identify one transaction." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="PARAMS_IN" />
+              <Caption value="PARAMS_IN - Comma separated list of fields used in AUTHCODE calculation" />
+              <Description value="Comma separated list of fields used in AUTHCODE calculation." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="PARAMS_OUT" />
+              <Caption value="PARAMS_OUT - Comma separated list of fields used in return AUTHCODE calculation" />
+              <Description value="Comma separated list of fields used in return AUTHCODE calculation." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="AMOUNT" />
+              <Caption value="AMOUNT - Payment amount" />
+              <Description value="Price is given in euros and cents. Price is given without currency type and decimals are separated with a dot. Price must contain two decimals. Minimum price accepted by the service is 0.65€." />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Decimal" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="AUTHCODE" />
+              <Caption value="AUTHCODE - Payment AUTHCODE" />
+              <Description value="AUTHCODE" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="MSG_UI_MERCHANT_PANEL" />
+              <Caption value="MSG_UI_MERCHANT_PANEL - Message shown in Merchant's Panel" />
+              <Description value="Message shown in Merchant's Panel." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="URL_NOTIFY" />
+              <Caption value="URL_NOTIFY - URL to be called when the payment has been marked as paid" />
+              <Description value="URL to be called when the payment has been marked as paid. This URL is called with parameters defined in PARAMS_OUT_NOTIFY (Not yet available) when the payment is marked as paid." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="LOCALE" />
+              <Caption value="LOCALE - The default language of payment method selection page" />
+              <Description value="The default language of payment method selection page. The default locale is 'fi_FI'." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="REFERENCE_NUMBER" />
+              <Caption value="REFERENCE_NUMBER - Reference number" />
+              <Description value="Reference number to be delivered to payment method provider's service." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="PAYER_PERSON_PHONE" />
+              <Caption value="Payer's telephone number" />
+              <Description value="Payer's telephone number." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="PAYER_PERSON_EMAIL" />
+              <Caption value="PAYER_PERSON_EMAIL - Payer's email" />
+              <Description value="Payer's email." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="PAYER_PERSON_FIRSTNAME" />
+              <Caption value="PAYER_PERSON_FIRSTNAME - Payer's first name" />
+              <Description value="Payer's first name." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="PAYER_PERSON_LASTNAME" />
+              <Caption value="PAYER_PERSON_LASTNAME - Payer's last name" />
+              <Description value="Payer's last name." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="PAYER_COMPANY_NAME" />
+              <Caption value="Payer's company" />
+              <Description value="Payer's company." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="PAYER_PERSON_ADDR_STREET" />
+              <Caption value="PAYER_COMPANY_NAME - Payer's street address" />
+              <Description value="Payer's street address." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="PAYER_PERSON_ADDR_POSTAL_CODE" />
+              <Caption value="PAYER_PERSON_ADDR_POSTAL_CODE - Payer's postal code" />
+              <Description value="Payer's postal code." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="PAYER_PERSON_ADDR_TOWN" />
+              <Caption value="PAYER_PERSON_ADDR_TOWN - Payer's town" />
+              <Description value="Payer's town." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="PAYER_PERSON_ADDR_COUNTRY" />
+              <Caption value="PAYER_PERSON_ADDR_COUNTRY - Payer's country (ISO_3166-2)" />
+              <Description value="Payer's country (ISO_3166-2)." />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Attribute>
+          <Name value="onSubmitAsyncRequest" />
+          <Caption value="On submit async request" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~handler_payTrailFormExample_OnCreate" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="handler_dataContext1_OnCreate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// This is an example of minimum implementation of E2 interface as only required fields are included.
+form.paymentData.MERCHANT_ID = 13466
+form.paymentData.URL_SUCCESS = "http://www.example.com/success"
+form.paymentData.URL_CANCEL = "http://www.example.com/cancel"
+form.paymentData.ORDER_NUMBER = "123456"
+form.paymentData.PARAMS_IN = "MERCHANT_ID,URL_SUCCESS,URL_CANCEL,ORDER_NUMBER,PARAMS_IN,PARAMS_OUT,AMOUNT"
+form.paymentData.PARAMS_OUT = "PAYMENT_ID,TIMESTAMP,STATUS"
+form.paymentData.AMOUNT = 350
+form.paymentData.AUTHCODE = "BBDF8997A56F97DC0A46C99C88C2EEF9D541AAD59CFF2695D0DD9AF474086D71"
+
+
+// Optional fields
+form.paymentData.LOCALE = "en_US"
+
+form.onSubmitAsyncRequest = "Categories?$select=CategoryID,CategoryName"]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_payTrailFormExample_OnCreate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var url = apiobjects.urlRouter.findFormUrl(navigation.main.payTrailFormExample.fullName)
+url.updatePageUrl()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_payTrailForm1_OnSubmit" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// In OnSubmit handler we can do some async task
+var response = apiobjects.northwind.getAsync(form.onSubmitAsyncRequest)
+
+// If handler action has result action variable defined (has IsResult=true in property grid) and false is assigned into it, submit will be canceled.
+// If result not explicitly set to false (= is set to true or is not set), submit will be done. 
+if response.isError() then
+	this.result = false
+	system.consoleError("Submit canceled.")
+endif
+
+// So if you want to proceed with submit, do nothing or set result to true, if you want to cancel submit, set result to false. If component has no OnSubmit handler, submit will be done immediately.
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="result" />
+              <Caption value="Result" />
+              <DataContextParameter.IsResult value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

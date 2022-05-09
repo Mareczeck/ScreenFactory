@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="routingExample" />
+  <Caption value="Routing example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Label>
+          <Name value="label1" />
+          <Data value="Zodpovědností formuláře je si např. při initu nastavit správně URL, aby pokud si ho uživatel zkopíruje nebo udělá tvrdý refresh, zůstal (pokud možno) tam, kde je. Pokud není vhodné, aby se do daného formuláře navigoval, lze url smazat pomocí clearUrl." />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Label>
+          <Name value="label2" />
+          <Data value="Formulář si může své URL i aktualizovat v průběhu práce (např. pokud při uložení získá ID záznamu, ale nenaviguje se automaticky jinam)." />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Label>
+          <Name value="label3" />
+          <Data value="Url může v této chvíli obsahovat pouze parametry typu string a integer. Můžeme později další typy přidat, ale musí pro to být dobrý důvod. S URL je vhodné pracovat s rozumem, aby to nedopadlo jako v Sharepointu." />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Label>
+          <Name value="label4" />
+          <Data value="Pro práci s deeplinky a routováním je potřeba použít API objekt urlRouter. Protože dostává konfiguraci všech možných route v aplikaci, je vhodné ho mít pouze jednou a to globálně." />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Label>
+          <Name value="label5" />
+          <Data value="Pokud si formuláře správně nastavují URL, začne smysluplně fungovat i back/forward v prohlížeči. V tuto chvíli se v reakci na ně stane tvrdý refresh, v budoucnu ale předpokládáme, že se aplikace refreshovat nebude (což bude znamenat lepší performance, ale je třeba s tím počítat pokud byste globální proměnné používali nějak hodně stavově)." />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <TextBox>
+          <Name value="textBox1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="id" />
+            <Binding SourceProperty="Caption" Expression="id.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="id.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <TextBox>
+          <Name value="textBox2" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="guid" />
+            <Binding SourceProperty="Caption" Expression="guid.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="guid.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <EnumCombo>
+          <Name value="enumCombo1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="mode" />
+            <Binding SourceProperty="Caption" Expression="mode.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="mode.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-enumcombo" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </EnumCombo>
+        <Button>
+          <Name value="button1" />
+          <Caption value="set url" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~setUrl" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <HyperLink>
+          <Name value="hardlink" />
+          <Data value="Příklad tvrdé navigace" />
+          <Href value="#routing/id=42&amp;guid=fb114e88-a6fb-4c5e-b91d-f2ceb3760e63" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <OnCreate>
+        <ActionEvent ReferencedAction="+UiParts.routingExample.init" />
+      </OnCreate>
+      <Children>
+        <Attribute>
+          <Name value="id" />
+          <Caption value="Id" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="guid" />
+          <Caption value="Guid" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="mode" />
+          <Caption value="Mode" />
+          <MetaType reference="+MetaTypes.mode" />
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <Actions>
+    <ActionBlock>
+      <Name value="setUrl" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// url lze vytvořit dvěma cestami; První pomocí findFormUrl, které pracuje s interním názvem formuláře (např. main_routingExample) a dohledá první route z konfigurace,
+// která pro tento formulář existuje a použije její alias (v tomto případě "routing"). Druhá možnost je použít createUrl, které dostává už přímo alias, čili v tomto případě něco jako createUrl("routing").
+// Tuto druhou cestu ale nedoporučujeme standardně používat, protože je méně odolná proti případnému přejmenování.
+
+var url = packages.main.apiobjects.urlRouter.findFormUrl(navigation.main.routingExample.fullName)
+
+if (form.id.hasValue()) then
+	url.addInt("id", form.id)
+endif
+
+if (form.guid.hasValue()) then
+	url.addString("guid", form.guid)
+endif
+
+if (form.mode.hasValue()) then
+	url.addString("mode", form.mode.enumValue())
+endif
+
+url.updatePageUrl()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.actions.memoryCheck()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="memoryCheck" />
+      <IsJavascript value="True" />
+      <Script><![CDATA[this.blob = new MemoryMonitoringBlob();]]></Script>
+      <ActionLangBody IsValid="True" />
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="pagingRepeaterCtrlExample" />
+  <Caption value="Paging repeater ctrl example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Href value="#" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Panel>
+          <Name value="panel7" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <CheckBox>
+              <Name value="checkBox1" />
+              <CaptionPosition value="Right" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="editMode" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="editMode.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="editMode.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+            <CheckBox>
+              <Name value="checkBox2" />
+              <CaptionPosition value="Right" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="allowAdd" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="allowAdd.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="allowAdd.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+            <CheckBox>
+              <Name value="checkBox3" />
+              <CaptionPosition value="Right" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="allowRemove" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="allowRemove.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="allowRemove.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+            <CheckBox>
+              <Name value="checkBox4" />
+              <CaptionPosition value="Right" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="showAdd" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="showAdd.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="showAdd.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+            <CheckBox>
+              <Name value="checkBox5" />
+              <CaptionPosition value="Right" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="showRemove" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="showRemove.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="showRemove.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-checkbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CheckBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <PagingRepeaterCtrl identity="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4">
+          <Name value="pagingRepeaterCtrl1" />
+          <CaptionAtt value="Title" />
+          <Panel.Height value="#" />
+          <Panel.Width value="50%" />
+          <OnItemAdd>
+            <ActionEvent ReferencedAction="~handler_pagingRepeaterCtrl1_OnItemAdd" />
+          </OnItemAdd>
+          <OnItemRemove>
+            <ActionEvent ReferencedAction="~handler_pagingRepeaterCtrl1_OnItemRemove" />
+          </OnItemRemove>
+          <Bindings>
+            <Binding SourceProperty="Index" Expression="form.Index" />
+            <Binding SourceProperty="Data" Expression="form.collection1" />
+            <Binding SourceProperty="AllowAdd" Expression="form.allowAdd" />
+            <Binding SourceProperty="AllowRemove" Expression="form.allowRemove" />
+            <Binding SourceProperty="ShowAdd" Expression="showAdd" />
+            <Binding SourceProperty="ShowRemove" Expression="showRemove" />
+          </Bindings>
+        </PagingRepeaterCtrl>
+        <TextBox>
+          <Name value="textBox6" />
+          <IsEnabled value="False" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="Index" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="Index.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="Index.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
+          <Name value="pagingRepeater1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Panel>
+              <Name value="panel5" />
+              <Orientation value="Vertical" />
+              <Children>
+                <Panel>
+                  <Name value="panel6" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <TextBox>
+                      <Name value="textBox2" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="FirstName" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="FirstName.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="FirstName.caption()" />
+                        <Binding SourceProperty="IsEnabled" Expression="form.editMode" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox3" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="LastName" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="LastName.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="LastName.caption()" />
+                        <Binding SourceProperty="IsEnabled" Expression="form.editMode" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <GroupBox>
+                  <Name value="groupBox1" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Content>
+                    <Panel>
+                      <Name value="panel4" />
+                      <Orientation value="Vertical" />
+                      <Children>
+                        <PagingRepeaterCtrl identity="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4">
+                          <Name value="pagingRepeaterCtrl2" />
+                          <AllowAdd value="True" />
+                          <AllowRemove value="True" />
+                          <KeepArrowsTogether value="True" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="subcollection1" />
+                            <Binding SourceProperty="Index" Expression="Index" />
+                          </Bindings>
+                        </PagingRepeaterCtrl>
+                        <TextBox>
+                          <Name value="textBox4" />
+                          <IsEnabled value="False" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="Index" />
+                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="Index.isRequired()" />
+                            <Binding SourceProperty="Caption" Expression="Index.caption()" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-textbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </TextBox>
+                        <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
+                          <Name value="pagingRepeater2" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Content>
+                            <Panel>
+                              <Name value="panel2" />
+                              <Orientation value="Vertical" />
+                              <Children>
+                                <TextBox>
+                                  <Name value="textBox5" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="ChildFirstName" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="ChildFirstName.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="ChildFirstName.caption()" />
+                                    <Binding SourceProperty="IsEnabled" Expression="form.editMode" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-textbox" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </TextBox>
+                                <TextBox>
+                                  <Name value="textBox7" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="ChildLastName" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="ChildLastName.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="ChildLastName.caption()" />
+                                    <Binding SourceProperty="IsEnabled" Expression="form.editMode" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-textbox" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </TextBox>
+                              </Children>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-panel" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Panel>
+                          </Content>
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="subcollection1" />
+                            <Binding SourceProperty="Index" Expression="Index" />
+                          </Bindings>
+                        </PagingRepeater>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Content>
+                  <Bindings>
+                    <Binding SourceProperty="Caption" Expression="subcollection1.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-groupbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </GroupBox>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="form.collection1" />
+            <Binding SourceProperty="Index" Expression="form.Index" />
+          </Bindings>
+        </PagingRepeater>
+        <Panel>
+          <Name value="panel3" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="add" />
+              <Caption value="Add" />
+              <Panel.Height value="#" />
+              <Panel.Width value="200px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~handler_add_OnClick" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Button>
+              <Name value="removeLast" />
+              <Caption value="Remove last" />
+              <Panel.Height value="#" />
+              <Panel.Width value="200px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~handler_removeLast_OnClick" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="Index" />
+          <Caption value="Index" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Collection>
+          <Name value="collection1" />
+          <Caption value="Collection 1" />
+          <MinCount value="3" />
+          <Children>
+            <Computed>
+              <Name value="Title" />
+              <Caption value="Title" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[FirstName + " " + LastName]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Attribute>
+              <Name value="FirstName" />
+              <Caption value="First name" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="LastName" />
+              <Caption value="Last name" />
+              <IsRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Index" />
+              <Caption value="Index" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Collection>
+              <Name value="subcollection1" />
+              <Caption value="Children" />
+              <MaxCount value="6" />
+              <MinCount value="1" />
+              <Children>
+                <Attribute>
+                  <Name value="ChildFirstName" />
+                  <Caption value="Child first name" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="ChildLastName" />
+                  <Caption value="Child last name" />
+                  <IsRequired value="True" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Computed>
+                  <Name value="Title" />
+                  <Caption value="Title" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA[ChildFirstName + " " + ChildLastName]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
+              </Children>
+            </Collection>
+          </Children>
+        </Collection>
+        <Attribute>
+          <Name value="allowAdd" />
+          <Caption value="Allow add" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="allowRemove" />
+          <Caption value="Allow remove" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="editMode" />
+          <Caption value="Edit mode" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="showAdd" />
+          <Caption value="Show add" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="showRemove" />
+          <Caption value="Show remove" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var item = form.collection1.addItem()
+item.FirstName = "Ferdinand"
+item.LastName = "Mravenec"
+
+var subitem1 = item.subcollection1.addItem()
+subitem1.ChildFirstName = "Ferdík"
+subitem1.ChildLastName = "Mravenec"
+
+var subitem2 = item.subcollection1.addItem()
+subitem2.ChildFirstName = "Mánička"
+subitem2.ChildLastName = "Mravencová"
+
+item = form.collection1.addItem()
+item.FirstName = "Josef"
+item.LastName = "Pytlík"
+
+form.allowAdd = true
+form.showAdd = true
+form.showRemove = true]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_add_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var item = form.collection1.addItem()
+item.FirstName = "Přidaná"
+item.LastName = "položka"]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_removeLast_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.collection1.count() > 0 then
+	form.collection1.removeItem(form.collection1.count())
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_pagingRepeaterCtrl1_OnItemAdd" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("params.newItem.index():" + toString(params.newItem.index()))]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_pagingRepeaterCtrl1_OnItemRemove" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("params.removedItem:" + params.removedItem.toJson())]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

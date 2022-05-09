@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="collapsibleGroupBoxExample" />
+  <Caption value="Collapsible group box example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <CheckBox>
+          <Name value="checkBox5" />
+          <CaptionPosition value="Right" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="panel2.enabled" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="panel2.enabled.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="panel2.enabled.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-checkbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CheckBox>
+        <CollapsibleGroupBox identity="collapsibleGroupBox.cfca4faa9e574885bad67cbe322167a7">
+          <Name value="collapsibleGroupBox1" />
+          <caption value="Nazev groupboxu" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Panel>
+              <Name value="panel2" />
+              <Orientation value="Vertical" />
+              <Bindings>
+                <Binding SourceProperty="IsEnabled" Expression="panel2.enabled" />
+              </Bindings>
+              <Children>
+                <CustomHtml>
+                  <Name value="customHtml1" />
+                  <HtmlMarkup><![CDATA[<p>Je obecně známou věcí, že člověk bývá při zkoumání grafického návrhu rozptylován okolním textem, pokud mu dává nějaký smysl. Úkolem Lorem Ipsum je pak nahradit klasický smysluplný text vhodnou bezvýznamovou alternativou s relativně běžným rozložením slov. To jej dělá narozdíl od opakujícího se "Tady bude text. Tady bude text..." mnohem více čitelnějším. V dnešní době je Lorem Ipsum používáno spoustou DTP balíků a webových editorů coby výchozí model výplňového textu. Ostatně si zkuste zadat frázi "lorem ipsum" do vyhledavače a sami uvidíte. Během let se objevily různé varianty a odvozeniny od klasického Lorem Ipsum, někdy náhodou, někdy účelně (např. pro pobavení čtenáře).</p>]]></HtmlMarkup>
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-customhtml" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CustomHtml>
+                <CollapsibleGroupBox identity="collapsibleGroupBox.cfca4faa9e574885bad67cbe322167a7">
+                  <Name value="collapsibleGroupBox2" />
+                  <caption value="Nazev groupboxu" />
+                  <heading value="h6" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="50%" />
+                  <Content>
+                    <Panel>
+                      <Name value="panel22" />
+                      <Orientation value="Vertical" />
+                      <Children>
+                        <CustomHtml>
+                          <Name value="customHtml12" />
+                          <HtmlMarkup><![CDATA[<p>Je obecně známou věcí, že člověk bývá při zkoumání grafického návrhu rozptylován okolním textem, pokud mu dává nějaký smysl. Úkolem Lorem Ipsum je pak nahradit klasický smysluplný text vhodnou bezvýznamovou alternativou s relativně běžným rozložením slov. To jej dělá narozdíl od opakujícího se "Tady bude text. Tady bude text..." mnohem více čitelnějším. V dnešní době je Lorem Ipsum používáno spoustou DTP balíků a webových editorů coby výchozí model výplňového textu. Ostatně si zkuste zadat frázi "lorem ipsum" do vyhledavače a sami uvidíte. Během let se objevily různé varianty a odvozeniny od klasického Lorem Ipsum, někdy náhodou, někdy účelně (např. pro pobavení čtenáře).</p>]]></HtmlMarkup>
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-customhtml" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </CustomHtml>
+                        <TextBox>
+                          <Name value="textBox1" />
+                          <CaptionVAlign value="Middle" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="300px" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="collapsibleGroupBox2.textBox" />
+                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="collapsibleGroupBox2.textBox.isRequired()" />
+                            <Binding SourceProperty="Caption" Expression="collapsibleGroupBox2.textBox.caption()" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-textbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </TextBox>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Content>
+                  <OnCollapseClick>
+                    <ActionEvent ReferencedAction="~action1_ALANG" />
+                  </OnCollapseClick>
+                  <Bindings>
+                    <Binding SourceProperty="isExpanded" Expression="jeRozbalen" />
+                    <Binding SourceProperty="isVisible" Expression="jeViditelny" />
+                    <Binding SourceProperty="IsEnabled" Expression="jeEnabled" />
+                  </Bindings>
+                  <conditionalCssClass>
+                    <CssClassConditional>
+                      <ClassName value="myCgbClass" />
+                      <Bindings>
+                        <Binding SourceProperty="Condition" Expression="isMyCgbClass" />
+                      </Bindings>
+                    </CssClassConditional>
+                  </conditionalCssClass>
+                </CollapsibleGroupBox>
+                <Panel>
+                  <Name value="panel5" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <CheckBox>
+                      <Name value="checkBox1" />
+                      <Caption value="Ukaz groubox" />
+                      <CaptionPosition value="Right" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="jeViditelny" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="jeViditelny.isRequired()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-checkbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </CheckBox>
+                    <CheckBox>
+                      <Name value="checkBox4" />
+                      <CaptionPosition value="Right" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="jeEnabled" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="jeEnabled.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="jeEnabled.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-checkbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </CheckBox>
+                    <CheckBox>
+                      <Name value="checkBox2" />
+                      <Caption value="Je rozbalen" />
+                      <CaptionPosition value="Right" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="jeRozbalen" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="jeRozbalen.isRequired()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-checkbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </CheckBox>
+                    <CheckBox>
+                      <Name value="checkBox3" />
+                      <CaptionPosition value="Right" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="isMyCgbClass" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="isMyCgbClass.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="isMyCgbClass.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-checkbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </CheckBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+          <OnCollapseClick>
+            <ActionEvent ReferencedAction="~action1_ALANG" />
+          </OnCollapseClick>
+          <conditionalCssClass>
+            <CssClassConditional>
+              <ClassName value="myCgbClass" />
+              <Bindings>
+                <Binding SourceProperty="Condition" Expression="isMyCgbClass" />
+              </Bindings>
+            </CssClassConditional>
+          </conditionalCssClass>
+        </CollapsibleGroupBox>
+        <Panel>
+          <Name value="panel6" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <HyperLink>
+              <Name value="back" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <OnCreate>
+        <ActionEvent ReferencedAction="+UiParts.collapsibleGroupBoxExample.memoryCheck" />
+      </OnCreate>
+      <Children>
+        <Attribute>
+          <Name value="attribute1" />
+          <Caption value="Attribute 1" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="jeViditelny" />
+          <Caption value="Je viditelny" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="jeRozbalen" />
+          <Caption value="Je rozbalen" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="isMyCgbClass" />
+          <Caption value="Aplikovat myCgbClass" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="jeEnabled" />
+          <Caption value="Je enabled" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Complex>
+          <Name value="collapsibleGroupBox2" />
+          <Caption value="Collapsible group box 2" />
+          <Children>
+            <Attribute>
+              <Name value="textBox" />
+              <Caption value="Text box" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="panel2" />
+          <Caption value="Panel 2" />
+          <Children>
+            <Attribute>
+              <Name value="enabled" />
+              <Caption value="Enabled" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <Actions>
+    <ActionBlock>
+      <Name value="action1_ALANG" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("Event collapse group box fired")
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="memoryCheck" />
+      <IsJavascript value="True" />
+      <Script><![CDATA[this.blob = new MemoryMonitoringBlob();]]></Script>
+      <ActionLangBody IsValid="True" />
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

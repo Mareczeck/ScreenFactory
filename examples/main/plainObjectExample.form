@@ -1,0 +1,737 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="plainObjectExample" />
+  <Caption value="Plain object example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Href value="#" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Label>
+          <Name value="label1" />
+          <Data value="ApiObjekt pro manipulaci s javascriptovým objektem pomocí JSON. Tento objekt slouží především pro performance účely a je vhodné ho používat pouze při manipulaci s potenciálně velkými javascriptovými objekty (řádově desetisíce a více atributů), jejichž načtení do datového modelu SF by bylo příliš pomalé a vyžadovalo velké množtví paměti. Cesta se používá v ActionLang notaci, která používá lomítko jako oddělovač a index začínají od 1." />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Button>
+          <Name value="btnInit" />
+          <Caption value="Init" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~init" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Button>
+          <Name value="btnSetXY" />
+          <Caption value="Set x/y" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~setXY" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Button>
+          <Name value="btnSetZ3" />
+          <Caption value="Set z[3]" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~setZ3" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Button>
+          <Name value="btnRemoveXY" />
+          <Caption value="Remove x/y" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~removeXY" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Button>
+          <Name value="btnRemoveZ2" />
+          <Caption value="Remove z[2]" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~removeZ2" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Label>
+          <Name value="label4" />
+          <Data value="Funkce get vrací string v němž je JSON části stromu. Pokud cesta neukazuje na objekt, ale na hodnotu, je přesto tato hodnota vrácena jako JSON, tedy např. string bude v uvozovkách dle JSON notace." />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Panel>
+          <Name value="panel6" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="button1" />
+              <Caption value="Get Z" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~getZ3" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <TextBox>
+              <Name value="textBox7" />
+              <Caption value="Text box 7" />
+              <CaptionPosition value="Hide" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="form.z" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Label>
+          <Name value="label3" />
+          <Data value="Chcete-li přečíst konkrétní hodnotu, je vhodné použít funkce getString, getInteger a getBool. Tyto funkce lze volat pouze na hodnoty (ne celé části stromu) a vrací hodnotu pouze pokud je daného typu, jinak vrací null. Tyto funkce nemají párové set funkce, protože PlainObject není určen pro takto jemné datové manipulace." />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Panel>
+          <Name value="panel3" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="button3" />
+              <Caption value="getInteger(&quot;x.a&quot;)" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~getIntegerXA" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <TextBox>
+              <Name value="textBox3" />
+              <CaptionPosition value="Hide" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="form.getIntegerResult" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="form.getIntegerResult.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="form.getIntegerResult.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel8" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="button4" />
+              <Caption value="getBool(&quot;x.c&quot;)" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~getBoolXC" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <TextBox>
+              <Name value="textBox9" />
+              <CaptionPosition value="Hide" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="form.getBoolResult" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="form.getBoolResult.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="form.getBoolResult.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel7" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="button2" />
+              <Caption value="getString(&quot;x.b&quot;)" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~getStringXB" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <TextBox>
+              <Name value="textBox8" />
+              <CaptionPosition value="Hide" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="form.getStringResult" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="form.getStringResult.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="form.getStringResult.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <GroupBox>
+          <Name value="grpCompare" />
+          <Caption value="Compare" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Panel>
+              <Name value="panel4" />
+              <Orientation value="Vertical" />
+              <Children>
+                <TextBox>
+                  <Name value="textBox1" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="compareJson" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="compareJson.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="compareJson.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+                <Panel>
+                  <Name value="panel5" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Button>
+                      <Name value="btnCompare" />
+                      <Caption value="Compare plain object path (or leave empty] with json" />
+                      <Panel.Height value="#" />
+                      <Panel.VerticalAlignment value="Middle" />
+                      <Panel.Width value="200px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~compare" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                    <TextBox>
+                      <Name value="textBox6" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="plainObjectPath" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="plainObjectPath.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="plainObjectPath.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <CheckBox>
+                  <Name value="checkBox1" />
+                  <IsEnabled value="False" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="equals" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="equals.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="equals.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-checkbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CheckBox>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-groupbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </GroupBox>
+        <Panel>
+          <Name value="panel2" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="btnToJson" />
+              <Caption value="ToJson" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~toJson" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <TextBox>
+              <Name value="textBox5" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="json" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="json.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="json.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <TextBox>
+              <Name value="textBox4" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="jsonOmitUnderscore" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="jsonOmitUnderscore.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="jsonOmitUnderscore.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Label>
+          <Name value="label2" />
+          <Data value="Set a Init vrací true, pokud se operace povede, a false pokud ne. To typicky znamená, že parametr nebyl validní json." />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <TextBox>
+          <Name value="textBox2" />
+          <Caption value="Content" />
+          <CaptionPosition value="Top" />
+          <CaptionVAlign value="Middle" />
+          <InputType value="Multiline" />
+          <IsEnabled value="False" />
+          <Panel.Height value="400px" />
+          <Panel.Width value="*" />
+          <Rows value="20" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="form.content" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="content" />
+          <Caption value="Content" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="z" />
+          <Caption value="z" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="json" />
+          <Caption value="Json" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="jsonOmitUnderscore" />
+          <Caption value="Json omit underscore" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="compareJson" />
+          <Caption value="Compare json" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="plainObjectPath" />
+          <Caption value="Plain object path" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="equals" />
+          <Caption value="Equals" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="getStringResult" />
+          <Caption value="Get string result" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="getIntegerResult" />
+          <Caption value="Get integer result" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="getBoolResult" />
+          <Caption value="Get bool result" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.plainObject1.init("{\"x\": { \"a\": 5, \"_a\": 7, \"b\": \"hello\", \"c\": true}, \"z\": [{\"c\": 10}, {\"c\": 20}]}")
+
+form.content = form.apiobjects.plainObject1.formatJson()
+
+form.compareJson = plainObject1.get("x")
+form.plainObjectPath = "x"]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setXY" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// druhý parametr může být hodnota ve formátu json, nebo json celého objektu
+form.apiobjects.plainObject1.set("x/y", "{\"w\": \"hello world\"}")
+
+form.content = form.apiobjects.plainObject1.formatJson()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setZ3" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.plainObject1.set("z[3]", "{\"c\": 100}")
+
+form.content = form.apiobjects.plainObject1.formatJson()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="getZ3" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.z = form.apiobjects.plainObject1.get("z")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="toJson" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.json = form.apiobjects.plainObject1.toJson()
+form.jsonOmitUnderscore = form.apiobjects.plainObject1.toJsonOmitUnderscore()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="removeXY" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.plainObject1.remove("x/y")
+
+form.content = form.apiobjects.plainObject1.formatJson()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="removeZ2" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.plainObject1.remove("z[2]")
+
+form.content = form.apiobjects.plainObject1.formatJson()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="compare" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.equals = plainObject1.isEqual(form.plainObjectPath, form.compareJson)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="getStringXB" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.getStringResult = form.apiobjects.plainObject1.getString("x.b")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="getIntegerXA" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.getIntegerResult = form.apiobjects.plainObject1.getInteger("x.a")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="getBoolXC" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.getBoolResult = form.apiobjects.plainObject1.getBool("x.c")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <PlainObject identity="PlainObject.2933617ce1714fe38ef01785a5a6492f">
+      <Name value="plainObject1" />
+    </PlainObject>
+  </ApiObjects>
+</Form>

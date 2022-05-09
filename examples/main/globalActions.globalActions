@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<GlobalActions>
+  <Name value="globalActions" />
+  <Actions>
+    <ActionBlock>
+      <Name value="goHome" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.home.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_breadcrumbsCtrl_OnChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("OnChange: " + apiobjects.breadcrumbsCtrl.getAllJson())]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_northwind_OnIsAliveTimeout" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.alert("Are you there?")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="userInactivityExpired" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("UserInactivity expired")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goToForm" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if errorSourceForm.hasValue() then
+	system.console("goToForm::navigationTreeNode=" + navigationTreeNode)
+	if errorSourceForm = "codelistExample" then
+		navigation.main.codelistExample.withErrorSourceComponent
+		(errorSourceComponent).withErrorPointer(pointer).go()
+	endif
+else
+	navigation.main.home.go()
+endif
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="errorSourceForm" />
+              <Caption value="Error source form" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="errorSourceComponent" />
+              <Caption value="Error source component" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="pointer" />
+              <Caption value="Pointer" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="navigationTreeNode" />
+              <Caption value="Navigation tree node" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_navigationObserver1_OnAfterFormActivate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("Navigation to form " + params.formId + " and form activate was completed.")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_accessibleDisabledEditors_OnChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.accessibilitySettings.accessibleDisabledEditors(params.data.accessibleDisabledEditors)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</GlobalActions>

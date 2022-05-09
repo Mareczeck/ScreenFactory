@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="filteredCodelistExample" />
+  <Caption value="abcd" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Data value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Label>
+          <Name value="label1" />
+          <Data value="This example will not work unless there is mock project running on localhost:3000." />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <ReferenceCombo>
+          <Name value="referenceCombo1" />
+          <DisplayMember value="_description" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <ReferenceList reference="~mockCodelist" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="unfilteredCodelist" />
+            <Binding SourceProperty="Caption" Expression="unfilteredCodelist.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="unfilteredCodelist.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-referencecombo" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </ReferenceCombo>
+        <Button>
+          <Name value="simpleValidityFilterFill" />
+          <Caption value="Simple filter by validity date" />
+          <Panel.Height value="#" />
+          <Panel.Width value="250px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~handler_btnFillFilteredCodelist_OnClick" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Button>
+          <Name value="resetFilter" />
+          <Caption value="Reset filter" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~reset" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Button>
+          <Name value="filterByExclude" />
+          <Caption value="Filter by exclude" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~exclude" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Button>
+          <Name value="filterByInclude" />
+          <Caption value="Filter by include" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~include" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <Panel>
+          <Name value="filterByRegex_parent" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="filterByRegex" />
+              <Caption value="Filter by regex" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~includeRegex" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <TextBox>
+              <Name value="textBox2" />
+              <CaptionPosition value="Hide" />
+              <Panel.Height value="#" />
+              <Panel.Width value="300px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="regex" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="regex.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="regex.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <ReferenceCombo>
+          <Name value="referenceCombo2" />
+          <DisplayMember value="_description" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <ReferenceList reference="~filteredCodelist" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="filteredCodelist" />
+            <Binding SourceProperty="Caption" Expression="filteredCodelist.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="filteredCodelist.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-referencecombo" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </ReferenceCombo>
+        <TextBox>
+          <Name value="textBox1" />
+          <InputType value="Multiline" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Rows value="10" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="dataAsJson" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="dataAsJson.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="dataAsJson.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+          <Name value="labeledText1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="count" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="count.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="count.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-labeledtext" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </LabeledText>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Reference>
+          <Name value="unfilteredCodelist" />
+          <Caption value="Unfiltered codelist" />
+          <Children>
+            <Attribute>
+              <Name value="Key" />
+              <Caption value="Key" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Description" />
+              <Caption value="Description" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="_description" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[Key.hasValue() ? (Key + " - " + Description) : defaultString()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Reference>
+        <Reference>
+          <Name value="filteredCodelist" />
+          <Caption value="Filtered codelist" />
+          <Children>
+            <Attribute>
+              <Name value="Key" />
+              <Caption value="Key" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Description" />
+              <Caption value="Description" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="_description" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[Key.hasValue() ? (Key + " - " + Description) : defaultString()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Reference>
+        <Attribute>
+          <Name value="dataAsJson" />
+          <Caption value="Data as json" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="count" />
+          <Caption value="Count" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="regex" />
+          <Caption value="Regex" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="handler_btnFillFilteredCodelist_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.filteredCodelist.filterByValidityDateTime(getDate())
+form.actions.showContentAsJson()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="exclude" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// First, we get a handle on the filter object.
+// To get filter we can use either getFilter or resetFilter functions;
+// getFilter only passes handle for current filter without changing it,
+// while reset filter resets it (including any validity date filter). 
+var filter = form.apiobjects.filteredCodelist.getFilter()
+
+// then we add any filtering rules by using excludeItemsBy..., includeItemsBy... or filterByValidityDate
+filter.excludeItemsByBoolColumn("SomeBool", false)
+
+// at the end we want to apply the filter by calling commit
+filter.commit()
+
+// NOTE: While constructing the filter does not trigger automatic refiltering, the filter is already active, so if it has to be used for other reasons (ie. because data of the source changes), it will be applied as is, that means even if it is not commited yet. That should not be a problem though, because once we finish it and commit it, it will be reapplied again and user will hardly notice.
+
+form.actions.showContentAsJson()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="showContentAsJson" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.count = form.apiobjects.filteredCodelist.getCount()
+form.dataAsJson = form.apiobjects.filteredCodelist.getDataAsJson()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="simpleValidityDateFilter" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// older api for simple filtering by date
+// more advanced filtering can be done by filter object (see getFilter)
+form.apiobjects.filteredCodelist.filterByValidityDateTime(getDate())
+form.actions.showContentAsJson()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="reset" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// parameter in resetFilter means whether the data should be refiltered immediatelly
+form.apiobjects.filteredCodelist.resetFilter(true)
+
+form.actions.showContentAsJson()
+
+// resetFilter method optionally returns filter object that may be used right away like:
+// var filter = form.apiobjects.filteredCodelist.resetFilter(true)
+// ... do something with filter
+// filter.commit()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="include" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var filter = form.apiobjects.filteredCodelist.getFilter()
+filter.includeItemsByStringColumn("Description", "Customs office of guarantee")
+filter.commit()
+
+form.actions.showContentAsJson()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="includeRegex" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var filter = form.apiobjects.filteredCodelist.getFilter()
+filter.includeItemsByRegex("Key", form.regex)
+filter.commit()
+
+form.actions.showContentAsJson()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[mockCodelist.loadDataAsync(GetDate())
+//all strings starting with "C"  
+form.regex = "^C.*"]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <ServerConnection identity="ServerConnection.db7b3eef075548988df768923691922c">
+      <Name value="localhost3k" />
+      <codelistsUrl value="" />
+      <listsUrl value="" />
+      <rootUrl value="http://localhost:3000/" />
+    </ServerConnection>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="mockCodelist" />
+      <filterByDate value="False" />
+      <name value="MockCodelist" />
+      <server reference="~localhost3k" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Key" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="From" />
+          <columnRole value="ValidityStart" />
+          <dataType value="datetime" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="To" />
+          <columnRole value="ValidityEnd" />
+          <dataType value="datetime" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <FilteredCodelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="filteredCodelist" />
+      <codelistSource reference="~mockCodelist" />
+    </FilteredCodelist>
+  </ApiObjects>
+</Form>

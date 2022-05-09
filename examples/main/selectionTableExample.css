@@ -1,0 +1,23 @@
+.bold-selected .sffw-selectiontable > tbody > tr.selected {
+    font-weight: 700;
+}
+
+.pagingrepeaterctrl\.280e5bd891d54eda9e7c2bfaaf9e4af4\.pagingrepeaterctrl {
+    padding-bottom: 0px;
+}
+
+.m8-selectiontable {
+    padding-top: 0px;
+}
+
+.column-header-italic {
+    font-style: italic;
+}
+
+.minWidth-200 {
+	min-width: 200px;
+}
+
+.displayNone {
+	display: none;
+}

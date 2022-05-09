@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="geolocationExample" />
+  <Caption value="Geolocation example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Href value="#" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Panel>
+          <Name value="panel4" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="50%" />
+          <Children>
+            <Button>
+              <Name value="button1" />
+              <Caption value="Načíst polohu - celý rozvoj" />
+              <Panel.Height value="#" />
+              <Panel.Width value="200px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~getLocation" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Button>
+              <Name value="button2" />
+              <Caption value="Načíst polohu - zaokr." />
+              <Panel.Height value="#" />
+              <Panel.Width value="200px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~getLocationRounded" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <TextBox>
+              <Name value="textBox2" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="precision" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="precision.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="precision.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="theme-textbox" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="theme-panel" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel2" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="50%" />
+          <Children>
+            <TextBox>
+              <Name value="textBox4" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="dms" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="dms.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="dms.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="theme-textbox" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel3" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="50%" />
+          <Children>
+            <TextBox>
+              <Name value="textBox1" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="latitude" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="latitude.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="latitude.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="theme-textbox" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <TextBox>
+              <Name value="textBox3" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="longitude" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="longitude.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="longitude.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="theme-textbox" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="theme-panel" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="dms" />
+          <Caption value="Location in DMS format" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="latitude" />
+          <Caption value="Latitude" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Decimal" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="longitude" />
+          <Caption value="Longitude" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Decimal" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="precision" />
+          <Caption value="Precision" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnActivate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnActivate>
+  <Actions>
+    <ActionBlock>
+      <Name value="getLocation" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var geoResult = form.apiobjects.geolocation1.getCurrentPositionAsync()
+if geoResult.isError() then
+	var err = "Error: " + geoResult.getErrorMessage()
+	system.consoleError(err)
+	system.alert(err)
+else
+	form.dms = geoResult.getDmsString()
+	form.latitude = geoResult.getLatitude()
+	form.longitude = geoResult.getLongitude()
+endif
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="getLocationRounded" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var geoResult = form.apiobjects.geolocation1.getCurrentPositionAsync()
+if geoResult.isError() then
+	var err = "Error: " + geoResult.getErrorMessage()
+	system.consoleError(err)
+	system.alert(err)
+else
+	var precision = defaultInt()
+	if form.precision.hasValue() then
+		precision = form.precision
+	endif
+	form.dms = geoResult.getDmsStringWithPrecision(precision)
+	form.latitude = geoResult.getLatitude()
+	form.longitude = geoResult.getLongitude()
+endif
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.precision = 3]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <Geolocation identity="Geolocation.35da8268d7aa43e8af9983ac186b0aab">
+      <Name value="geolocation1" />
+      <maximumAge value="60000" />
+      <timeout value="5000" />
+    </Geolocation>
+  </ApiObjects>
+</Form>

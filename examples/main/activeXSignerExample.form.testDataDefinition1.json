@@ -1,0 +1,10 @@
+{
+    "result": {
+        "signedXml": "feugiat imperdiet augue non id",
+        "signingSuccessful": true,
+        "activeXFound": true,
+        "certificateSelected": true,
+        "otherErrorMessage": "justo egestas egestas Nunc nostra"
+    },
+    "xmlToSign": "feugiat imperdiet augue non id"
+}

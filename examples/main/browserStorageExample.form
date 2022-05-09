@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="browserStorageExample" />
+  <Caption value="Browser storage example" />
+  <Content>
+    <GroupBox>
+      <Name value="groupBox1" />
+      <Caption value="Browser storage" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Content>
+        <Panel>
+          <Name value="panel1" />
+          <Orientation value="Vertical" />
+          <Children>
+            <Panel>
+              <Name value="key_parent" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <TextBox>
+                  <Name value="key" />
+                  <CaptionPosition value="Top" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="50%" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="key" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="key.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="key.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+                <TextBox>
+                  <Name value="value" />
+                  <CaptionPosition value="Top" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="value" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="value.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="value.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Button>
+              <Name value="btnSetItem" />
+              <Panel.Height value="#" />
+              <Panel.Width value="500px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~SetItem" />
+              </OnClick>
+              <Bindings>
+                <Binding SourceProperty="Caption" Expression="form.buttonCaptions.setItemCaption" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="m8-button" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Panel>
+              <Name value="panel2" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Button>
+                  <Name value="btnGetItem" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="500px" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~GetItem" />
+                  </OnClick>
+                  <Bindings>
+                    <Binding SourceProperty="Caption" Expression="form.buttonCaptions.getItemCaption" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="m8-button" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <TextBox>
+                  <Name value="textBox1" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="retrievedValue" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="retrievedValue.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="retrievedValue.caption()" />
+                  </Bindings>
+                </TextBox>
+              </Children>
+            </Panel>
+            <Button>
+              <Name value="btnRemoveItem" />
+              <Panel.Height value="#" />
+              <Panel.Width value="300px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~RemoveItem" />
+              </OnClick>
+              <Bindings>
+                <Binding SourceProperty="Caption" Expression="form.buttonCaptions.removeItemCaption" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="m8-button" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Button>
+              <Name value="btnClear" />
+              <Caption value="...browserStorage.clear()" />
+              <Panel.Height value="#" />
+              <Panel.Width value="300px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~Clear" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="m8-button" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Label>
+              <Name value="label1" />
+              <Data value="Note: If you set the storage to be session only, it is tied to browser tab. New tab will have new session. More info in sessionStorage documentation." />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Content>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-groupbox" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </GroupBox>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="key" />
+          <Caption value="Key" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="value" />
+          <Caption value="Value" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="retrievedValue" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Complex>
+          <Name value="buttonCaptions" />
+          <Children>
+            <Computed>
+              <Name value="setItemCaption" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA["...browserStorage.setItem(\"" + form.key + "\", \"" + form.value + "\")"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="getItemCaption" />
+              <Caption value="Get item caption" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA["form.retrievedValue = ...browserStorage.getItem(\"" + form.key + "\")"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="removeItemCaption" />
+              <Caption value="Remove item caption" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA["...browserStorage.removeItem(\"" + form.key + "\")"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Complex>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~Init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="Init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.key = "greeting"
+form.value = "Hello world!"]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="SetItem" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.browserStorage1.setItem(form.key, form.value)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="GetItem" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.retrievedValue = form.apiobjects.browserStorage1.getItem(form.key)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="RemoveItem" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.browserStorage1.removeItem(form.key)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="Clear" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.browserStorage1.clear()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <BrowserStorage identity="BrowserStorage.83565645179f49c7aca5e53363dc7176">
+      <Name value="browserStorage1" />
+    </BrowserStorage>
+  </ApiObjects>
+</Form>

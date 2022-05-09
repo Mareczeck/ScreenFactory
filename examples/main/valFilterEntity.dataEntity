@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="valFilterEntity" />
+  <Caption value="Val filter entity" />
+  <Children>
+    <Attribute>
+      <Name value="valFilterEntityAtt" />
+      <Caption value="Val filter entity att" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="2" />
+          <StrMinLength value="1" />
+        </AttributeType>
+      </DeclaredType>
+      <Validators>
+        <Validator Name="valEntity1">
+          <ErrorMessage IsValid="True">
+            <ExpressionText><![CDATA["valFilterEntity attribute error"]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </ErrorMessage>
+          <IsValid IsValid="True">
+            <ExpressionText><![CDATA[false]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </IsValid>
+        </Validator>
+      </Validators>
+    </Attribute>
+  </Children>
+  <Validators>
+    <Validator Name="wholeEntityVal1">
+      <ErrorMessage IsValid="True">
+        <ExpressionText><![CDATA["wholeEntityVal1 err"]]></ExpressionText>
+        <ResultType>
+          <BaseType value="String" />
+        </ResultType>
+      </ErrorMessage>
+      <IsValid IsValid="True">
+        <ExpressionText><![CDATA[false]]></ExpressionText>
+        <ResultType>
+          <BaseType value="Bool" />
+        </ResultType>
+      </IsValid>
+    </Validator>
+  </Validators>
+</DataEntity>

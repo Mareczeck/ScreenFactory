@@ -1,0 +1,645 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="referenceLookupExample" />
+  <Caption value="Reference lookup example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="*" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Panel>
+          <Name value="pnlExamples" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="pnlReferenceLookup" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+              <Children>
+                <Panel>
+                  <Name value="panel41" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <CustomHtml>
+                      <Name value="customHtml11" />
+                      <HtmlMarkup><![CDATA[<p>
+<b>Reference Lookup</b>
+<br>
+Textbox s našeptávačem - jako vstupní data bere referenci, api objekt, isEnabled a nazev DisplayMember (properta která se má zobrazovat Defaultní je Description)
+<br>
+<br>
+Při nastavení vlastnosti "Result sorting" = "preferedTop" a napojení na Codelist, ve kterém existuje boolean atribut se stejným jménem, které je nastaveno v property "Codelist prefered att name", jsou preferované položky vždy jako první a od ostatních jsou vizuálně odděleny oddělovačem. 
+<br>
+Pro vyzkoušení napojte komponentu "referenceLookup1" na Api objekt "mockPreferedCustomers".
+</p>]]></HtmlMarkup>
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-customhtml" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </CustomHtml>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="m8-panel" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="panel2" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="*" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <ReferenceLookup identity="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e">
+                      <Name value="referenceLookup1" />
+                      <CaptionPosition value="Top" />
+                      <DataApiObject reference="~Customers" />
+                      <DisplayMember value="_description" />
+                      <IsRequiredMarkVisible value="True" />
+                      <MinChars value="0" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="500px" />
+                      <PanelClass value="" />
+                      <useContains value="False" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Customers" />
+                        <Binding SourceProperty="Caption" Expression="Customers.caption()" />
+                        <Binding SourceProperty="IsEnabled" Expression="Enabled" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-referencelookup" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </ReferenceLookup>
+                    <CheckBox>
+                      <Name value="checkBox1" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Enabled" />
+                        <Binding SourceProperty="Caption" Expression="Enabled.caption()" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Enabled.isRequired()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-checkbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </CheckBox>
+                    <Button>
+                      <Name value="button1" />
+                      <Caption value="Set New Timestamp" />
+                      <Panel.Height value="#" />
+                      <Panel.VerticalAlignment value="Middle" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~SetCodelistTimestamp" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="m8-panel" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="panel5" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <TextBox>
+                      <Name value="textBox6" />
+                      <CaptionPosition value="Top" />
+                      <IsEnabled value="False" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Customers.CustomerID" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Customers.CustomerID.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="Customers.CustomerID.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox5" />
+                      <CaptionPosition value="Top" />
+                      <IsEnabled value="False" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Customers.CompanyName" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Customers.CompanyName.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="Customers.CompanyName.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Button>
+                  <Name value="btnDelete" />
+                  <Caption value="Delete value" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~handler_btnDelete_OnClick" />
+                  </OnClick>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="pnlTaricLookup" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+              <Children>
+                <Panel>
+                  <Name value="panel411" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <CustomHtml>
+                      <Name value="customHtml111" />
+                      <HtmlMarkup><![CDATA[<p>
+<b>Taric Lookup</b>
+</br>
+Specializovaný Reference Lookup pro vyhledávání v Taric. Některá nastavení komponenty jsou oproti ReferenceLookup fixní: minChars=4, resultSorting=basic, immediateUpdate=false, useContains=false.
+</br>
+Pro správnou funkci je potřeba nastavit v property staticODataFilter filtrování dat dle režimu/klienta - CWH,IMP,ENTRY... server bude podle toho vracet relevantní data.
+Server vrací v položkách číselníku booleanovsý atribut indikující vybratelnost/nevybratelnost položky - název tohoto atributu je potřeba nastavit do property TaricLookup.enabledMember.
+</br>
+Pro testování jsou použity položky začínající 0123.
+</p>]]></HtmlMarkup>
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-customhtml" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </CustomHtml>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="m8-panel" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="panel6" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <TaricLookup identity="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e">
+                      <Name value="taricLookup1" />
+                      <CaptionPosition value="Top" />
+                      <DataApiObject reference="~mockTaricCodelist" />
+                      <DisplayMember value="_description" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="500px" />
+                      <PanelClass value="" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="mockTaricReference" />
+                        <Binding SourceProperty="Caption" Expression="mockTaricReference.caption()" />
+                        <Binding SourceProperty="enabledMember" Expression="form.taricLookupProps.enabledMember" />
+                        <Binding SourceProperty="staticODataFilter" Expression="form.taricLookupProps.staticODataFilter" />
+                        <Binding SourceProperty="IsEnabled" Expression="form.taricLookupProps.Enabled" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-taricLookup" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TaricLookup>
+                    <CheckBox>
+                      <Name value="checkBox2" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="taricLookupProps.Enabled" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="taricLookupProps.Enabled.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="taricLookupProps.Enabled.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-checkbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </CheckBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="panel51" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <TextBox>
+                      <Name value="textBox3" />
+                      <CaptionPosition value="Top" />
+                      <IsEnabled value="False" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="mockTaricReference.Key" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="mockTaricReference.Key.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="mockTaricReference.Key.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox4" />
+                      <CaptionPosition value="Top" />
+                      <IsEnabled value="False" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="mockTaricReference.Description" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="mockTaricReference.Description.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="mockTaricReference.Description.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <OnCreate>
+        <ActionEvent ReferencedAction="+UiParts.referenceLookupExample.memoryCheck" />
+      </OnCreate>
+      <Children>
+        <Reference>
+          <Name value="Customers" />
+          <Caption value="Customers" />
+          <IsRequired value="True" />
+          <OnChange>
+            <ActionEvent ReferencedAction="+UiParts.referenceLookupExample.handler_Customers_OnChange" />
+          </OnChange>
+          <Children>
+            <Attribute>
+              <Name value="CompanyName" />
+              <Caption value="Company name" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="CustomerID" />
+              <Caption value="Customer ID" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="_description" />
+              <Caption value="_ description" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[this.CompanyName.hasValue() ? (tostring(this.CustomerID) + " - " + this.CompanyName) : tostring(this.CustomerID)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Reference>
+        <Attribute>
+          <Name value="Enabled" />
+          <Caption value="Enabled" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Reference>
+          <Name value="mockTaricReference" />
+          <Caption value="Mock taric item" />
+          <Children>
+            <Attribute>
+              <Name value="Key" />
+              <Caption value="Key" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Description" />
+              <Caption value="Description" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="_description" />
+              <Caption value="_ description" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[Key.hasValue() ? (Key + " - " + Description) : defaultString()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Attribute>
+              <Name value="IsLeaf" />
+              <Caption value="Is leaf" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Reference>
+        <Complex>
+          <Name value="taricLookupProps" />
+          <Caption value="Taric lookup props" />
+          <Children>
+            <Attribute>
+              <Name value="enabledMember" />
+              <Caption value="Enabled member" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="staticODataFilter" />
+              <Caption value="Static O data filter" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Enabled" />
+              <Caption value="Enabled" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="memoryCheck" />
+      <IsJavascript value="True" />
+      <Script><![CDATA[this.blob = new MemoryMonitoringBlob();]]></Script>
+      <ActionLangBody IsValid="True" />
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="SetCodelistTimestamp" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// Categories.setDataTimestamp("1.11.2017")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btnDelete_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.Customers.clear()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[Customers.setDateTime(getDateTime())
+form.Enabled = true
+form.taricLookupProps.Enabled = true
+//to test against mock, set autoload on mockTaricCodelist and run local server on port 3000 instead of fillFromJson
+form.apiobjects.mockTaricCodelist.fillFromJson("[{\"Key\":\"012300\",\"Description\":\"Boots\",\"From\":\"2017-12-31T17:26:19\",\"To\":\"2999-01-01T00:00:00\",\"IsLeaf\":false},{\"Key\":\"012305\",\"Description\":\"Rubber boots\",\"From\":\"2017-12-31T17:26:19\",\"To\":\"2999-01-01T00:00:00\",\"IsLeaf\":true},{\"Key\":\"012310\",\"Description\":\"Sport boots\",\"From\":\"2017-12-31T17:26:19\",\"To\":\"2999-01-01T00:00:00\",\"IsLeaf\":false},{\"Key\":\"012311\",\"Description\":\"Disco boots Adidas\",\"From\":\"2017-12-31T17:26:19\",\"To\":\"2999-01-01T00:00:00\",\"IsLeaf\":true},{\"Key\":\"012312\",\"Description\":\"Go in Adidas Torsion\",\"From\":\"2017-12-31T17:26:19\",\"To\":\"2999-01-01T00:00:00\",\"IsLeaf\":true},{\"Key\":\"012313\",\"Description\":\"Nike air\",\"From\":\"2017-12-31T17:26:19\",\"To\":\"2999-01-01T00:00:00\",\"IsLeaf\":true},{\"Key\":\"012314\",\"Description\":\"Puma panther\",\"From\":\"2017-12-31T17:26:19\",\"To\":\"2999-01-01T00:00:00\",\"IsLeaf\":true}]")
+
+form.taricLookupProps.enabledMember = "IsLeaf"
+form.taricLookupProps.staticODataFilter = "client eq 'IMP'"
+
+form.apiobjects.mockPreferedCustomers.fillFromJson("[ { \"CustomerID\": \"ALFKI\", \"CompanyName\": \"Alfreds Futterkiste\" }, { \"CustomerID\": \"ANATR\", \"CompanyName\": \"Ana Trujillo Emparedados y helados\" }, { \"CustomerID\": \"ANTON\", \"CompanyName\": \"Antonio Moreno Taquer\\u00eda\" }, { \"CustomerID\": \"AROUT\", \"CompanyName\": \"Around the Horn\", \"IsPrefered\": true }, { \"CustomerID\": \"BERGS\", \"CompanyName\": \"Berglunds snabbk\\u00f6p\" }, { \"CustomerID\": \"BLAUS\", \"CompanyName\": \"Blauer See Delikatessen\", \"IsPrefered\": true }, { \"CustomerID\": \"BLONP\", \"CompanyName\": \"Blondesddsl p\\u00e8re et fils\" }, { \"CustomerID\": \"BOLID\", \"CompanyName\": \"B\\u00f3lido Comidas preparadas\" }, { \"CustomerID\": \"BONAP\", \"CompanyName\": \"Bon app'\" }, { \"CustomerID\": \"BOTTM\", \"CompanyName\": \"Bottom-Dollar Markets\", \"IsPrefered\": true }, { \"CustomerID\": \"BSBEV\", \"CompanyName\": \"B's Beverages\" }, { \"CustomerID\": \"CACTU\", \"CompanyName\": \"Cactus Comidas para llevar\" }, { \"CustomerID\": \"CENTC\", \"CompanyName\": \"Centro comercial Moctezuma\" }, { \"CustomerID\": \"CHOPS\", \"CompanyName\": \"Chop-suey Chinese\", \"IsPrefered\": true }, { \"CustomerID\": \"COMMI\", \"CompanyName\": \"Com\\u00e9rcio Mineiro\" }, { \"CustomerID\": \"CONSH\", \"CompanyName\": \"Consolidated Holdings\" }, { \"CustomerID\": \"DRACD\", \"CompanyName\": \"Drachenblut Delikatessen\", \"IsPrefered\": true }, { \"CustomerID\": \"DUMON\", \"CompanyName\": \"Du monde entier\" }, { \"CustomerID\": \"EASTC\", \"CompanyName\": \"Eastern Connection\", \"IsPrefered\": true }, { \"CustomerID\": \"ERNSH\", \"CompanyName\": \"Ernst Handel\" } ]")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_Customers_OnChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("OnChange fired...; triggeredByUser=" + tostring(params.triggeredByUser))]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="Customers" />
+      <name value="Customers" />
+      <server reference="+GlobalApiObjects.northwind" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="CustomerID" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="CompanyName" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <ServerConnection identity="ServerConnection.db7b3eef075548988df768923691922c">
+      <Name value="localhost3k" />
+      <codelistsUrl value="" />
+      <listsUrl value="" />
+      <rootUrl value="http://localhost:3000/" />
+    </ServerConnection>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="mockTaricCodelist" />
+      <filterByDate value="False" />
+      <name value="MockTaricCodelist" />
+      <server reference="~localhost3k" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Key" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="From" />
+          <columnRole value="ValidityStart" />
+          <dataType value="datetime" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="To" />
+          <columnRole value="ValidityEnd" />
+          <dataType value="datetime" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="IsLeaf" />
+          <dataType value="boolean" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="mockPreferedCustomers" />
+      <name value="mockPreferedCustomers" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="CustomerID" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="CompanyName" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="IsPrefered" />
+          <dataType value="boolean" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+  </ApiObjects>
+</Form>

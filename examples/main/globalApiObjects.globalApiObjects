@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<GlobalApiObjects>
+  <Name value="globalApiObjects" />
+  <ApiObjects>
+    <ServerConnection identity="ServerConnection.db7b3eef075548988df768923691922c">
+      <Name value="northwind" />
+      <codelistsUrl value="" />
+      <listsUrl value="" />
+      <rootUrl value="https://services.odata.org/V3/Northwind/Northwind.svc/" />
+      <rootUrl_comment value="url for Northwind OData server" />
+      <OnIsAliveTimeout>
+        <ActionEvent ReferencedAction="+GlobalActions.handler_northwind_OnIsAliveTimeout" />
+      </OnIsAliveTimeout>
+    </ServerConnection>
+    <UrlRouter identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+      <Name value="urlRouter" />
+      <routes>
+        <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+          <form reference="+UiParts.routingExample" />
+          <params value="id?,guid?,mode?" />
+          <url value="routing" />
+        </UrlRouteCfg>
+        <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+          <form reference="+UiParts.imageButtonExample" />
+          <url value="imageButton" />
+        </UrlRouteCfg>
+        <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+          <form reference="+UiParts.payTrailFormExample" />
+          <url value="payTrailForm" />
+        </UrlRouteCfg>
+      </routes>
+    </UrlRouter>
+    <BreadcrumbsCtrl identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
+      <Name value="breadcrumbsCtrl" />
+      <OnChange>
+        <ActionEvent ReferencedAction="+GlobalActions.handler_breadcrumbsCtrl_OnChange" />
+      </OnChange>
+    </BreadcrumbsCtrl>
+    <ValidatorsFilter identity="ValidatorsFilter.8deb114ae09941fba01dc42d318a6c2f">
+      <Name value="validatorsFilter1" />
+    </ValidatorsFilter>
+    <UserInactivityTimer identity="UserInactivityTimer.a7b09c48b1c54575b4edb081fbaee9ab">
+      <Name value="userInactivityTimer1" />
+      <debugMode value="True" />
+      <OnTimeoutExpired>
+        <ActionEvent ReferencedAction="+GlobalActions.userInactivityExpired" />
+      </OnTimeoutExpired>
+    </UserInactivityTimer>
+    <NavigationObserver identity="NavigationObserver.a6850f60a9dd4afcb8b8289571bbfbb4">
+      <Name value="navigationObserver1" />
+      <OnAfterFormActivate>
+        <ActionEvent ReferencedAction="+GlobalActions.handler_navigationObserver1_OnAfterFormActivate" />
+      </OnAfterFormActivate>
+    </NavigationObserver>
+    <AriaLiveRegion identity="Accessibility.63b9f09334b545a39d169ea0ff801f1e">
+      <Name value="ariaLiveRegion" />
+    </AriaLiveRegion>
+    <AccessibilitySettings identity="Accessibility.63b9f09334b545a39d169ea0ff801f1e">
+      <Name value="accessibilitySettings" />
+    </AccessibilitySettings>
+  </ApiObjects>
+</GlobalApiObjects>

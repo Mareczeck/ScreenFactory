@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<GlobalVariables>
+  <Name value="globalVariables" />
+  <Children>
+    <Attribute>
+      <Name value="version" />
+      <Caption value="Version" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="listState" />
+      <Caption value="List state" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="listGrid2State" />
+      <Caption value="List grid 2 state" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Complex>
+      <Name value="_breadcrumbsCtrlStruct" />
+      <Children>
+        <Computed>
+          <Name value="homeTitle" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[localized.bcLevel1]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </Expression>
+        </Computed>
+        <Computed>
+          <Name value="level2Title" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[localized.bcLevel2]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </Expression>
+        </Computed>
+      </Children>
+    </Complex>
+    <Attribute>
+      <Name value="listGrid2Columns" />
+      <Caption value="List grid 2 columns" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="collectionDataProvider2State" />
+      <Caption value="State" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="collectionDataProvider2Columns" />
+      <Caption value="Columns" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Complex>
+      <Name value="accessibilitySettings" />
+      <Caption value="Accessibility settings" />
+      <Children>
+        <Attribute>
+          <Name value="accessibleDisabledEditors" />
+          <Caption value="Accessible disabled editors" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+          <OnChange>
+            <ActionEvent ReferencedAction="+GlobalActions.handler_accessibleDisabledEditors_OnChange" />
+          </OnChange>
+        </Attribute>
+      </Children>
+    </Complex>
+  </Children>
+</GlobalVariables>

@@ -1,0 +1,24 @@
+{
+    "collection1": [
+        {
+            "caption": "vitae tellus Proin varius",
+            "text1": "et turpis consequat Nullam sollicitudin accumsan",
+            "text2": "et in vestibulum"
+        },
+        {
+            "caption": "arcu Maecenas metus Donec fermentum",
+            "text1": "vel a sapien leo nisl velit",
+            "text2": "sed urna condimentum"
+        },
+        {
+            "caption": "ultricies at lobortis",
+            "text1": "id non rhoncus tristique felis eros Ut dictum",
+            "text2": "sollicitudin sodales leo metus"
+        },
+        {
+            "caption": "non elit lectus",
+            "text1": "diam fermentum erat Phasellus",
+            "text2": "nulla feugiat"
+        }
+    ]
+}

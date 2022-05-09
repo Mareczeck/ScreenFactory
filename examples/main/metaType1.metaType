@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.105"?>
+<MetaType>
+  <Name value="metaType1" />
+  <Caption value="Meta type 1" />
+  <TypeSpec>
+    <AttributeType>
+      <BaseType value="Enum" />
+      <EnumValues>
+        <AttributeEnumValue>
+          <Name value="val1" />
+          <Caption value="Val 1" />
+          <Value value="val1" />
+        </AttributeEnumValue>
+      </EnumValues>
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

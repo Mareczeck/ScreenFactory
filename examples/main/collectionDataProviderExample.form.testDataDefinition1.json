@@ -1,0 +1,35 @@
+{
+    "dataCollection": [
+        {
+            "ShipVia": "Donec hendrerit sapien Suspendisse",
+            "ShipCountry": "odio Suspendisse vel facilisis id sodales turpis sodales",
+            "_selected": false,
+            "CustomerID": "pulvinar odio nisl adipiscing tempus leo fermentum"
+        },
+        {
+            "ShipVia": "Donec consectetur porta rhoncus",
+            "ShipCountry": "feugiat volutpat ut elit adipiscing in",
+            "_selected": false,
+            "CustomerID": "quam"
+        }
+    ],
+    "sourceDataCollection": [
+        {
+            "CustomerID": "Donec ac",
+            "ShipVia": "Ut leo Donec condimentum pretium eget nec mauris",
+            "ShipCountry": "at Suspendisse"
+        },
+        {
+            "CustomerID": "tellus Ut Praesent sem massa Pellentesque feugiat",
+            "ShipVia": "amet sapien sed pharetra massa cursus vel conubia sed",
+            "ShipCountry": "sodales Cras"
+        }
+    ],
+    "reference1": {
+        "ShipVia": "adipiscing Nullam consectetur",
+        "ShipCountry": "nulla felis vehicula nisi condimentum augue Praesent"
+    },
+    "lastButtonClicked": "semper Mauris",
+    "recordsCount": 1958891799,
+    "recordsCountOData": -1177396481
+}

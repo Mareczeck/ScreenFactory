@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="appMenuExample" />
+  <Caption value="App menu example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="hyperLink1" />
+          <Data value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <AppMenu identity="AppMenu.58f389bf427043048cf94f089e3b95d2">
+          <Name value="appMenu1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <MenuItems>
+            <MenuItem identity="AppMenu.58f389bf427043048cf94f089e3b95d2">
+              <Name value="menuItem1" />
+              <Bindings>
+                <Binding SourceProperty="Visible" Expression="form.hideMenuItem" />
+                <Binding SourceProperty="Caption" Expression="form.nadpis" />
+              </Bindings>
+              <SubMenuCollection>
+                <SubMenuItem identity="AppMenu.58f389bf427043048cf94f089e3b95d2">
+                  <Name value="subMenuItem2" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~actionTest" />
+                  </OnClick>
+                  <Bindings>
+                    <Binding SourceProperty="MenuItemName" Expression="form.nadpis" />
+                  </Bindings>
+                </SubMenuItem>
+                <SubMenuItem identity="AppMenu.58f389bf427043048cf94f089e3b95d2">
+                  <Name value="subMenuItem3" />
+                  <Enabled value="False" />
+                  <MenuItemName value="Schválení změny -eAD" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~showPanelTest" />
+                  </OnClick>
+                </SubMenuItem>
+                <SubMenuItem identity="AppMenu.58f389bf427043048cf94f089e3b95d2">
+                  <Name value="subMenuItem4" />
+                  <MenuItemName value="K uvolnění zajištění" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~showPanelTest2" />
+                  </OnClick>
+                </SubMenuItem>
+              </SubMenuCollection>
+            </MenuItem>
+            <MenuItem identity="AppMenu.58f389bf427043048cf94f089e3b95d2">
+              <Name value="menuItem2" />
+              <Caption value="CÚ URČENÍ" />
+              <SubMenuCollection>
+                <SubMenuItem identity="AppMenu.58f389bf427043048cf94f089e3b95d2">
+                  <Name value="subMenuItem1" />
+                  <MenuItemName value="Řešení nesrovnalostí" />
+                </SubMenuItem>
+                <SubMenuItem identity="AppMenu.58f389bf427043048cf94f089e3b95d2">
+                  <Name value="subMenuItem5" />
+                  <MenuItemName value="Upomínky" />
+                  <Bindings>
+                    <Binding SourceProperty="Visible" Expression="form.hideMenuItem" />
+                  </Bindings>
+                </SubMenuItem>
+                <SubMenuItem identity="AppMenu.58f389bf427043048cf94f089e3b95d2">
+                  <Name value="subMenuItem6" />
+                  <Enabled value="False" />
+                  <MenuItemName value="Havaríjní e-AD" />
+                </SubMenuItem>
+              </SubMenuCollection>
+            </MenuItem>
+            <MenuItem identity="AppMenu.58f389bf427043048cf94f089e3b95d2">
+              <Name value="menuItem3" />
+              <Caption value="ZAINTERESOVANÝ CÚ" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~actionTest" />
+              </OnClick>
+            </MenuItem>
+            <MenuItem identity="AppMenu.58f389bf427043048cf94f089e3b95d2">
+              <Name value="menuItem4" />
+              <Caption value="OBECNÉ DOTAZY" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~actionTest" />
+              </OnClick>
+            </MenuItem>
+          </MenuItems>
+        </AppMenu>
+        <Panel>
+          <Name value="panel2" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="panel3" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="IsVisible" Expression="form.Panel1Visible" />
+              </Bindings>
+              <Children>
+                <CollapsibleGroupBox identity="collapsibleGroupBox.cfca4faa9e574885bad67cbe322167a7">
+                  <Name value="collapsibleGroupBox1" />
+                  <caption value="Obsah prvního panelu" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Content>
+                    <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                      <Name value="labeledText1" />
+                      <Caption value="POPIS" />
+                      <CaptionPosition value="Top" />
+                      <Data value="Lorem ipsum (zkráceně lipsum) je označení pro standardní pseudolah." />
+                      <Margin value="40, 6, 6, 6 px" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-labeledtext" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </LabeledText>
+                  </Content>
+                  <conditionalCssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-collapsiblegroupbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </conditionalCssClass>
+                </CollapsibleGroupBox>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="panel4" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="IsVisible" Expression="form.Panel2Visible" />
+              </Bindings>
+              <Children>
+                <CollapsibleGroupBox identity="collapsibleGroupBox.cfca4faa9e574885bad67cbe322167a7">
+                  <Name value="collapsibleGroupBox2" />
+                  <caption value="Obsah druhého panelu" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Content>
+                    <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                      <Name value="labeledText2" />
+                      <Caption value="OBSAH" />
+                      <CaptionPosition value="Top" />
+                      <Data value="Proin mattis lacinia justo. Etiam bibendum elit eget erat. Donec ipsum massa, ullamcorper in, auctmmodo. " />
+                      <Margin value="40, 6, 6, 6 px" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-labeledtext" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </LabeledText>
+                  </Content>
+                  <conditionalCssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-collapsiblegroupbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </conditionalCssClass>
+                </CollapsibleGroupBox>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel6" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="panel5" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <CheckBox>
+                  <Name value="checkBox1" />
+                  <Caption value="Hide item in menu" />
+                  <CaptionPosition value="Top" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="form.hideMenuItem" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-checkbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CheckBox>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="panel7" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <CollapsibleGroupBox identity="collapsibleGroupBox.cfca4faa9e574885bad67cbe322167a7">
+                  <Name value="collapsibleGroupBox3" />
+                  <caption value="Popis komponenty" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Content>
+                    <Panel>
+                      <Name value="panel8" />
+                      <Orientation value="Horizontal" />
+                      <Children>
+                        <CustomHtml>
+                          <Name value="customHtml1" />
+                          <HtmlMarkup><![CDATA[<div>
+	Komponenta AppMenu slouží pro vytvoření jednoduchého ovládacího meny v aplikaci.
+	<br>
+	V sekci nasatevní je možné konfigurovat zobrazené položky ,jejich viditelnost, akce vykonané při kliknutí a enable / disable. 
+	<br>	
+	V případě že v položka menu nemá žádné prvky v kolekci submenu je potřeba dané položce přidělit akci která se má vykonat při kliknutí.
+	<br>
+	Vzhled komponenty je možné libovolně měnit pomocí stylů.  
+</div>]]></HtmlMarkup>
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-customhtml" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </CustomHtml>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Content>
+                  <conditionalCssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-collapsiblegroupbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </conditionalCssClass>
+                </CollapsibleGroupBox>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <OnCreate>
+        <ActionEvent ReferencedAction="+UiParts.appMenuExample.handler_dataContext1_OnCreate" />
+      </OnCreate>
+      <Children>
+        <Attribute>
+          <Name value="Panel1Visible" />
+          <Caption value="Panel 1 visible" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="Panel2Visible" />
+          <Caption value="Panel 2 visible" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="hideMenuItem" />
+          <Caption value="Hide menu item" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="nadpis" />
+          <Caption value="Nadpis" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <Actions>
+    <ActionBlock>
+      <Name value="actionTest" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("Clicked action")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="showPanelTest" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.Panel1Visible = false
+form.Panel2Visible = true]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="showPanelTest2" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.Panel1Visible = true
+form.Panel2Visible = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_dataContext1_OnCreate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.Panel1Visible = false
+form.Panel2Visible = false
+form.nadpis = "CÚ ODESLÁNÍ"]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

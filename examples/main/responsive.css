@@ -1,0 +1,12 @@
+@media (max-width: 991px) {
+    .panel-responsive .panel-cell, .panel-responsive .collapsiblegroupbox\.cfca4faa9e574885bad67cbe322167a7\.collapsiblegroupbox, .panel-responsive .groupbox {
+        display: inline-block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .panel-h-stretch, .panel-h-stretch > * {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}

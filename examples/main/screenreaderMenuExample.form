@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="screenreaderMenuExample" />
+  <Caption value="Screenreader menu example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <ScreenreaderMenu identity="Accessibility.63b9f09334b545a39d169ea0ff801f1e">
+          <Name value="srMenuMain" />
+          <AccessibilitySettings reference="+GlobalApiObjects.accessibilitySettings" />
+          <Caption value="Accessibility links, header" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-screenreadermenu" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+          <MenuItems>
+            <SrMenuItem identity="Accessibility.63b9f09334b545a39d169ea0ff801f1e">
+              <Name value="srMenuMainItem1" />
+              <AssistiveText value="Clicking this button will select the main content area" />
+              <Caption value="Skip to content" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~onSkipToContent" />
+              </OnClick>
+            </SrMenuItem>
+            <SrMenuItem identity="Accessibility.63b9f09334b545a39d169ea0ff801f1e">
+              <Name value="srMenuMainItem2" />
+              <AssistiveText value="Clicking this button will select the Back button" />
+              <Caption value="Skip to Go back button" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~onSkipToBackButton" />
+              </OnClick>
+            </SrMenuItem>
+          </MenuItems>
+        </ScreenreaderMenu>
+        <HyperLink>
+          <Name value="hyperLink1" />
+          <Data value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Landmark identity="Accessibility.63b9f09334b545a39d169ea0ff801f1e">
+          <Name value="landmarkMainContent" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <tagName value="main" />
+          <Content>
+            <Panel>
+              <Name value="panel2" />
+              <Orientation value="Vertical" />
+              <Children>
+                <CheckBox>
+                  <Name value="checkBox1" />
+                  <CaptionPosition value="Right" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="300px" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="disableScreenreaderMenu" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="disableScreenreaderMenu.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="disableScreenreaderMenu.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-checkbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CheckBox>
+                <Label>
+                  <Name value="label1" />
+                  <Data value="This is Screenreader menu and Landmark components example" />
+                  <Heading value="h1" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+                <Label>
+                  <Name value="label2" />
+                  <Data value="Start with TAB key to see what Screenreader menu does" />
+                  <Heading value="h2" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+                <CustomHtml>
+                  <Name value="customHtml1" />
+                  <HtmlMarkup><![CDATA[<p>
+Screenreader menu is specialized menu for screen readers and keyboard users. This is related to WCAG (Web Content Accessibility Guidelines) 2.0 Success Criterion <a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks" target="_blank">2.4.1 Bypass Blocks</a>.
+</p>
+<p>This offers a way for the user to jump (or skip) from content to content when using keyboard to interact with the application by using a hidden menu that is shown when focus is applied to buttons. The screen reader menu with “skip-to” -links should be used in the header, before everything else. This is for skipping the repeatable header section. There should also be a screen reader menu after the main content that helps with skipping back to header, the log-out button etc.
+</p>]]></HtmlMarkup>
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-customhtml" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CustomHtml>
+                <Label>
+                  <Name value="label3" />
+                  <Data value="Continue with TAB key to reach Screenreader menu at the bottom of page" />
+                  <Heading value="h2" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+                <CustomHtml>
+                  <Name value="customHtml2" />
+                  <HtmlMarkup><![CDATA[<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Vestibulum fermentum tortor id mi. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Pellentesque arcu. Pellentesque sapien. Integer imperdiet lectus quis justo. Fusce tellus. Quisque porta. Nulla non arcu lacinia neque faucibus fringilla.</p>
+
+<p>Integer pellentesque quam vel velit. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Quisque porta. Praesent dapibus. Integer vulputate sem a nibh rutrum consequat. Phasellus rhoncus. Aliquam erat volutpat. Aliquam erat volutpat. Integer imperdiet lectus quis justo. Curabitur bibendum justo non orci. Maecenas sollicitudin. Suspendisse nisl. Etiam posuere lacus quis dolor. Vivamus porttitor turpis ac leo. Quisque porta.</p>
+
+<p>Etiam posuere lacus quis dolor. Suspendisse nisl. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Phasellus et lorem id felis nonummy placerat. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Integer tempor. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Integer vulputate sem a nibh rutrum consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis pulvinar. Mauris elementum mauris vitae tortor. Vivamus ac leo pretium faucibus. Maecenas lorem. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Maecenas lorem. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat.</p>
+
+<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer in sapien. Etiam commodo dui eget wisi. Nam sed tellus id magna elementum tincidunt. In rutrum. Maecenas sollicitudin. Fusce aliquam vestibulum ipsum. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Phasellus rhoncus. Nullam dapibus fermentum ipsum. Phasellus faucibus molestie nisl. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Curabitur sagittis hendrerit ante. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Phasellus faucibus molestie nisl. Aenean vel massa quis mauris vehicula lacinia.</p>
+
+<p>In enim a arcu imperdiet malesuada. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Vivamus porttitor turpis ac leo. Sed ac dolor sit amet purus malesuada congue. In convallis. Suspendisse sagittis ultrices augue. Duis pulvinar. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Fusce tellus.</p>
+
+<p>Duis condimentum augue id magna semper rutrum. Suspendisse nisl. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Aliquam ante. Nunc dapibus tortor vel mi dapibus sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc tincidunt ante vitae massa. Pellentesque arcu. Nam quis nulla. Quisque tincidunt scelerisque libero. Nullam eget nisl. Nunc tincidunt ante vitae massa. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus.</p>
+
+<p>Aliquam ante. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. In dapibus augue non sapien. Praesent id justo in neque elementum ultrices. Nunc dapibus tortor vel mi dapibus sollicitudin. Mauris dictum facilisis augue. Quisque tincidunt scelerisque libero. Aenean fermentum risus id tortor. Integer vulputate sem a nibh rutrum consequat. Vivamus ac leo pretium faucibus. Praesent id justo in neque elementum ultrices. Et harum quidem rerum facilis est et expedita distinctio. Etiam commodo dui eget wisi. Pellentesque pretium lectus id turpis.</p>
+
+<p>Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Nam quis nulla. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Donec quis nibh at felis congue commodo. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Etiam egestas wisi a erat. Aliquam erat volutpat. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Nulla non arcu lacinia neque faucibus fringilla. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Nulla pulvinar eleifend sem. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat.</p>
+
+<p>Fusce nibh. Aenean fermentum risus id tortor. Aliquam erat volutpat. Maecenas libero. Aenean placerat. Sed ac dolor sit amet purus malesuada congue. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. In rutrum. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. Suspendisse nisl. Aliquam ornare wisi eu metus. Etiam neque.</p>
+
+<p>Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Aliquam erat volutpat. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Suspendisse nisl. Etiam neque. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Morbi scelerisque luctus velit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+<p>Praesent dapibus. Etiam commodo dui eget wisi. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Morbi scelerisque luctus velit. Ut tempus purus at lorem. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Curabitur bibendum justo non orci. Etiam posuere lacus quis dolor. Mauris elementum mauris vitae tortor. Etiam neque. Nullam sit amet magna in magna gravida vehicula. Vestibulum fermentum tortor id mi. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Phasellus rhoncus. Vestibulum fermentum tortor id mi. Mauris metus.</p>
+
+<p>Integer in sapien. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Integer lacinia. Duis risus. Sed ac dolor sit amet purus malesuada congue. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Mauris metus. Proin mattis lacinia justo. Nullam rhoncus aliquam metus. Maecenas sollicitudin. Etiam commodo dui eget wisi. Morbi scelerisque luctus velit. Aliquam erat volutpat. Aliquam id dolor. Mauris tincidunt sem sed arcu. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Aenean vel massa quis mauris vehicula lacinia. Nullam faucibus mi quis velit.</p>
+
+<p>Nullam eget nisl. Proin mattis lacinia justo. Nulla pulvinar eleifend sem. Etiam dictum tincidunt diam. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Phasellus rhoncus. Nullam at arcu a est sollicitudin euismod. Etiam bibendum elit eget erat. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Proin mattis lacinia justo. Nullam faucibus mi quis velit.</p>
+
+<p>Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Aliquam erat volutpat. Suspendisse nisl. Nullam at arcu a est sollicitudin euismod. Nullam feugiat, turpis at pulvinar vulputate, erat libero tristique tellus, nec bibendum odio risus sit amet ante. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Donec iaculis gravida nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris tincidunt sem sed arcu. Maecenas aliquet accumsan leo. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Aliquam erat volutpat. Praesent id justo in neque elementum ultrices. Etiam quis quam. Pellentesque pretium lectus id turpis. Maecenas sollicitudin. Nullam at arcu a est sollicitudin euismod. Nullam sit amet magna in magna gravida vehicula.</p>
+
+<p>Praesent id justo in neque elementum ultrices. In enim a arcu imperdiet malesuada. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi scelerisque luctus velit. Aliquam erat volutpat. Duis viverra diam non justo. Phasellus faucibus molestie nisl. Aenean fermentum risus id tortor. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Etiam quis quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Aliquam erat volutpat. Etiam commodo dui eget wisi. Curabitur bibendum justo non orci. Nullam at arcu a est sollicitudin euismod.</p>
+
+<p>Proin mattis lacinia justo. In dapibus augue non sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Etiam posuere lacus quis dolor. Pellentesque arcu. Suspendisse sagittis ultrices augue. Vestibulum fermentum tortor id mi. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+<p>Phasellus et lorem id felis nonummy placerat. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Duis risus. Aliquam id dolor. In dapibus augue non sapien. Nunc tincidunt ante vitae massa. Phasellus et lorem id felis nonummy placerat. Nunc auctor. Proin mattis lacinia justo. Etiam commodo dui eget wisi. Pellentesque pretium lectus id turpis. Fusce nibh.</p>
+
+<p>Mauris elementum mauris vitae tortor. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Vivamus porttitor turpis ac leo. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Nulla est. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Etiam posuere lacus quis dolor. Quisque tincidunt scelerisque libero. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Praesent vitae arcu tempor neque lacinia pretium. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Et harum quidem rerum facilis est et expedita distinctio.</p>
+
+<p>Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. Praesent dapibus. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Vivamus ac leo pretium faucibus. Nulla est. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer lacinia. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Etiam egestas wisi a erat. Pellentesque sapien. Integer vulputate sem a nibh rutrum consequat. Fusce consectetuer risus a nunc. Etiam dictum tincidunt diam. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero.</p>
+
+<p>Nam quis nulla. Aenean id metus id velit ullamcorper pulvinar. Proin mattis lacinia justo. Etiam quis quam. Curabitur vitae diam non enim vestibulum interdum. Praesent in mauris eu tortor porttitor accumsan. Aliquam erat volutpat. Proin in tellus sit amet nibh dignissim sagittis. Mauris elementum mauris vitae tortor. Etiam quis quam. Sed ac dolor sit amet purus malesuada congue. Pellentesque sapien.</p>
+]]></HtmlMarkup>
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-customhtml" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CustomHtml>
+                <CustomHtml>
+                  <Name value="customHtml3" />
+                  <HtmlMarkup><![CDATA[<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Vestibulum fermentum tortor id mi. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Pellentesque arcu. Pellentesque sapien. Integer imperdiet lectus quis justo. Fusce tellus. Quisque porta. Nulla non arcu lacinia neque faucibus fringilla.</p>
+
+<p>Integer pellentesque quam vel velit. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Quisque porta. Praesent dapibus. Integer vulputate sem a nibh rutrum consequat. Phasellus rhoncus. Aliquam erat volutpat. Aliquam erat volutpat. Integer imperdiet lectus quis justo. Curabitur bibendum justo non orci. Maecenas sollicitudin. Suspendisse nisl. Etiam posuere lacus quis dolor. Vivamus porttitor turpis ac leo. Quisque porta.</p>
+
+<p>Etiam posuere lacus quis dolor. Suspendisse nisl. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Phasellus et lorem id felis nonummy placerat. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Integer tempor. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Integer vulputate sem a nibh rutrum consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis pulvinar. Mauris elementum mauris vitae tortor. Vivamus ac leo pretium faucibus. Maecenas lorem. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Maecenas lorem. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat.</p>
+
+<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer in sapien. Etiam commodo dui eget wisi. Nam sed tellus id magna elementum tincidunt. In rutrum. Maecenas sollicitudin. Fusce aliquam vestibulum ipsum. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Phasellus rhoncus. Nullam dapibus fermentum ipsum. Phasellus faucibus molestie nisl. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Curabitur sagittis hendrerit ante. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Phasellus faucibus molestie nisl. Aenean vel massa quis mauris vehicula lacinia.</p>
+
+<p>In enim a arcu imperdiet malesuada. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Vivamus porttitor turpis ac leo. Sed ac dolor sit amet purus malesuada congue. In convallis. Suspendisse sagittis ultrices augue. Duis pulvinar. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Fusce tellus.</p>
+
+<p>Duis condimentum augue id magna semper rutrum. Suspendisse nisl. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Aliquam ante. Nunc dapibus tortor vel mi dapibus sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc tincidunt ante vitae massa. Pellentesque arcu. Nam quis nulla. Quisque tincidunt scelerisque libero. Nullam eget nisl. Nunc tincidunt ante vitae massa. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus.</p>
+
+<p>Aliquam ante. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. In dapibus augue non sapien. Praesent id justo in neque elementum ultrices. Nunc dapibus tortor vel mi dapibus sollicitudin. Mauris dictum facilisis augue. Quisque tincidunt scelerisque libero. Aenean fermentum risus id tortor. Integer vulputate sem a nibh rutrum consequat. Vivamus ac leo pretium faucibus. Praesent id justo in neque elementum ultrices. Et harum quidem rerum facilis est et expedita distinctio. Etiam commodo dui eget wisi. Pellentesque pretium lectus id turpis.</p>
+
+<p>Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Nam quis nulla. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Donec quis nibh at felis congue commodo. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Etiam egestas wisi a erat. Aliquam erat volutpat. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Nulla non arcu lacinia neque faucibus fringilla. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Nulla pulvinar eleifend sem. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat.</p>
+
+<p>Fusce nibh. Aenean fermentum risus id tortor. Aliquam erat volutpat. Maecenas libero. Aenean placerat. Sed ac dolor sit amet purus malesuada congue. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. In rutrum. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. Suspendisse nisl. Aliquam ornare wisi eu metus. Etiam neque.</p>
+
+<p>Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Aliquam erat volutpat. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Suspendisse nisl. Etiam neque. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Morbi scelerisque luctus velit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+<p>Praesent dapibus. Etiam commodo dui eget wisi. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Morbi scelerisque luctus velit. Ut tempus purus at lorem. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Curabitur bibendum justo non orci. Etiam posuere lacus quis dolor. Mauris elementum mauris vitae tortor. Etiam neque. Nullam sit amet magna in magna gravida vehicula. Vestibulum fermentum tortor id mi. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Phasellus rhoncus. Vestibulum fermentum tortor id mi. Mauris metus.</p>
+
+<p>Integer in sapien. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Integer lacinia. Duis risus. Sed ac dolor sit amet purus malesuada congue. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Mauris metus. Proin mattis lacinia justo. Nullam rhoncus aliquam metus. Maecenas sollicitudin. Etiam commodo dui eget wisi. Morbi scelerisque luctus velit. Aliquam erat volutpat. Aliquam id dolor. Mauris tincidunt sem sed arcu. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Aenean vel massa quis mauris vehicula lacinia. Nullam faucibus mi quis velit.</p>
+
+<p>Nullam eget nisl. Proin mattis lacinia justo. Nulla pulvinar eleifend sem. Etiam dictum tincidunt diam. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Phasellus rhoncus. Nullam at arcu a est sollicitudin euismod. Etiam bibendum elit eget erat. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Proin mattis lacinia justo. Nullam faucibus mi quis velit.</p>
+
+<p>Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Aliquam erat volutpat. Suspendisse nisl. Nullam at arcu a est sollicitudin euismod. Nullam feugiat, turpis at pulvinar vulputate, erat libero tristique tellus, nec bibendum odio risus sit amet ante. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in, elit. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Donec iaculis gravida nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris tincidunt sem sed arcu. Maecenas aliquet accumsan leo. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Aliquam erat volutpat. Praesent id justo in neque elementum ultrices. Etiam quis quam. Pellentesque pretium lectus id turpis. Maecenas sollicitudin. Nullam at arcu a est sollicitudin euismod. Nullam sit amet magna in magna gravida vehicula.</p>
+
+<p>Praesent id justo in neque elementum ultrices. In enim a arcu imperdiet malesuada. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi scelerisque luctus velit. Aliquam erat volutpat. Duis viverra diam non justo. Phasellus faucibus molestie nisl. Aenean fermentum risus id tortor. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Etiam quis quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Aliquam erat volutpat. Etiam commodo dui eget wisi. Curabitur bibendum justo non orci. Nullam at arcu a est sollicitudin euismod.</p>
+
+<p>Proin mattis lacinia justo. In dapibus augue non sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Etiam posuere lacus quis dolor. Pellentesque arcu. Suspendisse sagittis ultrices augue. Vestibulum fermentum tortor id mi. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+<p>Phasellus et lorem id felis nonummy placerat. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Duis risus. Aliquam id dolor. In dapibus augue non sapien. Nunc tincidunt ante vitae massa. Phasellus et lorem id felis nonummy placerat. Nunc auctor. Proin mattis lacinia justo. Etiam commodo dui eget wisi. Pellentesque pretium lectus id turpis. Fusce nibh.</p>
+
+<p>Mauris elementum mauris vitae tortor. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Vivamus porttitor turpis ac leo. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Nulla est. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Etiam posuere lacus quis dolor. Quisque tincidunt scelerisque libero. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Praesent vitae arcu tempor neque lacinia pretium. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Et harum quidem rerum facilis est et expedita distinctio.</p>
+
+<p>Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. Praesent dapibus. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Vivamus ac leo pretium faucibus. Nulla est. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer lacinia. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Etiam egestas wisi a erat. Pellentesque sapien. Integer vulputate sem a nibh rutrum consequat. Fusce consectetuer risus a nunc. Etiam dictum tincidunt diam. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero.</p>
+
+<p>Nam quis nulla. Aenean id metus id velit ullamcorper pulvinar. Proin mattis lacinia justo. Etiam quis quam. Curabitur vitae diam non enim vestibulum interdum. Praesent in mauris eu tortor porttitor accumsan. Aliquam erat volutpat. Proin in tellus sit amet nibh dignissim sagittis. Mauris elementum mauris vitae tortor. Etiam quis quam. Sed ac dolor sit amet purus malesuada congue. Pellentesque sapien.</p>
+]]></HtmlMarkup>
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-customhtml" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CustomHtml>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+        </Landmark>
+        <ScreenreaderMenu identity="Accessibility.63b9f09334b545a39d169ea0ff801f1e">
+          <Name value="srMenuBottom" />
+          <AccessibilitySettings reference="+GlobalApiObjects.accessibilitySettings" />
+          <Caption value="Accessibility links, bottom" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-screenreadermenu" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+          <MenuItems>
+            <SrMenuItem identity="Accessibility.63b9f09334b545a39d169ea0ff801f1e">
+              <Name value="srMenuBottomItem1" />
+              <AssistiveText value="Clicking this button will select the main content area" />
+              <Caption value="Skip to content" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~onSkipToContent" />
+              </OnClick>
+            </SrMenuItem>
+          </MenuItems>
+        </ScreenreaderMenu>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="disableScreenreaderMenu" />
+          <Caption value="Disable screenreader menu" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+          <OnChange>
+            <ActionEvent ReferencedAction="+UiParts.screenreaderMenuExample.handler_disableScreenreaderMenu_OnChange" />
+          </OnChange>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <Actions>
+    <ActionBlock>
+      <Name value="onSkipToContent" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// we can eventually scroll before focusing...
+// form.apiobjects.page.scrollTo("label1", defaultString())
+form.apiobjects.page.focusMainHeading()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="onSkipToBackButton" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// we can eventually scroll before focusing...
+// form.apiobjects.page.scrollTo("hyperLink1", defaultString())
+form.apiobjects.page.focusHyperlink("hyperLink1")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_disableScreenreaderMenu_OnChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.accessibilitySettings.disableScreenreaderMenu(params.data.disableScreenreaderMenu)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <Page identity="Page.f7aa0c151c64407daef13910dcf7b72a">
+      <Name value="page" />
+    </Page>
+  </ApiObjects>
+</Form>

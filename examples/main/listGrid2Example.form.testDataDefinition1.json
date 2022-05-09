@@ -1,0 +1,32 @@
+{
+    "dColl": [
+        {
+            "CustomerID": "neque Sed",
+            "ShipVia": -1528758834,
+            "Freight": "Donec",
+            "ShipCountry": "Nulla justo tempus ipsum mauris",
+            "_selected": false,
+            "OrderDate": "2019-02-24T14:40:48Z"
+        },
+        {
+            "CustomerID": "ullamcorper",
+            "ShipVia": -1989992806,
+            "Freight": "suscipit odio id ac eget eget molestie",
+            "ShipCountry": "sit molestie vel sit dolor eu",
+            "_selected": true,
+            "OrderDate": "2018-11-24T14:40:48Z"
+        }
+    ],
+    "clickedActionButtonName": "Cras nibh tincidunt lorem quam pulvinar ut magna condimentum",
+    "reference1": {
+        "CustomerID": "neque condimentum mauris facilisis eu non",
+        "ShipVia": 1445693990,
+        "Freight": "Nunc at metus sed tincidunt rhoncus"
+    },
+    "ShowCheckboxes": false,
+    "recordsCount": -42473317,
+    "displayedRecords": 1523947263,
+    "localizedColumn": "tempus sit mi metus sodales elit mauris",
+    "lang": "nec odio id sed eu volutpat condimentum",
+    "isColumSelectionMode": true
+}

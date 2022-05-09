@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="optionCardsExample" />
+  <Caption value="Option cards example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="hyperLink1" />
+          <Data value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <CardGroup identity="OptionCard.ff80d2766adc450bb3856b6632b29d06">
+          <Name value="cardGroup1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Panel>
+              <Name value="panel3" />
+              <Orientation value="Horizontal" />
+              <Children>
+                <OptionCardSimple identity="OptionCard.ff80d2766adc450bb3856b6632b29d06">
+                  <Name value="optionCardSimple1" />
+                  <Description value="Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Nulla quis diam. Vivamus porttitor turpis ac leo." />
+                  <Heading value="3000" />
+                  <OptionGroupName value="group2" />
+                  <OptionValue value="option1" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Title value="Pellentesque sapien" />
+                  <TooltipButtonAriaLabel value="Instructions for option 1" />
+                  <Bindings>
+                    <Binding SourceProperty="SelectedValue" Expression="form.optionSets.set2SelectedValue" />
+                    <Binding SourceProperty="Tooltip" Expression="localized.tooltip1" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-optioncardsimple" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </OptionCardSimple>
+                <OptionCardSimple identity="OptionCard.ff80d2766adc450bb3856b6632b29d06">
+                  <Name value="optionCardSimple2" />
+                  <Icon value="icon icon-tulli-service-passitus icon-lg" />
+                  <IsVisible value="False" />
+                  <OptionGroupName value="group2" />
+                  <OptionValue value="option2" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <TooltipButtonAriaLabel value="Instructions for option 2" />
+                  <Bindings>
+                    <Binding SourceProperty="SelectedValue" Expression="form.optionSets.set2SelectedValue" />
+                    <Binding SourceProperty="Description" Expression="localized.Description" />
+                    <Binding SourceProperty="Title" Expression="localized.Tab01" />
+                    <Binding SourceProperty="Tooltip" Expression="localized.tooltip1" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-optioncardsimple" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </OptionCardSimple>
+                <OptionCardSimple identity="OptionCard.ff80d2766adc450bb3856b6632b29d06">
+                  <Name value="optionCardSimpleHidden" />
+                  <Description value="Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. Nulla quis diam. Vivamus porttitor turpis ac leo." />
+                  <Icon value="icon icon-tulli-service-museum icon-lg" />
+                  <OptionGroupName value="group2" />
+                  <OptionValue value="option3" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Title value="Pellentesque sapien" />
+                  <TooltipButtonAriaLabel value="Instructions for option 3" />
+                  <Bindings>
+                    <Binding SourceProperty="SelectedValue" Expression="form.optionSets.set2SelectedValue" />
+                    <Binding SourceProperty="Tooltip" Expression="localized.tooltip1" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-optioncardsimple" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </OptionCardSimple>
+                <OptionCardContent identity="OptionCard.ff80d2766adc450bb3856b6632b29d06">
+                  <Name value="optionCardContent1" />
+                  <Heading value="4000" />
+                  <Icon value="icon icon-tulli-service-luvat icon-lg" />
+                  <OptionGroupName value="group2" />
+                  <OptionValue value="option4" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <TooltipButtonAriaLabel value="Instructions for option 4" />
+                  <Content>
+                    <Panel>
+                      <Name value="panel4" />
+                      <Orientation value="Vertical" />
+                      <Children>
+                        <ReferenceCombo>
+                          <Name value="referenceCombo1" />
+                          <CaptionPosition value="Top" />
+                          <DisplayMember value="_description" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <ReferenceList reference="~Country" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="optionSets.set2.selectedCountry" />
+                            <Binding SourceProperty="Caption" Expression="optionSets.set2.selectedCountry.caption()" />
+                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="optionSets.set2.selectedCountry.isRequired()" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-referencecombo" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </ReferenceCombo>
+                        <ReferenceLookup identity="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e">
+                          <Name value="referenceLookup1" />
+                          <Caption value="Country" />
+                          <CaptionPosition value="Top" />
+                          <DataApiObject reference="~Country" />
+                          <DisplayMember value="_description" />
+                          <immediateUpdate value="True" />
+                          <MinChars value="0" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="form.optionSets.set2.selectedCountry" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-referencelookup" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </ReferenceLookup>
+                        <Button>
+                          <Name value="button3" />
+                          <Caption value="Button" />
+                          <Panel.Height value="#" />
+                          <Panel.HorizontalAlignment value="Center" />
+                          <Panel.Width value="150px" />
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Content>
+                  <Bindings>
+                    <Binding SourceProperty="SelectedValue" Expression="form.optionSets.set2SelectedValue" />
+                    <Binding SourceProperty="Tooltip" Expression="localized.tooltip1" />
+                  </Bindings>
+                </OptionCardContent>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+        </CardGroup>
+        <CardRepeater identity="OptionCard.ff80d2766adc450bb3856b6632b29d06">
+          <Name value="cardRepeater1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Panel>
+              <Name value="panel2" />
+              <Orientation value="Horizontal" />
+              <Children>
+                <OptionCardSimple identity="OptionCard.ff80d2766adc450bb3856b6632b29d06">
+                  <Name value="optionCardSimple" />
+                  <OptionGroupName value="group1" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Description" Expression="description" />
+                    <Binding SourceProperty="Title" Expression="title" />
+                    <Binding SourceProperty="Tooltip" Expression="tooltip" />
+                    <Binding SourceProperty="Icon" Expression="icon" />
+                    <Binding SourceProperty="OptionValue" Expression="value" />
+                    <Binding SourceProperty="SelectedValue" Expression="form.optionSets.set1SelectedValue" />
+                    <Binding SourceProperty="IsEnabled" Expression="isEnabled" />
+                    <Binding SourceProperty="TooltipButtonAriaLabel" Expression="tooltipBtnAriaLabel" />
+                    <Binding SourceProperty="IsVisible" Expression="isVisible" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-optioncard" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </OptionCardSimple>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="optionSets.set1" />
+            <Binding SourceProperty="IsVisible" Expression="form.optionSets.showCardRepeater1" />
+          </Bindings>
+        </CardRepeater>
+        <CardGroup identity="OptionCard.ff80d2766adc450bb3856b6632b29d06">
+          <Name value="cardGroup2" />
+          <CardItemsClassNumber value="3" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Panel>
+              <Name value="panel5" />
+              <Orientation value="Horizontal" />
+              <Children>
+                <OptionCardContent identity="OptionCard.ff80d2766adc450bb3856b6632b29d06">
+                  <Name value="optionCardContent2" />
+                  <Icon value="icon icon-tulli-service-tullaus icon-lg" />
+                  <OptionGroupName value="group3" />
+                  <OptionValue value="option1" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <TooltipButtonAriaLabel value="Instructions for option 1" />
+                  <Content>
+                    <Panel>
+                      <Name value="button1_parent" />
+                      <Orientation value="Vertical" />
+                      <Children>
+                        <Label>
+                          <Name value="label1" />
+                          <Data value="Proin mattis lacinia justo." />
+                          <Heading value="h5" />
+                          <Panel.Height value="#" />
+                          <Panel.HorizontalAlignment value="Center" />
+                          <Panel.Width value="80%" />
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-label" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Label>
+                        <Button>
+                          <Name value="button1" />
+                          <Caption value="Button 1" />
+                          <Panel.Height value="#" />
+                          <Panel.HorizontalAlignment value="Center" />
+                          <Panel.Width value="150px" />
+                          <Bindings>
+                            <Binding SourceProperty="IsEnabled" Expression="form.optionSets.button1Enabled" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <CheckBox>
+                          <Name value="checkBox1" />
+                          <Caption value="Check box 1" />
+                          <CaptionPosition value="Right" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="300px" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-checkbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </CheckBox>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Content>
+                  <Bindings>
+                    <Binding SourceProperty="SelectedValue" Expression="form.optionSets.set3SelectedValue" />
+                    <Binding SourceProperty="Tooltip" Expression="localized.tooltip1" />
+                  </Bindings>
+                </OptionCardContent>
+                <OptionCardContent identity="OptionCard.ff80d2766adc450bb3856b6632b29d06">
+                  <Name value="optionCardContent3" />
+                  <Icon value="icon icon-tulli-service-tullaus icon-lg" />
+                  <OptionGroupName value="group3" />
+                  <OptionValue value="option2" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <TooltipButtonAriaLabel value="Instructions for option 2" />
+                  <Content>
+                    <Panel>
+                      <Name value="button2_parent" />
+                      <Orientation value="Vertical" />
+                      <Children>
+                        <Label>
+                          <Name value="label2" />
+                          <Data value="Praesent id justo in neque elementum ultrices." />
+                          <Heading value="h5" />
+                          <Panel.Height value="#" />
+                          <Panel.HorizontalAlignment value="Center" />
+                          <Panel.Width value="80%" />
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-label" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Label>
+                        <Button>
+                          <Name value="button2" />
+                          <Caption value="Button 2" />
+                          <Panel.Height value="#" />
+                          <Panel.HorizontalAlignment value="Center" />
+                          <Panel.Width value="150px" />
+                          <Bindings>
+                            <Binding SourceProperty="IsEnabled" Expression="form.optionSets.button2Enabled" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <CheckBox>
+                          <Name value="checkBox2" />
+                          <Caption value="Check box 2" />
+                          <CaptionPosition value="Right" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="300px" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-checkbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </CheckBox>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Content>
+                  <Bindings>
+                    <Binding SourceProperty="SelectedValue" Expression="form.optionSets.set3SelectedValue" />
+                    <Binding SourceProperty="Tooltip" Expression="localized.tooltip1" />
+                  </Bindings>
+                </OptionCardContent>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+          <Bindings>
+            <Binding SourceProperty="IsVisible" Expression="form.optionSets.showCardGroup2" />
+          </Bindings>
+        </CardGroup>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Complex>
+          <Name value="optionSets" />
+          <Caption value="Option sets" />
+          <Children>
+            <Collection>
+              <Name value="set1" />
+              <Caption value="Set 1" />
+              <Children>
+                <Attribute>
+                  <Name value="icon" />
+                  <Caption value="Icon" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="tooltip" />
+                  <Caption value="Tooltip" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="title" />
+                  <Caption value="Title" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="description" />
+                  <Caption value="Description" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="value" />
+                  <Caption value="Value" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="isEnabled" />
+                  <Caption value="Is enabled" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <BaseType value="Bool" />
+                    </AttributeType>
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="isVisible" />
+                  <Caption value="Is visible" />
+                  <Comment value="bind to Optioncard wrapper panel" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <BaseType value="Bool" />
+                    </AttributeType>
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="tooltipBtnAriaLabel" />
+                  <Caption value="Tooltip btn aria label" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+              </Children>
+            </Collection>
+            <Attribute>
+              <Name value="set1SelectedValue" />
+              <Caption value="Set 1 selected value" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <OnChange>
+                <ActionEvent ReferencedAction="+UiParts.optionCardsExample.handler_set1SelectedValue_OnChange" />
+              </OnChange>
+            </Attribute>
+            <Attribute>
+              <Name value="set2SelectedValue" />
+              <Caption value="Set 2 selected value" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="set3SelectedValue" />
+              <Caption value="Set 3 selected value" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Complex>
+              <Name value="set2" />
+              <Caption value="Set 2" />
+              <Children>
+                <Reference>
+                  <Name value="selectedCountry" />
+                  <Caption value="Selected country" />
+                  <Children>
+                    <Attribute>
+                      <Name value="Country" />
+                      <Caption value="Country" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                    <Attribute>
+                      <Name value="Description" />
+                      <Caption value="Description" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                    <Attribute>
+                      <Name value="_description" />
+                      <Caption value="_ description" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                  </Children>
+                </Reference>
+              </Children>
+            </Complex>
+            <Computed>
+              <Name value="showCardRepeater1" />
+              <Caption value="Show card repeater 1" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[isTrue(form.optionSets.set2SelectedValue in ["option1", "option2", "option3"])]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="showCardGroup2" />
+              <Caption value="Show card group 2" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[isTrue(form.optionSets.set2SelectedValue in ["option4"]) ? form.optionSets.set2.selectedCountry.hasValue() ? form.optionSets.set2.selectedCountry.Country = "CN" ? true : false : false : false]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="button1Enabled" />
+              <Caption value="Button 1 enabled" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[isTrue(showCardGroup2) ? isTrue(form.optionSets.set3SelectedValue = "option1") ? true : false : false]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="button2Enabled" />
+              <Caption value="Button 2 enabled" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[isTrue(showCardGroup2) ? isTrue(form.optionSets.set3SelectedValue = "option2") ? true : false : false]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Complex>
+        <Attribute>
+          <Name value="lang" />
+          <Caption value="Lang" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.Country.fillFromJson("[{\"Country\":\"AD\",\"Description\":\"Andorra\"}, {\"Country\":\"CN\",\"Description\":\"China\"}, {\"Country\":\"CZ\",\"Description\":\"Czech Republic\"}]")
+
+form.optionSets.set1.clear()
+
+var itm1 = form.optionSets.set1.addItem()
+itm1.value = "option1"
+itm1.icon = "icon icon-tulli-service-tullaus icon-lg "
+itm1.tooltip = localized.tooltip1
+itm1.tooltipBtnAriaLabel = "Instructions for option 1"
+itm1.title = localized.Tab01
+itm1.description = localized.Description
+itm1.isVisible = true
+itm1.isEnabled = true
+
+itm1 = form.optionSets.set1.addItem()
+itm1.value = "option2"
+itm1.icon = "icon icon-tulli-service-tullaus icon-lg "
+itm1.tooltip = localized.tooltip1
+itm1.tooltipBtnAriaLabel = "Instructions for option 2"
+itm1.title = "Ut tempus purus at lorem"
+itm1.description = "Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat."
+itm1.isVisible = true
+itm1.isEnabled = false
+
+itm1 = form.optionSets.set1.addItem()
+itm1.value = "option3"
+itm1.icon = "icon icon-tulli-service-tullaus icon-lg "
+//itm1.tooltip = localized.tooltip1
+itm1.title = "Etiam posuere lacus quis dolor"
+itm1.description = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Vestibulum fermentum tortor id mi."
+itm1.isVisible = true
+itm1.isEnabled = true
+
+form.optionSets.set1SelectedValue.clear()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setLang" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.page.setLang(form.lang)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_set1SelectedValue_OnChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console(params.data.set1SelectedValue)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <Page identity="Page.f7aa0c151c64407daef13910dcf7b72a">
+      <Name value="page" />
+      <OnLangChanged>
+        <ActionEvent ReferencedAction="~init" />
+      </OnLangChanged>
+    </Page>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="Country" />
+      <name value="Country" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Country" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+  </ApiObjects>
+</Form>

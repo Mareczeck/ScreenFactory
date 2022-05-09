@@ -1,0 +1,25 @@
+/* my-tab-1 */
+.sffw-tabs>ul>li.sffw-my-tab-1 {
+    background-color: #d1ff33!important;
+}
+
+.sffw-tabs>ul>li.sffw-my-tab-1:hover {
+    background-color: #33ff3f!important;
+}
+
+.sffw-tabs>ul>li.sffw-my-tab-1.sffw-tab-selected {
+    background-color: #33ff3f!important;
+}
+
+/* my-tab-2 */
+.sffw-tabs>ul>li.sffw-my-tab-2 {
+    background-color: #33f6ff!important;
+}
+
+.sffw-tabs>ul>li.sffw-my-tab-2:hover {
+    background-color: #33bbff!important;
+}
+
+.sffw-tabs>ul>li.sffw-my-tab-2.sffw-tab-selected {
+    background-color: #33bbff!important;
+}

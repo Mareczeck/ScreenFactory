@@ -1,0 +1,7 @@
+.myClientValSummary table > thead th {
+	background-color: green;
+}
+
+.myServerValSummary table > thead th {
+	background-color: brown;
+}

@@ -1,0 +1,12 @@
+{
+    "Tabs": {
+        "Tab01": {
+            "Title": "Maecenas metus Nam justo torquent at Aenean",
+            "Visible": true,
+            "CustomCssClass": "ligula Vivamus laoreet vitae molestie lectus amet semper"
+        },
+        "SelectedTab": 1178702020,
+        "Tab02": {
+        }
+    }
+}

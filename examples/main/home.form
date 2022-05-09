@@ -1,0 +1,1417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="home" />
+  <Caption value="Home" />
+  <Content>
+    <Panel>
+      <Name value="panel1_parent_parent" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.HorizontalAlignment value="Center" />
+      <Panel.Width value="*" />
+      <Children>
+        <GroupBox>
+          <Name value="groupBox1" />
+          <Caption value="SFFW" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Panel>
+              <Name value="panel1_parent" />
+              <Orientation value="Horizontal" />
+              <Children>
+                <Panel>
+                  <Name value="pnlApi" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="33%" />
+                  <Children>
+                    <Label>
+                      <Name value="label12" />
+                      <Data value="API objects" />
+                      <Heading value="h2" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                    </Label>
+                    <HyperLink>
+                      <Name value="accessibilitySettings" />
+                      <Data value="AccessibilitySettings" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goAccessibilitySettings" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <Label>
+                      <Name value="label211" />
+                      <Data value="Playground for recursive IsEnabled and AccessibleDisabledEditors" />
+                      <Margin value="0, 6, 6, 6 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <HyperLink>
+                      <Name value="activeXSigner" />
+                      <Data value="ActiveXSigner" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goActiveXSigner" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="businessDaysCalc" />
+                      <Data value="BusinessDaysCalc" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goBusinessDaysCalc" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="browserStorage" />
+                      <Data value="BrowserStorage" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goBrowserStorage" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <Panel>
+                      <Name value="codelist_parent" />
+                      <Orientation value="Horizontal" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <Children>
+                        <HyperLink>
+                          <Name value="codelist1" />
+                          <Data value="Codelist" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~goCodelist" />
+                          </OnClick>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-hyperlink" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </HyperLink>
+                        <HyperLink>
+                          <Name value="filteredCodelist1" />
+                          <Data value="FilteredCodelist" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~goFilteredCodelist" />
+                          </OnClick>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-hyperlink" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </HyperLink>
+                        <HyperLink>
+                          <Name value="codelistGroup" />
+                          <Data value="CodelistGroup" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~goCodelistGroup" />
+                          </OnClick>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-hyperlink" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </HyperLink>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                    <HyperLink>
+                      <Name value="eventDispatcher" />
+                      <Data value="Event dispatcher (na Breadcrumbs)" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="250px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goBreadcrumbs" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="geolocation" />
+                      <Data value="Geolocation" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="250px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goGeolocation" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="modalDialog" />
+                      <Data value="ModalDialog" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goModalDialog" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="page" />
+                      <Data value="Page" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goPage" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="plainObject" />
+                      <Data value="PlainObject" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goPlainObject" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="serverConnection" />
+                      <Data value="ServerConnection" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goServerConnection" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="timer" />
+                      <Data value="Timer" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goTimer" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="urlRouter" />
+                      <Data value="UrlRouter" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goRouting" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="userInactivity" />
+                      <Data value="UserInactivityTimer" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goInactivityTimerExample" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="validatorsFilter" />
+                      <Data value="ValidatorsFilter" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goValidatorsFilter" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="xmlSigner" />
+                      <Data value="XmlSigner" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goXmlSigner" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="pnlComp" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="33%" />
+                  <Children>
+                    <Label>
+                      <Name value="label11" />
+                      <Data value="Components" />
+                      <Heading value="h2" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                    </Label>
+                    <HyperLink>
+                      <Name value="actionLangEditor" />
+                      <Data value="ActionLangEditor" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goActionLangEditor" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="appMenu" />
+                      <Data value="App Menu" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_appMenu_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="attUpload" />
+                      <Data value="AttachmentUpload" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goAttUpload" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="booleanRadioGroup" />
+                      <Data value="BooleanRadioGroup" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goBooleanRadioGroup" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="busyIndicator1" />
+                      <Data value="BusyIndicator" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goBusyIndicator" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="collapsibleGroupBox" />
+                      <Data value="CollapsibleGroupBox" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goCollapsibleGroupBox" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="collapsibleStickyPanel" />
+                      <Data value="CollapsibleStickyPanel" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goCollapsibleStickyPanel" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="complexEditor" />
+                      <Data value="ComplexEditor" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goComplexEditor" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="dynamicRichText" />
+                      <Data value="DynamicRichText" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goDynamicRichText" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="errorSummary" />
+                      <Data value="ErrorSummary" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goErrorSummary" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <Label>
+                      <Name value="label21" />
+                      <Data value="(incl. demo how to do accessible error handling)" />
+                      <Margin value="0, 6, 6, 6 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <HyperLink>
+                      <Name value="fileReader" />
+                      <Data value="FileReader" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goFileReader" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="groupItem" />
+                      <Data value="GroupItem" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goGroupItem" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperlinkPlus identity="HyperlinkPlus.f7180323204e4230ba196fd4a2f62748">
+                      <Name value="hyperlinkPlus" />
+                      <AriaLabel value="Solitea website - Opens in new window" />
+                      <Data value="HyperlinkPlus external link example" />
+                      <Href value="http://www.solitea.cz" />
+                      <OnClickContinue value="True" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_blank" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperlinkPlus_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlinkplus" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperlinkPlus>
+                    <HyperLink>
+                      <Name value="imageButton1" />
+                      <Data value="ImageButton" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goImageButton" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="labeledText" />
+                      <Data value="LabeledText" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goLabeledText" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="optionCards" />
+                      <Data value="OptionCards" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goOptionCards" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="payTrailForm" />
+                      <Data value="PayTrailForm" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goPayTrailForm" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="pagingRepeater" />
+                      <Data value="PagingRepeater" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goPagingRepeater" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="pagingRepeaterCtrl" />
+                      <Data value="PagingRepeaterController" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="250px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goPagingRepeaterController" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="referenceComboPlus" />
+                      <Data value="ReferenceComboPlus" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goReferenceComboPlus" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="referenceLookup" />
+                      <Data value="ReferenceLookup" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goReferenceLookup" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="srMenu" />
+                      <Data value="Screenreader menu + Landmark" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_srMenu_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="selectionTable" />
+                      <Data value="SelectionTable" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goSelectionTable" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="tabControl" />
+                      <Data value="TabControl" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="250px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goTabControlExample" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="textBoxPlus" />
+                      <Data value="TextBoxPlus" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goTextBoxPlus" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="tooltipButton" />
+                      <Data value="TooltipButton" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goTooltipButton" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="validationSummary1" />
+                      <Data value="ValidationSummary" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goValidationSummary" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                  </Children>
+                </Panel>
+                <Panel>
+                  <Name value="pnlCompCtrl" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Label>
+                      <Name value="label1" />
+                      <Data value="Components &amp; API Ctrl" />
+                      <Heading value="h2" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                    </Label>
+                    <HyperLink>
+                      <Name value="breadcrumbs1" />
+                      <Data value="Breadcrumbs" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="250px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goBreadcrumbs" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="list" />
+                      <Data value="List" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goList" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="navigationTree" />
+                      <Data value="NavigationTree" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goNavigationTree" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="listGrid2" />
+                      <Data value="ListGrid 2" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goListGrid2" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="listGrid2Collection" />
+                      <Data value="ListGrid 2 with CollectionDataProvider2" />
+                      <Margin value="6, 6, 0, 6 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goListGrid2Collection" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <Label>
+                      <Name value="label22" />
+                      <Data value="(incl. ListGridViewSettings + automatic state save &amp; load)" />
+                      <Margin value="0, 6, 6, 6 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <HyperLink>
+                      <Name value="notification" />
+                      <Data value="Notification" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="250px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goNotification" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                  </Children>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-groupbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </GroupBox>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <OnCreate>
+        <ActionEvent ReferencedAction="+UiParts.home.init" />
+      </OnCreate>
+    </DataContext>
+  </DataContext>
+  <Actions>
+    <ActionBlock>
+      <Name value="goServerConnection" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.serverConnectionExample.go()
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goList" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.listExample.go()
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goCodelist" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.codelistExample.go()
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goGroupItem" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.groupItemExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goCollapsibleGroupBox" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.collapsibleGroupBoxExample.go()
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goLabeledText" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.labeledTextExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goReferenceLookup" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.referenceLookupExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goErrorSummary" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.errorSummaryExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goPagingRepeater" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.pagingRepeaterExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goBusyIndicator" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.busyIndicatorExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goNavigationTree" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.navigationTreeExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goPage" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.pageExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goRouting" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.routingExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.urlRouter.clearUrl()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goTimer" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.timerExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goFileReader" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.fileReaderExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goPagingRepeaterController" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.pagingRepeaterCtrlExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goTabControlExample" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.tabControlExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goGeolocation" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.geolocationExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goBreadcrumbs" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.breadcrumbsExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goPlainObject" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.plainObjectExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goBusinessDaysCalc" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.businessDaysCalcExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goActionLangEditor" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.actionLangEditorExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goListGrid2" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.listGrid2Example.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goListGrid2Collection" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.collectionDataProvider2Example.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goFilteredCodelist" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.filteredCodelistExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goBrowserStorage" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.browserStorageExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goCollapsibleStickyPanel" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.collapsibleStickyPanelExample.go()
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goValidatorsFilter" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.validatorsFilterExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goInactivityTimerExample" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.inactivityExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goActiveXSigner" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.activeXSignerExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goValidationSummary" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.validationSummaryExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hermesAdapter1_onAppTitleClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("hermes event")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goImageButton" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.imageButtonExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goPayTrailForm" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.payTrailFormExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goNotification" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.notificationsExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_appMenu_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.appMenuExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goModalDialog" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.modalDialogExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goAttUpload" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.attachmentUploadExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goXmlSigner" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.xmlSignerExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goTooltipButton" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.tooltipButtonExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goCodelistGroup" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.codelistGroupExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_srMenu_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.screenreaderMenuExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goReferenceComboPlus" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.referenceComboPlusExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goOptionCards" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.optionCardsExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperlinkPlus_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("hyperlinkPlus clicked")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goSelectionTable" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.selectionTableExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goAccessibilitySettings" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.accessibilitySettingsExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goBooleanRadioGroup" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.booleanRadioGroupExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goTextBoxPlus" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.textBoxPlusExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goDynamicRichText" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.dynamicRichTextExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goComplexEditor" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.complexEditorExample.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <HermesAdapter identity="HermesAdapter.ead94efc02184e0ea5ae29b66c6bd70e">
+      <Name value="hermesAdapter1" />
+      <onAppTitleClick>
+        <ActionEvent ReferencedAction="~handler_hermesAdapter1_onAppTitleClick" />
+      </onAppTitleClick>
+    </HermesAdapter>
+  </ApiObjects>
+</Form>

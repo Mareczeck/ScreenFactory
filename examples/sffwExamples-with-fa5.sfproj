@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ProjectRoot>
+  <CreatedOn value="2017-04-04T22:28:45.1451033+02:00" />
+  <GeneratorParametersJSON value="{&#xD;&#xA;&#x9;&quot;textboxWiggle&quot;: true,&#xD;&#xA;&#x9;&quot;validationsAbove&quot;: true,&#xD;&#xA;&#x9;&quot;plainCodelists&quot;: true,&#xD;&#xA;&#x9;&quot;toolTipVPaddingPx&quot;: 12,&#xD;&#xA;&#x9;&quot;toolTipHAlign&quot;: &quot;Center&quot;,&#xD;&#xA;&#x9;&quot;tooltipBehaviour&quot;: &quot;Hover&quot;,&#xD;&#xA;&#x9;&quot;omitIfBindingVisibility&quot;: false&#xD;&#xA;}" />
+  <Language value="en" />
+  <ProjectName value="sffwExamples-with-fa5" />
+  <StartupForm reference="/(main.c9f5b2d2d1064cbd94881927260fd327)+UiParts.home" />
+  <MainForm>
+    <ProjectMainFormOptions MaxPageWidth="100%" />
+  </MainForm>
+  <Options>
+    <ProjectOptions>
+      <LocalizationEnabled value="True" />
+      <ManageFolderContent value="False" />
+      <DataToForm>
+        <DataToFormConfiguration BoolEditor="Sf.LibraryOne.CheckBox" CollectionEditor="Repeater" ComputedText="Sf.LibraryOne.Label" DateEditor="Sf.LibraryOne.DatePicker" DateTimeEditor="Sf.LibraryOne.DatePicker" DecimalEditor="ScreenFactory.Data.Model.Ui.TextBox" EnumEditor="ScreenFactory.Data.Model.Ui.EnumCombo" IntegerEditor="ScreenFactory.Data.Model.Ui.TextBox" ReferenceEditor="Sf.LibraryOne.ReferenceCombo" StringEditor="ScreenFactory.Data.Model.Ui.TextBox" />
+      </DataToForm>
+      <Theme>
+        <ProjectTheme>
+          <ThemeName value="m8" />
+        </ProjectTheme>
+      </Theme>
+    </ProjectOptions>
+  </Options>
+  <Languages>
+    <ProjectLanguageItem Language="en" />
+    <ProjectLanguageItem Language="cs" />
+    <ProjectLanguageItem Language="fi" />
+    <ProjectLanguageItem Language="sv" />
+    <ProjectLanguageItem Language="sr" />
+    <ProjectLanguageItem Language="me" />
+  </Languages>
+  <PackageReferences>
+    <PackageReference Alias="CorePackage" IsComponentLib="True" IsReadOnly="True" IsSystem="True" Origin="system://CorePackage/CorePackage.package">
+      <ReferencedIdentity value="CorePackage.5f000000000045f00000000000000000" />
+      <ReferencedVersion value="0.0.0" />
+    </PackageReference>
+    <PackageReference Alias="main" Origin="main\main.package">
+      <ReferencedIdentity value="main.c9f5b2d2d1064cbd94881927260fd327" />
+      <ReferencedVersion value="0.0.0" />
+    </PackageReference>
+    <PackageReference Alias="ServerConnection" IsComponentLib="True" Origin="..\dist\serverconnection\ServerConnection.package">
+      <ReferencedIdentity value="ServerConnection.db7b3eef075548988df768923691922c" />
+      <ReferencedVersion value="4.3.0" />
+    </PackageReference>
+    <PackageReference Alias="List" IsComponentLib="True" Origin="..\dist\list\List.package">
+      <ReferencedIdentity value="List.a6f439c3b8e944f383863f66ff1261c8" />
+      <ReferencedVersion value="5.1.1" />
+    </PackageReference>
+    <PackageReference Alias="Codelist" IsComponentLib="True" Origin="..\dist\codelist\Codelist.package">
+      <ReferencedIdentity value="Codelist.2fd2d7af4a6d445bad8a58610632f8e0" />
+      <ReferencedVersion value="3.14.0" />
+    </PackageReference>
+    <PackageReference Alias="groupItem" IsComponentLib="True" Origin="..\dist\groupitem\GroupItem.package">
+      <ReferencedIdentity value="groupItem.5a6b8e35dae64b4cafe1e0c390297e27" />
+      <ReferencedVersion value="1.1.0" />
+    </PackageReference>
+    <PackageReference Alias="CollapsibleGroupBox" IsComponentLib="True" Origin="..\dist\collapsiblegroupbox\CollapsibleGroupBox.package">
+      <ReferencedIdentity value="collapsibleGroupBox.cfca4faa9e574885bad67cbe322167a7" />
+      <ReferencedVersion value="2.3.0" />
+    </PackageReference>
+    <PackageReference Alias="LabeledText" IsComponentLib="True" Origin="..\dist\labeledtext\LabeledText.package">
+      <ReferencedIdentity value="labeledText.a92a691d6915448ebf9f0b804ce6a733" />
+      <ReferencedVersion value="1.1.1" />
+    </PackageReference>
+    <PackageReference Alias="IconStylecheckbox" IsComponentLib="True" Origin="..\dist\iconstylecheckbox\IconStylecheckbox.package">
+      <ReferencedIdentity value="iconStyleCheckbox.d07c7f39f45b4c33b495f905390db71c" />
+      <ReferencedVersion value="1.1.1" />
+    </PackageReference>
+    <PackageReference Alias="ReferenceLookup" IsComponentLib="True" Origin="..\dist\referencelookup\ReferenceLookup.package">
+      <ReferencedIdentity value="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e" />
+      <ReferencedVersion value="3.2.1" />
+    </PackageReference>
+    <PackageReference Alias="jQueryUI" IsComponentLib="True" Origin="..\dist\jquerypackage\jQueryPackage.package">
+      <ReferencedIdentity value="jQueryPackage.969dfbfe76454b4187e210594a2a988b" />
+      <ReferencedVersion value="0.0.0" />
+    </PackageReference>
+    <PackageReference Alias="errorSummary" IsComponentLib="True" Origin="..\dist\errorsummary\ErrorSummary.package">
+      <ReferencedIdentity value="errorSummary.18906f81e9c84384b3ed7eec38b2ef24" />
+      <ReferencedVersion value="5.0.4" />
+    </PackageReference>
+    <PackageReference Alias="PagingRepeater" IsComponentLib="True" Origin="..\dist\pagingrepeater\PagingRepeater.package">
+      <ReferencedIdentity value="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf" />
+      <ReferencedVersion value="0.0.0" />
+    </PackageReference>
+    <PackageReference Alias="BusyIndicator" IsComponentLib="True" Origin="..\dist\busyindicator\BusyIndicator.package">
+      <ReferencedIdentity value="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e" />
+      <ReferencedVersion value="2.0.1" />
+    </PackageReference>
+    <PackageReference Alias="NavigationTree" IsComponentLib="True" Origin="..\dist\navigationtree\NavigationTree.package">
+      <ReferencedIdentity value="NavigationTree.b87dd9f990504f86a481d689d499f644" />
+      <ReferencedVersion value="4.2.0" />
+    </PackageReference>
+    <PackageReference Alias="Page" IsComponentLib="True" Origin="..\dist\page\Page.package">
+      <ReferencedIdentity value="Page.f7aa0c151c64407daef13910dcf7b72a" />
+      <ReferencedVersion value="1.7.0" />
+    </PackageReference>
+    <PackageReference Alias="UrlRouter" IsComponentLib="True" Origin="..\dist\urlrouter\UrlRouter.package">
+      <ReferencedIdentity value="UrlRouter.69a71809c45249cbb2999d13bb9100c0" />
+      <ReferencedVersion value="3.0.3" />
+    </PackageReference>
+    <PackageReference Alias="Timer" IsComponentLib="True" Origin="..\dist\timer\Timer.package">
+      <ReferencedIdentity value="Timer.cee6b8357b9240469bd5d89cf64b0c9a" />
+      <ReferencedVersion value="1.0.1" />
+    </PackageReference>
+    <PackageReference Alias="FileReader" IsComponentLib="True" Origin="..\dist\filereader\FileReader.package">
+      <ReferencedIdentity value="FileReader.f457f0445b7e44b7a3a1134647eff385" />
+      <ReferencedVersion value="1.1.1" />
+    </PackageReference>
+    <PackageReference Alias="PagingRepeaterCtrl" IsComponentLib="True" Origin="..\dist\pagingrepeaterctrl\PagingRepeaterCtrl.package">
+      <ReferencedIdentity value="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4" />
+      <ReferencedVersion value="2.3.0" />
+    </PackageReference>
+    <PackageReference Alias="TabControl" IsComponentLib="True" Origin="..\dist\tabcontrol\TabControl.package">
+      <ReferencedIdentity value="TabControl.060fd7850ded45d3aceb7bf1f53aebb6" />
+      <ReferencedVersion value="1.3.1" />
+    </PackageReference>
+    <PackageReference Alias="Geolocation" IsComponentLib="True" Origin="..\dist\geolocation\Geolocation.package">
+      <ReferencedIdentity value="Geolocation.35da8268d7aa43e8af9983ac186b0aab" />
+      <ReferencedVersion value="1.0.1" />
+    </PackageReference>
+    <PackageReference Alias="Breadcrumbs" IsComponentLib="True" Origin="..\dist\breadcrumbs\Breadcrumbs.package">
+      <ReferencedIdentity value="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb" />
+      <ReferencedVersion value="1.0.5" />
+    </PackageReference>
+    <PackageReference Alias="PlainObject" IsComponentLib="True" Origin="..\dist\plainobject\PlainObject.package">
+      <ReferencedIdentity value="PlainObject.2933617ce1714fe38ef01785a5a6492f" />
+      <ReferencedVersion value="2.6.0" />
+    </PackageReference>
+    <PackageReference Alias="DeclListQuery" IsComponentLib="True" Origin="..\dist\decllistquery\DeclListQuery.package">
+      <ReferencedIdentity value="DeclListQuery.f41d2c211a8f43618588763e63b56065" />
+      <ReferencedVersion value="1.0.3" />
+    </PackageReference>
+    <PackageReference Alias="BusinessDaysCalc" IsComponentLib="True" Origin="..\dist\businessdayscalc\BusinessDaysCalc.package">
+      <ReferencedIdentity value="BusinessDaysCalc.9dcbd50fd89e4ee3926d17a07c714b1e" />
+      <ReferencedVersion value="1.0.1" />
+    </PackageReference>
+    <PackageReference Alias="ActionLangEditor" IsComponentLib="True" Origin="..\dist\actionlangeditor\ActionLangEditor.package">
+      <ReferencedIdentity value="ActionLangEditor.7d8f3ea4b0454679ac3461ace2edf073" />
+      <ReferencedVersion value="2.2.4" />
+    </PackageReference>
+    <PackageReference Alias="ListCtrl" IsComponentLib="True" Origin="..\dist\listctrl\ListCtrl.package">
+      <ReferencedIdentity value="ListCtrl.459ff3780ab145df985191cfc1336ce1" />
+      <ReferencedVersion value="2.19.0" />
+    </PackageReference>
+    <PackageReference Alias="ErrorPointerMap" IsComponentLib="True" Origin="..\dist\errorpointermap\ErrorPointerMap.package">
+      <ReferencedIdentity value="ErrorPointerMap.69320151074d4125908af3869d7556e1" />
+      <ReferencedVersion value="1.3.0" />
+    </PackageReference>
+    <PackageReference Alias="ListGrid2" IsComponentLib="True" Origin="..\dist\listgrid2\ListGrid2.package">
+      <ReferencedIdentity value="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb" />
+      <ReferencedVersion value="2.1.2" />
+    </PackageReference>
+    <PackageReference Alias="CollectionDataProvider2" IsComponentLib="True" Origin="..\dist\collectiondataprovider2\CollectionDataProvider2.package">
+      <ReferencedIdentity value="CollectionDataProvider2.796ba28ddaf44db78bd2cdf0b9f3628c" />
+      <ReferencedVersion value="1.4.0" />
+    </PackageReference>
+    <PackageReference Alias="TextEditor" IsComponentLib="True" Origin="..\dist\texteditor\TextEditor.package">
+      <ReferencedIdentity value="TextEditor.770190e20cd64d30821b7b783444edd5" />
+      <ReferencedVersion value="1.0.1" />
+    </PackageReference>
+    <PackageReference Alias="BrowserStorage" IsComponentLib="True" Origin="..\dist\browserstorage\BrowserStorage.package">
+      <ReferencedIdentity value="BrowserStorage.83565645179f49c7aca5e53363dc7176" />
+      <ReferencedVersion value="1.0.0" />
+    </PackageReference>
+    <PackageReference Alias="MonacoEditor" IsComponentLib="True" Origin="..\dist\monacoeditor\MonacoEditor.package">
+      <ReferencedIdentity value="MonacoEditor.0c44fac2700f4673a31803ab3d6a53b4" />
+      <ReferencedVersion value="1.1.0" />
+    </PackageReference>
+    <PackageReference Alias="EventDispatcher" IsComponentLib="True" Origin="..\dist\eventdispatcher\EventDispatcher.package">
+      <ReferencedIdentity value="EventDispatcher.eb764ceb30274f1e9a3d051d512d6b26" />
+      <ReferencedVersion value="1.1.0" />
+    </PackageReference>
+    <PackageReference Alias="CollapsibleStickyPanel" IsComponentLib="True" Origin="..\dist\collapsiblestickypanel\CollapsibleStickyPanel.package">
+      <ReferencedIdentity value="CollapsibleStickyPanel.4b45f89dd6ca43ecb980574e5dacae09" />
+      <ReferencedVersion value="1.2.0" />
+    </PackageReference>
+    <PackageReference Alias="ValidatorsFilter" IsComponentLib="True" Origin="..\dist\validatorsfilter\ValidatorsFilter.package">
+      <ReferencedIdentity value="ValidatorsFilter.8deb114ae09941fba01dc42d318a6c2f" />
+      <ReferencedVersion value="1.0.0" />
+    </PackageReference>
+    <PackageReference Alias="UserInactivityTimer" IsComponentLib="True" Origin="..\dist\userinactivitytimer\UserInactivityTimer.package">
+      <ReferencedIdentity value="UserInactivityTimer.a7b09c48b1c54575b4edb081fbaee9ab" />
+      <ReferencedVersion value="1.0.0" />
+    </PackageReference>
+    <PackageReference Alias="ListColumnSelector" IsComponentLib="True" Origin="..\dist\listcolumnselector\ListColumnSelector.package">
+      <ReferencedIdentity value="ListColumnSelector.2cbd6bf4e5dc483c88201c7083328f69" />
+      <ReferencedVersion value="2.0.2" />
+    </PackageReference>
+    <PackageReference Alias="ActiveXSigner" IsComponentLib="True" Origin="..\dist\activexsigner\ActiveXSigner.package">
+      <ReferencedIdentity value="ActiveXSigner.88015d04baac4e2fa67ffcff720d66ad" />
+      <ReferencedVersion value="1.1.0" />
+    </PackageReference>
+    <PackageReference Alias="ListGridViewSettings" IsComponentLib="True" Origin="..\dist\listgridviewsettings\ListGridViewSettings.package">
+      <ReferencedIdentity value="ListGridViewSettings.13c6ca769c344553aaa727b591042920" />
+      <ReferencedVersion value="1.3.5" />
+    </PackageReference>
+    <PackageReference Alias="NavigationObserver" IsComponentLib="True" Origin="..\dist\navigationobserver\NavigationObserver.package">
+      <ReferencedIdentity value="NavigationObserver.a6850f60a9dd4afcb8b8289571bbfbb4" />
+      <ReferencedVersion value="1.0.0" />
+    </PackageReference>
+    <PackageReference Alias="ValidationSummary" IsComponentLib="True" Origin="..\dist\ValidationSummary\ValidationSummary.package">
+      <ReferencedIdentity value="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445" />
+      <ReferencedVersion value="1.0.5" />
+    </PackageReference>
+    <PackageReference Alias="HermesAdapter" IsComponentLib="True" Origin="..\dist\hermesadapter\hermesAdapter.package">
+      <ReferencedIdentity value="HermesAdapter.ead94efc02184e0ea5ae29b66c6bd70e" />
+      <ReferencedVersion value="1.0.1" />
+    </PackageReference>
+    <PackageReference Alias="ImageButton" IsComponentLib="True" Origin="..\dist\ImageButton\ImageButton.package">
+      <ReferencedIdentity value="ImageButton.d5705fac3ef94ff185b0260525af877a" />
+      <ReferencedVersion value="2.1.0" />
+    </PackageReference>
+    <PackageReference Alias="ResponsiveFoldPanel" IsComponentLib="True" Origin="..\dist\ResponsiveFoldPanel\ResponsiveFoldPanel.package">
+      <ReferencedIdentity value="ResponsiveFoldPanel.780fd423512842a8a7dd1130674c2332" />
+      <ReferencedVersion value="1.0.2" />
+    </PackageReference>
+    <PackageReference Alias="PayTrailForm" IsComponentLib="True" Origin="..\dist\PayTrailForm\PayTrailForm.package">
+      <ReferencedIdentity value="PayTrailForm.75d8c04d1a41484e9d2ba41296a1acd5" />
+      <ReferencedVersion value="1.3.1" />
+    </PackageReference>
+    <PackageReference Alias="Notifications" IsComponentLib="True" Origin="..\dist\Notifications\Notifications.package">
+      <ReferencedIdentity value="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc" />
+      <ReferencedVersion value="1.4.0" />
+    </PackageReference>
+    <PackageReference Alias="IconsTulli" Origin="..\IconsTulli\IconsTulli.package">
+      <ReferencedIdentity value="IconsTulli.a42602e696cd46468dba171f022da2b4" />
+      <ReferencedVersion value="0.0.0" />
+    </PackageReference>
+    <PackageReference Alias="AppMenu" IsComponentLib="True" Origin="..\dist\AppMenu\AppMenu.package">
+      <ReferencedIdentity value="AppMenu.58f389bf427043048cf94f089e3b95d2" />
+      <ReferencedVersion value="0.0.0" />
+    </PackageReference>
+    <PackageReference Alias="ModalDialog" IsComponentLib="True" Origin="..\dist\ModalDialog\ModalDialog.package">
+      <ReferencedIdentity value="ModalDialog.94570be80952477cb3e636ab95b79441" />
+      <ReferencedVersion value="1.1.1" />
+    </PackageReference>
+    <PackageReference Alias="AttachmentUpload" IsComponentLib="True" Origin="..\dist\AttachmentUpload\AttachmentUpload.package">
+      <ReferencedIdentity value="AttachmentUpload.284f714f2c0c4a4b8dfacca37052a11b" />
+      <ReferencedVersion value="1.3.0" />
+    </PackageReference>
+    <PackageReference Alias="Accessibility" IsComponentLib="True" Origin="..\dist\Accessibility\Accessibility.package">
+      <ReferencedIdentity value="Accessibility.63b9f09334b545a39d169ea0ff801f1e" />
+      <ReferencedVersion value="1.2.1" />
+    </PackageReference>
+    <PackageReference Alias="XmlSigner" IsComponentLib="True" Origin="..\dist\XmlSigner\XmlSigner.package">
+      <ReferencedIdentity value="XmlSigner.42a93ef298b64fb68abcd2dc89426101" />
+      <ReferencedVersion value="1.0.0" />
+    </PackageReference>
+    <PackageReference Alias="FontAwesome5" IsComponentLib="True" Origin="..\dist\FontAwesome5\FontAwesome5.package">
+      <ReferencedIdentity value="FontAwesome5.5da8a1be7cdf43528b94f5c8c7c0158e" />
+      <ReferencedVersion value="1.0.0" />
+    </PackageReference>
+  </PackageReferences>
+</ProjectRoot>

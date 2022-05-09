@@ -1,0 +1,54 @@
+{
+    "clickedActionButtonName": "accumsan vestibulum",
+    "reference1": {
+        "CustomerID": "sapien metus nisi interdum euismod",
+        "ShipVia": 1735541823,
+        "Freight": "tortor non Sed euismod imperdiet",
+        "_idxStr": "ac Lorem faucibus feugiat lorem hendrerit",
+        "OrderDate": "2019-09-20T16:29:46Z"
+    },
+    "ShowCheckboxes": true,
+    "recordsCount": 2081461401,
+    "displayedRecords": 2029442100,
+    "localizedColumn": "justo ante adipiscing molestie vestibulum",
+    "dataCollection": [
+        {
+            "CustomerID": "cursus et nulla metus Vivamus volutpat mi at nec in non eget",
+            "ShipVia": 2121652009,
+            "Freight": "id sed feugiat sed",
+            "ShipCountry": "leo vestibulum elementum fringilla et Donec",
+            "_selected": true,
+            "OrderDate": "2018-11-15T14:29:19Z",
+            "BoolProp": false
+        },
+        {
+            "CustomerID": "quis per",
+            "ShipVia": -1592352099,
+            "Freight": "tempus scelerisque augue tortor pulvinar erat volutpat ligu",
+            "ShipCountry": "Donec viverra himenaeos ligula Sed metus",
+            "_selected": true,
+            "OrderDate": "2018-05-15T14:29:19Z",
+            "BoolProp": false
+        }
+    ],
+    "sourceDataCollection": [
+        {
+            "CustomerID": "lobortis at ligula eget euismod mollis elementum",
+            "ShipVia": "felis tempor Ut vel",
+            "Freight": "pulvinar vel",
+            "ShipCountry": "dolor leo viverra accumsan Cras faucibus Duis Nulla est",
+            "OrderDate": "2018-11-06T14:28:58Z",
+            "BoolProp": false
+        },
+        {
+            "CustomerID": "",
+            "ShipVia": "eu condimentum",
+            "Freight": "sit lacus sit adipiscing lacus nibh risus vel id",
+            "ShipCountry": "ipsum sollicitudin orci iaculis aliquet nec elit",
+            "OrderDate": "2017-06-23T14:28:58Z",
+            "BoolProp": false
+        }
+    ],
+    "recordsCountOData": -246179906,
+    "lang": "eget eget semper iaculis nec tristique pulvinar"
+}

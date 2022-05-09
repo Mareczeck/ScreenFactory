@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="complexEditorExample" />
+  <Caption value="Complex editor example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Href value="#" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <TextBox>
+          <Name value="textBox1" />
+          <CaptionVAlign value="Middle" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="def" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="def.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="def.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <CheckBox>
+          <Name value="checkBox1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="panelEnabled" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="panelEnabled.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="panelEnabled.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-checkbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CheckBox>
+        <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+          <Name value="labeledText1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="isDataValid" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="isDataValid.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="isDataValid.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-labeledtext" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </LabeledText>
+        <Panel>
+          <Name value="complexEditor1_parent" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="IsEnabled" Expression="form.panelEnabled" />
+          </Bindings>
+          <Children>
+            <ComplexEditor identity="ComplexEditor.695d8e1b81814a2eb1dc07874e2089f9">
+              <Name value="complexEditor1" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="isDataValid" Expression="form.isDataValid" />
+                <Binding SourceProperty="dataJson" Expression="form.dataAsJson" />
+                <Binding SourceProperty="definition" Expression="form.def" />
+              </Bindings>
+            </ComplexEditor>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <TextBox>
+          <Name value="textBox5" />
+          <CaptionVAlign value="Middle" />
+          <InputType value="Multiline" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Rows value="5" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="dataAsJson" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="dataAsJson.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="dataAsJson.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="def" />
+          <Caption value="Def" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="dataAsJson" />
+          <Caption value="Data as json" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="initialData" />
+          <Caption value="Initial data" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="isDataValid" />
+          <Caption value="Is data valid" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="attribute1" />
+          <Caption value="Attribute 1" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Decimal" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="panelEnabled" />
+          <Caption value="Panel enabled" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~handler_complexEditorExample_OnCreate" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="handler_complexEditorExample_OnCreate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.panelEnabled = true
+form.def = "{\"metadata\":[{\"Name\":\"str\",\"Caption\":\"String with caption\", \"DataType\":\"string\",\"IsRequired\":true},{\"Name\":\"intg\",\"DataType\":\"integer\",\"Disabled\":true},{\"Name\":\"dec\",\"DataType\":\"decimal\"},{\"Name\":\"dt\",\"DataType\":\"date\"},{\"Name\":\"tm\",\"DataType\":\"dateTime\"},{\"Name\":\"bool\",\"DataType\":\"bool\"}],\"initialData\":{\"str\":\"x\",\"intg\":423,\"dec\":\"3.5\",\"dt\":\"2022-03-10\",\"tm\":\"2022-03-05T12:00:00.000\",\"bool\":true}}"]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="actionLangEditorExample" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="hyperLink1" />
+          <Data value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <CheckBox>
+          <Name value="checkBox2" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="isVisible" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="isVisible.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="isVisible.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-checkbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CheckBox>
+        <Panel>
+          <Name value="actionLangEditor1_parent" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="IsVisible" Expression="form.isVisible" />
+          </Bindings>
+          <Children>
+            <GroupBox>
+              <Name value="actionLangEditor11_parent_parent" />
+              <Caption value="ActionLangEditor" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+              <Content>
+                <Panel>
+                  <Name value="actionLangEditor11_parent1" />
+                  <Orientation value="Vertical" />
+                  <Children>
+                    <ActionLangEditor identity="ActionLangEditor.7d8f3ea4b0454679ac3461ace2edf073">
+                      <Name value="actionLangEditor111" />
+                      <completionUrl value="/ALangCompletion" />
+                      <Panel.Height value="500px" />
+                      <Panel.Width value="*" />
+                      <server reference="~mock" />
+                      <validationUrl value="/ALangValidation" />
+                      <Bindings>
+                        <Binding SourceProperty="code" Expression="form.code" />
+                        <Binding SourceProperty="isValid" Expression="form.isValid" />
+                        <Binding SourceProperty="contextJson" Expression="form.context" />
+                      </Bindings>
+                    </ActionLangEditor>
+                    <CheckBox>
+                      <Name value="checkBox11" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="isValid" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="isValid.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="isValid.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-checkbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </CheckBox>
+                    <TextBox>
+                      <Name value="textBox11" />
+                      <InputType value="Multiline" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Rows value="5" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="code" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="code.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="code.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <Button>
+                      <Name value="btnSetContent1" />
+                      <Caption value="set content" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_button1_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                  </Children>
+                </Panel>
+              </Content>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-groupbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </GroupBox>
+            <GroupBox>
+              <Name value="panel3_parent" />
+              <Caption value="TextEditor - xml" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Content>
+                <Panel>
+                  <Name value="panel31" />
+                  <Orientation value="Vertical" />
+                  <Children>
+                    <textEditor identity="TextEditor.770190e20cd64d30821b7b783444edd5">
+                      <Name value="textEditor11" />
+                      <language value="xml" />
+                      <Panel.Height value="500px" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="code" Expression="textEditor.code" />
+                      </Bindings>
+                    </textEditor>
+                  </Children>
+                </Panel>
+              </Content>
+            </GroupBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="code" />
+          <Caption value="Code" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+          <OnChange>
+            <ActionEvent ReferencedAction="+UiParts.actionLangEditorExample.handler_code_OnChange" />
+          </OnChange>
+        </Attribute>
+        <Attribute>
+          <Name value="isValid" />
+          <Caption value="Is valid" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+          <OnChange>
+            <ActionEvent ReferencedAction="+UiParts.actionLangEditorExample.handler_isValid_OnChange" />
+          </OnChange>
+        </Attribute>
+        <Attribute>
+          <Name value="actionLangServerContext" />
+          <Caption value="Action lang server context" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="isVisible" />
+          <Caption value="Is visible" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="context" />
+          <Caption value="Context" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Complex>
+          <Name value="textEditor" />
+          <Children>
+            <Attribute>
+              <Name value="code" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~handler_actionLangEditorExample_OnCreate" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="handler_actionLangEditorExample_OnCreate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.context = "{\"someKey\": \"context is some json string the server uses to identify what script it is etc.\"}"]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button1_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.code = "ab cd ef gh"]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_isValid_OnChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("isValid change; triggeredByUser=" + tostring(params.triggeredByUser))]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_code_OnChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("code change; triggeredByUser=" + tostring(params.triggeredByUser))]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <ServerConnection identity="ServerConnection.db7b3eef075548988df768923691922c">
+      <Name value="mock" />
+      <codelistsUrl value="" />
+      <listsUrl value="" />
+      <rootUrl value="http://localhost:3000" />
+    </ServerConnection>
+  </ApiObjects>
+</Form>

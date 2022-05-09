@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="businessDaysCalcExample" />
+  <Caption value="businessDaysCalcExample" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Href value="#" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <DatePicker>
+          <Name value="datePicker1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="date" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="date.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="date.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-datepicker" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </DatePicker>
+        <CheckBox>
+          <Name value="checkBox1" />
+          <IsEnabled value="False" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="isWorkDay" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="isWorkDay.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="isWorkDay.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-checkbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CheckBox>
+        <Panel>
+          <Name value="panel2" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="button1" />
+              <Caption value="Check working day" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~checkIsWorkDay" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Label>
+              <Name value="label22" />
+              <Data value="Funkce isWorkDay zkontroluje zda je datum pracovním dnem." />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel3" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="button2" />
+              <Caption value="Conditional shift to next workday" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~setToNextWorkDay" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Label>
+              <Name value="label2" />
+              <Data value="Funkce getNextWorkDay zajistí posun datumu, který není pracovním dnem, na nejbližší následující pracovní den. Typicky slouží k posunu datumu splatnosti dluhu subjektu." />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel5" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="button4" />
+              <Caption value="Conditional shift to previous workday" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~setToPrevWorkDay" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Label>
+              <Name value="label21" />
+              <Data value="Funkce getPrevWorkDay zajistí posun datumu, který není pracovním dnem, na nejbližší předcházející pracovní den. Typicky slouží k posunu datumu splatnosti nároku subjektu." />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel4" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="button3" />
+              <Caption value="Shift by " />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~setWorkDayShift" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <TextBox>
+              <Name value="textBox1" />
+              <CaptionPosition value="Hide" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50px" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="workdays" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="workdays.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="workdays.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <Label>
+              <Name value="label1" />
+              <Data value="workdays" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Label>
+          <Name value="label3" />
+          <Data value="Funkce getWorkDayShift posune datum o požadovaný počet pracovních dní (kladný parametr posouvá vpřed, záporný vzad). Pokud není výchozí datum pracovním dnem, posune se nejprve na nejbližší pracovní den (ve směru podle znaménka parametru) a poté o zadaný počet pracovních dní." />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="date" />
+          <Caption value="Date" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Date" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="isWorkDay" />
+          <Caption value="Is work day" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="workdays" />
+          <Caption value="Workdays" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~create" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="create" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.businessDaysCalc1.loadHolidays(" { \"holidays\":[{\"date\": \"2018-01-01\", \"description\": \"Nový rok\"},{\"date\": \"2017-12-25\", \"description\": \"1. svátek vánoční\"},{\"date\": \"2017-12-26\", \"description\": \"2. svátek vánoční\"}] }")
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="checkIsWorkDay" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.isWorkDay.clear()
+if form.date.hasValue() then
+	form.isWorkDay = form.apiobjects.businessDaysCalc1.isWorkDay(form.date)
+endif
+	
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setToNextWorkDay" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var workDay = form.apiobjects.businessDaysCalc1.getNextWorkDay(form.date)
+form.date = workDay]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setWorkDayShift" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var workDay = form.apiobjects.businessDaysCalc1.getWorkDayShift(form.date, form.workdays)
+form.date = workDay]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setToPrevWorkDay" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var workDay = form.apiobjects.businessDaysCalc1.getPrevWorkDay(form.date)
+form.date = workDay]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <BusinessDaysCalc identity="BusinessDaysCalc.9dcbd50fd89e4ee3926d17a07c714b1e">
+      <Name value="businessDaysCalc1" />
+      <countryCode value="CZ" />
+    </BusinessDaysCalc>
+  </ApiObjects>
+</Form>

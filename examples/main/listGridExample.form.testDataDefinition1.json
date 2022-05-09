@@ -1,0 +1,44 @@
+{
+    "clickedActionButtonName": "facilisis felis",
+    "dColl": [
+        {
+            "CustomerID": "ligula diam adipiscing adipiscing adipiscing",
+            "ShipVia": 1866248108,
+            "Freight": "laoreet Phasellus vitae condimentum Nam auctor urna pellent",
+            "ShipCountry": "eros ornare tortor odio elit sed vestibulum",
+            "_selected": false
+        },
+        {
+            "CustomerID": "Nullam in Sed a placerat",
+            "ShipVia": 335205693,
+            "Freight": "ante eget orci mauris aliquet sit Phasellus eget",
+            "ShipCountry": "Pellentesque mollis",
+            "_selected": true
+        }
+    ],
+    "selectedRows": [
+        {
+            "clickedRow": {
+                "CustomerID": "erat vulputate pellentesque"
+            }
+        },
+        {
+            "clickedRow": {
+                "CustomerID": "Vivamus Proin lorem fermentum amet amet fermentum"
+            }
+        }
+    ],
+    "complex1": {
+        "CustomerID": "pellentesque a nisi vulputate"
+    },
+    "reference1": {
+        "CustomerID": "semper gravida porttitor ac eu sed ut hendrerit eget amet",
+        "ShipVia": 1751792059
+    },
+    "additionalFilter": "condimentum nec non tincidunt Integer",
+    "TestNazvu": "suscipit risus Donec blandit quam Vestibulum",
+    "ShowCheckboxes": false,
+    "recordsCount": -1565984601,
+    "displayedRecords": 1953270547,
+    "localizedColumn": "erat accumsan nec Cras consectetur"
+}

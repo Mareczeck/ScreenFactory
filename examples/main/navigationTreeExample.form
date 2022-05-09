@@ -1,0 +1,1318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="navigationTreeExample" />
+  <Caption value="Navigation tree example" />
+  <Content>
+    <Panel>
+      <Name value="panel3" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <Panel>
+          <Name value="panel5" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <Children>
+            <HyperLink>
+              <Name value="hyperLink1" />
+              <Data value="back" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <OnClick>
+                <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel8" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="btnShowErrors" />
+              <Caption value="Show errors" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~showErrors" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Button>
+              <Name value="btnHideErrors" />
+              <Caption value="Hide errors" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~hideErrors" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Button>
+              <Name value="btnFocusSummary" />
+              <Caption value="Hide summary" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~hideSummary" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Button>
+              <Name value="btnShowSummary" />
+              <Caption value="Show summary" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~showSummary" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Button>
+              <Name value="btnClear" />
+              <Caption value="Clear data" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~clearData" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Button>
+              <Name value="btnJson" />
+              <Caption value="Btn json" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~handler_btnJson_OnClick" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Button>
+              <Name value="addItem" />
+              <Caption value="Add item" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~action1" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="textBox6_parent" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <TextBox>
+              <Name value="textBox6" />
+              <CaptionPosition value="Top" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="lastSelectedNodeId" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="lastSelectedNodeId.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="lastSelectedNodeId.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <Button>
+              <Name value="setShipmentExpanded" />
+              <Caption value="Shipment always expanded" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~handler_button2_OnClick" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Button>
+              <Name value="cancelShipmentExpanded" />
+              <Caption value="Cancel shipment always expanded" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~handler_cancelShipmentExpanded_OnClick" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel1" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <responsiveFoldPanel identity="ResponsiveFoldPanel.780fd423512842a8a7dd1130674c2332">
+              <Name value="responsiveFoldPanel1" />
+              <Panel.Height value="#" />
+              <Panel.Width value="200px" />
+              <Content>
+                <Panel>
+                  <Name value="panel7" />
+                  <Orientation value="Vertical" />
+                  <Children>
+                    <NavigationTree identity="NavigationTree.b87dd9f990504f86a481d689d499f644">
+                      <Name value="navigationTree1" />
+                      <ariaLabel value="Sample navigation" />
+                      <controller reference="~treeCtrl" />
+                      <generateAriaCurrent value="page" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnNodeActivated>
+                        <ActionEvent ReferencedAction="~handler_navigationTree1_OnNodeActivated" />
+                      </OnNodeActivated>
+                    </NavigationTree>
+                    <Panel>
+                      <Name value="panel14" />
+                      <Orientation value="Horizontal" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Children>
+                        <TextBox>
+                          <Name value="textBox5" />
+                          <CaptionPosition value="Top" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="goToItem" />
+                            <Binding SourceProperty="Caption" Expression="goToItem.caption()" />
+                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="goToItem.isRequired()" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-textbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </TextBox>
+                        <Button>
+                          <Name value="button1" />
+                          <Caption value="Go" />
+                          <Panel.Height value="#" />
+                          <Panel.VerticalAlignment value="Middle" />
+                          <Panel.Width value="50px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~focusItem" />
+                          </OnClick>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+            </responsiveFoldPanel>
+            <Panel>
+              <Name value="panel2" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Panel>
+                  <Name value="summary" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="IsVisible" Expression="_navigationTree.isSummaryActive" />
+                  </Bindings>
+                  <Children>
+                    <Label>
+                      <Name value="label1" />
+                      <Data value="Summary" />
+                      <Heading value="h2" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                      <Name value="labeledText1" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Declaration.Header.MRN" />
+                        <Binding SourceProperty="Caption" Expression="Declaration.Header.MRN.caption()" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Declaration.Header.MRN.isRequired()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-labeledtext" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </LabeledText>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="header" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="IsVisible" Expression="_navigationTree.isHeaderActive" />
+                  </Bindings>
+                  <Children>
+                    <Label>
+                      <Name value="label2" />
+                      <Data value="Header" />
+                      <Heading value="h2" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <TextBox>
+                      <Name value="textBox1" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Declaration.Header.MRN" />
+                        <Binding SourceProperty="Caption" Expression="Declaration.Header.MRN.caption()" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Declaration.Header.MRN.isRequired()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="participants" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="IsVisible" Expression="_navigationTree.isParticipantsActive" />
+                  </Bindings>
+                  <Children>
+                    <Label>
+                      <Name value="label21" />
+                      <Data value="Participants" />
+                      <Heading value="h2" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <TextBox>
+                      <Name value="textBox2" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Declaration.Subjects.Consignor.TIN" />
+                        <Binding SourceProperty="Caption" Expression="Declaration.Subjects.Consignor.TIN.caption()" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Declaration.Subjects.Consignor.TIN.isRequired()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <TextBox>
+                      <Name value="textBox3" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Declaration.Subjects.Consignee.TIN" />
+                        <Binding SourceProperty="Caption" Expression="Declaration.Subjects.Consignee.TIN.caption()" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Declaration.Subjects.Consignee.TIN.isRequired()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="pnlGoodsItem" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Button>
+                      <Name value="btnRemoveLast2" />
+                      <Caption value="Remove last" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~removeLastItem" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                    <Label>
+                      <Name value="label6" />
+                      <Data value="Goods items" />
+                      <Heading value="h2" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <Repeater>
+                      <Name value="repeater2" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Content>
+                        <Panel>
+                          <Name value="panel10" />
+                          <Orientation value="Vertical" />
+                          <Children>
+                            <Label>
+                              <Name value="label7" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="_caption" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-label" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Label>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Content>
+                      <Bindings>
+                        <Binding SourceProperty="DataItems" Expression="Declaration.GoodsShipment.GoodsItem" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-repeater" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Repeater>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="panel11" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="IsVisible" Expression="_navigationTree.isGoodsItemItemActive" />
+                  </Bindings>
+                  <Children>
+                    <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
+                      <Name value="pagingRepeater4" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Content>
+                        <Panel>
+                          <Name value="panel12" />
+                          <Orientation value="Vertical" />
+                          <Children>
+                            <Button>
+                              <Name value="btnRemoveLast" />
+                              <Caption value="Remove last" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="150px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~removeLastItem" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
+                            <Label>
+                              <Name value="label8" />
+                              <Heading value="h2" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="_caption" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-label" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Label>
+                            <TextBox>
+                              <Name value="textBox4" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="Description" />
+                                <Binding SourceProperty="Caption" Expression="Description.caption()" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="Description.isRequired()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-textbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </TextBox>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Content>
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Declaration.GoodsShipment.GoodsItem" />
+                        <Binding SourceProperty="Index" Expression="form._navigationTree.indexGoodsItem" />
+                      </Bindings>
+                    </PagingRepeater>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+            <CssClassConditional>
+              <ClassName value="panel-responsive" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <GroupBox>
+          <Name value="groupBox1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Repeater>
+              <Name value="repeater1" />
+              <Content>
+                <Panel>
+                  <Name value="panel4" />
+                  <Orientation value="Horizontal" />
+                  <Children>
+                    <Label>
+                      <Name value="label4" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="50px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="ItemNumber" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <Label>
+                      <Name value="label3" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="100px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="_caption" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <TextBox>
+                      <Name value="textBox7" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Description" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Description.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="Description.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <Button>
+                      <Name value="btnRemoveItem" />
+                      <Caption value="remove" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_btnRemoveItem_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <Bindings>
+                <Binding SourceProperty="DataItems" Expression="Declaration.GoodsShipment.GoodsItem" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-repeater" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Repeater>
+          </Content>
+          <Bindings>
+            <Binding SourceProperty="Caption" Expression="Declaration.GoodsShipment.GoodsItem.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-groupbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </GroupBox>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Complex>
+          <Name value="_navigationTree" />
+          <Caption value="_ navigation tree" />
+          <Children>
+            <Attribute>
+              <Name value="isCommunicationActive" />
+              <Caption value="Is communication active" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isSummaryActive" />
+              <Caption value="Is summary active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isHeaderActive" />
+              <Caption value="Is header active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isParticipantsActive" />
+              <Caption value="Is participants active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isGoodsShipmentActive" />
+              <Caption value="Is goods shipment active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isGoodsShipmentItemActive" />
+              <Caption value="Is goods shipment item active" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="indexGoodsShipment" />
+              <Caption value="Index goods shipment" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isGoodsItemActive" />
+              <Caption value="Is goods item active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isGoodsItemItemActive" />
+              <Caption value="Is goods item item active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="indexGoodsItem" />
+              <Caption value="Index goods item" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="captionSummary" />
+              <Caption value="Caption summary" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA["Summary"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="captionParticipants" />
+              <Caption value="Caption participants" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA["Participants"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="captionGoodsItem" />
+              <Caption value="Caption goods item" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA["GoodsItem"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="markerCommunication" />
+              <Caption value="Marker communication" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA["exclamation-mark"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="markerTextGoodsItem" />
+              <Caption value="Marker text goods item" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[ToString(form.Declaration.GoodsShipment.GoodsItem.count())]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="captionCommunication" />
+              <Caption value="Caption communication" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA["Communication"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="Declaration" />
+          <Caption value="Declaration" />
+          <IsRequired value="True" />
+          <Children>
+            <Complex>
+              <Name value="Header" />
+              <Caption value="Header" />
+              <IsRequired value="True" />
+              <Children>
+                <Attribute>
+                  <Name value="MRN" />
+                  <Caption value="MRN" />
+                  <IsRequired value="True" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+              </Children>
+            </Complex>
+            <Complex>
+              <Name value="Subjects" />
+              <Caption value="Subjects" />
+              <IsRequired value="True" />
+              <Children>
+                <Complex>
+                  <Name value="Consignor" />
+                  <Caption value="Consignor" />
+                  <IsRequired value="True" />
+                  <Children>
+                    <Attribute>
+                      <Name value="TIN" />
+                      <Caption value="Consignor TIN" />
+                      <IsRequired value="True" />
+                      <DeclaredType>
+                        <AttributeType>
+                          <StrMinLength value="13" />
+                        </AttributeType>
+                      </DeclaredType>
+                    </Attribute>
+                  </Children>
+                </Complex>
+                <Complex>
+                  <Name value="Consignee" />
+                  <Caption value="Consignee" />
+                  <IsRequired value="True" />
+                  <Children>
+                    <Attribute>
+                      <Name value="TIN" />
+                      <Caption value="Consignee TIN" />
+                      <IsRequired value="True" />
+                      <DeclaredType>
+                        <AttributeType>
+                          <StrMinLength value="13" />
+                        </AttributeType>
+                      </DeclaredType>
+                    </Attribute>
+                  </Children>
+                </Complex>
+              </Children>
+            </Complex>
+            <Computed>
+              <Name value="_participantsErrCount" />
+              <Caption value="_ participants err count" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[this.Subjects.Consignor.validationErrorsCount() + this.Subjects.Consignee.validationErrorsCount()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Integer" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Complex>
+              <Name value="GoodsShipment" />
+              <Caption value="Goods shipment" />
+              <Children>
+                <Collection>
+                  <Name value="GoodsItem" />
+                  <Caption value="Goods item" />
+                  <MinCount value="3" />
+                  <Children>
+                    <Computed>
+                      <Name value="_caption" />
+                      <Caption value="_ caption" />
+                      <Expression IsValid="True">
+                        <ExpressionText><![CDATA[ToString(this.ItemNumber) + " " + (this.Description.hasValue() ? this.Description : "Goods item")]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </Expression>
+                    </Computed>
+                    <Computed>
+                      <Name value="ItemNumber" />
+                      <Caption value="Item number" />
+                      <Expression IsValid="True">
+                        <ExpressionText><![CDATA[this.index()]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Integer" />
+                        </ResultType>
+                      </Expression>
+                    </Computed>
+                    <Attribute>
+                      <Name value="Description" />
+                      <Caption value="Description" />
+                      <IsRequired value="True" />
+                      <DeclaredType>
+                        <AttributeType>
+                          <StrMaxLength value="8" />
+                        </AttributeType>
+                      </DeclaredType>
+                    </Attribute>
+                  </Children>
+                </Collection>
+                <Computed>
+                  <Name value="_shipmentErrCount" />
+                  <Caption value="_ shipment err count" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA[42]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Integer" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
+              </Children>
+            </Complex>
+          </Children>
+        </Complex>
+        <Attribute>
+          <Name value="goToItem" />
+          <Caption value="Go to item" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Integer" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="lastSelectedNodeId" />
+          <Caption value="Last selected node id" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// první operací definice stromu musí být beginSetup
+form.apiobjects.treeCtrl.beginSetup("_navigationTree", defaultString())
+
+// první atribut addNode je id větve, druhý cesta ke caption nebo přímo caption
+
+// pomocné atributy jsou dohledávány prvně v _navigationTree a pokud se nenajdou, hledá se cesta od rootu form variables
+// pokud cesta k hlavičce vede na atribut, který má hodnotu, použije se ta hodnota (což umožňí lokalizaci); pokud vede na complex nebo collection, použije se její caption (opět lokalizovatený)
+// pokud se na dané cestě žádný atribut nenajde, předpokládá se, že to je přímo řetězec, který se má zobrazit; pozor ale, takový řetězec už je přímo v kódu actionlangu a není tedy lokalizovatelný
+
+// summary element neexistuje, použijeme proto pro jeho hlavičku pomocný atribut
+var summary = form.apiobjects.treeCtrl.addNode("Summary", "captionSummary")
+
+summary.addNode("Communication", "captionCommunication")
+
+var header = form.apiobjects.treeCtrl.addNode("Header", "Declaration/Header")
+// showErrorsFrom říká, že položka stromu se má zobrazit červeně, pokud prvek na dané cestě obsahuje validační chyby
+header.showErrorsFrom("Declaration/Header")
+
+
+var participants = form.apiobjects.treeCtrl.addNode("Participants", "captionParticipants")
+// v tomto případě nemáme jediný prvek, ze kterého bychom mohli zobrazit validační chyby, vytvoříme si proto na to pomocný atribut, který bude vracet počet validačních chyb
+// pokud je hodnota atributu větší než 0, položka stromu bude červená
+participants.showErrorsFrom("Declaration/_participantsErrCount")
+
+// connectToCollection napojí větev stromu na kolekci, což zajistí, že si strom sám vykreslí položky; druhý atribut "_caption" v tomto případě říká, kde se má hledat popisek položky
+// connectToCollection automaticky proved i analogii showErrorsFrom; je ale možné showErrorsFrom pro tento prvek zavolat později a změnit kde se počet chyb hledá
+
+
+// podobně jako showErrorsFrom lze navázat počet chyb na položkách metodou
+// showItemErrorsFrom
+
+// pro hlavičku musíme použít pomocný atribut, protože tento prvek je zanořený v kolekci a není možné přistupovat k prvkům potenciálně prázdné kolekce
+var goodsItems = form.apiobjects.treeCtrl.addNode("GoodsItem", "captionGoodsItem")
+goodsItems.connectToCollection(
+    "Declaration/GoodsShipment/GoodsItem",
+    "_caption")
+
+// pokud chceme zobrazit jen omezené množství položek, použijeme limitSubnodesAroundSelected; parametr říká kolik položek se má zobrazit před a za vybranou položkou
+goodsItems.limitSubnodesAroundSelected(0)
+
+// definice stromu musí končit finishSetup; poté by se už nemělo do definice sahat
+form.apiobjects.treeCtrl.finishSetup()
+
+form.actions.initData()
+
+// expandAlways není součástí setup, protože se nevolá na definici struktury, ale už na konkrétní větve stromu. Je tedy např. možné vždy expandovat jednu položku kolekce, ale už ne druhou.
+form.apiobjects.treeCtrl.expandAlways("GoodsItem", true)
+
+// toto klidně ignorujte; slouží to k ověření, že komponenta/api objekt nezpůsobuje memory leak datacontextu
+// form.actions.memoryCheck()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="showErrors" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.treeCtrl.showErrors(true)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="memoryCheck" />
+      <IsJavascript value="True" />
+      <Script><![CDATA[this.blob = new MemoryMonitoringBlob();]]></Script>
+      <ActionLangBody IsValid="True" />
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="hideErrors" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.treeCtrl.showErrors(false)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="hideSummary" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.treeCtrl.setNodeVisibility("Summary", false)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="initData" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var item = form.Declaration.GoodsShipment.GoodsItem.addItem()
+item.Description = "Ananananasy"
+
+item = form.Declaration.GoodsShipment.GoodsItem.addItem()
+item.Description = "Bobule"
+
+item = form.Declaration.GoodsShipment.GoodsItem.addItem()
+item.Description = "Crumpáče"
+
+item = form.Declaration.GoodsShipment.GoodsItem.addItem()
+item.Description = "Dodo"
+
+item = form.Declaration.GoodsShipment.GoodsItem.addItem()
+item.Description = "Epitheliumy"
+
+item = form.Declaration.GoodsShipment.GoodsItem.addItem()
+item.Description = "Festovní crumpáče"
+
+item = form.Declaration.GoodsShipment.GoodsItem.addItem()
+item.Description = "Godot"
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="focusItem" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if (form.goToItem.hasValue()) then
+	form.apiobjects.treeCtrl.focusNode("GoodsShipment[1]/GoodsItem[" + ToString(form.goToItem) + "]")
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="showSummary" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.treeCtrl.setNodeVisibility("Summary", true)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="clearData" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.Declaration.clear()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_navigationTree1_OnNodeActivated" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[system.console("navigationTree.OnNodeActivated: id = " + params.id + "; activatedByUser: " + toString(params.activatedByUser))
+form.lastSelectedNodeId = params.id]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button2_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.treeCtrl.expandAlways("GoodsItem", true)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_cancelShipmentExpanded_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.treeCtrl.expandAlways("GoodsItem", false)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="removeLastItem" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.Declaration.GoodsShipment.GoodsItem.count() > 0 then
+	var gi = form.Declaration.GoodsShipment.GoodsItem.where(current.index() = form.Declaration.GoodsShipment.GoodsItem.count()).selectFirst()
+	gi.removeMe()
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btnRemoveItem_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[params.data.removeMe()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btnJson_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var json = form.Declaration.toJson(true)
+system.console(json)
+form.Declaration.fromJson("{\"GoodsShipment\":{\"GoodsItem\":[{\"ItemNumber\":1,\"Description\":\"AA\"},{\"ItemNumber\":2,\"Description\":\"BB\"},{\"ItemNumber\":3,\"Description\":\"CC\"}]}}")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+      <Tests>
+        <ActionTest>
+          <Name value="dummy" />
+          <ActionLangBody IsValid="True">
+            <Script><![CDATA[/* Arrange */
+//form.name = "Willy"
+
+/* Act */
+// callTestedAction()
+
+/* Assert */
+//assert.isTrue(form.greetings = "Hello, Willy!")]]></Script>
+          </ActionLangBody>
+        </ActionTest>
+      </Tests>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action1" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var itm = form.Declaration.GoodsShipment.GoodsItem.addItem()
+// itm.ItemNumber = itm.index()
+itm.Description = "Item no. " + ToString(itm.ItemNumber)
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <NavigationTreeController identity="NavigationTree.b87dd9f990504f86a481d689d499f644">
+      <Name value="treeCtrl" />
+      <autoRefocus value="False" />
+    </NavigationTreeController>
+  </ApiObjects>
+</Form>

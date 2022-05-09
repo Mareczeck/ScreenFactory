@@ -1,0 +1,34 @@
+{
+    "result": {
+        "value": [
+            {
+                "CategoryID": "vestibulum sit mauris erat iaculis sit",
+                "CategoryName": "ut Sed Proin elit dui pharetra sit tempus viverra egestas"
+            },
+            {
+                "CategoryID": "posuere Aenean pellentesque rutrum justo interdum nisi",
+                "CategoryName": "eget erat aptent facilisis fringilla"
+            },
+            {
+                "CategoryID": "tempus Vivamus eleifend",
+                "CategoryName": "amet"
+            },
+            {
+                "CategoryID": "interdum odio tortor elit amet tellus nec",
+                "CategoryName": "varius sapien ante nisi"
+            }
+        ]
+    },
+    "version": "eros pretium",
+    "language": "tellus sed sit velit dapibus Suspendisse",
+    "postResult": "sed vel augue",
+    "dataToPost": {
+        "hello": "elementum"
+    },
+    "customHeaderName": "gravida mi lectus suscipit",
+    "customHeaderValue": "sit id vehicula ipsum elementum id",
+    "ContentType": "vitae enim sem convallis volutpat Praesent",
+    "serverCSRFResponse": "vehicula erat elit tellus per fermentum",
+    "statusCode": "tristique nibh",
+    "csrfToken": "purus sed Duis sit Aliquam leo felis sapien pellentesque"
+}

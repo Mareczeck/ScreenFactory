@@ -1,0 +1,1177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="codelistExample" />
+  <Caption value="Codelist example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="hyperLink1" />
+          <Data value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Button>
+          <Name value="button1" />
+          <Caption value="Load data" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~loadCategories" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+        <ReferenceCombo>
+          <Name value="referenceCombo1" />
+          <DisplayMember value="_description" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <ReferenceList reference="~Categories" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="Category" />
+            <Binding SourceProperty="Caption" Expression="Category.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="Category.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-referencecombo" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </ReferenceCombo>
+        <TextBox>
+          <Name value="textBox14" />
+          <Caption value="Text box 14" />
+          <CaptionVAlign value="Middle" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <Bindings>
+            <Binding SourceProperty="Data" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <TextBox>
+          <Name value="textBox5" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Tooltip value="Tooltip for CategoryID" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="Category.CategoryID" />
+            <Binding SourceProperty="Caption" Expression="Category.CategoryID.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="Category.CategoryID.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <TextBox>
+          <Name value="textBox2" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="Category.CategoryName" />
+            <Binding SourceProperty="Caption" Expression="Category.CategoryName.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="Category.CategoryName.isRequired()" />
+            <Binding SourceProperty="Tooltip" Expression="CategoryNameTooltip" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <TextBox>
+          <Name value="textBox3" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.tooltip1" />
+                  <PropertyName value="Tooltip" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="categoriesAsJson" />
+            <Binding SourceProperty="Caption" Expression="categoriesAsJson.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="categoriesAsJson.isRequired()" />
+            <Binding SourceProperty="Tooltip" Expression="localized.tooltip1" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <Label>
+          <Name value="label1" />
+          <Data value="Codelist from JSON" />
+          <Heading value="h2" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <ReferenceCombo>
+          <Name value="referenceCombo2" />
+          <DisplayMember value="_description" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <ReferenceList reference="~DynamicCategories" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="DynamicCategory" />
+            <Binding SourceProperty="Caption" Expression="DynamicCategory.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="DynamicCategory.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-referencecombo" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </ReferenceCombo>
+        <Panel>
+          <Name value="panel7" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="button2" />
+              <Caption value="Fill from JSON" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~fillDynamicCategories" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Button>
+              <Name value="button6" />
+              <Caption value="Replace { } in descriptions" />
+              <Panel.Height value="#" />
+              <Panel.Width value="200px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~replaceDynCatDescriptions" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <TextBox>
+          <Name value="textBox15" />
+          <CaptionPosition value="Top" />
+          <CaptionVAlign value="Middle" />
+          <InputType value="Multiline" />
+          <IsEnabled value="False" />
+          <Panel.Height value="#" />
+          <Panel.Width value="80%" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="dynCatReplaceValueJson" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="dynCatReplaceValueJson.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="dynCatReplaceValueJson.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <GroupBox>
+          <Name value="groupBox3" />
+          <Caption value="Products" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Panel>
+              <Name value="panel5" />
+              <Orientation value="Vertical" />
+              <Children>
+                <Panel>
+                  <Name value="panel8" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <ReferenceCombo>
+                      <Name value="referenceCombo3" />
+                      <Caption value="All products" />
+                      <CaptionPosition value="Top" />
+                      <DisplayMember value="ProductName" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <ReferenceList reference="~ProductsLoaded" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="Product" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Product.isRequired()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-referencecombo" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </ReferenceCombo>
+                    <ReferenceLookup identity="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e">
+                      <Name value="ProductFiltered" />
+                      <Caption value="Product filtered" />
+                      <CaptionPosition value="Top" />
+                      <DataApiObject reference="~filteredProducts" />
+                      <DisplayMember value="ProductName" />
+                      <MinChars value="0" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="ProductFiltered" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-referencelookup" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </ReferenceLookup>
+                    <ReferenceLookup identity="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e">
+                      <Name value="ProductDoubleFiltered" />
+                      <Caption value="Product double filtered" />
+                      <CaptionPosition value="Top" />
+                      <DataApiObject reference="~doubleFilteredProducts" />
+                      <DisplayMember value="ProductName" />
+                      <MinChars value="0" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="ProductDoubleFiltered" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-referencelookup" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </ReferenceLookup>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="panel3" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <GroupBox>
+                      <Name value="groupBox1" />
+                      <Caption value="Search Products by int value - Codelist is already loaded" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="50%" />
+                      <Content>
+                        <Panel>
+                          <Name value="panel6" />
+                          <Orientation value="Vertical" />
+                          <Children>
+                            <TextBox>
+                              <Name value="textBox8" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="searchByInt.columnName" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="searchByInt.columnName.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="searchByInt.columnName.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-textbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </TextBox>
+                            <TextBox>
+                              <Name value="textBox9" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="searchByInt.columnValue" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="searchByInt.columnValue.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="searchByInt.columnValue.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-textbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </TextBox>
+                            <TextBox>
+                              <Name value="textBox10" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="searchByInt.resultColumnName" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="searchByInt.resultColumnName.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="searchByInt.resultColumnName.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-textbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </TextBox>
+                            <CheckBox>
+                              <Name value="checkBox3" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="searchByInt.requeryIfNotFound" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="searchByInt.requeryIfNotFound.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="searchByInt.requeryIfNotFound.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-checkbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </CheckBox>
+                            <TextBox>
+                              <Name value="textBox11" />
+                              <IsEnabled value="False" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="searchByInt.result" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="searchByInt.result.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="searchByInt.result.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-textbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </TextBox>
+                            <CheckBox>
+                              <Name value="checkBox1" />
+                              <IsEnabled value="False" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="searchByInt.performedServerQuery" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="searchByInt.performedServerQuery.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="searchByInt.performedServerQuery.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-checkbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </CheckBox>
+                            <CheckBox>
+                              <Name value="checkBox4" />
+                              <IsEnabled value="False" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="searchByInt.isFound" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="searchByInt.isFound.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="searchByInt.isFound.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-checkbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </CheckBox>
+                            <TextBox>
+                              <Name value="textBox12" />
+                              <IsEnabled value="False" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="searchByInt.jsonString" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="searchByInt.jsonString.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="searchByInt.jsonString.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-textbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </TextBox>
+                            <TextBox>
+                              <Name value="textBox13" />
+                              <IsEnabled value="False" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="searchByInt.errorMessage" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="searchByInt.errorMessage.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="searchByInt.errorMessage.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-textbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </TextBox>
+                            <Panel>
+                              <Name value="panel2" />
+                              <Orientation value="Horizontal" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Children>
+                                <Button>
+                                  <Name value="button3" />
+                                  <Caption value="Get value" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="150px" />
+                                  <OnClick>
+                                    <ActionEvent ReferencedAction="~getValueByInteger" />
+                                  </OnClick>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-button" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Button>
+                                <Button>
+                                  <Name value="button5" />
+                                  <Caption value="Apply to combo" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="150px" />
+                                  <OnClick>
+                                    <ActionEvent ReferencedAction="~applyToCombo" />
+                                  </OnClick>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-button" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Button>
+                              </Children>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-panel" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Panel>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Content>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-groupbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </GroupBox>
+                    <GroupBox>
+                      <Name value="groupBox2" />
+                      <Caption value="Search Products by string value - Codelist is not loaded" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Content>
+                        <Panel>
+                          <Name value="panel4" />
+                          <Orientation value="Vertical" />
+                          <Children>
+                            <TextBox>
+                              <Name value="textBox1" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="searchByString.columnName" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="searchByString.columnName.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="searchByString.columnName.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-textbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </TextBox>
+                            <TextBox>
+                              <Name value="textBox4" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="searchByString.columnValue" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="searchByString.columnValue.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="searchByString.columnValue.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-textbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </TextBox>
+                            <TextBox>
+                              <Name value="textBox6" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="searchByString.resultColumnName" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="searchByString.resultColumnName.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="searchByString.resultColumnName.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-textbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </TextBox>
+                            <TextBox>
+                              <Name value="textBox7" />
+                              <IsEnabled value="False" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="searchByString.result" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="searchByString.result.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="searchByString.result.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-textbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </TextBox>
+                            <CheckBox>
+                              <Name value="checkBox2" />
+                              <IsEnabled value="False" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="searchByString.performedServerQuery" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="searchByString.performedServerQuery.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="searchByString.performedServerQuery.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-checkbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </CheckBox>
+                            <Button>
+                              <Name value="button4" />
+                              <Caption value="Get value" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="150px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~getValueByString" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Content>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-groupbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </GroupBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-groupbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </GroupBox>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <OnCreate>
+        <ActionEvent ReferencedAction="+UiParts.codelistExample.init" />
+      </OnCreate>
+      <Children>
+        <Reference>
+          <Name value="Category" />
+          <Caption value="Category" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.NorthwindCategory" />
+            </Include>
+          </Children>
+        </Reference>
+        <Reference>
+          <Name value="DynamicCategory" />
+          <Caption value="Dynamic category" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.NorthwindCategory" />
+            </Include>
+          </Children>
+        </Reference>
+        <Attribute>
+          <Name value="categoriesAsJson" />
+          <Caption value="Categories as json" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Reference>
+          <Name value="Product" />
+          <Caption value="Product" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.NorthwindProduct" />
+            </Include>
+          </Children>
+        </Reference>
+        <Complex>
+          <Name value="searchByInt" />
+          <Caption value="Search by int" />
+          <Children>
+            <Attribute>
+              <Name value="columnName" />
+              <Caption value="Column name" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="columnValue" />
+              <Caption value="Column value" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="resultColumnName" />
+              <Caption value="Result column name" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="result" />
+              <Caption value="Result" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="performedServerQuery" />
+              <Caption value="Performed server query" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="requeryIfNotFound" />
+              <Caption value="Requery if not found" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="jsonString" />
+              <Caption value="Json string" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="errorMessage" />
+              <Caption value="Error message" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isFound" />
+              <Caption value="Item found" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="searchByString" />
+          <Caption value="Search by string" />
+          <Children>
+            <Attribute>
+              <Name value="columnName" />
+              <Caption value="Column name" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="columnValue" />
+              <Caption value="Column value" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="resultColumnName" />
+              <Caption value="Result column name" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="result" />
+              <Caption value="Result" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="performedServerQuery" />
+              <Caption value="Performed server query" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Attribute>
+          <Name value="CategoryNameTooltip" />
+          <Caption value="CategoryName tooltip" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Collection>
+          <Name value="dynCatReplaceValue" />
+          <Caption value="Dyn cat replace value" />
+          <Children>
+            <Attribute>
+              <Name value="CodeParameter" />
+              <Caption value="Code parameter" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Collection>
+              <Name value="DescriptionParameter" />
+              <Caption value="Description parameter" />
+              <Children>
+                <Attribute>
+                  <Name value="Code" />
+                  <Caption value="Code" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <BaseType value="Integer" />
+                    </AttributeType>
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="Value" />
+                  <Caption value="Value" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+              </Children>
+            </Collection>
+          </Children>
+        </Collection>
+        <Attribute>
+          <Name value="dynCatReplaceValueJson" />
+          <Caption value="Dyn cat replace value json" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="errorSourceComponent" />
+          <Caption value="Error source component" />
+          <DataContextParameter.IsInput value="True" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="errorPointer" />
+          <Caption value="Error pointer" />
+          <DataContextParameter.IsInput value="True" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Reference>
+          <Name value="ProductDoubleFiltered" />
+          <Caption value="Product double filtered" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.NorthwindProduct" />
+            </Include>
+            <Attribute>
+              <Name value="ReorderLevel" />
+              <Caption value="Reorder level" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Reference>
+        <Reference>
+          <Name value="ProductFiltered" />
+          <Caption value="Product filtered" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.NorthwindProduct" />
+            </Include>
+          </Children>
+        </Reference>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnActivate>
+    <ActionEvent ReferencedAction="~handler_codelistExample_OnActivate" />
+  </OnActivate>
+  <Actions>
+    <ActionBlock>
+      <Name value="loadCategories" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var relevantDate = ToDateTime("2016-12-31", GetDateTime())
+form.apiobjects.Categories.loadDataAsync(relevantDate)
+form.apiobjects.Products.loadDataAsync(relevantDate)
+
+form.categoriesAsJson = form.apiobjects.Categories.getDataAsJson()
+var filtered = form.apiobjects.filteredProducts.resetFilter(true)
+filtered.includeItemsByIntColumn("CategoryID", 2)
+filtered.commit()
+
+var doubleFiltered = form.apiobjects.doubleFilteredProducts.resetFilter(true)
+doubleFiltered.includeItemsByIntColumn("ReorderLevel", 25)
+doubleFiltered.commit()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="fillDynamicCategories" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.DynamicCategories.fillFromJson("[{\"CategoryID\":1,\"CategoryName\":\"Tritanium{0}{1}\"},{\"CategoryID\":2,\"CategoryName\":\"Morphite{0}{1}\"},{\"CategoryID\":3,\"CategoryName\":\"Mexallon{0}{1}\"}]")
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.DynamicCategory.CategoryID = 2
+form.DynamicCategory.CategoryName = "Morphite"
+form.actions.memoryCheck()
+
+form.searchByInt.columnName = "ProductID"
+form.searchByInt.columnValue = 3
+form.searchByInt.resultColumnName = "ProductName"
+
+form.searchByString.columnName = "ProductName"
+form.searchByString.columnValue = "Aniseed Syrup"
+form.searchByString.resultColumnName = "ProductID"
+
+form.CategoryNameTooltip = "Děsně dlouhej bindovanej tooltip Děsně dlouhej bindovanej tooltip Děsně dlouhej bindovanej tooltip Děsně dlouhej bindovanej tooltip Děsně dlouhej bindovanej tooltip Děsně dlouhej bindovanej tooltip Děsně dlouhej bindovanej tooltip Děsně dlouhej bindovanej tooltip Děsně dlouhej bindovanej tooltip Děsně dlouhej bindovanej tooltip Děsně dlouhej bindovanej tooltip"
+
+form.dynCatReplaceValue.fromJson("[{\"CodeParameter\": \"1\", \"DescriptionParameter\": [{\"Code\": 0, \"Value\": \" hey\"}, {\"Code\": 1, \"Value\": \" hola\"}]}, {\"CodeParameter\": \"2\", \"DescriptionParameter\": [{\"Code\": 0, \"Value\": \" hey\"}, {\"Code\": 1, \"Value\": \" you\"}]}, {\"CodeParameter\": \"3\", \"DescriptionParameter\": [{\"Code\": 0, \"Value\": \" come\"}, {\"Code\": 1, \"Value\": \" on\"}]}]")
+
+form.dynCatReplaceValueJson = form.dynCatReplaceValue.toJson()
+
+form.apiobjects.ProductsLoaded.loadDataAsync(GetDate())]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="memoryCheck" />
+      <IsJavascript value="True" />
+      <Script><![CDATA[this.blob = new MemoryMonitoringBlob();]]></Script>
+      <ActionLangBody IsValid="True" />
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="getValueByInteger" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var relevantDate = ToDateTime("2016-12-31", GetDateTime())
+var codelistItem = form.apiobjects.ProductsLoaded.getItemByIntegerColumnAsync(form.searchByInt.columnName
+, form.searchByInt.columnValue, relevantDate, form.searchByInt.requeryIfNotFound)
+if codelistItem.isError() then
+	form.searchByInt.isFound.clear()
+	form.searchByInt.result.clear()
+	form.searchByInt.performedServerQuery.clear()
+	form.searchByInt.jsonString.clear()
+
+	form.searchByInt.errorMessage = codelistItem.getErrorMessage()
+else
+	form.searchByInt.isFound = codelistItem.isFound()
+	form.searchByInt.result = codelistItem.getPropertyValue(form.searchByInt.resultColumnName)
+	form.searchByInt.performedServerQuery = codelistItem.performedServerQuery()
+	form.searchByInt.jsonString = codelistItem.getJsonString()
+
+	form.searchByInt.errorMessage.clear()
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="getValueByString" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var relevantDate = ToDateTime("2016-12-31", GetDateTime())
+var codelistItem = form.apiobjects.Products.getItemByStringColumnAsync(form.searchByString.columnName
+, form.searchByString.columnValue, relevantDate, false)
+if codelistItem.isError() then
+	form.searchByString.result.clear()
+	form.searchByString.performedServerQuery.clear()
+else
+	form.searchByString.result = codelistItem.getPropertyValue(form.searchByString.resultColumnName)
+	form.searchByString.performedServerQuery = codelistItem.performedServerQuery()
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="applyToCombo" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.Product.fromJson(form.searchByInt.jsonString)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="replaceDynCatDescriptions" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.DynamicCategories.loadDescReplaceValues(form.dynCatReplaceValueJson)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_codelistExample_OnActivate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.errorSourceComponent.hasValue() then
+	page.focusControl(form.errorSourceComponent, form.errorPointer)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="Categories" />
+      <filter value="CategoryID gt 3" />
+      <name value="Categories" />
+      <server reference="+GlobalApiObjects.northwind" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="CategoryID" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="CategoryName" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="DynamicCategories" />
+      <name value="dynamicCategories" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="CategoryID" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="CategoryName" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="ProductsLoaded" />
+      <filter value="ProductID gt 2" />
+      <name value="Products" />
+      <server reference="+GlobalApiObjects.northwind" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ProductID" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ProductName" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="Products" />
+      <name value="Products" />
+      <server reference="+GlobalApiObjects.northwind" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ProductID" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ProductName" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="CategoryID" />
+          <dataType value="integer" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ReorderLevel" />
+          <dataType value="integer" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Page identity="Page.f7aa0c151c64407daef13910dcf7b72a">
+      <Name value="page" />
+    </Page>
+    <FilteredCodelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="doubleFilteredProducts" />
+      <codelistSource reference="~filteredProducts" />
+    </FilteredCodelist>
+    <FilteredCodelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="filteredProducts" />
+      <codelistSource reference="~Products" />
+    </FilteredCodelist>
+  </ApiObjects>
+</Form>

@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="timerExample" />
+  <Caption value="Timer example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Href value="#" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+          <Name value="labeledText3" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="pageOpened" />
+            <Binding SourceProperty="Caption" Expression="pageOpened.caption()" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="pageOpened.isRequired()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-labeledtext" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </LabeledText>
+        <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+          <Name value="labeledText1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <Bindings>
+            <Binding SourceProperty="Caption" Expression="currentTime.caption()" />
+            <Binding SourceProperty="Data" Expression="currentTime" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-labeledtext" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </LabeledText>
+        <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+          <Name value="labeledText2" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="form.elapsed" />
+            <Binding SourceProperty="Caption" Expression="form.elapsed.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-labeledtext" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </LabeledText>
+        <Panel>
+          <Name value="panel2" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="button1" />
+              <Caption value="Start" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~startTimer" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Label>
+              <Name value="label11" />
+              <Data value="Spustí timer. Pokud by timer už běžel, nic se nestane." />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel3" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Button>
+              <Name value="button2" />
+              <Caption value="Stop" />
+              <Panel.Height value="#" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~stopTimer" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+            <Label>
+              <Name value="label1" />
+              <Data value="Zastaví timer. Pokud timer zrovna neběží, nic se nestane." />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="pageOpened" />
+          <Caption value="Page opened" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="DateTime" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="currentTime" />
+          <Caption value="Current time" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="DateTime" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="elapsed" />
+          <Caption value="Elapsed" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="OnTick" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.currentTime = getDateTime()
+var seconds = secondsBetween(form.currentTime, form.pageOpened)
+
+if (seconds = 1) then
+	form.elapsed = tostring(seconds) + " second"
+else 
+	if (seconds < 60) then
+		form.elapsed = tostring(seconds) + " seconds"
+	else
+		if (seconds < 120) then
+			form.elapsed = tostring(trunc(divide(seconds, 60, 0))) + " minute"
+		else
+			form.elapsed = tostring(trunc(divide(seconds, 60, 0))) + " minutes"
+		endif
+	endif
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.pageOpened = getDateTime()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="startTimer" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.timer1.start()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="stopTimer" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.timer1.stop()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <Timer identity="Timer.cee6b8357b9240469bd5d89cf64b0c9a">
+      <Name value="timer1" />
+      <autoRepeat value="True" />
+      <interval value="1000" />
+      <OnTick>
+        <ActionEvent ReferencedAction="~OnTick" />
+      </OnTick>
+    </Timer>
+  </ApiObjects>
+</Form>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.300"?>
+<Form>
+  <Name value="form" />
+  <Caption value="actionLangEditorExample" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <ActionLangEditor identity="ActionLangEditor.7d8f3ea4b0454679ac3461ace2edf073">
+          <Name value="actionLangEditor1" />
+          <completitionUrl value="/completitionExample" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <server reference="+GlobalApiObjects.northwind" />
+          <Bindings>
+            <Binding SourceProperty="code">
+              <Expression>
+                <Text><![CDATA[form.code]]></Text>
+              </Expression>
+            </Binding>
+            <Binding SourceProperty="isValid">
+              <Expression>
+                <Text><![CDATA[form.isValid]]></Text>
+              </Expression>
+            </Binding>
+            <Binding SourceProperty="contextJson">
+              <Expression>
+                <Text><![CDATA[form.actionLangServerContext]]></Text>
+              </Expression>
+            </Binding>
+          </Bindings>
+        </ActionLangEditor>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="m8-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="code" />
+          <Caption value="Code" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="isValid" />
+          <Caption value="Is valid" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="actionLangServerContext" />
+          <Caption value="Action lang server context" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <ApiObjects>
+    <ServerConnection identity="ServerConnection.db7b3eef075548988df768923691922c">
+      <Name value="mock" />
+      <codelistsUrl value="" />
+      <listsUrl value="" />
+      <rootUrl value="https://private-1531d-kenedy.apiary-mock.com" />
+    </ServerConnection>
+  </ApiObjects>
+</Form>

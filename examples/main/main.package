@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package>
+  <Identity value="main.c9f5b2d2d1064cbd94881927260fd327" />
+  <Items>
+    <PackageItem Src="home.form" />
+    <PackageItem Src="accessibilitySettingsExample.form" />
+    <PackageItem Src="actionLangEditorExample.form" />
+    <PackageItem Src="activeXSignerExample.form" />
+    <PackageItem Src="appMenuExample.form" />
+    <PackageItem Src="attachmentUploadExample.form" />
+    <ResourceItem ResourceName="attachmentUploadExample.css" LinkerAction="Css" OutputFileName="attachmentUploadExample.css" Src="attachmentUploadExample.css" />
+    <PackageItem Src="booleanRadioGroupExample.form" />
+    <PackageItem Src="breadcrumbsExample.form" />
+    <ResourceItem ResourceName="breadcrumbsExample.css" LinkerAction="Css" OutputFileName="breadcrumbsExample.css" Src="breadcrumbsExample.css" />
+    <PackageItem Src="browserStorageExample.form" />
+    <PackageItem Src="businessDaysCalcExample.form" />
+    <PackageItem Src="busyIndicatorExample.form" />
+    <PackageItem Src="codelistExample.form" />
+    <PackageItem Src="codelistGroupExample.form" />
+    <PackageItem Src="collapsibleGroupBoxExample.form" />
+    <ResourceItem ResourceName="collapsibleGroupBoxExampleCustom.css" LinkerAction="Css" OutputFileName="collapsibleGroupBoxExampleCustom.css" Src="collapsibleGroupBoxExampleCustom.css" />
+    <PackageItem Src="collapsibleStickyPanelExample.form" />
+    <ResourceItem ResourceName="collapsibleStickyPanelExample.css" LinkerAction="Css" OutputFileName="collapsibleStickyPanelExample.css" Src="collapsibleStickyPanelExample.css" />
+    <PackageItem Src="collectionDataProvider2Example.form" />
+    <PackageItem Src="complexEditorExample.form" />
+    <PackageItem Src="dynamicRichTextExample.form" />
+    <PackageItem Src="errorSummaryExample.form" />
+    <PackageItem Src="fileReaderExample.form" />
+    <PackageItem Src="filteredCodelistExample.form" />
+    <PackageItem Src="geolocationExample.form" />
+    <PackageItem Src="groupItemExample.form" />
+    <PackageItem Src="imageButtonExample.form" />
+    <PackageItem Src="inactivityExample.form" />
+    <PackageItem Src="labeledTextExample.form" />
+    <PackageItem Src="listExample.form" />
+    <ResourceItem ResourceName="listExample.css" LinkerAction="Css" OutputFileName="listExample.css" Src="listExample.css" />
+    <PackageItem Src="listGrid2Example.form" />
+    <PackageItem Src="modalDialogExample.form" />
+    <PackageItem Src="navigationTreeExample.form" />
+    <PackageItem Src="notificationsExample.form" />
+    <PackageItem Src="optionCardsExample.form" />
+    <PackageItem Src="pageExample.form" />
+    <PackageItem Src="pagingRepeaterCtrlExample.form" />
+    <PackageItem Src="pagingRepeaterExample.form" />
+    <PackageItem Src="payTrailFormExample.form" />
+    <ResourceItem ResourceName="payTrailFormExample.css" LinkerAction="Css" OutputFileName="payTrailFormExample.css" Src="payTrailFormExample.css" />
+    <PackageItem Src="plainObjectExample.form" />
+    <PackageItem Src="referenceComboPlusExample.form" />
+    <PackageItem Src="referenceLookupExample.form" />
+    <ResourceItem ResourceName="responsive.css" LinkerAction="Css" OutputFileName="responsive.css" Src="responsive.css" />
+    <PackageItem Src="routingExample.form" />
+    <PackageItem Src="screenreaderMenuExample.form" />
+    <PackageItem Src="selectionTableExample.form" />
+    <ResourceItem ResourceName="selectionTableExample.css" LinkerAction="Css" OutputFileName="selectionTableExample.css" Src="selectionTableExample.css" />
+    <PackageItem Src="serverConnectionExample.form" />
+    <PackageItem Src="tabControlExample.form" />
+    <ResourceItem ResourceName="tabControlExampleCustom.css" LinkerAction="Css" OutputFileName="tabControlExampleCustom.css" Src="tabControlExampleCustom.css" />
+    <PackageItem Src="textBoxPlusExample.form" />
+    <PackageItem Src="timerExample.form" />
+    <PackageItem Src="tooltipButtonExample.form" />
+    <PackageItem Src="validationSummaryExample.form" />
+    <ResourceItem ResourceName="validationSummaryExample.css" LinkerAction="Css" OutputFileName="validationSummaryExample.css" Src="validationSummaryExample.css" />
+    <PackageItem Src="validatorsFilterExample.form" />
+    <PackageItem Src="xmlSignerExample.form" />
+    <PackageItem Src="mode.metaType" />
+    <ResourceItem ResourceName="memoryMonitoring.js" LinkerAction="Script" OutputFileName="memoryMonitoring.js" Src="memoryMonitoring.js" />
+    <ResourceItem ResourceName="defaults.ini" Action="None" OutputFileName="defaults.ini" Src="defaults.ini" />
+    <PackageItem Src="NewAttachment.dataEntity" />
+    <PackageItem Src="UploadedAttachment.dataEntity" />
+    <PackageItem Src="valFilterEntity.dataEntity" />
+    <PackageItem Src="NorthwindProduct.dataEntity" />
+    <PackageItem Src="NorthwindCategory.dataEntity" />
+    <PackageItem Src="globalActions.globalActions" />
+    <PackageItem Src="globalApiObjects.globalApiObjects" />
+    <PackageItem Src="globalVariables.globalVariables" />
+    <PackageItem Src="localizations.packageLocalizations" />
+    <PackageFolder Name="Resources">
+      <Items>
+        <ResourceItem ResourceName="pat&amp;mat.png" OutputFileName="pat&amp;mat.png" Src="Resources\pat&amp;mat.png" />
+        <ResourceItem ResourceName="loader-fallback.gif" OutputFileName="loader-fallback.gif" Src="Resources\loader-fallback.gif" />
+      </Items>
+    </PackageFolder>
+    <PackageItem Src="DocumentType.dataEntity" />
+    <PackageFolder Name="custFncts">
+      <Items>
+        <PackageItem Src="custFncts\codeListDescription.customExpressionFunction" />
+      </Items>
+    </PackageFolder>
+    <PackageItem Src="DeclarationKind.dataEntity" />
+  </Items>
+</Package>

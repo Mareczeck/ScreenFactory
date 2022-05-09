@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="tooltipButtonExample" />
+  <Caption value="Tooltip button example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Data value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <TooltipButton identity="TooltipButton.ddb64055385f4e46922b69d871374710">
+          <Name value="tooltipButton11" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <tooltipButtonAriaLabel value="Tooltip button with assistive text" />
+          <Bindings>
+            <Binding SourceProperty="tooltip" Expression="localized.tooltip1" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-tooltipbutton" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TooltipButton>
+        <CustomHtml>
+          <Name value="customHtml1" />
+          <HtmlMarkup><![CDATA[<p>If button is very near to top/left, tooltip is displayed at left top corner.</p>
+]]></HtmlMarkup>
+          <Panel.Height value="#" />
+          <Panel.Width value="50%" />
+          <Bindings>
+            <Binding SourceProperty="Data" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-customhtml" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CustomHtml>
+        <CustomHtml>
+          <Name value="customHtml21" />
+          <HtmlMarkup><![CDATA[<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Vestibulum fermentum tortor id mi. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Pellentesque arcu. Pellentesque sapien. Integer imperdiet lectus quis justo. Fusce tellus. Quisque porta. Nulla non arcu lacinia neque faucibus fringilla.</p>
+]]></HtmlMarkup>
+          <Panel.Height value="#" />
+          <Panel.Width value="50%" />
+          <Bindings>
+            <Binding SourceProperty="Data" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-customhtml" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </CustomHtml>
+        <Panel>
+          <Name value="customHtml2_parent" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <CustomHtml>
+              <Name value="customHtml2" />
+              <HtmlMarkup><![CDATA[<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Vestibulum fermentum tortor id mi. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Fusce tellus odio, dapibus id fermentum quis, suscipit id erat. Pellentesque arcu. Pellentesque sapien. Integer imperdiet lectus quis justo. Fusce tellus. Quisque porta. Nulla non arcu lacinia neque faucibus fringilla.</p>
+]]></HtmlMarkup>
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+              <Bindings>
+                <Binding SourceProperty="Data" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-customhtml" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </CustomHtml>
+            <Panel>
+              <Name value="customHtml11_parent" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+              <Children>
+                <CustomHtml>
+                  <Name value="customHtml11" />
+                  <HtmlMarkup><![CDATA[<p>Otherwise, tooltip is displayed just above the mid of the button.</p>
+]]></HtmlMarkup>
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-customhtml" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </CustomHtml>
+                <TooltipButton identity="TooltipButton.ddb64055385f4e46922b69d871374710">
+                  <Name value="tooltipButton1" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="tooltip" Expression="localized.tooltip1" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-tooltipbutton" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TooltipButton>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext />
+  </DataContext>
+</Form>

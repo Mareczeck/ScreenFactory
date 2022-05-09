@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="validatorsFilterExample" />
+  <Caption value="Validators filter example" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Href value="#" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="+GlobalActions.goHome" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Panel>
+          <Name value="textBox4_parent" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <TextBox>
+              <Name value="textBox4" />
+              <CaptionVAlign value="Middle" />
+              <InputType value="Multiline" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Rows value="18" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="validatorsFilterConfig" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="validatorsFilterConfig.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="validatorsFilterConfig.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <Button>
+              <Name value="btnSetConfig" />
+              <Caption value="set config" />
+              <Panel.Height value="#" />
+              <Panel.VerticalAlignment value="Middle" />
+              <Panel.Width value="150px" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~setConfig" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-button" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Button>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+          <Name value="labeledText1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="setConfigSuccessful" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="setConfigSuccessful.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="setConfigSuccessful.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-labeledtext" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </LabeledText>
+        <Label>
+          <Name value="label1" />
+          <Data value="NOTE: First you need to set the config. Usually somewhere at the start of the application. In this example by pushing the button. After that it is applied every time new form is open, so to test it here, you need to go back and return to this form." />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <TextBox>
+          <Name value="textBox1" />
+          <CaptionVAlign value="Middle" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="att1" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="att1.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="att1.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <TextBox>
+          <Name value="textBox2" />
+          <CaptionVAlign value="Middle" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <Bindings>
+            <Binding SourceProperty="Data" Expression="complex1.att2" />
+            <Binding SourceProperty="IsRequiredMarkVisible" Expression="complex1.att2.isRequired()" />
+            <Binding SourceProperty="Caption" Expression="complex1.att2.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-textbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </TextBox>
+        <GroupBox>
+          <Name value="groupBox1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Repeater>
+              <Name value="repeater1" />
+              <Content>
+                <Panel>
+                  <Name value="panel2" />
+                  <Orientation value="Vertical" />
+                  <Children>
+                    <TextBox>
+                      <Name value="textBox3" />
+                      <CaptionVAlign value="Middle" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="att3" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="att3.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="att3.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <Bindings>
+                <Binding SourceProperty="DataItems" Expression="collection1" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-repeater" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Repeater>
+          </Content>
+          <Bindings>
+            <Binding SourceProperty="Caption" Expression="collection1.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-groupbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </GroupBox>
+        <GroupBox>
+          <Name value="groupBox2" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Repeater>
+              <Name value="repeater2" />
+              <Content>
+                <Panel>
+                  <Name value="panel3" />
+                  <Orientation value="Vertical" />
+                  <Children>
+                    <TextBox>
+                      <Name value="textBox5" />
+                      <CaptionVAlign value="Middle" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="valFilterEntityAtt" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="valFilterEntityAtt.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="valFilterEntityAtt.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <Bindings>
+                <Binding SourceProperty="DataItems" Expression="collection2" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-repeater" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Repeater>
+          </Content>
+          <Bindings>
+            <Binding SourceProperty="Caption" Expression="collection2.caption()" />
+          </Bindings>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-groupbox" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </GroupBox>
+        <ErrorPanel>
+          <Name value="errorPanel1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-errorpanel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </ErrorPanel>
+        <Button>
+          <Name value="addItem" />
+          <Caption value="Add Collection2 item" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <OnClick>
+            <ActionEvent ReferencedAction="~handler_addItem_OnClick" />
+          </OnClick>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-button" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Button>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="validatorsFilterConfig" />
+          <Caption value="Validators filter config" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="setConfigSuccessful" />
+          <Caption value="Was setConfig successful" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="att1" />
+          <Caption value="Att 1" />
+          <IsRequired value="True" />
+          <DeclaredType>
+            <AttributeType>
+              <StrMaxLength value="5" />
+              <StrMinLength value="3" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Complex>
+          <Name value="complex1" />
+          <Caption value="Complex 1" />
+          <Children>
+            <Attribute>
+              <Name value="att2" />
+              <Caption value="Att 2" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <Validators>
+                <Validator Name="alwaysBrokenVal">
+                  <ErrorMessage IsValid="True">
+                    <ExpressionText><![CDATA["always broken"]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </ErrorMessage>
+                  <IsValid IsValid="True">
+                    <ExpressionText><![CDATA[false]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </IsValid>
+                </Validator>
+              </Validators>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Collection>
+          <Name value="collection1" />
+          <Caption value="Collection 1" />
+          <MaxCount value="2" />
+          <MinCount value="1" />
+          <Children>
+            <Attribute>
+              <Name value="att3" />
+              <Caption value="Att 3" />
+              <DeclaredType>
+                <AttributeType>
+                  <StrMinLength value="3" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+          <CollectionValidators>
+            <Validator Name="val1">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["collection always broken"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[false]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </CollectionValidators>
+        </Collection>
+        <Complex>
+          <Name value="complex2" />
+          <Caption value="Complex 2" />
+          <IsRequired value="True" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.valFilterEntity" />
+            </Include>
+          </Children>
+        </Complex>
+        <Collection>
+          <Name value="collection2" />
+          <Caption value="Collection 2" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.valFilterEntity" />
+            </Include>
+          </Children>
+          <ItemValidators>
+            <Validator Name="itemVal1">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["itemVal1 always broken"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[false]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </ItemValidators>
+        </Collection>
+      </Children>
+      <Modifiers>
+        <Modifier>
+          <Name value="modifier_FCF1B2D3_valFilterEntityAtt" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="collection2.valFilterEntityAtt" />
+          <Validators>
+            <Validator Name="attachedValidatorOnCol">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["attachedValidatorOnCol"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[false]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Modifier>
+      </Modifiers>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="setConfig" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.setConfigSuccessful = apiobjects.validatorsFilter1.setConfig(form.validatorsFilterConfig) ]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.validatorsFilterConfig = "[[\"main_validatorsFilterExample\",\"att1\",\"required\"],[\"main_validatorsFilterExample\",\"att1\",\"stringLength\"],[\"main_validatorsFilterExample\",\"complex1/att2\",\"alwaysBrokenVal\"],[\"main_validatorsFilterExample\",\"collection1\",\"val1\"],[\"main_validatorsFilterExample\",\"collection1\",\"collectionCount\"],[\"main_validatorsFilterExample\",\"collection1/[]\",\"required\"],[\"main_validatorsFilterExample\",\"collection1/[]/att3\",\"stringLength\"],[\"main_validatorsFilterExample\",\"complex2\",\"required\"],[\"main_validatorsFilterExample\",\"complex2\",\"wholeEntityVal1\"],[\"main_validatorsFilterExample\",\"complex2/valFilterEntityAtt\",\"valEntity1\"],[\"main_validatorsFilterExample\",\"complex2/valFilterEntityAtt\",\"stringLength\"],[\"main_validatorsFilterExample\",\"collection2\",\"collectionCount\"],[\"main_validatorsFilterExample\",\"collection2/[]\",\"required\"],[\"main_validatorsFilterExample\",\"collection2/[]\",\"itemVal1\"],    [\"main_validatorsFilterExample\",\"collection2/[]\",\"wholeEntityVal1\"],[\"main_validatorsFilterExample\",\"collection2/[]/valFilterEntityAtt\",\"stringLength\"],[\"main_validatorsFilterExample\",\"collection2/[]/valFilterEntityAtt\",\"valEntity1\"],[\"main_validatorsFilterExample\",\"collection2/[]/valFilterEntityAtt\",\"attachedValidatorOnCol\"]]"
+
+var item = form.collection1.addItem()
+item.att3 = "x"
+
+var item2 = form.collection2.addItem()
+item2.valFilterEntityAtt = "y"]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_addItem_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var item = form.collection2.addItem()
+item.valFilterEntityAtt = "z"]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>
