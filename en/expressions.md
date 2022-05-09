@@ -2,7 +2,7 @@
 
 Expression is a way how to define some calculation. We use expressions
 in computed attributes, validators and actions. We define them in
-[ActionLang](actionLang.md).
+[ActionLang](actionlang.md).
 
 Expressions contain arithmetics for NULL values. ActionLang is
 type-based, incompatible types have to be explicitly converted (by

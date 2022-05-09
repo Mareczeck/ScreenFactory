@@ -13,7 +13,7 @@ Z pohledu vývojáře:
   vytvářím, WYSIWYG). Některé chování se definuje pomocí výrazů
   (podobně jako vzorce v Excelu).
 - Některé chování se definuje pomocí akcí zapsaných v
-   [ActionLangu](actionLang.md) (stejný jako je použit v jiném nástroji -
+   [ActionLangu](actionlang.md) (stejný jako je použit v jiném nástroji -
   MetaSystému)
 - Pokročilé vlastnosti a nové komponenty lze doprogramovat
   (programátorem)
