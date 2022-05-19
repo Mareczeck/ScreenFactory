@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="TextBoxPlus" />
+  <Generator value="textBoxPlusGenerator.js" />
+  <Type value="Editor" />
+  <UiCategory value="SFFW" />
+  <UiDescription value="Advanced text editor for entering single line string values. Can be used for numbers and strings. Supports numeric value formatting." />
+  <UiIcon value="TextBoxPlus.png" />
+  <Events>
+    <EventManifest>
+      <Name value="OnEnterPressed" />
+      <UiDescription value="Occurs when user presses Enter." />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="OnKeyDown" />
+      <UiDescription value="Occurs when user presses some key on keyboard. Underlaying data-bound attribute is not updated till focus is lost." />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="keyCode" />
+          <BaseType value="Integer" />
+          <ParamType value="BaseType" />
+          <UiDescription value="Code of pressed key. For details see documentation of javascript/DOM onkeydown event." />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="Data" />
+      <Bindable value="True" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Text" />
+      <UiCategory value="Common" />
+      <UiDescription value="Bind this property to your data." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="InputType" />
+      <Default value="Normal" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Common" />
+      <UiDescription value="Type of input behavior." />
+      <UiEditor value="list/Normal|Numeric|TextTrimmed" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IsCurrency" />
+      <Type value="bool" />
+      <UiCategory value="Formatting" />
+      <UiDescription value="If value is valid number, will be displayed (for viewing, not editing) formatted according to current locale together with CurrencySymbol." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IsAmount" />
+      <Type value="bool" />
+      <UiCategory value="Formatting" />
+      <UiDescription value="If value is valid number, will be displayed (for viewing, not editing) formatted according to current locale." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="MinDecimalPlaces" />
+      <Type value="integer" />
+      <UiCategory value="Formatting" />
+      <UiDescription value="Minimum decimal places (or zeros) to display (for viewing, not editing) when IsCurrency or IsAmount is True." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="CurrencySymbol" />
+      <Bindable value="OneWay" />
+      <Default value="€" />
+      <Type value="string" />
+      <UiCategory value="Formatting" />
+      <UiDescription value="Currency symbol to display (for viewing, not editing) when IsCurrency is True." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="TextAlign" />
+      <Default value="Left" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Appearance" />
+      <UiDescription value="Alignment of edited text." />
+      <UiEditor value="list/Left|Right|Center" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="ImmediateUpdate" />
+      <Type value="bool" />
+      <UiCategory value="Behaviour" />
+      <UiDescription value="If set to true, binding is updated after each keystroke." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="MaxLength" />
+      <Type value="integer" />
+      <UiCategory value="Behaviour" />
+      <UiDescription value="Maximum number of characters the user can enter into input." />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

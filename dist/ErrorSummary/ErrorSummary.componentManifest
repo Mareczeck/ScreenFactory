@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="ErrorSummary" />
+  <Generator value="&lt;sffw-error-summary&gt;" />
+  <Type value="Control" />
+  <UiCaption value="Error summary" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="errorSummary.png" />
+  <Events>
+    <EventManifest>
+      <Name value="OnItemClick" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="errorSourceForm" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="errorSourceComponent" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="pointer" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="navigationTreeNode" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="root" />
+      <Bindable value="True" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.NamedDataChildWithChildren" />
+      <UiCategory value="Client validation errors" />
+      <UiDescription value="Root of structure containing client validation errors" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isVisible" />
+      <Bindable value="True" />
+      <Default value="True" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="DescriptionCodelist" />
+      <Type value="ApiObject" />
+      <UiCategory value="Client validation errors" />
+      <UiEditor value="contract/IReferenceList" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="DescriptionColumn" />
+      <Type value="string" />
+      <UiCategory value="Client validation errors" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="AllowDescriptionDownload" />
+      <Bindable value="True" />
+      <Default value="True" />
+      <IsRequired value="True" />
+      <Type value="bool" />
+      <UiCategory value="Client validation errors" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="DescriptionSeparator" />
+      <Type value="string" />
+      <UiCategory value="Client validation errors" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="errorPointerMap" />
+      <Type value="ApiObject" />
+      <UiCategory value="Error pointers" />
+      <UiEditor value="contract/IErrorPointerMap" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="hideMissingDescription" />
+      <Bindable value="OneWay" />
+      <Default value="False" />
+      <Type value="bool" />
+      <UiCategory value="Client validation errors" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="preferDisplayMessageInDescription" />
+      <Bindable value="OneWay" />
+      <Default value="true" />
+      <Type value="bool" />
+      <UiCategory value="Client validation errors" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="customPointerCaption" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="customDescriptionCaption" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="serverValidationErrors" />
+      <Bindable value="True" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.NamedDataChildWithChildren" />
+      <UiCategory value="Server validation errors" />
+      <UiDescription value="Collection containing server validation errors" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="reasonCodelistDisplayMember" />
+      <Default value="_description" />
+      <Type value="string" />
+      <UiCategory value="Server validation errors" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="errorCodeDisplayMember" />
+      <Default value="_description" />
+      <Type value="string" />
+      <UiCaption value="Error code (&quot;Code&quot;) display member" />
+      <UiCategory value="Server validation errors" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

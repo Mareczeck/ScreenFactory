@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="ModalDialog.94570be80952477cb3e636ab95b79441" />
+  <Version value="1.2.2" />
+  <Items>
+    <PackageItem Src="ModalDialog.apiObjectManifest" />
+    <ResourceItem ResourceName="modalDialog.js" Action="None" OutputFileName="modalDialog.js" Src="modalDialog.js" />
+    <ResourceItem ResourceName="modalDialog.css" LinkerAction="Css" OutputFileName="modalDialog.css" Src="modalDialog.css" />
+    <PackageItem Src="localizations.packageLocalizations" />
+  </Items>
+</Package>

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="PagingRepeaterCtrl" />
+  <Generator value="&lt;sffw-paging-repeater-ctrl&gt;" />
+  <Type value="Control" />
+  <UiCaption value="PagingRepeater control" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="pagingRepeaterCtrl.png" />
+  <Events>
+    <EventManifest>
+      <Name value="OnItemAdd" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="newItem" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="OnItemRemove" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="removedItem" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="Index" />
+      <Bindable value="Always" />
+      <IsRequired value="True" />
+      <Type value="integer" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="Data" />
+      <Bindable value="Always" />
+      <IsRequired value="True" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.DataCollection" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="CaptionAtt" />
+      <UiCaption value="Caption attribute" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="AllowAdd" />
+      <Bindable value="True" />
+      <Default value="False" />
+      <Type value="bool" />
+      <UiCategory value="Buttons" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="AllowRemove" />
+      <Bindable value="True" />
+      <Default value="False" />
+      <Type value="bool" />
+      <UiCategory value="Buttons" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="ShowAdd" />
+      <Bindable value="OneWay" />
+      <Default value="true" />
+      <Type value="bool" />
+      <UiCategory value="Buttons" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="ShowRemove" />
+      <Bindable value="OneWay" />
+      <Default value="true" />
+      <Type value="bool" />
+      <UiCategory value="Buttons" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IconLeftClass" />
+      <Default value="fa fa-caret-left" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Left&quot; button icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Left&quot; icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IconRightClass" />
+      <Default value="fa fa-caret-right" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Right&quot; button icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Right&quot; icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IconAddClass" />
+      <Default value="fa fa-plus" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Add&quot; button icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Add&quot; icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IconRemoveClass" />
+      <Default value="fa fa-minus" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Remove&quot; button icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Remove&quot; icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IconsAdditionalClass" />
+      <Default value="fa-lg fa-fw" />
+      <Type value="string" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Additional class for icons size, setting fixed width etc. Applies to all &quot;Left, Right, Add, Remove&quot; icons." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="CheckItemIsValidBeforeIndexChange" />
+      <Bindable value="OneWay" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IndicateDataErrors" />
+      <Bindable value="OneWay" />
+      <Default value="True" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="KeepArrowsTogether" />
+      <Type value="bool" />
+      <UiCategory value="Buttons" />
+      <UiDescription value="Should right arrow be rendered next to the left arrow" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

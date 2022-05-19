@@ -1,0 +1,12 @@
+a.sffw-hyperlinkplus[target=_blank]:after {
+    font-family: 'FontAwesome' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    margin-left: 6px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f08e";
+}

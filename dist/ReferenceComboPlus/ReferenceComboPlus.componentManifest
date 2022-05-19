@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="ReferenceComboPlus" />
+  <Generator value="referenceComboPlusGenerator.js" />
+  <Type value="Editor" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="ReferenceComboPlus.png" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="Data" />
+      <Bindable value="True" />
+      <IsRequired value="True" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.DataReferenceAttribute" />
+      <UiCategory value="Common" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="ReferenceList" />
+      <Bindable value="True" />
+      <IsRequired value="True" />
+      <Type value="ApiObject" />
+      <UiCategory value="Common" />
+      <UiDescription value="Reference list with codelist data" />
+      <UiEditor value="contract/IReferenceList" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="DisplayMember" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Data" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IsEnabled" />
+      <Bindable value="True" />
+      <Default value="True" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="ResultSorting" />
+      <Default value="basic" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Misc" />
+      <UiDescription value="-*basic*&#xD;&#xA;Sorted on server&#xD;&#xA;-*preferedTop*&#xD;&#xA;Items having True in attribute, whose name is defined by &quot;CodelistPreferedAttName&quot;, are first and visually separated from remaining items " />
+      <UiEditor value="list/basic|preferedTop" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="CodelistPreferedAttName" />
+      <Default value="IsPrefered" />
+      <Type value="string" />
+      <UiCategory value="Controlling attributes" />
+      <UiDescription value="Name of boolean attribute of underlying ReferenceList, that contains true/false values to be used in conjunction with preferedTop result sorting method." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="CreateGroupHeadings" />
+      <Default value="true" />
+      <Type value="bool" />
+      <UiCategory value="Misc" />
+      <UiDescription value="If ResultSorting is set to *preferedTop*, &quot;Favourites&quot; and &quot;Other&quot; group &quot;headings&quot; will be generated before both groups of options. " />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

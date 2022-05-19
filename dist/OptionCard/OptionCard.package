@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="OptionCard.ff80d2766adc450bb3856b6632b29d06" />
+  <Version value="1.1.0" />
+  <Items>
+    <PackageItem Src="CardGroup.componentManifest" />
+    <PackageItem Src="CardRepeater.componentManifest" />
+    <PackageItem Src="OptionCardSimple.componentManifest" />
+    <PackageItem Src="OptionCardContent.componentManifest" />
+    <ResourceItem ResourceName="optionCard.js" LinkerAction="Script" OutputFileName="optionCard.js" Src="optionCard.js" />
+    <ResourceItem ResourceName="optionCard.css" LinkerAction="Css" OutputFileName="optionCard.css" Src="optionCard.css" />
+    <ResourceItem ResourceName="optionCardTooltip.css" LinkerAction="Css" OutputFileName="optionCardTooltip.css" Src="optionCardTooltip.css" />
+    <ResourceItem ResourceName="OptionCardSimple.png" Action="None" OutputFileName="OptionCardSimple.png" Src="OptionCardSimple.png" />
+    <ResourceItem ResourceName="OptionCardContent.png" Action="None" OutputFileName="OptionCardContent.png" Src="OptionCardContent.png" />
+    <ResourceItem ResourceName="CardRepeater.png" Action="None" OutputFileName="CardRepeater.png" Src="CardRepeater.png" />
+    <ResourceItem ResourceName="CardGroup.png" Action="None" OutputFileName="CardGroup.png" Src="CardGroup.png" />
+  </Items>
+</Package>

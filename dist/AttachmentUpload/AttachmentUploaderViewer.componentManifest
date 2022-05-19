@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="AttachmentUploaderViewer" />
+  <Generator value="&lt;sffw-attach-uploader-viewer&gt;" />
+  <Type value="Control" />
+  <UiCategory value="SFFW" />
+  <Events>
+    <EventManifest>
+      <Name value="OnAttachmentOpenClick" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="documentId" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="OnUploadFinished" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="server" />
+      <IsRequired value="True" />
+      <Type value="ApiObject" />
+      <UiCategory value="API objects" />
+      <UiEditor value="contract/IServerConnection" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="documentTypeCodelist" />
+      <IsRequired value="True" />
+      <Type value="ApiObject" />
+      <UiCategory value="API objects" />
+      <UiEditor value="contract/IReferenceList" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="notificationsController" />
+      <Type value="ApiObject" />
+      <UiCategory value="API objects" />
+      <UiEditor value="contract/INotificationsCtrl" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="modalDialog" />
+      <IsRequired value="True" />
+      <Type value="ApiObject" />
+      <UiCategory value="API objects" />
+      <UiEditor value="contract/IModalDialog" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="attachmentsCollection" />
+      <Bindable value="Always" />
+      <IsRequired value="True" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.NamedDataChildWithChildren" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="newAttachmentsCollection" />
+      <Bindable value="Always" />
+      <IsRequired value="True" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.NamedDataChildWithChildren" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="fileTypeFilter" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+      <UiCategory value="Behavior" />
+      <UiDescription value="Comma separated list of file extensions starting with dot (for example .pdf,.jgp)" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="allowMultipleFiles" />
+      <Bindable value="OneWay" />
+      <Default value="True" />
+      <Type value="bool" />
+      <UiCategory value="Behavior" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="maxFileSize" />
+      <Bindable value="OneWay" />
+      <Default value="3700" />
+      <Type value="integer" />
+      <UiCategory value="Behavior" />
+      <UiDescription value="Maximum allowed size of file in kB, default is ca 3700kB = 5 MB converted to BASE64" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconAdd" />
+      <Default value="icon icon-tulli-add" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Add new attachments&quot; button icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Add new attachments&quot; button icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconRemove" />
+      <Default value="icon icon-tulli-delete" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Remove attachments&quot; button icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Remove attachments&quot; button icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconUpload" />
+      <Default value="icon icon-tulli-service-upload" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Upload attachments&quot; button icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Upload attachments&quot; button icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconCancel" />
+      <Default value="icon icon-tulli-close" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Cancel upload&quot; button icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Cancel upload&quot; button icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconUp" />
+      <Default value="icon icon-tulli-arrow-up" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Move up&quot; button icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Move up&quot; button icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconDown" />
+      <Default value="icon icon-tulli-arrow-down" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Move down&quot; button icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Move down&quot; button icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="uploadRequestMessageType" />
+      <Default value="uploadAttachment" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Upload request message type" />
+      <UiCategory value="Messages" />
+      <UiDescription value="Message type name of upload request" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="uploadResponseMessageType" />
+      <Default value="uploadAttachmentResponse" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Upload response message type" />
+      <UiCategory value="Messages" />
+      <UiDescription value="Message type name of upload response(X-MessageType HTTP response header)" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="deleteRequestMessageType" />
+      <Default value="removeDocumentIds" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Delete request message type" />
+      <UiCategory value="Messages" />
+      <UiDescription value="Message type name of delete request" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="deleteResponseMessageType" />
+      <Default value="removeDocumentIdsResponse" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Delete response message type" />
+      <UiCategory value="Messages" />
+      <UiDescription value="Message type name of delete response(X-MessageType HTTP response header)" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="declarationKind" />
+      <Bindable value="Always" />
+      <IsRequired value="True" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.DataReferenceAttribute" />
+      <UiCategory value="Additional attributes of upload message" />
+      <UiDescription value="Value from the eDeclarationKind enumeration, sent as a functionCode to the DM" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="requiredByCustoms" />
+      <Bindable value="OneWay" />
+      <Default value="false" />
+      <IsRequired value="True" />
+      <Type value="bool" />
+      <UiCategory value="Additional attributes of upload message" />
+      <UiDescription value="If documents are added to FI453A (reply to customs FI452A), then true, otherwise false" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="cwar" />
+      <Bindable value="OneWay" />
+      <Default value="true" />
+      <IsRequired value="True" />
+      <Type value="bool" />
+      <UiCategory value="Additional attributes of upload message" />
+      <UiDescription value="True for H2 or EIDR declarations (for mode 71), otherwise false" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isEditMode" />
+      <Bindable value="OneWay" />
+      <Default value="True" />
+      <IsRequired value="True" />
+      <Type value="bool" />
+      <UiDescription value="*True* - *Adding, deleting and re-ordering of attachment is allowed*&#xD;&#xA;*False* - *Only displays list of uploaded attachments*" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isNewAttName" />
+      <Default value="isNew" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Controlling attributes" />
+      <UiDescription value="Name of boolean attribute in uploaded attachment complex, for indicating newly added attachments." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="documentLinkAttName" />
+      <Default value="documentLink" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Controlling attributes" />
+      <UiDescription value="Name of string attribute in uploaded attachment complex, holding URL for attachment display hyperlink." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="mrn" />
+      <Bindable value="True" />
+      <UiCaption value="MRN" />
+      <UiCategory value="Additional attributes of upload message" />
+      <UiDescription value="MRN for which the document is uploaded" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="canBeRemoved" />
+      <Bindable value="OneWay" />
+      <UiCategory value="Additional attributes of upload message" />
+      <UiDescription value="Value for &quot;canBeRemoved&quot; attribute of uploadAttachment message" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

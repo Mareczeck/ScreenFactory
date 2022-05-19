@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="DataTablePlus.cc32b616f4094d929bc32891cf024bb9" />
+  <Version value="1.0.0" />
+  <Items>
+    <PackageItem Src="DataTablePlus.componentManifest" />
+    <PackageItem Src="DataTablePlusColumn.componentManifest" />
+    <ResourceItem ResourceName="dataTablePlus.js" LinkerAction="Script" OutputFileName="dataTablePlus.js" Src="dataTablePlus.js" />
+    <ResourceItem ResourceName="dataTablePlusGenerator.js" Action="None" OutputFileName="dataTablePlusGenerator.js" Src="dataTablePlusGenerator.js" />
+    <ResourceItem ResourceName="dataTablePlus.css" LinkerAction="Css" OutputFileName="dataTablePlus.css" Src="dataTablePlus.css" />
+    <ResourceItem ResourceName="DataTablePlus.png" Action="None" OutputFileName="DataTablePlus.png" Src="DataTablePlus.png" />
+    <PackageItem Src="localizations.packageLocalizations" />
+  </Items>
+</Package>

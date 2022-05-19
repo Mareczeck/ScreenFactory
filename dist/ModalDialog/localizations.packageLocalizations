@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="OK">
+      <Values>
+        <LocaleValue Lang="en" Value="OK" />
+        <LocaleValue Lang="cs" Value="OK" />
+        <LocaleValue Lang="sr" Value="U redu" />
+        <LocaleValue Lang="me" Value="U redu" />
+        <LocaleValue Lang="sv" Value="Okej" />
+        <LocaleValue Lang="fi" Value="Okei" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Cancel">
+      <Values>
+        <LocaleValue Lang="en" Value="Cancel" />
+        <LocaleValue Lang="cs" Value="Zrušit" />
+        <LocaleValue Lang="sv" Value="Avbryt" />
+        <LocaleValue Lang="me" Value="Otkaži" />
+        <LocaleValue Lang="fi" Value="Peruuta" />
+        <LocaleValue Lang="sr" Value="Otkaži" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Yes">
+      <Values>
+        <LocaleValue Lang="en" Value="Yes" />
+        <LocaleValue Lang="fi" Value="Kyllä" />
+        <LocaleValue Lang="cs" Value="Ano" />
+        <LocaleValue Lang="sv" Value="Ja" />
+        <LocaleValue Lang="sr" Value="Da" />
+        <LocaleValue Lang="me" Value="Da" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="No">
+      <Values>
+        <LocaleValue Lang="en" Value="No" />
+        <LocaleValue Lang="fi" Value="Ei" />
+        <LocaleValue Lang="cs" Value="Ne" />
+        <LocaleValue Lang="sv" Value="Nej" />
+        <LocaleValue Lang="sr" Value="Ne" />
+        <LocaleValue Lang="me" Value="Ne" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

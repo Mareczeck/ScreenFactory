@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="List" />
+  <Generator value="listGenerator.js" />
+  <Type value="Control" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="list.png" />
+  <Events>
+    <EventManifest>
+      <Name value="OnSelectionChange" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="OnRowClicked" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="columnName" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="OnRowsChanged" />
+      <UiDescription value="Fired when rows were passed from controller to component and eventually projected to referenced dataCollection structure and selected row was projected to referenced selectedRowReference structure." />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="OnViewSettingsButtonClicked" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="listName" />
+      <UiCategory value="Common" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="showCheckboxes" />
+      <Bindable value="OneWay" />
+      <Type value="bool" />
+      <UiCategory value="Checkboxes on rows" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="lastClickedRow" />
+      <Bindable value="True" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.NamedDataChildWithChildren" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="columns" />
+      <Type value="collection-listColumn" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="pagingTemplate" />
+      <Type value="string" />
+      <UiCategory value="Common" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="dataCollection" />
+      <Bindable value="True" />
+      <IsRequired value="True" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.NamedDataChildWithChildren" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isMultiselect" />
+      <Type value="bool" />
+      <UiCategory value="Checkboxes on rows" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="controller" />
+      <IsRequired value="True" />
+      <Type value="ApiObject" />
+      <UiCategory value="Common" />
+      <UiDescription value="Use one controller with one List/ListGrid2 only. Sharing ListCtrl between components is not recommended, could be safe only on components with same column defs and without using state save/load." />
+      <UiEditor value="contract/IListCtrl" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="maxVisibleFilterOptions" />
+      <Bindable value="OneWay" />
+      <Type value="integer" />
+      <UiCaption value="Maximum of visible filter options" />
+      <UiDescription value="Maximum of visible filter options without scrolling" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="allowSelectAll" />
+      <Type value="bool" />
+      <UiCategory value="Checkboxes on rows" />
+      <UiDescription value="Displays 'Select all' checkbox in header row" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isRowMarkedAttName" />
+      <Default value="_marked" />
+      <Type value="string" />
+      <UiCategory value="Controlling attributes" />
+      <UiDescription value="Name of boolen attribute in dataCollection, that can indicate rows on which the css class 'sffw-list-marked-row' is applied." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="colorIndicatorAttName" />
+      <Default value="_colorIndicator" />
+      <Type value="string" />
+      <UiCategory value="Controlling attributes" />
+      <UiDescription value="Name of string attribute in dataCollection, that controls the name of css class that is applied on list row. The class name convention is 'sffw-list-colorindicator-[attribute value]'." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isRowSelectedAttName" />
+      <Default value="_selected" />
+      <Type value="string" />
+      <UiCategory value="Controlling attributes" />
+      <UiDescription value="Name of boolen attribute in dataCollection, to which the component will propagate selection status of the row." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="showCheckboxInRowAttName" />
+      <Default value="_checkbox" />
+      <Type value="string" />
+      <UiCategory value="Controlling attributes" />
+      <UiDescription value="Name of boolen attribute in dataCollection, that controls on row level if checkbox is generated (showCheckboxes must be also set). If dataCollection does not contain the attribute, showCheckboxes setting is used." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="lastClickedRowSelectWhenCheckboxesOff" />
+      <Type value="bool" />
+      <UiDescription value="Marks clicked row as selected, applicable only if showCheckboxes is set to false." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="pagingControlsPosition" />
+      <Default value="bottom" />
+      <Type value="string" />
+      <UiCategory value="Common" />
+      <UiDescription value="Position of paging controls" />
+      <UiEditor value="list/bottom|top|both" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="savedState" />
+      <Bindable value="Always" />
+      <Type value="string" />
+      <UiCategory value="Automatic saving/loading of list state" />
+      <UiDescription value="Binding to global string attribute in which the state will be persisted" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="savedStateOptions" />
+      <UiCategory value="Automatic saving/loading of list state" />
+      <UiDescription value="Comma separated options (sorting, visibleFilter, invisibleFilter, paging) or empty (=all)" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="savedColumns" />
+      <Bindable value="Always" />
+      <Type value="string" />
+      <UiCategory value="Automatic saving/loading of list state" />
+      <UiDescription value="Binding to global string attribute in which the columns configuration will be persisted" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="allowFilterClearIcon" />
+      <Type value="bool" />
+      <UiDescription value="Displays icon in column header when column filter is active" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="useArrowKeys" />
+      <Type value="bool" />
+      <UiDescription value="Up/down arrow keys are used to navigate and select rows" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="viewSettingsButtonTitle" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+      <UiCaption value="View settings button" />
+      <UiCategory value="Custom titles" />
+      <UiDescription value="Custom title of $viewSettings paging template button" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconSortAsc" />
+      <Default value="fa fa-sort-alpha-asc" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Sort by...ascending&quot; column header button" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Sort by...ascending&quot; column header button from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconSortDesc" />
+      <Default value="fa fa-sort-alpha-desc" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Sort by...descending&quot; column header button" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Sort by...descending&quot; column header button from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconClearFilter" />
+      <Default value="fa fa-remove" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Clear filter value&quot; column header button" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Clear filter value&quot; column header button from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconPageFirst" />
+      <Default value="fa fa-fast-backward" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;First page&quot; paging button" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;First page&quot; paging button from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconPagePrevious" />
+      <Default value="fa fa-play fa-flip-horizontal" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Previous page&quot; paging button" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Previous page&quot; paging button from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconDataLoading" />
+      <Default value="fa fa-refresh fa-spin" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Loading data&quot; icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Loading data&quot; icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconDataLoadError" />
+      <Default value="fa fa-exclamation-triangle" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Data loading error&quot; icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Data loading error&quot; icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconDataRefresh" />
+      <Default value="fa fa-refresh fa-spin" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Refresh data&quot; paging button" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Refresh data&quot; paging button from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconPageNext" />
+      <Default value="fa fa-play" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Next page&quot; paging button" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Next page&quot; paging button from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconPageLast" />
+      <Default value="fa fa-fast-forward" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Last page&quot; paging button" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Last page&quot; paging button from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconViewSettings" />
+      <Default value="fa fa-cog" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;View settings&quot; paging button" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;View settings&quot; paging button from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconCopy" />
+      <Default value="fa fa-copy w3-small" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Copy to clipboard&quot; icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Copy to clipboard&quot; icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconLeaveFilterEditMode" />
+      <Default value="fa fa-compress" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;Leave filter edit mode&quot; icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Leave filter edit mode&quot; icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="notificationsController" />
+      <Type value="ApiObject" />
+      <UiCategory value="Common" />
+      <UiDescription value="If set, internal out-of-box notifications will be sent into NotificationsCtrl (only cell value copying at the time)." />
+      <UiEditor value="contract/INotificationsCtrl" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="pageSizeValues" />
+      <Bindable value="OneWay" />
+      <Default value="5,10,20,30" />
+      <Type value="string" />
+      <UiCategory value="Common" />
+      <UiDescription value="Comma separated list of user selectable page size values" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

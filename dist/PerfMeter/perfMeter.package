@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="perfMeter.38471d563acf42a0bd720aff9939a562" />
+  <Items>
+    <PackageItem Src="PerfMeter.apiObjectManifest" />
+    <ResourceItem ResourceName="PerfMeter.js" Action="None" OutputFileName="PerfMeter.js" Src="PerfMeter.js" />
+  </Items>
+</Package>

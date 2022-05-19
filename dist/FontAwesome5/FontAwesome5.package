@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="FontAwesome5.5da8a1be7cdf43528b94f5c8c7c0158e" />
+  <Version value="1.0.0" />
+  <Items>
+    <ResourceItem ResourceName="fontawesome.min.css" LinkerAction="Css" OutputFileName="fontawesome.min.css" Src="fontawesome.min.css" />
+    <ResourceItem ResourceName="v4-shims.min.css" LinkerAction="Css" OutputFileName="v4-shims.min.css" Src="v4-shims.min.css" />
+    <ResourceItem ResourceName="regular.css" LinkerAction="Css" OutputFileName="regular.css" Src="regular.css" />
+    <ResourceItem ResourceName="solid.css" LinkerAction="Css" OutputFileName="solid.css" Src="solid.css" />
+    <ResourceItem ResourceName="fa-regular-400.eot" OutputFileName="fa-regular-400.eot" Src="fa-regular-400.eot" />
+    <ResourceItem ResourceName="fa-regular-400.svg" OutputFileName="fa-regular-400.svg" Src="fa-regular-400.svg" />
+    <ResourceItem ResourceName="fa-regular-400.ttf" OutputFileName="fa-regular-400.ttf" Src="fa-regular-400.ttf" />
+    <ResourceItem ResourceName="fa-regular-400.woff" OutputFileName="fa-regular-400.woff" Src="fa-regular-400.woff" />
+    <ResourceItem ResourceName="fa-regular-400.woff2" OutputFileName="fa-regular-400.woff2" Src="fa-regular-400.woff2" />
+    <ResourceItem ResourceName="fa-solid-900.eot" OutputFileName="fa-solid-900.eot" Src="fa-solid-900.eot" />
+    <ResourceItem ResourceName="fa-solid-900.svg" OutputFileName="fa-solid-900.svg" Src="fa-solid-900.svg" />
+    <ResourceItem ResourceName="fa-solid-900.ttf" OutputFileName="fa-solid-900.ttf" Src="fa-solid-900.ttf" />
+    <ResourceItem ResourceName="fa-solid-900.woff" OutputFileName="fa-solid-900.woff" Src="fa-solid-900.woff" />
+    <ResourceItem ResourceName="fa-solid-900.woff2" OutputFileName="fa-solid-900.woff2" Src="fa-solid-900.woff2" />
+    <ResourceItem ResourceName="fontAwesome5.css" LinkerAction="Css" OutputFileName="fontAwesome5.css" Src="fontAwesome5.css" />
+  </Items>
+</Package>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="Next">
+      <Values>
+        <LocaleValue Lang="en" Value="next" />
+        <LocaleValue Lang="cs" Value="následující" />
+        <LocaleValue Lang="fi" Value="seuraava" />
+        <LocaleValue Lang="sv" Value="nästa" />
+        <LocaleValue Lang="sr" Value="sledeća" />
+        <LocaleValue Lang="me" Value="sledeća" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Previous">
+      <Values>
+        <LocaleValue Lang="en" Value="previous" />
+        <LocaleValue Lang="fi" Value="edellinen" />
+        <LocaleValue Lang="sv" Value="föregående" />
+        <LocaleValue Lang="sr" Value="prethodna" />
+        <LocaleValue Lang="cs" Value="předchozí" />
+        <LocaleValue Lang="me" Value="prethodna" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

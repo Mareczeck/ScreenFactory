@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="Accessibility.63b9f09334b545a39d169ea0ff801f1e" />
+  <Version value="1.8.0" />
+  <Items>
+    <PackageItem Src="AriaLiveRegion.apiObjectManifest" />
+    <ResourceItem ResourceName="ariaLiveRegion.js" Action="None" OutputFileName="ariaLiveRegion.js" Src="ariaLiveRegion.js" />
+    <ResourceItem ResourceName="ariaLiveRegion.css" LinkerAction="Css" OutputFileName="ariaLiveRegion.css" Src="ariaLiveRegion.css" />
+    <PackageItem Src="AccessibilitySettings.apiObjectManifest" />
+    <ResourceItem ResourceName="accessibilitySettings.js" Action="None" OutputFileName="accessibilitySettings.js" Src="accessibilitySettings.js" />
+    <PackageItem Src="Landmark.componentManifest" />
+    <ResourceItem ResourceName="landmark.js" LinkerAction="Script" OutputFileName="landmark.js" Src="landmark.js" />
+    <ResourceItem ResourceName="landmark.css" LinkerAction="Css" OutputFileName="landmark.css" Src="landmark.css" />
+    <PackageItem Src="ScreenreaderMenu.componentManifest" />
+    <PackageItem Src="SrMenuItem.componentManifest" />
+    <ResourceItem ResourceName="srMenuGenerator.js" Action="None" OutputFileName="srMenuGenerator.js" Src="srMenuGenerator.js" />
+    <ResourceItem ResourceName="srMenu.js" LinkerAction="Script" OutputFileName="srMenu.js" Src="srMenu.js" />
+    <ResourceItem ResourceName="srMenu.css" LinkerAction="Css" OutputFileName="srMenu.css" Src="srMenu.css" />
+  </Items>
+</Package>

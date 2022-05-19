@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="HermesAdapter.ead94efc02184e0ea5ae29b66c6bd70e" />
+  <Version value="1.0.1" />
+  <Items>
+    <PackageItem Src="HermesAdapter.apiObjectManifest" />
+    <ResourceItem ResourceName="hermesAdapter.js" Action="None" OutputFileName="hermesAdapter.js" Src="hermesAdapter.js" />
+  </Items>
+</Package>

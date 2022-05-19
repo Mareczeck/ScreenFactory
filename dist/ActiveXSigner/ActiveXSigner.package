@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="ActiveXSigner.88015d04baac4e2fa67ffcff720d66ad" />
+  <Version value="1.1.0" />
+  <Items>
+    <ResourceItem ResourceName="ActiveXSigner.cab" OutputFileName="ActiveXSigner.cab" Src="ActiveXSigner.cab" />
+    <PackageItem Src="ActiveXSigner.apiObjectManifest" />
+    <PackageItem Src="SignResult.apiObjectManifest" />
+    <ResourceItem ResourceName="ActiveXSigner.js" Action="None" OutputFileName="ActiveXSigner.js" Src="ActiveXSigner.js" />
+  </Items>
+</Package>

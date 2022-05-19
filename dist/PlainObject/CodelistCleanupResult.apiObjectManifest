@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="CodelistCleanupResult" />
+  <CanBeFormLocal value="False" />
+  <CanBeGlobal value="False" />
+  <Generator value="*" />
+  <IsInstantiable value="False" />
+  <Methods>
+    <MethodManifest>
+      <Name value="isSomethingRemoved" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="isSomethingRemovedInPath" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="aLangPath" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+</ApiObjectManifest>

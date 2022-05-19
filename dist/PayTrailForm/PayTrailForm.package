@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="PayTrailForm.75d8c04d1a41484e9d2ba41296a1acd5" />
+  <Version value="1.3.1" />
+  <Items>
+    <PackageItem Src="payTrailForm.componentManifest" />
+    <ResourceItem ResourceName="payTrailForm.js" LinkerAction="Script" OutputFileName="payTrailForm.js" Src="payTrailForm.js" />
+    <ResourceItem ResourceName="payTrailForm.css" LinkerAction="Css" OutputFileName="payTrailForm.css" Src="payTrailForm.css" />
+    <ResourceItem ResourceName="payTrailForm.png" Action="None" OutputFileName="payTrailForm.png" Src="payTrailForm.png" />
+  </Items>
+</Package>

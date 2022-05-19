@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="pointer">
+      <Values>
+        <LocaleValue Lang="cs" Value="Ukazatel" />
+        <LocaleValue Lang="sr" Value="Pokazivač" />
+        <LocaleValue Lang="en" Value="Pointer" />
+        <LocaleValue Lang="fi" Value="Sijainti" />
+        <LocaleValue Lang="sv" Value="Placering" />
+        <LocaleValue Lang="me" Value="Pokazivač" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="description">
+      <Values>
+        <LocaleValue Lang="en" Value="Description" />
+        <LocaleValue Lang="cs" Value="Popis" />
+        <LocaleValue Lang="fi" Value="Kuvaus" />
+        <LocaleValue Lang="sv" Value="Beskrivning" />
+        <LocaleValue Lang="sr" Value="Opis" />
+        <LocaleValue Lang="me" Value="Opis" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="missingDescriptionText">
+      <Values>
+        <LocaleValue Lang="en" Value="(missing description)" />
+        <LocaleValue Lang="cs" Value="(chybějící popis)" />
+        <LocaleValue Lang="fi" Value="(puuttuva kuvaus)" />
+        <LocaleValue Lang="sv" Value="(saknas beskrivning)" />
+        <LocaleValue Lang="sr" Value="(nedostaje opis)" />
+        <LocaleValue Lang="me" Value="(nedostaje opis)" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="errorUndefined">
+      <Values>
+        <LocaleValue Lang="en" Value="Error undefined" />
+        <LocaleValue Lang="cs" Value="Chyba nedefinovaná" />
+        <LocaleValue Lang="fi" Value="Määrittämätön virhe" />
+        <LocaleValue Lang="sv" Value="Odefinierat fel" />
+        <LocaleValue Lang="sr" Value="Greška nedefinisana" />
+        <LocaleValue Lang="me" Value="Greška nedefinisana" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="messageNone">
+      <Values>
+        <LocaleValue Lang="en" Value="NONE" />
+        <LocaleValue Lang="cs" Value="ŽÁDNÝ" />
+        <LocaleValue Lang="fi" Value="EI MITÄÄN" />
+        <LocaleValue Lang="sv" Value="INGEN" />
+        <LocaleValue Lang="sr" Value="NIKO NIJE" />
+        <LocaleValue Lang="me" Value="NIKO NIJE" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="showFormElement">
+      <Values>
+        <LocaleValue Lang="cs" Value="Ukázat prvek na formuláři" />
+        <LocaleValue Lang="en" Value="Show element on the form" />
+        <LocaleValue Lang="sv" Value="Visa element i formuläret" />
+        <LocaleValue Lang="fi" Value="Näytä elementti lomakkeella" />
+        <LocaleValue Lang="sr" Value="Prikaži element u obrascu" />
+        <LocaleValue Lang="me" Value="Prikaži element u obrascu" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="textEditor" />
+  <Generator value="&lt;sffw-text-editor&gt;" />
+  <Type value="Control" />
+  <UiCaption value="Text editor (syntax)" />
+  <UiCategory value="SFFW" />
+  <UiDescription value="Text editor with syntax highlighting of many languages" />
+  <UiIcon value="textEditor.png" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="code" />
+      <Bindable value="Always" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="language" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiEditor value="list/*|apex|azcli|bat|clojure|coffee|cpp|csharp|csp|css|dockerfile|fsharp|go|handlebars|html|ini|java|javascript|less|lua|markdown|msdax|mysql|objective-c|perl|pgsql|php|postiats|powerquery|powershell|pug|python|r|razor|redis|redshift|ruby|rust|sb|scss|shell|scheme|solidity|sql|st|swift|typescript|vb|xml|yaml" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="loadingDataError">
+      <Values>
+        <LocaleValue Lang="en" Value="Loading data error" />
+        <LocaleValue Lang="cs" Value="Chyba načítání dat" />
+        <LocaleValue Lang="fi" Value="Tietovirheen lataaminen" />
+        <LocaleValue Lang="sv" Value="Laddar datafel" />
+        <LocaleValue Lang="sr" Value="Učitavanje greške podataka" />
+        <LocaleValue Lang="me" Value="Greška prilikom učitavanja podataka" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="captionNotSet">
+      <Values>
+        <LocaleValue Lang="en" Value="[Caption not set]" />
+        <LocaleValue Lang="cs" Value="[Titulek není nastaven]" />
+        <LocaleValue Lang="fi" Value="[Otsikkoa ei ole asetettu]" />
+        <LocaleValue Lang="sv" Value="[Bildtext ej inställt]" />
+        <LocaleValue Lang="sr" Value="[Natpis nije postavljen]" />
+        <LocaleValue Lang="me" Value="[Natpis nije postavljen]" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="showingDataAnnouncement">
+      <Values>
+        <LocaleValue Lang="en" Value="Showing {rowFrom} to {rowTo} of {rowCount} entries" />
+        <LocaleValue Lang="me" Value="Prikazuje od {rowFrom} do {rowTo} od {rowCount} unosa" />
+        <LocaleValue Lang="cs" Value="Zobrazeno {rowFrom} až {rowTo} z {rowCount} položek" />
+        <LocaleValue Lang="sv" Value="Visar {rowFrom} till {rowTo} av {rowCount} poster" />
+        <LocaleValue Lang="fi" Value="Näytetään {rowFrom}-{rowTo} / {rowCount} merkinnät" />
+        <LocaleValue Lang="sr" Value="Prikazuje {rowFrom} do {rowTo} od {rowCount} stavki" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

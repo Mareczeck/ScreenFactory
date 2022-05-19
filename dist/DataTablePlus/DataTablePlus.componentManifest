@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="DataTablePlus" />
+  <Generator value="dataTablePlusGenerator.js" />
+  <Type value="Control" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="DataTablePlus.png" />
+  <Events>
+    <EventManifest>
+      <Name value="OnRowClick" />
+      <UiDescription value="Invoked even when SelectionAllowed is set to False" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="Data" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.DataCollection" />
+      <UiCaption value="Data items" />
+      <UiCategory value="Data" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="Index" />
+      <Bindable value="Always" />
+      <Type value="integer" />
+      <UiCaption value="Selected row index" />
+      <UiCategory value="Row selecting" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IsVisible" />
+      <Bindable value="OneWay" />
+      <Default value="true" />
+      <Type value="bool" />
+      <UiCategory value="Common" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="CssClass" />
+      <Type value="collection-CssClassConditional" />
+      <UiCategory value="Appearance" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="ShowSelector" />
+      <Bindable value="OneWay" />
+      <Default value="true" />
+      <Type value="bool" />
+      <UiCategory value="Row selecting" />
+      <UiDescription value="Shows indicator for selected row" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="SelectorClass" />
+      <Default value="fa fa-fw fa-lg fa-caret-right" />
+      <Type value="string" />
+      <UiCategory value="Row selecting" />
+      <UiDescription value="Css class for indicator of selected row from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="SelectorWidth" />
+      <Default value="20px" />
+      <Type value="Length" />
+      <UiCategory value="Row selecting" />
+      <UiDescription value="Width of column for indicator of selected row" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IsScrollable" />
+      <Bindable value="OneWay" />
+      <Type value="bool" />
+      <UiCategory value="Scrolling" />
+      <UiDescription value="Enable scrolling if maximum height is exceeded" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="MaxHeight" />
+      <Default value="200px" />
+      <Type value="Length" />
+      <UiCategory value="Scrolling" />
+      <UiDescription value="Maximum allowed height without scrolling (IsScrollable must be set to True to have any effect)" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="Columns" />
+      <IsRequired value="True" />
+      <Type value="collection-DataTablePlusColumn" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="RowSelectionEnabled" />
+      <Bindable value="OneWay" />
+      <Type value="bool" />
+      <UiCategory value="Row selecting" />
+      <UiDescription value="Turns on/off component's row selection feature" />
+      <UiSortCaption value="A_RowSelectionEnabled" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="AllowUserChangeSelection" />
+      <Bindable value="OneWay" />
+      <Default value="true" />
+      <Type value="bool" />
+      <UiCategory value="Row selecting" />
+      <UiDescription value="If set to False, user can't change selected row, but OnRowClicked event is still invoked" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="AlternateRows" />
+      <Default value="true" />
+      <Type value="bool" />
+      <UiCategory value="Appearance" />
+      <UiDescription value="Set to false, if striped rows are not needed." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="HoverHighlight" />
+      <Default value="true" />
+      <Type value="bool" />
+      <UiCategory value="Appearance" />
+      <UiDescription value="Set to false, if you don't want to hightlight row under mouse." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IsHeaderVisible" />
+      <Default value="true" />
+      <Type value="bool" />
+      <UiCategory value="Appearance" />
+      <UiDescription value="Set to false, if you want to hide table header." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="PagingEnabled" />
+      <Bindable value="OneWay" />
+      <Type value="bool" />
+      <UiCategory value="Paging" />
+      <UiDescription value="If set to True, table will display maximum number of rows according to &quot;PageSize&quot; property value and paging controls will be displayed." />
+      <UiSortCaption value="A_PagingEnabled" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="PageSize" />
+      <Bindable value="OneWay" />
+      <Default value="10" />
+      <Type value="integer" />
+      <UiCategory value="Paging" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

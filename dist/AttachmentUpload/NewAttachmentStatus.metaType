@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="NewAttachmentStatus" />
+  <Caption value="New attachment status" />
+  <TypeSpec>
+    <AttributeType>
+      <BaseType value="Enum" />
+      <EnumValues>
+        <AttributeEnumValue>
+          <Name value="Waiting" />
+          <Caption value="Waiting for details" />
+          <Value value="Waiting" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.waitingForDetails" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="Ready" />
+          <Caption value="Ready for upload" />
+          <Value value="Ready" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.readyForUpload" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="Uploading" />
+          <Caption value="Uploading" />
+          <Value value="Uploading" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.uploading" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="UploadError" />
+          <Caption value="Upload error" />
+          <Value value="UploadError" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.uploadError" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </AttributeEnumValue>
+      </EnumValues>
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

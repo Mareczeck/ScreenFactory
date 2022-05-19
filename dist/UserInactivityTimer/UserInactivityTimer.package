@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="UserInactivityTimer.a7b09c48b1c54575b4edb081fbaee9ab" />
+  <Version value="1.0.0" />
+  <Items>
+    <PackageItem Src="UserInactivityTimer.apiObjectManifest" />
+    <ResourceItem ResourceName="userInactivityTimer.js" Action="None" OutputFileName="userInactivityTimer.js" Src="userInactivityTimer.js" />
+  </Items>
+</Package>

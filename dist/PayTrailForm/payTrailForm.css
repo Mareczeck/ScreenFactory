@@ -1,0 +1,29 @@
+.sffw-paytrail-form-button > button {
+    width: 100%;
+}
+
+.sffw-paytrail-form-button > button {
+  font-family: "Segoe UI Light", "Open Sans", "Helvetica Neue Light", "HelveticaNeue-Light", sans-serif;
+  outline: medium none;
+  background-color: #4390df;
+  color: white;
+  border: 0px solid transparent;
+  border-radius: 0px;
+  padding: 4px 12px;
+  vertical-align: middle;
+  text-align: center;
+  height: 100%;
+}
+.sffw-paytrail-form-button > button:focus {
+    background-color: #1b5da1;
+}
+.sffw-paytrail-form-button > button:active {
+    background-color: #1d1d1d;
+}
+.sffw-paytrail-form-button > button:disabled {
+    background-color: #F2F2F2;
+    color: black;
+}
+.sffw-paytrail-form-button > button:disabled:active {
+    background-color: #F2F2F2;
+}

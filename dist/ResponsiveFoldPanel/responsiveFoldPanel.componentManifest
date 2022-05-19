@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="responsiveFoldPanel" />
+  <Generator value="&lt;sffw-responsive-foldpanel&gt;" />
+  <Type value="ContentObject" />
+  <UiCaption value="ResponsiveFoldPanel" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="responsiveFoldPanel.png" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="isVisible" />
+      <Bindable value="True" />
+      <Default value="true" />
+      <Type value="bool" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

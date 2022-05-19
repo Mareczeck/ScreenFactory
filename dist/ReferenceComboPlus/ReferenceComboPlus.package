@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="ReferenceComboPlus.f226cb7867c34aa5acaae01850cbf771" />
+  <Description value="Reference combo with additional features" />
+  <Version value="1.3.0" />
+  <Items>
+    <PackageItem Src="ReferenceComboPlus.componentManifest" />
+    <ResourceItem ResourceName="referenceComboPlus.js" LinkerAction="Script" OutputFileName="referenceComboPlus.js" Src="referenceComboPlus.js" />
+    <ResourceItem ResourceName="referenceComboPlus.css" LinkerAction="Css" OutputFileName="referenceComboPlus.css" Src="referenceComboPlus.css" />
+    <ResourceItem ResourceName="referenceComboPlusGenerator.js" Action="None" OutputFileName="referenceComboPlusGenerator.js" Src="referenceComboPlusGenerator.js" />
+    <ResourceItem ResourceName="ReferenceComboPlus.png" Action="None" OutputFileName="ReferenceComboPlus.png" Src="ReferenceComboPlus.png" />
+    <PackageItem Src="localizations.packageLocalizations" />
+  </Items>
+</Package>

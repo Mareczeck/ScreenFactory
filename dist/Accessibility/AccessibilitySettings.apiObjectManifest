@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="AccessibilitySettings" />
+  <CanBeFormLocal value="False" />
+  <Generator value="accessibilitySettings.js" />
+  <Contracts>
+    <ImplementsContractManifest>
+      <Name value="IAccessibilitySettings" />
+    </ImplementsContractManifest>
+  </Contracts>
+  <Methods>
+    <MethodManifest>
+      <Name value="focusTooltipButtons" />
+      <Description value="Sets user preference that enables/disables keyboard focus of click-tooltip buttons" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="focus" />
+          <BaseType value="Bool" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="disableScreenreaderMenu" />
+      <Description value="Sets user preference that disables/enables displaying screenreader menu component" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="disable" />
+          <BaseType value="Bool" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="accessibleDisabledEditors" />
+      <Description value="Components of &quot;Editor&quot; type, that can support &quot;readonly&quot; HTML attribute or implement alternation of &quot;disabled&quot; component with &quot;readonly&quot; component, can dynamically change their behavior &quot;to be&quot;/&quot;not to be&quot; focusable if their value can't be modified by user." />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="value" />
+          <BaseType value="Bool" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+</ApiObjectManifest>

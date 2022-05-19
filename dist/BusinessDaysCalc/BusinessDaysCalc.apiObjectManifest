@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="BusinessDaysCalc" />
+  <Generator value="businessDaysCalc.js" />
+  <Methods>
+    <MethodManifest>
+      <Name value="loadHolidays" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="holidaysJson" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="isWorkDay" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="date" />
+          <BaseType value="Date" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getNextWorkDay" />
+      <ReturnType>
+        <BaseType value="Date" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="date" />
+          <BaseType value="Date" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getPrevWorkDay" />
+      <ReturnType>
+        <BaseType value="Date" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="date" />
+          <BaseType value="Date" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getWorkDayShift" />
+      <ReturnType>
+        <BaseType value="Date" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="date" />
+          <BaseType value="Date" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <Name value="workdays" />
+          <BaseType value="Integer" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="countryCode" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Common" />
+      <UiDescription value="Country code to resolve national holidays" />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

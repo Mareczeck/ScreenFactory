@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="isNotValidMessage">
+      <Values>
+        <LocaleValue Lang="en" Value="Please remove all validation errors on current item to continue." />
+        <LocaleValue Lang="cs" Value="Chcete-li pokračovat, odstraňte chyby na aktuálním záznamu." />
+        <LocaleValue Lang="sv" Value="Ta bort alla valideringsfel på den aktuella artikeln för att fortsätta." />
+        <LocaleValue Lang="fi" Value="Jatka poistamalla kaikki nykyisen kohteen oikeellisuus tarkistus virheet." />
+        <LocaleValue Lang="sr" Value="Da biste nastavili, uklonite sve greške u proveri valjanosti ove stavke." />
+        <LocaleValue Lang="me" Value="Da biste nastavili, uklonite sve greške u provjeri valjanosti ove stavke." />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="nextItemAriaLabel">
+      <Values>
+        <LocaleValue Lang="en" Value="Next item" />
+        <LocaleValue Lang="cs" Value="Další položka" />
+        <LocaleValue Lang="fi" Value="Seuraava kohde" />
+        <LocaleValue Lang="sv" Value="Nästa punkt" />
+        <LocaleValue Lang="sr" Value="Sledeća stavka" />
+        <LocaleValue Lang="me" Value="Sledeća stavka" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="previousItemAriaLabel">
+      <Values>
+        <LocaleValue Lang="en" Value="Previous item" />
+        <LocaleValue Lang="cs" Value="Předchozí položka" />
+        <LocaleValue Lang="fi" Value="Edellinen kohde" />
+        <LocaleValue Lang="sv" Value="Föregående artikel" />
+        <LocaleValue Lang="sr" Value="Prethodna stavka" />
+        <LocaleValue Lang="me" Value="Prethodna stavka" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="itemIndexAriaLabel">
+      <Values>
+        <LocaleValue Lang="en" Value="Serial number of the item " />
+        <LocaleValue Lang="cs" Value="Pořadové číslo položky" />
+        <LocaleValue Lang="fi" Value="Nimikkeen sarjanumero " />
+        <LocaleValue Lang="sv" Value="Artikelns serienummer " />
+        <LocaleValue Lang="sr" Value="Serijski broj stavke " />
+        <LocaleValue Lang="me" Value="Serijski broj stavke " />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="addItemAriaLabel">
+      <Values>
+        <LocaleValue Lang="en" Value="Add item" />
+        <LocaleValue Lang="cs" Value="Přidat položku" />
+        <LocaleValue Lang="fi" Value="Lisää kohde" />
+        <LocaleValue Lang="sv" Value="Lägga till objekt" />
+        <LocaleValue Lang="sr" Value="Dodaj stavku" />
+        <LocaleValue Lang="me" Value="Dodaj stavku" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="removeItemAriaLabel">
+      <Values>
+        <LocaleValue Lang="en" Value="Remove item" />
+        <LocaleValue Lang="cs" Value="Odebrat položku" />
+        <LocaleValue Lang="fi" Value="Kohteen poistaminen" />
+        <LocaleValue Lang="sv" Value="Ta bort objekt" />
+        <LocaleValue Lang="sr" Value="Uklanjanje stavke" />
+        <LocaleValue Lang="me" Value="Uklanjanje stavke" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="validationErrorsInItems">
+      <Values>
+        <LocaleValue Lang="en" Value="At least one item has errors, check item # {index}." />
+        <LocaleValue Lang="cs" Value="Alespoň jedna položka obsahuje chyby, zkontrolujte položku č. {index}." />
+        <LocaleValue Lang="fi" Value="Ainakin yhdessä kohdassa on virheitä, tarkista tuotenro. {index}." />
+        <LocaleValue Lang="sv" Value="Minst ett objekt har fel, kontrollera artikelnr. {index}." />
+        <LocaleValue Lang="sr" Value="Najmanje jedna stavka ima greške, proverite artikal br. {index}." />
+        <LocaleValue Lang="me" Value="Najmanje jedna stavka ima greške, proverite artikal br. {index}." />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

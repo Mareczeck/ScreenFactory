@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="CardGroup" />
+  <Generator value="&lt;sffw-card-group&gt;" />
+  <Type value="ContentObject" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="CardGroup.png" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="IsVisible" />
+      <Bindable value="OneWay" />
+      <Default value="True" />
+      <Type value="bool" />
+      <UiCategory value="Appearance" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="CardItemsClassNumber" />
+      <Bindable value="True" />
+      <Type value="integer" />
+      <UiDescription value="Explicitly sets number of items used for css class  name card-items-[number of items] to container element. Css class is used to set proportional percentual width of option cards. If not set, number of child option cards is used by default." />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

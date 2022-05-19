@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="MenuItem" />
+  <Generator value="&lt;MenuItem&gt;" />
+  <Type value="Component" />
+  <UiCategory value="(hidden)" />
+  <Events>
+    <EventManifest>
+      <Name value="OnClick" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="SubMenuCollection" />
+      <IsRequired value="True" />
+      <Type value="collection-SubMenuItem" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="Caption" />
+      <Bindable value="True" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="Visible" />
+      <Bindable value="True" />
+      <Default value="true" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="Enabled" />
+      <Bindable value="True" />
+      <Default value="true" />
+      <Type value="bool" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

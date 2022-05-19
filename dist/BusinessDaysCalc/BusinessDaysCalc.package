@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="BusinessDaysCalc.9dcbd50fd89e4ee3926d17a07c714b1e" />
+  <Version value="1.0.1" />
+  <Items>
+    <PackageItem Src="BusinessDaysCalc.apiObjectManifest" />
+    <ResourceItem ResourceName="businessDaysCalc.js" Action="None" OutputFileName="businessDaysCalc.js" Src="businessDaysCalc.js" />
+  </Items>
+</Package>

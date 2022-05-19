@@ -1,0 +1,370 @@
+.sffw-listgrid-paging {
+    margin-top: 1em;
+}
+.sffw-listgrid-paging-top {
+    margin-bottom: 1em;
+}
+.sffw-listgrid-paging-button {
+    margin: 0 0.25em;
+
+    font-family: "Segoe UI Light", "Open Sans", "Helvetica Neue Light", "HelveticaNeue-Light", sans-serif;
+    outline: medium none;
+    background-color: #5f7599;
+    color: white;
+    border: 0px solid transparent;
+    -webkit-border-radius: 0px;
+            border-radius: 0px;
+    padding: 4px 12px;
+    vertical-align: middle;
+    text-align: center;
+}
+.sffw-listgrid-paging-button:focus {
+    background-color: #134271;
+}
+.sffw-listgrid-paging-button:active {
+    background-color: #1d1d1d;
+}
+.sffw-listgrid-paging-button:disabled, .sffw-listgrid-paging-button[aria-disabled=true] {
+    background-color: #F2F2F2;
+    color: black;
+    cursor: not-allowed;
+}
+.sffw-listgrid-display-inline {
+    display: inline-block;
+}
+.sffw-listgrid-paging-button[aria-disabled=true]:active {
+    background-color: #F2F2F2;
+}
+.sffw-listgrid-paging-button[aria-disabled=true]:focus {
+    color: white;
+    background-color: #a9a9a9;
+}
+.sffw-listgrid-paging-pageinput, .sffw-listgrid-paging-pagemax {
+    margin: 0 1em;
+    width: 4em;
+}
+.sffw-listgrid-paging-pageinput {
+    text-align: right;
+    width: 4em;
+    vertical-align: middle;
+}
+.sffw-listgrid-paging-spin {
+    width: 2em;
+    text-align: center;
+    display: inline-block;
+}
+.sffw-listgrid-ordering-glyph {
+    margin: 0 0.25em;
+}
+.sffw-listgrid-clear-glyph {
+    margin: 0 0.25em;
+    vertical-align: middle;
+}
+.sffw-listgrid-clear-glyph > button {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 1em;
+    background: transparent;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.sffw-listgrid-clear-glyph > button[aria-disabled="true"] {
+    color: lightgray;
+    cursor: not-allowed;
+}
+.sffw-listgrid-clear-glyph > button > i {
+    vertical-align: top;
+}
+.sffw-listgrid table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.sffw-listgrid td, .sffw-listgrid th[role="rowheader"] {
+    padding: 0;
+    height: 1.5em;
+}
+.sffw-listgrid td > a, .sffw-listgrid th[role="rowheader"] > a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    text-decoration: none;
+    color: initial;
+}
+/* hack for Mozilla FF to fill full height of td with a */
+@-moz-document url-prefix() {
+    .sffw-listgrid td, .sffw-listgrid th[role="rowheader"] {
+        height: 100%;
+    }
+    .sffw-listgrid td > a, .sffw-listgrid th[role="rowheader"] > a {
+        display: inline-table;
+        line-height: 2.5em;
+        margin-left: 0.25em;
+    }
+}
+.sffw-listgrid th, .filter-row td {
+    cursor: pointer;
+    text-align: left;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    padding-bottom: 0.5em;
+    vertical-align: bottom;
+}
+.sffw-listgrid th[role="rowheader"] {
+    font-weight: normal;
+}
+.sffw-listgrid th[role="columnheader"] button {
+    border: 0;
+    background-color: transparent;
+    width: 100%;
+    font-weight: bold;
+    display: inline-block;
+    height: 100%;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+}
+.sffw-listgrid th[role="columnheader"] button:after {
+    display: inline-block;
+    margin: 0 0.25em;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--fontAwesomeFontName, FontAwesome);
+    font-weight: calc(400 + var(--isFontAwesome5, 0)*500);
+}
+/* icon for column with no sort */
+/*.sffw-listgrid th[aria-sort=none] button:after {
+    content: "\f0dc";
+}*/
+.sffw-listgrid th[aria-sort=ascending] button:after {
+    content: "\f15d";
+}
+.sffw-listgrid th[aria-sort=descending] button:after {
+    content: "\f15e";
+}
+.sffw-listgrid tbody tr.data-row {
+    cursor: pointer;
+}
+.sffw-listgrid tbody tr.data-row:nth-child(even) {
+    background-color: #EEE;
+}
+.sffw-listgrid tbody tr.data-row:hover {
+	background-color: lightyellow;
+}
+.sffw-listgrid tbody tr.data-row.sffw-listgrid-selected-row {
+    background-color: gold;
+}
+.sffw-listgrid tbody tr.data-row.sffw-listgrid-marked-row {
+    background-color: salmon;
+}
+.sffw-listgrid .noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.sffw-listgrid-filter-wrap {
+    display: table;
+    width: 100%;
+}
+
+.sffw-listgrid-filter-wrap > div {
+    display: table-cell;
+}
+
+.sffw-listgrid-filter-wrap .sffw-listgrid-filter-wrap-value {
+    width: 100%;
+}
+
+.sffw-listgrid-filter-wrap-value {
+   position: relative;
+}
+
+.sffw-listgrid-filter-wrap .sffw-listgrid-clear-glyph {
+    min-width: 1em;
+}
+
+.sffw-listgrid-filter {
+    width: 100%;
+    border: 1px solid silver;
+    padding: 0.25em;
+    height: 2em;
+}
+
+.sffw-listgrid-filter-wrap-value .range-filter {
+    width: 46%;
+    display: inline-block;
+}
+
+.sffw-listgrid-filter-wrap-value .float-left {
+    float: left;
+}
+
+.sffw-listgrid-filter-wrap-value .float-right {
+    float: right;
+}
+
+.sffw-listgrid-filter-active {
+    background-color: gold;
+}
+.sffw-listgrid-sort-active {
+    font-weight: bolder;
+}
+.sffw-listgrid-error, .sffw-listgrid-paging-spin-error {
+    color: red;
+}
+
+.sffw-listgrid-dd-filter {
+    padding: 0;
+    border: none;
+    min-height: 2em;
+    width: 100%;
+    float: left;
+}
+
+.sffw-listgrid-buttons button {
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.sffw-listgrid-buttons button:disabled, .sffw-listgrid-buttons button[aria-disabled=true] {
+    cursor: not-allowed;
+}
+
+.sffw-listgrid-buttons button[aria-disabled=true] {
+    background-color: #F2F2F2;
+    color: #b7b4b4;
+}
+
+.sffw-listgrid-buttons button[aria-disabled=true]:active {
+    background-color: #F2F2F2;
+}
+
+.sffw-listgrid-buttons button[aria-disabled=true]:focus {
+    color: white;
+    background-color: #a9a9a9;
+}
+
+.sffw-listgrid-buttons a {
+    border: none;
+    display: inline-block;
+}
+
+.enum-th {
+    width: 16em;
+}
+
+.sffw-listgrid-view-settings-button, .sffw-listgrid-clear-button {
+    float: right;
+}
+
+.icon-crossed-out {
+    position: relative;
+}
+
+.icon-crossed-out:after {
+    position: absolute;
+    top:-0.3em;
+    left:0.05em;
+    content: '|';
+    color: white;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+}
+
+.sffw-listgrid-dd {
+    display: none;
+    list-style: none;
+    border: 1px silver solid;
+    margin-top: 24px;
+    padding: 0;
+    font-size: 1em;
+    position: absolute;
+    background-color: white;
+    overflow: auto;
+    border: 1px solid #999;
+}
+
+.sffw-listgrid-dd li {
+    font-weight: bold;
+    padding: 0.5em;
+    position: relative;
+    white-space: nowrap;
+}
+
+.sffw-listgrid-dd li.activedescendant {
+    background-color: #ddd;
+}
+
+.sffw-listgrid-dd li span {
+    vertical-align: text-bottom;
+}
+
+.sffw-listgrid-dd li input[type="checkbox"] {
+    margin-left: 0.2em;
+    margin-right: 1em;
+}
+
+.sffw-listgrid-filter-wrap-value .flatpickr {
+    position: relative;
+    vertical-align: bottom;
+}
+
+.sffw-listgrid-filter-wrap-value .flatpickr input.flatpickr-input[data-input] {
+    width: 80%;
+}
+
+.sffw-listgrid-filter-wrap-value .flatpickr .datepicker-input-button {
+    width: 20%;
+    height: 2em;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+
+.sffw-listgrid-filter-wrap-value .sffw-listgrid-filter-active + .datepicker-input-button {
+    background-color: gold;
+}
+
+.sffw-listgrid-filter-wrap-value .flatpickr .datepicker-input-button > button  {
+    border: 1px solid silver;
+    border-left: 0;
+    padding: 0;
+    padding-bottom: 1px;
+    width: 100%;
+    height: 100%;
+    line-height: 1;
+    background: transparent;
+    cursor: pointer;
+}
+
+.sffw-listgrid-filter-wrap-value .flatpickr .datepicker-input-button > button:hover {
+    background-color: #eeeff2;
+}
+
+.sffw-listgrid-filter-wrap-value .flatpickr .datepicker-input-button > button > span {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17"><path d="M14 2V1h-3v1H6V1H3v1H0v15h17V2h-3zM12 2h1v2h-1V2zM4 2h1v2H4V2zM16 16H1v-8.921h15V16zM1 6.079v-3.079h2v2h3V3h5v2h3V3h2v3.079H1z" fill="rgb(0, 0, 0)" /></svg>');
+}
+
+.sffw-listgrid-filter-wrap-value .flatpickr .flatpickr-input.flatpickr-mobile + .datepicker-input-button {
+    display: none;
+}

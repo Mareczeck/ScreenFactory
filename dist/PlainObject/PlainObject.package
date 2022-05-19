@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="PlainObject.2933617ce1714fe38ef01785a5a6492f" />
+  <Version value="2.6.0" />
+  <Items>
+    <PackageItem Src="PlainObject.apiObjectManifest" />
+    <ResourceItem ResourceName="plainObject.js" Action="None" OutputFileName="plainObject.js" Src="plainObject.js" />
+    <PackageItem Src="CodelistCleanupResult.apiObjectManifest" />
+  </Items>
+</Package>

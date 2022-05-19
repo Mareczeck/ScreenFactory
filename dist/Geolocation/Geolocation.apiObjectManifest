@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="Geolocation" />
+  <Generator value="geolocation.js" />
+  <Methods>
+    <MethodManifest>
+      <Name value="getCurrentPositionAsync" />
+      <ReturnType>
+        <ObjectType reference="+Components.GeoResult" />
+      </ReturnType>
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="enableHighAccuracy" />
+      <Default value="true" />
+      <IsRequired value="True" />
+      <Type value="bool" />
+      <UiDescription value="Indicates the application would like to receive the best possible results. See https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="timeout" />
+      <Type value="integer" />
+      <UiDescription value="Value representing the maximum length of time (in milliseconds) the device is allowed to take in order to return a position. See https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="maximumAge" />
+      <Default value="0" />
+      <Type value="integer" />
+      <UiDescription value="Value indicating the maximum age in milliseconds of a possible cached position that is acceptable to return. See https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions." />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

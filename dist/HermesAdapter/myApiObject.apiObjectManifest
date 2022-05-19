@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.301"?>
+<ApiObjectManifest>
+  <Name value="myApiObject" />
+  <Events>
+    <EventManifest>
+      <Name value="onAppTitleClick" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+</ApiObjectManifest>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="AttachmentUpload.284f714f2c0c4a4b8dfacca37052a11b" />
+  <Description value="Support for UTU DM attachments upload" />
+  <Version value="1.7.0" />
+  <Items>
+    <PackageItem Src="AttachmentUploaderViewer.componentManifest" />
+    <ResourceItem ResourceName="attachmentUpload.js" LinkerAction="Script" OutputFileName="attachmentUpload.js" Src="attachmentUpload.js" />
+    <ResourceItem ResourceName="attachmentUpload.css" LinkerAction="Css" OutputFileName="attachmentUpload.css" Src="attachmentUpload.css" />
+    <PackageItem Src="localizations.packageLocalizations" />
+    <PackageItem Src="NewAttachmentStatus.metaType" />
+  </Items>
+</Package>

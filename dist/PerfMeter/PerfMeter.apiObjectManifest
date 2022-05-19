@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="PerfMeter" />
+  <Generator value="PerfMeter.js" />
+  <Methods>
+    <MethodManifest>
+      <Name value="timelineLabel" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="name" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="time" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="name" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="timeEnd" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <BaseType value="String" />
+          <Name value="name" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+</ApiObjectManifest>

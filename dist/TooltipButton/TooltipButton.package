@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="TooltipButton.ddb64055385f4e46922b69d871374710" />
+  <Version value="1.1.1" />
+  <Items>
+    <PackageItem Src="TooltipButton.componentManifest" />
+    <ResourceItem ResourceName="tooltipButton.js" LinkerAction="Script" OutputFileName="tooltipButton.js" Src="tooltipButton.js" />
+    <ResourceItem ResourceName="tooltipButton.css" LinkerAction="Css" OutputFileName="tooltipButton.css" Src="tooltipButton.css" />
+  </Items>
+</Package>

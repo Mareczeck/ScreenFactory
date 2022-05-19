@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="UserInactivityTimer" />
+  <Generator value="userInactivityTimer.js" />
+  <Events>
+    <EventManifest>
+      <Name value="OnTimeoutExpired" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Methods>
+    <MethodManifest>
+      <Name value="enable" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="timerLengthInMinutes" />
+          <BaseType value="Integer" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="disable" />
+      <ReturnType />
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="debugMode" />
+      <Default value="false" />
+      <Type value="bool" />
+      <UiDescription value="If debugMode is active, the api object logs to the console every time it resets the timer. It should not be on in the production environment." />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

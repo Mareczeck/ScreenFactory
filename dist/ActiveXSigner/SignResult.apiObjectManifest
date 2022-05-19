@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="SignResult" />
+  <CanBeFormLocal value="False" />
+  <CanBeGlobal value="False" />
+  <Generator value="*" />
+  <IsInstantiable value="False" />
+  <Methods>
+    <MethodManifest>
+      <Name value="getSignedXml" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="wasSigningSuccessful" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="wasActiveXFound" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="wasCertificateSelected" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getOtherErrorMessage" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+  </Methods>
+</ApiObjectManifest>

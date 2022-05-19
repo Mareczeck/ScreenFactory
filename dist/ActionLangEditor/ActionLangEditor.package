@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="ActionLangEditor.7d8f3ea4b0454679ac3461ace2edf073" />
+  <Version value="2.2.4" />
+  <Items>
+    <PackageItem Src="ActionLangEditor.componentManifest" />
+    <ResourceItem ResourceName="actionLangEditor.js" LinkerAction="Script" OutputFileName="actionLangEditor.js" Src="actionLangEditor.js" />
+    <ResourceItem ResourceName="actionLangEditor.css" LinkerAction="Css" OutputFileName="actionLangEditor.css" Src="actionLangEditor.css" />
+    <ResourceItem ResourceName="actionLangEditor.png" Action="None" OutputFileName="actionLangEditor.png" Src="actionLangEditor.png" />
+  </Items>
+</Package>

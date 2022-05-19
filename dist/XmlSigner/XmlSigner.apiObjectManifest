@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="XmlSigner" />
+  <Generator value="xmlSigner.js" />
+  <Methods>
+    <MethodManifest>
+      <Name value="signXmlAsync" />
+      <ReturnType>
+        <ObjectType reference="+Components.XmlSignResult" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="xml" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="isRunningAsync" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getVersionAsync" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+  </Methods>
+</ApiObjectManifest>

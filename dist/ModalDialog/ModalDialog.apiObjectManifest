@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="ModalDialog" />
+  <Generator value="modalDialog.js" />
+  <Contracts>
+    <ImplementsContractManifest>
+      <Name value="IModalDialog" />
+    </ImplementsContractManifest>
+  </Contracts>
+  <Methods>
+    <MethodManifest>
+      <Name value="showAlertAsync" />
+      <Description value="Displays custom modal prompt with functionality similar to javascript alert." />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="message" />
+          <BaseType value="String" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <Name value="title" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="showConfirmAsync" />
+      <Description value="Displays custom modal prompt with functionality similar to javascript confirm." />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="message" />
+          <BaseType value="String" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <Name value="title" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+</ApiObjectManifest>

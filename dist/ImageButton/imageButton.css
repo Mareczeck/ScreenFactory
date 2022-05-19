@@ -1,0 +1,31 @@
+sffw-imagebutton > button {
+    width: 100%;
+}
+
+.m8-imagebutton > button {
+    font-family: "Segoe UI Light", "Open Sans", "Helvetica Neue Light", "HelveticaNeue-Light", sans-serif;
+    outline: medium none;
+    background-color: #4390df;
+    color: white;
+    border: 0px solid transparent;
+    border-radius: 0px;
+    padding: 4px 12px;
+    vertical-align: middle;
+    text-align: center;
+    height: 100%;
+}
+.m8-imagebutton > button:focus {
+    background-color: #1b5da1;
+}
+.m8-imagebutton > button:active {
+    background-color: #1d1d1d;
+}
+.m8-imagebutton > button:disabled, .m8-imagebutton > button[aria-disabled=true] {
+    background-color: #F2F2F2;
+    color: black;
+    cursor: not-allowed;
+}
+.m8-imagebutton > button[aria-disabled=true]:focus {
+    color: #ffffff;
+    background-color: #a9a9a9;
+}

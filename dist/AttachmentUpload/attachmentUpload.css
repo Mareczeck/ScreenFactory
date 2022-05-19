@@ -1,0 +1,164 @@
+.sffw-attachment-upload .upload-box {
+    background-color: #eeeff2;
+    border: 2px dashed #bfcadb;
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: background 150ms ease-in-out;
+}
+
+.sffw-attachment-upload .upload-box:hover, .sffw-attachment-upload .upload-box.highlight {
+    background-color: #ffffff;
+}
+
+.sffw-attachment-upload .upload-box .upload-box-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.sffw-attachment-upload .upload-box button {
+    margin: 0 auto 20px;
+}
+
+.sffw-attachment-upload .upload-box p {
+    color: #00205b;
+}
+
+.sffw-attachment-upload .upload-box p:last-child {
+    margin: 0;
+}
+
+.sffw-attachment-upload .btn {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: top;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 2px solid transparent;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 8px 20px;
+    font-size: 14px;
+    line-height: 1.44;
+    border-radius: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.sffw-attachment-upload .btn:hover {
+    border-color: #19366b;
+    -webkit-box-shadow: 0 0 10px 2px #00205b !important;
+    box-shadow: 0 0 10px 2px #00205b !important;
+    outline-offset: -2px;
+}
+
+.sffw-attachment-upload .btn:focus {
+    border-color: #19366b;
+    -webkit-box-shadow: 0 0 10px 2px #00205b !important;
+    box-shadow: 0 0 10px 2px #00205b !important;
+    outline-offset: -2px;
+}
+
+.sffw-attachment-upload .btn.btn-default {
+    color: #00205b;
+    background-color: #fff;
+    border-color: #00205b;
+    margin-bottom: 0;
+}
+
+.sffw-attachment-upload .btn.btn-default:focus {
+    color: #334d7c;
+    background-color: #eeeff2;
+}
+
+.sffw-attachment-upload .btn.btn-default:hover {
+    color: #334d7c;
+    background-color: #eeeff2;
+}
+
+.sffw-attachment-upload .btn.btn-primary {
+    color: #fff;
+    background-color: #00205b;
+    border-color: #00205b;
+}
+
+.sffw-attachment-upload .btn.btn-primary:focus {
+    color: #fff;
+    background-color: #334d7c;
+}
+
+.sffw-attachment-upload .btn.btn-primary:hover {
+    color: #fff;
+    background-color: #334d7c;
+}
+
+.sffw-attachment-upload .btn[disabled], .sffw-attachment-upload .btn[aria-disabled=true], .sffw-attachment-upload .btn[disabled]:hover, .sffw-attachment-upload .btn[aria-disabled=true]:hover, .sffw-attachment-upload .btn[disabled]:focus, .sffw-attachment-upload .btn[aria-disabled=true]:focus {
+    cursor: not-allowed;
+    background-color: #eeeeee !important;
+    border-color: #dddddd !important;
+    color: #6c6c6c !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn-hidden {
+    display: none;
+}
+
+.files-table {
+    width: 100%;
+}
+
+.files-table tr {
+    vertical-align: top;
+}
+
+.files-table input, .files-table select {
+    width: 100%;
+}
+
+.files-table.new-attachments-table th {
+    width: 25%;
+}
+
+.files-table.uploaded-attachments-table th {
+    width: 32%;
+}
+
+.files-table.uploaded-attachments-table th.col-updown {
+    width: 4%;
+    overflow: hidden;
+}
+
+.sffw-attachment-upload .buttons {
+    text-align: right;
+}
+
+.sffw-attachment-upload .errorText {
+    color: red;
+    font-size: 80%;
+    position: unset;
+    margin-top: 0px;
+}
+
+.sffw-attachment-upload .col-buttons-updown {
+    padding-right: 1em;
+}
+
+.sffw-attachment-upload .col-buttons-updown > button {
+    display: block;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 1em;
+    background: transparent;
+    cursor: pointer;
+}

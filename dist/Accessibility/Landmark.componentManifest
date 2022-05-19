@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="Landmark" />
+  <Generator value="&lt;sffw-landmark&gt;" />
+  <Type value="ContentObject" />
+  <UiCaption value="Landmark" />
+  <UiCategory value="SFFW" />
+  <UiDescription value="HTML5 element that will act as a container." />
+  <Properties>
+    <PropertyManifest>
+      <Name value="isVisible" />
+      <Bindable value="True" />
+      <Default value="true" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="tagName" />
+      <Default value="nav" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiDescription value="*nav* - use to wrap group of navigation elements (buttons, links), f.e. for button bar&#xD;&#xA;*main* - use as container for main content of the form" />
+      <UiEditor value="list/nav|main" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="ariaLabel" />
+      <Bindable value="OneWay" />
+      <UiCategory value="Accessibility" />
+      <UiDescription value="Accessible text for screen readers to describe function of component" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

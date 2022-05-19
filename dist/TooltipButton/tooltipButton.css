@@ -1,0 +1,105 @@
+.sffw-tooltip-button-wrapper {
+    display: inline-block;
+}
+
+.sffw-tooltip-button-wrapper .tooltip-button {
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow: none;
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+    vertical-align: top;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.44;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.sffw-tooltip-button-wrapper .tooltip-button:focus {
+    box-shadow: 0 0 10px 2px #00205b !important;
+}
+
+.sffw-tooltip-button-wrapper .tooltip-button .icon {
+    font-size: 120%;
+}
+
+.sffw-tooltip-button-wrapper .tooltip-button .icon {
+    position: relative;
+    top: 2px;
+}
+
+.sffw-tooltip-button-wrapper .tooltip-popover {
+    margin-top: -10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1060;
+    display: none;
+    max-width: 600px;
+    width: unset;
+    padding: 1px;
+    font-family: Open Sans, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-break: auto;
+    line-height: 1.44;
+    text-align: left;
+    text-align: start;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    white-space: normal;
+    word-break: normal;
+    word-spacing: normal;
+    word-wrap: normal;
+    font-size: 14px;
+    color: #333;
+    background-color: #e5e8ee;
+    background-clip: padding-box;
+    border: 1px solid #b2bccd;
+    border: 1px solid #b2bccd;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    inline-size: max-content;
+}
+
+.sffw-tooltip-button-wrapper .tooltip-popover .popover-content {
+    padding: 9px 14px;
+}
+
+.sffw-tooltip-button-wrapper .tooltip-popover > .popover-arrow,
+.sffw-tooltip-button-wrapper .tooltip-popover > .popover-arrow:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.sffw-tooltip-button-wrapper .tooltip-popover > .popover-arrow {
+    left: 50%;
+    margin-left: -11px;
+    border-top-color: #b2bccd;
+    bottom: -11px;
+    border-width: 11px;
+    border-bottom-width: 0;
+}
+
+.sffw-tooltip-button-wrapper .tooltip-popover > .popover-arrow:after {
+    content: " ";
+    bottom: 1px;
+    margin-left: -10px;
+    border-top-color: #e5e8ee;
+    border-width: 10px;
+    border-bottom-width: 0;
+}

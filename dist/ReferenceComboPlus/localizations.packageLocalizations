@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="favourites">
+      <Values>
+        <LocaleValue Lang="en" Value="Favourites" />
+        <LocaleValue Lang="cs" Value="Oblíbené" />
+        <LocaleValue Lang="fi" Value="Suosikit" />
+        <LocaleValue Lang="sv" Value="Favoriter" />
+        <LocaleValue Lang="sr" Value="Favorite" />
+        <LocaleValue Lang="me" Value="Favorite" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="other">
+      <Values>
+        <LocaleValue Lang="en" Value="Other" />
+        <LocaleValue Lang="cs" Value="Ostatní" />
+        <LocaleValue Lang="fi" Value="Toinen" />
+        <LocaleValue Lang="sv" Value="Annan" />
+        <LocaleValue Lang="sr" Value="Drugo" />
+        <LocaleValue Lang="me" Value="Drugo" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

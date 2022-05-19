@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="ComplexEditor.695d8e1b81814a2eb1dc07874e2089f9" />
+  <Version value="1.0.0" />
+  <Items>
+    <PackageItem Src="ComplexEditor.componentManifest" />
+    <ResourceItem ResourceName="complexEditor.js" LinkerAction="Script" OutputFileName="complexEditor.js" Src="complexEditor.js" />
+    <ResourceItem ResourceName="complexEditor.css" LinkerAction="Css" OutputFileName="complexEditor.css" Src="complexEditor.css" />
+  </Items>
+</Package>

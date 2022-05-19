@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="payTrailForm" />
+  <Generator value="&lt;sffw-paytrail-form&gt;" />
+  <Type value="Control" />
+  <UiCaption value="PayTrail Form (FIN)" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="payTrailForm.png" />
+  <Events>
+    <EventManifest>
+      <Name value="OnSubmit" />
+      <UiDescription value="Action that is executed before PayTrail form is submitted. If handler action returns false, submit is canceled." />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="postUrl" />
+      <Bindable value="OneWay" />
+      <Default value="https://payment.paytrail.com/e2" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="buttonCaption" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+      <UiDescription value="Caption of form POST button. If you want to use own button to submit the form and hide builtin button, simply do not set the button caption." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="MERCHANT_ID" />
+      <Bindable value="OneWay" />
+      <IsRequired value="True" />
+      <Type value="integer" />
+      <UiCategory value="Payment required fields" />
+      <UiDescription value="Merchant ID is the merchant identification number given by Paytrail." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="URL_SUCCESS" />
+      <Bindable value="Always" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Payment required fields" />
+      <UiDescription value="URL where customer is redirected after successful payment." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="URL_CANCEL" />
+      <Bindable value="Always" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Payment required fields" />
+      <UiDescription value="URL where customer is redirected after failed or cancelled payment." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="ORDER_NUMBER" />
+      <Bindable value="Always" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Payment required fields" />
+      <UiDescription value="Order number is used to identify one transaction." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="PARAMS_IN" />
+      <Bindable value="OneWay" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Payment required fields" />
+      <UiDescription value="Comma separated list of fields used in AUTHCODE calculation." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="PARAMS_OUT" />
+      <Bindable value="OneWay" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Payment required fields" />
+      <UiDescription value="Comma separated list of fields used in return AUTHCODE calculation." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="AMOUNT" />
+      <Bindable value="Always" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Payment required fields" />
+      <UiDescription value="Price is given in euros and cents. Price is given without currency type and decimals are separated with a dot. Price must contain two decimals. Minimum price accepted by the service is 0.65€." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="AUTHCODE" />
+      <Bindable value="Always" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Payment required fields" />
+      <UiDescription value="AUTHCODE" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="MSG_UI_MERCHANT_PANEL" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+      <UiCategory value="Payment optional fields" />
+      <UiDescription value="Message shown in Merchant's Panel." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="URL_NOTIFY" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+      <UiCategory value="Payment optional fields" />
+      <UiDescription value="URL to be called when the payment has been marked as paid. This URL is called with parameters defined in PARAMS_OUT_NOTIFY (Not yet available) when the payment is marked as paid." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="LOCALE" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+      <UiCategory value="Payment optional fields" />
+      <UiDescription value="The default language of payment method selection page. The default locale is 'fi_FI'." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="REFERENCE_NUMBER" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+      <UiCategory value="Payment optional fields" />
+      <UiDescription value="Reference number to be delivered to payment method provider's service." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="PAYER_PERSON_PHONE" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+      <UiCategory value="Payment optional fields" />
+      <UiDescription value="Payer's telephone number." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="PAYER_PERSON_EMAIL" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+      <UiCategory value="Payment optional fields" />
+      <UiDescription value="Payer's email." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="PAYER_PERSON_FIRSTNAME" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+      <UiCategory value="Payment optional fields" />
+      <UiDescription value="Payer's first name." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="PAYER_PERSON_LASTNAME" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+      <UiCategory value="Payment optional fields" />
+      <UiDescription value="Payer's last name." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="PAYER_COMPANY_NAME" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+      <UiCategory value="Payment optional fields" />
+      <UiDescription value="Payer's company." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="PAYER_PERSON_ADDR_STREET" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+      <UiCategory value="Payment optional fields" />
+      <UiDescription value="Payer's street address." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="PAYER_PERSON_ADDR_POSTAL_CODE" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+      <UiCategory value="Payment optional fields" />
+      <UiDescription value="Payer's postal code." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="PAYER_PERSON_ADDR_TOWN" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+      <UiCategory value="Payment optional fields" />
+      <UiDescription value="Payer's town." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="PAYER_PERSON_ADDR_COUNTRY" />
+      <Bindable value="OneWay" />
+      <Type value="string" />
+      <UiCategory value="Payment optional fields" />
+      <UiDescription value="Payer's country (ISO_3166-2)." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="encodeURLs" />
+      <Bindable value="OneWay" />
+      <Type value="bool" />
+      <UiCaption value="Encode URLs" />
+      <UiDescription value="If True, all URL_ properties (URL_SUCCESS, URL_CANCEL, URL_NOTIFY) will be encoded with encodeURI function, otherwise not." />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

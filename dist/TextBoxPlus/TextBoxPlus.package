@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="TextBoxPlus.f021f91b4dcd481f9313ce94bc0b8a18" />
+  <Version value="1.0.1" />
+  <Items>
+    <PackageItem Src="TextBoxPlus.componentManifest" />
+    <ResourceItem ResourceName="textBoxPlusGenerator.js" Action="None" OutputFileName="textBoxPlusGenerator.js" Src="textBoxPlusGenerator.js" />
+    <ResourceItem ResourceName="textBoxPlus.js" LinkerAction="Script" OutputFileName="textBoxPlus.js" Src="textBoxPlus.js" />
+    <ResourceItem ResourceName="textBoxPlus.css" LinkerAction="Css" OutputFileName="textBoxPlus.css" Src="textBoxPlus.css" />
+    <ResourceItem ResourceName="TextBoxPlus.png" Action="None" OutputFileName="TextBoxPlus.png" Src="TextBoxPlus.png" />
+  </Items>
+</Package>

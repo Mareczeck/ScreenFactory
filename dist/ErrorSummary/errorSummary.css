@@ -1,0 +1,25 @@
+.sffw-error-summary table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+
+.sffw-error-summary thead {
+    background-color: #00205b;
+    border: 1px solid #00205b;
+}
+
+.sffw-error-summary th {
+    color: #fff;
+    font-weight: bold;
+    padding: 4px 10px;
+    font-size: 1em;
+}
+
+.sffw-error-summary tbody tr:nth-child(4n-2), sffw-error-summary tbody tr:nth-child(4n-3) {
+    background: lightgrey;
+}
+
+.sffw-error-summary td {
+    padding: 4px 10px;
+}

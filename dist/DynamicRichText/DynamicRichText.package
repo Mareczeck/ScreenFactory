@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="DynamicRichText.ff7145862ecd4333a9c352d2fe76f295" />
+  <Version value="1.1.0" />
+  <Items>
+    <PackageItem Src="DynamicRichText.componentManifest" />
+    <ResourceItem ResourceName="dynamicRichText.js" LinkerAction="Script" OutputFileName="dynamicRichText.js" Src="dynamicRichText.js" />
+  </Items>
+</Package>

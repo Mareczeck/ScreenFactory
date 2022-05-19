@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="DynamicRichText" />
+  <Generator value="&lt;sffw-dynamic-richtext&gt;" />
+  <Type value="VisualControl" />
+  <UiCategory value="SFFW" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="Codelist" />
+      <IsRequired value="True" />
+      <Type value="ApiObject" />
+      <UiDescription value="Reference list with HTML fragments" />
+      <UiEditor value="contract/IReferenceList" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="CodelistKey" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiDescription value="Key of &quot;Codelist&quot; item to be bound to component" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="ActiveMode" />
+      <Default value="false" />
+      <Type value="bool" />
+      <UiDescription value="If &quot;Codelist&quot; will be loaded on client, let &quot;ActiveMode&quot; be False. Component will detect when &quot;Codelist&quot; is reloaded and update its content.&#xD;&#xA;If &quot;Codelist&quot; will not be loaded on client, set &quot;ActiveMode&quot; to True and component will automatically make a request to &quot;Codelist&quot; and update itself when language is changed.&#xD;&#xA;" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

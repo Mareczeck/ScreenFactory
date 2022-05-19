@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="AppMenu" />
+  <Generator value="appMenuGenerator.js" />
+  <Type value="Control" />
+  <UiCaption value="Application menu" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="appMenu.png" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="MenuItems" />
+      <IsRequired value="True" />
+      <Type value="collection-MenuItem" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="Visible" />
+      <Bindable value="True" />
+      <Default value="true" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IconClass" />
+      <Type value="string" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

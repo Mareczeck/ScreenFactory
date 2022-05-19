@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="NavigationObserver" />
+  <CanBeFormLocal value="False" />
+  <Generator value="navigationObserver.js" />
+  <Contracts>
+    <ImplementsContractManifest>
+      <Name value="INavigationObserverApi" />
+    </ImplementsContractManifest>
+  </Contracts>
+  <Events>
+    <EventManifest>
+      <Name value="OnAfterFormActivate" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="formId" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+</ApiObjectManifest>

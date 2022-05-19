@@ -1,0 +1,207 @@
+sffw-optioncard-simple, sffw-optioncard-content {
+    display: block !important;
+    height: 100%;
+}
+
+.sffw-card-container {
+    display: inline-flex;
+    margin: 2em;
+    width: calc(100% - 4em);
+    /*max-width: 100em;*/
+    padding: 0;
+}
+
+.sffw-card-container > .panel {
+    margin: 0 0.5em 0 0.5em;
+}
+
+.sffw-card-container .panel-table > .panel-row > .panel-cell {
+    height: 100%;
+}
+
+.sffw-card-container.card-group > .panel {
+    width: 100%;
+}
+
+.sffw-card-container.card-group > .component > .panel-table {
+    display: inline-grid;
+}
+
+.sffw-card-container.card-group > .component > .panel-table > .panel-row {
+    display: unset;
+}
+
+.sffw-card-container.card-group > .component > .panel-table > .panel-row > .panel-cell {
+    display: inline-block;
+}
+
+/* width for different numbers of options */
+.sffw-card-container.card-repeater.card-items-2 > *,
+.sffw-card-container.card-group.card-items-2 > .component > .panel-table > .panel-row > .panel-cell {
+    width: 50%;
+}
+
+.sffw-card-container.card-repeater.card-items-3 > *,
+.sffw-card-container.card-group.card-items-3 > .component > .panel-table > .panel-row > .panel-cell {
+    width: 33.3333%;
+}
+
+.sffw-card-container.card-repeater.card-items-4 > * ,
+.sffw-card-container.card-group.card-items-4 > .component > .panel-table > .panel-row > .panel-cell {
+    width: 25%;
+}
+
+.sffw-card-container.card-repeater.card-items-5 > *,
+.sffw-card-container.card-group.card-items-5 > .component > .panel-table > .panel-row > .panel-cell {
+
+    width: 20%;
+}
+
+.sffw-card-container.card-repeater.card-items-6 > *,
+.sffw-card-container.card-group.card-items-6 > .component > .panel-table > .panel-row > .panel-cell {
+
+    width: 16.6666%;
+}
+
+.sffw-card-container.card-repeater.card-items-7 > *,
+.sffw-card-container.card-group.card-items-7 > .component > .panel-table > .panel-row > .panel-cell {
+
+    width: 14.2857%;
+}
+
+.sffw-card-container.card-repeater.card-items-8 > *,
+.sffw-card-container.card-group.card-items-8 > .component > .panel-table > .panel-row > .panel-cell {
+
+    width: 12.5%;
+}
+
+.sffw-option-card {
+    background-color: #fff;
+    border-radius: 0.5em;
+    position: relative;
+    outline: 2px solid #00205b;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s ease-out;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.sffw-option-card:hover {
+    -webkit-box-shadow: 0 0 10px 2px #00205b;
+    box-shadow: 0 0 10px 2px #00205b;
+    outline-offset: -2px;
+}
+
+.sffw-option-card .option-card-body {
+    display: grid;
+}
+
+.sffw-option-card .option-card-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.sffw-option-card .option-card-heading {
+    display: block;
+    background-color:#e3e5e9;
+    padding: 1rem 0 0.5rem 0;
+    font-size: 2em;
+    height: 4em;
+}
+
+.sffw-option-card .option-card-heading .heading-text {
+    font-size: 1.5em;
+}
+
+.sffw-option-card .option-card-heading .heading-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sffw-option-card .option-card-heading .heading-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sffw-option-card .option-card-radio {
+    font-size: inherit;
+    margin: 0;
+    position: absolute;
+    right: calc(-1.5em + 2px);
+    top: calc(-1.5em + 2px);
+    appearance: none;
+    background: #fff;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 0;
+    outline: none;
+    transition:
+      background 0.2s ease-out,
+      border-color 0.2s ease-out;
+    width: 0;
+
+}
+
+.sffw-option-card .option-card-radio:checked {
+    border: 2px solid #e2ebf6;
+    height: 2.5em;
+    width: 2.5em;
+    background: #00205b;
+    border-color: #00205b;
+}
+
+.sffw-option-card .option-card-radio:checked:after {
+    color: #ffffff;
+    content: "\2713";
+    position: absolute;
+    top: 0.1em;
+    left: 0.3em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.sffw-option-card:hover .option-card-radio {
+    border-color:  #c4d1e1;
+}
+
+.sffw-option-card .option-card-radio:focus ~ .option-card-wrap {
+    -webkit-box-shadow: 0 0 10px 2px #00205b;
+    box-shadow: 0 0 10px 2px #00205b;
+    outline-offset: -2px;
+}
+
+.sffw-option-card .option-card-radio:disabled ~ .option-card-wrap {
+    color: #c4d1e1;
+    cursor: default;
+}
+
+.sffw-option-card .option-card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    overflow-wrap: anywhere;
+}
+
+.sffw-option-card .option-card-description {
+    padding: 0.5rem;
+}
+
+.sffw-option-card.option-checked {
+    outline: 4px solid #00205b;
+}
+
+.sffw-option-card .tooltip-button {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}

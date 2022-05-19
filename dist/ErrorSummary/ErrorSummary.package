@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="errorSummary.18906f81e9c84384b3ed7eec38b2ef24" />
+  <Version value="5.0.5" />
+  <Items>
+    <ResourceItem ResourceName="errorSummary.js" LinkerAction="Script" OutputFileName="errorSummary.js" Src="errorSummary.js" />
+    <PackageItem Src="ErrorSummary.componentManifest" />
+    <ResourceItem ResourceName="errorSummary.css" LinkerAction="Css" OutputFileName="errorSummary.css" Src="errorSummary.css" />
+    <PackageItem Src="localizations.packageLocalizations" />
+    <ResourceItem ResourceName="errorSummary.png" Action="None" OutputFileName="errorSummary.png" Src="errorSummary.png" />
+  </Items>
+</Package>

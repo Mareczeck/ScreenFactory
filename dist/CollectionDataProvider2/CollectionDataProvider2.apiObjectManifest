@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="CollectionDataProvider2" />
+  <Generator value="collectionDataProvider2.js" />
+  <Contracts>
+    <ImplementsContractManifest>
+      <Name value="IListCtrlDataProvider" />
+    </ImplementsContractManifest>
+  </Contracts>
+  <Methods>
+    <MethodManifest>
+      <Name value="setCollection" />
+      <Description value="Update collection source object" />
+      <OverloadName value="setCollection" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="dataSourceCollectionReference" />
+          <BaseType value="String" />
+          <UiDescription value="New collection reference" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="dataSourceCollectionReference" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

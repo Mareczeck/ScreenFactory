@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="SrMenuItem" />
+  <Generator value="&lt;srMenuItem&gt;" />
+  <Type value="Component" />
+  <UiCategory value="(hidden)" />
+  <Events>
+    <EventManifest>
+      <Name value="OnClick" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="Code" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="Caption" />
+      <Bindable value="True" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiDescription value="Menu item caption" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="AssistiveText" />
+      <Bindable value="True" />
+      <Type value="string" />
+      <UiDescription value="Menu item description / assistive text" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

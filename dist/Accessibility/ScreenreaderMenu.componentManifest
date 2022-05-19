@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="ScreenreaderMenu" />
+  <Generator value="srMenuGenerator.js" />
+  <Type value="VisualControl" />
+  <UiCaption value="Screenreader menu" />
+  <UiCategory value="SFFW" />
+  <UiDescription value="Specialized menu for screen readers and keyboard users.&#xD;&#xA;This offers a way for the user to jump (or skip) from content to content when using keyboard to interact with the application by using a hidden menu that is shown when focus is applied to buttons." />
+  <Properties>
+    <PropertyManifest>
+      <Name value="Caption" />
+      <Bindable value="True" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiDescription value="Main caption for menu, for example &quot;Accessibility links, header&quot; " />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="MenuItems" />
+      <IsRequired value="True" />
+      <Type value="collection-SrMenuItem" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="AccessibilitySettings" />
+      <Type value="ApiObject" />
+      <UiDescription value="If bound to global AccessibilitySettings api object, availability of ScreenreaderMenu, that can be set through AccessibilitySettings.disableScreenreaderMenu(), will be shared between all ScreenreaderMenu components bound to the same AccessibilitySettings." />
+      <UiEditor value="contract/IAccessibilitySettings" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="HermesAdapter" />
+  <Generator value="hermesAdapter.js" />
+  <Events>
+    <EventManifest>
+      <Name value="onAppTitleClick" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="onPortalTitleClick" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="onLoginClick" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="onLogoutClick" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="onProfileClick" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="onSettingsClick" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="onHelpClick" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Methods>
+    <MethodManifest>
+      <Name value="getAppTitleUrl" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getPortalTitleUrl" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getLoginUrl" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getLogoutUrl" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getProfileUrl" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getSettingsUrl" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getHelpUrl" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getLangUrl" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="lang" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+</ApiObjectManifest>

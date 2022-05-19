@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="ActionLangEditor" />
+  <Generator value="&lt;sffw-actionLang-editor&gt;" />
+  <GeneratorParams value="bindAtt" />
+  <Type value="Control" />
+  <UiCaption value="ActionLang editor" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="actionLangEditor.png" />
+  <Events>
+    <EventManifest>
+      <Name value="OnCommunicationError" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="code" />
+      <Bindable value="Always" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isValid" />
+      <Bindable value="Always" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="contextJson" />
+      <Bindable value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="server" />
+      <IsRequired value="True" />
+      <Type value="ApiObject" />
+      <UiEditor value="contract/IServerConnection" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="completionUrl" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="validationUrl" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

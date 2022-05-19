@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="ActiveXSigner" />
+  <Generator value="ActiveXSigner.js" />
+  <Methods>
+    <MethodManifest>
+      <Name value="signXml" />
+      <ReturnType>
+        <ObjectType reference="+Components.SignResult" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="xml" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="algorithm" />
+      <Default value="sha256" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiEditor value="list/sha1|sha2|sha256|sha384|sha512" />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

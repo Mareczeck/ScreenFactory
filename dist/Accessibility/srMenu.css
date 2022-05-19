@@ -1,0 +1,68 @@
+sffw-srmenu .accessibility-links-container {
+    position: relative;
+    float: left;
+    z-index: 9999;
+}
+
+sffw-srmenu .accessibility-links-container p {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+    background: #fff;
+    border: 1px solid #ccc;
+    line-height: 2em;
+    z-index: 1;
+    display: block;
+    color: #333;
+}
+
+sffw-srmenu .accessibility-links-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+sffw-srmenu .accessibility-links-container ul li {
+    display: block;
+    float: left;
+}
+
+sffw-srmenu .accessibility-links-container ul li a {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+    background: #fff;
+    border: 1px solid #ccc;
+    line-height: 2em;
+    z-index: 1;
+    display: block;
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: top;
+    background-image: none;
+    border: 2px solid #00205b;
+    white-space: nowrap;
+    padding: 8px 20px;
+}
+
+sffw-srmenu .accessibility-links-container ul li a:focus {
+    position: absolute;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    clip: auto;
+    box-shadow: 0 0 10px 2px #00205b;
+    outline-offset: -2px;
+    text-decoration: none;
+    transition: all 150ms ease-in-out;
+}

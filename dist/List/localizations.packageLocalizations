@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="recordsLocalization">
+      <Values>
+        <LocaleValue Lang="en" Value="records" />
+        <LocaleValue Lang="cs" Value="záznamů" />
+        <LocaleValue Lang="fi" Value="tietueet" />
+        <LocaleValue Lang="sv" Value="Records" />
+        <LocaleValue Lang="sr" Value="zapisi" />
+        <LocaleValue Lang="me" Value="zapisi" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="fromPlaceholderLocalization">
+      <Values>
+        <LocaleValue Lang="en" Value="From" />
+        <LocaleValue Lang="cs" Value="Od" />
+        <LocaleValue Lang="fi" Value="Alkaen" />
+        <LocaleValue Lang="sv" Value="Från" />
+        <LocaleValue Lang="sr" Value="Iz" />
+        <LocaleValue Lang="me" Value="Sa" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="toPlaceholderLocalization">
+      <Values>
+        <LocaleValue Lang="en" Value="To" />
+        <LocaleValue Lang="cs" Value="Do" />
+        <LocaleValue Lang="fi" Value="Jotta" />
+        <LocaleValue Lang="sv" Value="Till" />
+        <LocaleValue Lang="sr" Value="Da" />
+        <LocaleValue Lang="me" Value="Na" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="pageNumAriaLabel">
+      <Values>
+        <LocaleValue Lang="en" Value="Current page number" />
+        <LocaleValue Lang="cs" Value="Aktuální stránka" />
+        <LocaleValue Lang="fi" Value="Nykyinen sivunumero" />
+        <LocaleValue Lang="sv" Value="Aktuellt sidnummer" />
+        <LocaleValue Lang="sr" Value="Broj trenutne stranice" />
+        <LocaleValue Lang="me" Value="Broj trenutne stranice" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="prevPageAriaLabel">
+      <Values>
+        <LocaleValue Lang="en" Value="Previous page" />
+        <LocaleValue Lang="cs" Value="Předchozí stránka" />
+        <LocaleValue Lang="fi" Value="Edellinen sivu" />
+        <LocaleValue Lang="sv" Value="Föregående sida" />
+        <LocaleValue Lang="sr" Value="Prethodna stranica" />
+        <LocaleValue Lang="me" Value="Prethodna stranica" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="firstPageAriaLabel">
+      <Values>
+        <LocaleValue Lang="en" Value="First page" />
+        <LocaleValue Lang="cs" Value="První stránka" />
+        <LocaleValue Lang="fi" Value="Ensimmäinen sivu" />
+        <LocaleValue Lang="sv" Value="Första sidan" />
+        <LocaleValue Lang="sr" Value="Prva stranica" />
+        <LocaleValue Lang="me" Value="Prva stranica" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="nextPageAriaLabel">
+      <Values>
+        <LocaleValue Lang="en" Value="Next page" />
+        <LocaleValue Lang="cs" Value="Další stránka" />
+        <LocaleValue Lang="fi" Value="Seuraava sivu" />
+        <LocaleValue Lang="sv" Value="Nästa sida" />
+        <LocaleValue Lang="sr" Value="Sledeća stranica" />
+        <LocaleValue Lang="me" Value="Sljedeća stranica" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="lastPageAriaLabel">
+      <Values>
+        <LocaleValue Lang="en" Value="Last page" />
+        <LocaleValue Lang="cs" Value="Poslední stránka" />
+        <LocaleValue Lang="fi" Value="Viimeinen sivu" />
+        <LocaleValue Lang="sv" Value="Sista sidan" />
+        <LocaleValue Lang="sr" Value="Poslednje stranice" />
+        <LocaleValue Lang="me" Value="Poslednja stranica" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="refreshPageAriaLabel">
+      <Values>
+        <LocaleValue Lang="en" Value="Refresh data" />
+        <LocaleValue Lang="cs" Value="Obnovit data" />
+        <LocaleValue Lang="fi" Value="Tietojen päivittäminen" />
+        <LocaleValue Lang="sv" Value="Uppdatera data" />
+        <LocaleValue Lang="sr" Value="Osvežavanje podataka" />
+        <LocaleValue Lang="me" Value="Osvježavanje podataka" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="pageSizeAriaLabel">
+      <Values>
+        <LocaleValue Lang="en" Value="Records per page" />
+        <LocaleValue Lang="cs" Value="Počet záznamů na stránku" />
+        <LocaleValue Lang="fi" Value="Viitettä / sivu" />
+        <LocaleValue Lang="sv" Value="Poster per sida" />
+        <LocaleValue Lang="sr" Value="Zapisa po stranici" />
+        <LocaleValue Lang="me" Value="Zapisi po stranici" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="filterValue">
+      <Values>
+        <LocaleValue Lang="en" Value="filter value" />
+        <LocaleValue Lang="cs" Value="hodnota filtru" />
+        <LocaleValue Lang="fi" Value="suodattimen arvo" />
+        <LocaleValue Lang="sv" Value="filtervärde" />
+        <LocaleValue Lang="sr" Value="vrednost filtera" />
+        <LocaleValue Lang="me" Value="vrijednost filtera" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="selectAll">
+      <Values>
+        <LocaleValue Lang="en" Value="Select all" />
+        <LocaleValue Lang="fi" Value="Valitse kaikki" />
+        <LocaleValue Lang="sv" Value="Markera alla" />
+        <LocaleValue Lang="cs" Value="Vybrat vše" />
+        <LocaleValue Lang="sr" Value="Izaberi sve" />
+        <LocaleValue Lang="me" Value="Izabrati sve" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="viewSettings">
+      <Values>
+        <LocaleValue Lang="en" Value="Manage view settings" />
+        <LocaleValue Lang="cs" Value="Správa nastavení zobrazení" />
+        <LocaleValue Lang="fi" Value="Näkymän asetusten hallinta" />
+        <LocaleValue Lang="sv" Value="Hantera vyinställningar" />
+        <LocaleValue Lang="sr" Value="Upravljanje postavkama prikaza" />
+        <LocaleValue Lang="me" Value="Upravljanje postavkama prikaza" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="filter">
+      <Values>
+        <LocaleValue Lang="en" Value="filter" />
+        <LocaleValue Lang="cs" Value="filtr" />
+        <LocaleValue Lang="fi" Value="suodatin" />
+        <LocaleValue Lang="sv" Value="filter" />
+        <LocaleValue Lang="sr" Value="filter" />
+        <LocaleValue Lang="me" Value="filter" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="notSet">
+      <Values>
+        <LocaleValue Lang="en" Value="Not set" />
+        <LocaleValue Lang="cs" Value="Není nastaveno" />
+        <LocaleValue Lang="fi" Value="Ei asetettu" />
+        <LocaleValue Lang="sv" Value="Inte inställt" />
+        <LocaleValue Lang="sr" Value="Nije podešeno" />
+        <LocaleValue Lang="me" Value="Nije podešeno" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="sort">
+      <Values>
+        <LocaleValue Lang="en" Value="Sort by" />
+        <LocaleValue Lang="cs" Value="Seřadit podle" />
+        <LocaleValue Lang="fi" Value="Lajittele" />
+        <LocaleValue Lang="sv" Value="Sortera efter" />
+        <LocaleValue Lang="sr" Value="Sortiraj po" />
+        <LocaleValue Lang="me" Value="Sortirati po" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ascending">
+      <Values>
+        <LocaleValue Lang="en" Value="ascending" />
+        <LocaleValue Lang="cs" Value="vzestupně" />
+        <LocaleValue Lang="fi" Value="nouseva" />
+        <LocaleValue Lang="sv" Value="stigande" />
+        <LocaleValue Lang="sr" Value="rastući" />
+        <LocaleValue Lang="me" Value="rastući" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="descending">
+      <Values>
+        <LocaleValue Lang="en" Value="descending" />
+        <LocaleValue Lang="cs" Value="sestupně" />
+        <LocaleValue Lang="fi" Value="laskeva" />
+        <LocaleValue Lang="sv" Value="fallande" />
+        <LocaleValue Lang="sr" Value="opadajući" />
+        <LocaleValue Lang="me" Value="opadajući" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="copyToClipboard">
+      <Values>
+        <LocaleValue Lang="en" Value="copy to clipboard" />
+        <LocaleValue Lang="cs" Value="kopírovat do schránky" />
+        <LocaleValue Lang="fi" Value="kopioi leikepöydälle" />
+        <LocaleValue Lang="sv" Value="kopiera till Urklipp" />
+        <LocaleValue Lang="sr" Value="kopiranje u ostavu" />
+        <LocaleValue Lang="me" Value="kopiranje u ostavu" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="copyToClipboardErr">
+      <Values>
+        <LocaleValue Lang="en" Value="Copy to clipboard failed." />
+        <LocaleValue Lang="cs" Value="Kopírování do schránky se nezdařilo." />
+        <LocaleValue Lang="fi" Value="Kopioiminen leikepöydälle epäonnistui." />
+        <LocaleValue Lang="sv" Value="Det gick inte att kopiera till Urklipp." />
+        <LocaleValue Lang="sr" Value="Kopiranje u ostavu nije uspelo." />
+        <LocaleValue Lang="me" Value="Kopiranje u ostavu nije uspelo." />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="copyToClipboardSuccess">
+      <Values>
+        <LocaleValue Lang="en" Value="Value was copied to clipboard." />
+        <LocaleValue Lang="cs" Value="Hodnota byla zkopírována do schránky." />
+        <LocaleValue Lang="fi" Value="Arvo kopioitiin leikepöydälle." />
+        <LocaleValue Lang="sv" Value="Värdet kopierades till Urklipp." />
+        <LocaleValue Lang="sr" Value="Vrednost je kopirana u ostavu." />
+        <LocaleValue Lang="me" Value="Vrednost je kopirana u ostavu." />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="clearFilterValue">
+      <Values>
+        <LocaleValue Lang="en" Value="Clear filter value of {columnCaption}" />
+        <LocaleValue Lang="cs" Value="Vymazat hodnotu filtru {columnCaption}" />
+        <LocaleValue Lang="fi" Value="Tyhjennä {columnCaption} suodatinarvo" />
+        <LocaleValue Lang="sv" Value="Rensa filtervärdet för {columnCaption}" />
+        <LocaleValue Lang="sr" Value="Obriši vrednost filtera {columnCaption}" />
+        <LocaleValue Lang="me" Value="Obriši vrednost filtera {columnCaption}" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="leaveFilterEditMode">
+      <Values>
+        <LocaleValue Lang="en" Value="Leave edit mode of {columnCaption} filter" />
+        <LocaleValue Lang="cs" Value="Opustit režim úprav filtru {columnCaption}" />
+        <LocaleValue Lang="fi" Value="Poistu {columnCaption}-suodattimen muokkaustilasta" />
+        <LocaleValue Lang="sv" Value="Lämna redigeringsläget för filtret {columnCaption}" />
+        <LocaleValue Lang="me" Value="Ostavite režim uređivanja filtera {columnCaption}" />
+        <LocaleValue Lang="sr" Value="Ostavite režim uređivanja filtera {columnCaption}" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

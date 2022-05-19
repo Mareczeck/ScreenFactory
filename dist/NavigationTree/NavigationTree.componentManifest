@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="NavigationTree" />
+  <Generator value="&lt;sffw-navigation-tree&gt;" />
+  <Type value="Control" />
+  <UiCaption value="Navigation tree" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="navigationTree.png" />
+  <Events>
+    <EventManifest>
+      <Name value="OnNodeActivated" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="id" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="activatedByUser" />
+          <BaseType value="Bool" />
+          <ParamType value="BaseType" />
+          <UiDescription value="Indicates that node was activated by user, ie. click or keyboard event on some node in the tree" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="controller" />
+      <Type value="ApiObject" />
+      <UiEditor value="contract/INavigationTreeCtrl" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="generateAriaCurrent" />
+      <Type value="string" />
+      <UiCategory value="Accessibility" />
+      <UiDescription value="The aria-current attribute helps to indicate, that current active node of Navigation tree represents the current page in navigation (=page) or process step f.e. when used as some wizard etc...(=step)." />
+      <UiEditor value="list/page|step" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="ariaLabel" />
+      <Bindable value="OneWay" />
+      <UiCategory value="Accessibility" />
+      <UiDescription value="Accessible text for screen readers to describe function for component" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="generatedNodesKind" />
+      <Default value="button" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Generate nodes as" />
+      <UiCategory value="Accessibility" />
+      <UiDescription value="Type of generated navigation elements depending on specific component instance functionality.&#xD;&#xA;*General accessibility recommendation:&#xD;&#xA;Always use links instead of buttons when the navigation target is a different resource or page.&#xD;&#xA;This is relevant also for single-page applications.*" />
+      <UiEditor value="list/button|hyperlink" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

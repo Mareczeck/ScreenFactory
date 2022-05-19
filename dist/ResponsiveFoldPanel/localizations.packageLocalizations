@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="buttonExpandText">
+      <Values>
+        <LocaleValue Lang="en" Value="Click here to expand collapsed section." />
+        <LocaleValue Lang="cs" Value="Kliknutím sbalíte rozbalenou sekci." />
+        <LocaleValue Lang="fi" Value="Laajenna kutistettu osa napsauttamalla tätä." />
+        <LocaleValue Lang="sv" Value="Klicka här för att expandera komprimerad sektion." />
+        <LocaleValue Lang="sr" Value="Kliknite ovde da biste razvili skupljeni odeljak." />
+        <LocaleValue Lang="me" Value="Kliknite ovde da biste razvili skupljeni odeljak." />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="buttonCollapseText">
+      <Values>
+        <LocaleValue Lang="en" Value="Click here to collapse expanded section." />
+        <LocaleValue Lang="cs" Value="Kliknutím rozbalíte sbalenou sekci." />
+        <LocaleValue Lang="fi" Value="Tiivistä laajennettu osa napsauttamalla tätä." />
+        <LocaleValue Lang="sv" Value="Klicka här för att komprimera expanderat avsnitt." />
+        <LocaleValue Lang="sr" Value="Kliknite ovde da biste skupili prošireni odeljak." />
+        <LocaleValue Lang="me" Value="Kliknite ovde da biste skupili prošireni odeljak." />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

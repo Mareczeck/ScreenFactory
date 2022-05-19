@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="MonacoEditor.0c44fac2700f4673a31803ab3d6a53b4" />
+  <Version value="1.1.0" />
+  <Items>
+    <ResourceItem ResourceName="base\worker\workerMain.js" OutputFileName="base\worker\workerMain.js" Src="base\worker\workerMain.js" />
+    <ResourceItem ResourceName="basic-languages\apex\apex.js" OutputFileName="basic-languages\apex\apex.js" Src="basic-languages\apex\apex.js" />
+    <ResourceItem ResourceName="basic-languages\azcli\azcli.js" OutputFileName="basic-languages\azcli\azcli.js" Src="basic-languages\azcli\azcli.js" />
+    <ResourceItem ResourceName="basic-languages\bat\bat.js" OutputFileName="basic-languages\bat\bat.js" Src="basic-languages\bat\bat.js" />
+    <ResourceItem ResourceName="basic-languages\clojure\clojure.js" OutputFileName="basic-languages\clojure\clojure.js" Src="basic-languages\clojure\clojure.js" />
+    <ResourceItem ResourceName="basic-languages\coffee\coffee.js" OutputFileName="basic-languages\coffee\coffee.js" Src="basic-languages\coffee\coffee.js" />
+    <ResourceItem ResourceName="basic-languages\cpp\cpp.js" OutputFileName="basic-languages\cpp\cpp.js" Src="basic-languages\cpp\cpp.js" />
+    <ResourceItem ResourceName="basic-languages\csharp\csharp.js" OutputFileName="basic-languages\csharp\csharp.js" Src="basic-languages\csharp\csharp.js" />
+    <ResourceItem ResourceName="basic-languages\csp\csp.js" OutputFileName="basic-languages\csp\csp.js" Src="basic-languages\csp\csp.js" />
+    <ResourceItem ResourceName="basic-languages\css\css.js" OutputFileName="basic-languages\css\css.js" Src="basic-languages\css\css.js" />
+    <ResourceItem ResourceName="basic-languages\dockerfile\dockerfile.js" OutputFileName="basic-languages\dockerfile\dockerfile.js" Src="basic-languages\dockerfile\dockerfile.js" />
+    <ResourceItem ResourceName="basic-languages\fsharp\fsharp.js" OutputFileName="basic-languages\fsharp\fsharp.js" Src="basic-languages\fsharp\fsharp.js" />
+    <ResourceItem ResourceName="basic-languages\go\go.js" OutputFileName="basic-languages\go\go.js" Src="basic-languages\go\go.js" />
+    <ResourceItem ResourceName="basic-languages\handlebars\handlebars.js" OutputFileName="basic-languages\handlebars\handlebars.js" Src="basic-languages\handlebars\handlebars.js" />
+    <ResourceItem ResourceName="basic-languages\html\html.js" OutputFileName="basic-languages\html\html.js" Src="basic-languages\html\html.js" />
+    <ResourceItem ResourceName="basic-languages\ini\ini.js" OutputFileName="basic-languages\ini\ini.js" Src="basic-languages\ini\ini.js" />
+    <ResourceItem ResourceName="basic-languages\java\java.js" OutputFileName="basic-languages\java\java.js" Src="basic-languages\java\java.js" />
+    <ResourceItem ResourceName="basic-languages\javascript\javascript.js" OutputFileName="basic-languages\javascript\javascript.js" Src="basic-languages\javascript\javascript.js" />
+    <ResourceItem ResourceName="basic-languages\less\less.js" OutputFileName="basic-languages\less\less.js" Src="basic-languages\less\less.js" />
+    <ResourceItem ResourceName="basic-languages\lua\lua.js" OutputFileName="basic-languages\lua\lua.js" Src="basic-languages\lua\lua.js" />
+    <ResourceItem ResourceName="basic-languages\markdown\markdown.js" OutputFileName="basic-languages\markdown\markdown.js" Src="basic-languages\markdown\markdown.js" />
+    <ResourceItem ResourceName="basic-languages\msdax\msdax.js" OutputFileName="basic-languages\msdax\msdax.js" Src="basic-languages\msdax\msdax.js" />
+    <ResourceItem ResourceName="basic-languages\mysql\mysql.js" OutputFileName="basic-languages\mysql\mysql.js" Src="basic-languages\mysql\mysql.js" />
+    <ResourceItem ResourceName="basic-languages\objective-c\objective-c.js" OutputFileName="basic-languages\objective-c\objective-c.js" Src="basic-languages\objective-c\objective-c.js" />
+    <ResourceItem ResourceName="basic-languages\perl\perl.js" OutputFileName="basic-languages\perl\perl.js" Src="basic-languages\perl\perl.js" />
+    <ResourceItem ResourceName="basic-languages\pgsql\pgsql.js" OutputFileName="basic-languages\pgsql\pgsql.js" Src="basic-languages\pgsql\pgsql.js" />
+    <ResourceItem ResourceName="basic-languages\php\php.js" OutputFileName="basic-languages\php\php.js" Src="basic-languages\php\php.js" />
+    <ResourceItem ResourceName="basic-languages\postiats\postiats.js" OutputFileName="basic-languages\postiats\postiats.js" Src="basic-languages\postiats\postiats.js" />
+    <ResourceItem ResourceName="basic-languages\powerquery\powerquery.js" OutputFileName="basic-languages\powerquery\powerquery.js" Src="basic-languages\powerquery\powerquery.js" />
+    <ResourceItem ResourceName="basic-languages\powershell\powershell.js" OutputFileName="basic-languages\powershell\powershell.js" Src="basic-languages\powershell\powershell.js" />
+    <ResourceItem ResourceName="basic-languages\pug\pug.js" OutputFileName="basic-languages\pug\pug.js" Src="basic-languages\pug\pug.js" />
+    <ResourceItem ResourceName="basic-languages\python\python.js" OutputFileName="basic-languages\python\python.js" Src="basic-languages\python\python.js" />
+    <ResourceItem ResourceName="basic-languages\r\r.js" OutputFileName="basic-languages\r\r.js" Src="basic-languages\r\r.js" />
+    <ResourceItem ResourceName="basic-languages\razor\razor.js" OutputFileName="basic-languages\razor\razor.js" Src="basic-languages\razor\razor.js" />
+    <ResourceItem ResourceName="basic-languages\redis\redis.js" OutputFileName="basic-languages\redis\redis.js" Src="basic-languages\redis\redis.js" />
+    <ResourceItem ResourceName="basic-languages\redshift\redshift.js" OutputFileName="basic-languages\redshift\redshift.js" Src="basic-languages\redshift\redshift.js" />
+    <ResourceItem ResourceName="basic-languages\ruby\ruby.js" OutputFileName="basic-languages\ruby\ruby.js" Src="basic-languages\ruby\ruby.js" />
+    <ResourceItem ResourceName="basic-languages\rust\rust.js" OutputFileName="basic-languages\rust\rust.js" Src="basic-languages\rust\rust.js" />
+    <ResourceItem ResourceName="basic-languages\sb\sb.js" OutputFileName="basic-languages\sb\sb.js" Src="basic-languages\sb\sb.js" />
+    <ResourceItem ResourceName="basic-languages\scheme\scheme.js" OutputFileName="basic-languages\scheme\scheme.js" Src="basic-languages\scheme\scheme.js" />
+    <ResourceItem ResourceName="basic-languages\scss\scss.js" OutputFileName="basic-languages\scss\scss.js" Src="basic-languages\scss\scss.js" />
+    <ResourceItem ResourceName="basic-languages\shell\shell.js" OutputFileName="basic-languages\shell\shell.js" Src="basic-languages\shell\shell.js" />
+    <ResourceItem ResourceName="basic-languages\solidity\solidity.js" OutputFileName="basic-languages\solidity\solidity.js" Src="basic-languages\solidity\solidity.js" />
+    <ResourceItem ResourceName="basic-languages\sql\sql.js" OutputFileName="basic-languages\sql\sql.js" Src="basic-languages\sql\sql.js" />
+    <ResourceItem ResourceName="basic-languages\st\st.js" OutputFileName="basic-languages\st\st.js" Src="basic-languages\st\st.js" />
+    <ResourceItem ResourceName="basic-languages\swift\swift.js" OutputFileName="basic-languages\swift\swift.js" Src="basic-languages\swift\swift.js" />
+    <ResourceItem ResourceName="basic-languages\typescript\typescript.js" OutputFileName="basic-languages\typescript\typescript.js" Src="basic-languages\typescript\typescript.js" />
+    <ResourceItem ResourceName="basic-languages\vb\vb.js" OutputFileName="basic-languages\vb\vb.js" Src="basic-languages\vb\vb.js" />
+    <ResourceItem ResourceName="basic-languages\xml\xml.js" OutputFileName="basic-languages\xml\xml.js" Src="basic-languages\xml\xml.js" />
+    <ResourceItem ResourceName="basic-languages\yaml\yaml.js" OutputFileName="basic-languages\yaml\yaml.js" Src="basic-languages\yaml\yaml.js" />
+    <ResourceItem ResourceName="editor\editor.main.css" OutputFileName="editor\editor.main.css" Src="editor\editor.main.css" />
+    <ResourceItem ResourceName="editor\editor.main.js" OutputFileName="editor\editor.main.js" Src="editor\editor.main.js" />
+    <ResourceItem ResourceName="editor\editor.main.nls.de.js" OutputFileName="editor\editor.main.nls.de.js" Src="editor\editor.main.nls.de.js" />
+    <ResourceItem ResourceName="editor\editor.main.nls.es.js" OutputFileName="editor\editor.main.nls.es.js" Src="editor\editor.main.nls.es.js" />
+    <ResourceItem ResourceName="editor\editor.main.nls.fr.js" OutputFileName="editor\editor.main.nls.fr.js" Src="editor\editor.main.nls.fr.js" />
+    <ResourceItem ResourceName="editor\editor.main.nls.it.js" OutputFileName="editor\editor.main.nls.it.js" Src="editor\editor.main.nls.it.js" />
+    <ResourceItem ResourceName="editor\editor.main.nls.ja.js" OutputFileName="editor\editor.main.nls.ja.js" Src="editor\editor.main.nls.ja.js" />
+    <ResourceItem ResourceName="editor\editor.main.nls.js" OutputFileName="editor\editor.main.nls.js" Src="editor\editor.main.nls.js" />
+    <ResourceItem ResourceName="editor\editor.main.nls.ko.js" OutputFileName="editor\editor.main.nls.ko.js" Src="editor\editor.main.nls.ko.js" />
+    <ResourceItem ResourceName="editor\editor.main.nls.ru.js" OutputFileName="editor\editor.main.nls.ru.js" Src="editor\editor.main.nls.ru.js" />
+    <ResourceItem ResourceName="editor\editor.main.nls.zh-cn.js" OutputFileName="editor\editor.main.nls.zh-cn.js" Src="editor\editor.main.nls.zh-cn.js" />
+    <ResourceItem ResourceName="editor\editor.main.nls.zh-tw.js" OutputFileName="editor\editor.main.nls.zh-tw.js" Src="editor\editor.main.nls.zh-tw.js" />
+    <ResourceItem ResourceName="language\css\cssMode.js" OutputFileName="language\css\cssMode.js" Src="language\css\cssMode.js" />
+    <ResourceItem ResourceName="language\css\cssWorker.js" OutputFileName="language\css\cssWorker.js" Src="language\css\cssWorker.js" />
+    <ResourceItem ResourceName="language\html\htmlMode.js" OutputFileName="language\html\htmlMode.js" Src="language\html\htmlMode.js" />
+    <ResourceItem ResourceName="language\html\htmlWorker.js" OutputFileName="language\html\htmlWorker.js" Src="language\html\htmlWorker.js" />
+    <ResourceItem ResourceName="language\json\jsonMode.js" OutputFileName="language\json\jsonMode.js" Src="language\json\jsonMode.js" />
+    <ResourceItem ResourceName="language\json\jsonWorker.js" OutputFileName="language\json\jsonWorker.js" Src="language\json\jsonWorker.js" />
+    <ResourceItem ResourceName="language\typescript\tsMode.js" OutputFileName="language\typescript\tsMode.js" Src="language\typescript\tsMode.js" />
+    <ResourceItem ResourceName="language\typescript\tsWorker.js" OutputFileName="language\typescript\tsWorker.js" Src="language\typescript\tsWorker.js" />
+  </Items>
+</Package>

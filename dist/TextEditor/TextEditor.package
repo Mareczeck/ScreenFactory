@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="TextEditor.770190e20cd64d30821b7b783444edd5" />
+  <Version value="1.0.1" />
+  <Items>
+    <ResourceItem ResourceName="textEditor.js" LinkerAction="Script" OutputFileName="textEditor.js" Src="textEditor.js" />
+    <PackageItem Src="textEditor.componentManifest" />
+    <ResourceItem ResourceName="textEditor.css" LinkerAction="Css" OutputFileName="textEditor.css" Src="textEditor.css" />
+    <ResourceItem ResourceName="textEditor.png" Action="None" OutputFileName="textEditor.png" Src="textEditor.png" />
+  </Items>
+</Package>

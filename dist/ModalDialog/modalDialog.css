@@ -1,0 +1,182 @@
+.sffw-modal-dialog-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10050;
+    display: none;
+}
+
+.sffw-modal-dialog-container .modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+    opacity: 1;
+}
+
+.sffw-modal-dialog-container .modal-content {
+    position: relative;
+    background-color: #fafafa;
+    border: 1px solid transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+    outline: 0;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10040;
+    background-color: #000;
+}
+.modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.modal-backdrop.in {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+.sffw-modal-dialog-container .modal-header {
+    padding: 5px;
+    background: #00205b;
+    color: #fff;
+}
+
+.sffw-modal-dialog-container .modal-header:before, .sffw-modal-dialog-container .modal-header:after {
+    content: " ";
+    display: table;
+}
+
+.sffw-modal-dialog-container .modal-title {
+    font-size: 18px;
+    color: inherit;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: none;
+    letter-spacing: initial;
+    margin: 0;
+    display: block;
+    text-align: center;
+}
+
+.sffw-modal-dialog-container .modal-body {
+    position: relative;
+    padding: 20px;
+}
+
+.sffw-modal-dialog-container .modal-body > p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.44;
+    color: #333;
+}
+
+.sffw-modal-dialog-container .modal-footer {
+    vertical-align: top;
+    padding: 20px;
+    text-align: right;
+    border-top: 1px solid transparent;
+    background-color: #e3e5e9;
+}
+
+.sffw-modal-dialog-container .modal-footer:before, .sffw-modal-dialog-container .modal-footer:after {
+    content: " ";
+    display: table;
+}
+.sffw-modal-dialog-container .modal-footer:after {
+    clear: both;
+}
+
+.modal-footer .dialog-btn + .dialog-btn {
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .sffw-modal-dialog-container .modal-dialog {
+        width: 580px;
+        margin: 30px auto;
+    }
+}
+
+.sffw-modal-dialog-container .btn {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: top;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 2px solid transparent;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 8px 20px;
+    font-size: 14px;
+    line-height: 1.44;
+    border-radius: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.sffw-modal-dialog-container .btn:hover {
+    border-color: #19366b;
+    -webkit-box-shadow: 0 0 10px 2px #00205b !important;
+    box-shadow: 0 0 10px 2px #00205b !important;
+    outline-offset: -2px;
+}
+
+.sffw-modal-dialog-container .btn:focus {
+    border-color: #19366b;
+    -webkit-box-shadow: 0 0 10px 2px #00205b !important;
+    box-shadow: 0 0 10px 2px #00205b !important;
+    outline-offset: -2px;
+}
+
+.sffw-modal-dialog-container .btn.dialog-btn {
+    color: #00205b;
+    background-color: #fff;
+    border-color: #00205b;
+    margin-bottom: 0;
+}
+
+.sffw-modal-dialog-container .btn.dialog-btn:focus {
+    color: #334d7c;
+    background-color: #eeeff2;
+}
+
+.sffw-modal-dialog-container .btn.dialog-btn:hover {
+    color: #334d7c;
+    background-color: #eeeff2;
+}
+
+.sffw-modal-dialog-container .btn.dialog-btn-primary {
+    color: #fff;
+    background-color: #00205b;
+    border-color: #00205b;
+}
+
+.sffw-modal-dialog-container .btn.dialog-btn-primary:focus {
+    color: #fff;
+    background-color: #334d7c;
+}
+
+.sffw-modal-dialog-container .btn.dialog-btn-primary:hover {
+    color: #fff;
+    background-color: #334d7c;
+}

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="rows">
+      <Values>
+        <LocaleValue Lang="en" Value="rows" />
+        <LocaleValue Lang="cs" Value="řádků" />
+        <LocaleValue Lang="fi" Value="riviä" />
+        <LocaleValue Lang="sv" Value="rader" />
+        <LocaleValue Lang="sr" Value="redova" />
+        <LocaleValue Lang="me" Value="redova" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="prevPageAriaLabel">
+      <Values>
+        <LocaleValue Lang="en" Value="Previous page" />
+        <LocaleValue Lang="cs" Value="Předchozí stránka" />
+        <LocaleValue Lang="fi" Value="Edellinen sivu" />
+        <LocaleValue Lang="sv" Value="Föregående sida" />
+        <LocaleValue Lang="sr" Value="Prethodna stranica" />
+        <LocaleValue Lang="me" Value="Prethodna stranica" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="nextPageAriaLabel">
+      <Values>
+        <LocaleValue Lang="en" Value="Next page" />
+        <LocaleValue Lang="cs" Value="Další stránka" />
+        <LocaleValue Lang="fi" Value="Seuraava sivu" />
+        <LocaleValue Lang="sv" Value="Nästa sida" />
+        <LocaleValue Lang="sr" Value="Sledeća stranica" />
+        <LocaleValue Lang="me" Value="Sledeća stranica" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="showingDataAnnouncement">
+      <Values>
+        <LocaleValue Lang="en" Value="Showing {rowFrom} to {rowTo} of {rowCount} entries in table {tableName}" />
+        <LocaleValue Lang="me" Value="Prikazuje od {rowFrom} do {rowTo} od {rowCount} unosa u tabeli {tableName}" />
+        <LocaleValue Lang="cs" Value="Zobrazeno {rowFrom} až {rowTo} z {rowCount} položek v tabulce {tableName}" />
+        <LocaleValue Lang="sv" Value="Visar {rowFrom} till {rowTo} av {rowCount} poster i tabellen {tableName}" />
+        <LocaleValue Lang="fi" Value="Näytetään {rowFrom}-{rowTo} / {rowCount} merkinnät taulukossa {tableName}" />
+        <LocaleValue Lang="sr" Value="Prikazuje od {rowFrom} do {rowTo} od {rowCount} unosa u tabeli {tableName}" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

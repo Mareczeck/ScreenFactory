@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="GeoResult" />
+  <CanBeFormLocal value="False" />
+  <CanBeGlobal value="False" />
+  <Generator value="*" />
+  <Methods>
+    <MethodManifest>
+      <Name value="getDmsString" />
+      <Description value="Get coordinates as DMS string" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getDmsStringWithPrecision" />
+      <Description value="Get coordinates as DMS string with seconds rounded to specified number of decimal places" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="precision" />
+          <BaseType value="Integer" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="isError" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getErrorMessage" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getLatitude" />
+      <ReturnType>
+        <BaseType value="Decimal" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getLongitude" />
+      <ReturnType>
+        <BaseType value="Decimal" />
+      </ReturnType>
+    </MethodManifest>
+  </Methods>
+</ApiObjectManifest>

@@ -1,0 +1,41 @@
+.sffw-appmenu {
+    /*font-weight: bold;*/
+    cursor: pointer;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    margin-left: -15px;
+    margin-top: 5px;
+    float: left;
+    z-index: 1000;
+    border: 1px solid black;
+    background-color:white;
+    font-size: 16px;
+    color: black;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+.menu-item {
+    float: left;
+    padding: 5px 15px 5px 15px;
+    background-color: white;
+    font-size: 16px;
+}
+.sub-menu-item {
+    font-size: 14px;
+    padding: 3px 15px 3px 15px;
+}
+
+.highlight-menu-item, .sub-menu-item:hover, .menu-item:hover, .sub-menu-item:focus {
+    background-color: #044879;
+    color: white;
+    outline: none;
+}
+
+/*.menu-item:hover .sub-menu {
+    display: block !important;
+}*/

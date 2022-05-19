@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="AppMenu.58f389bf427043048cf94f089e3b95d2" />
+  <Items>
+    <PackageItem Src="AppMenu.componentManifest" />
+    <PackageItem Src="SubMenuItem.componentManifest" />
+    <PackageItem Src="MenuItem.componentManifest" />
+    <ResourceItem ResourceName="AppMenu.js" LinkerAction="Script" OutputFileName="AppMenu.js" Src="AppMenu.js" />
+    <ResourceItem ResourceName="AppMenuGenerator.js" Action="None" OutputFileName="AppMenuGenerator.js" Src="AppMenuGenerator.js" />
+    <ResourceItem ResourceName="AppMenu.css" LinkerAction="Css" OutputFileName="AppMenu.css" Src="AppMenu.css" />
+    <ResourceItem ResourceName="appMenu.png" Action="None" OutputFileName="appMenu.png" Src="appMenu.png" />
+  </Items>
+</Package>

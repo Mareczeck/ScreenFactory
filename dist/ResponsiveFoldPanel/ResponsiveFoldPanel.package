@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="ResponsiveFoldPanel.780fd423512842a8a7dd1130674c2332" />
+  <Description value="Alternates inner contents with responsive fold-out panel (hamburger) based on min-width and max-width media selectors defined in component css." />
+  <Version value="1.0.2" />
+  <Items>
+    <PackageItem Src="responsiveFoldPanel.componentManifest" />
+    <ResourceItem ResourceName="responsiveFoldPanel.js" LinkerAction="Script" OutputFileName="responsiveFoldPanel.js" Src="responsiveFoldPanel.js" />
+    <ResourceItem ResourceName="responsiveFoldPanel.css" LinkerAction="Css" OutputFileName="responsiveFoldPanel.css" Src="responsiveFoldPanel.css" />
+    <PackageItem Src="localizations.packageLocalizations" />
+    <ResourceItem ResourceName="responsiveFoldPanel.png" Action="None" OutputFileName="responsiveFoldPanel.png" Src="responsiveFoldPanel.png" />
+  </Items>
+</Package>

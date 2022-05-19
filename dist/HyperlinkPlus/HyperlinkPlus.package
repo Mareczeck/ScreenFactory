@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="HyperlinkPlus.f7180323204e4230ba196fd4a2f62748" />
+  <Version value="1.0.0" />
+  <Items>
+    <PackageItem Src="HyperlinkPlus.componentManifest" />
+    <ResourceItem ResourceName="hyperlinkPlusGenerator.js" Action="None" OutputFileName="hyperlinkPlusGenerator.js" Src="hyperlinkPlusGenerator.js" />
+    <ResourceItem ResourceName="hyperlinkPlus.css" LinkerAction="Css" OutputFileName="hyperlinkPlus.css" Src="hyperlinkPlus.css" />
+    <ResourceItem ResourceName="HyperLinkPlus.png" Action="None" OutputFileName="HyperLinkPlus.png" Src="HyperLinkPlus.png" />
+  </Items>
+</Package>

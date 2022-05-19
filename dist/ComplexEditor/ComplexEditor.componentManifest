@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="ComplexEditor" />
+  <Generator value="&lt;sffw-complex-editor&gt;" />
+  <UiCategory value="SFFW" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="definition" />
+      <Bindable value="Always" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="dataJson" />
+      <Bindable value="Always" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isDataValid" />
+      <Bindable value="Always" />
+      <Type value="bool" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

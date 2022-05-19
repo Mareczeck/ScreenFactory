@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="AriaLiveRegion" />
+  <CanBeFormLocal value="False" />
+  <Generator value="ariaLiveRegion.js" />
+  <Contracts>
+    <ImplementsContractManifest>
+      <Name value="IAriaLiveRegionListener" />
+    </ImplementsContractManifest>
+  </Contracts>
+  <Methods>
+    <MethodManifest>
+      <Name value="appendMessage" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="message" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="clearAllMessages" />
+      <ReturnType />
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="ariaRelevant" />
+      <Default value="additions" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Attributes" />
+      <UiEditor value="list/additions|additions text|removals|additions removals|text|all" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="ariaLive" />
+      <Default value="polite" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCategory value="Attributes" />
+      <UiEditor value="list/polite|assertive" />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

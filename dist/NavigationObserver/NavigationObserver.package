@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="NavigationObserver.a6850f60a9dd4afcb8b8289571bbfbb4" />
+  <Version value="1.0.0" />
+  <Items>
+    <PackageItem Src="NavigationObserver.apiObjectManifest" />
+    <ResourceItem ResourceName="navigationObserver.js" Action="None" OutputFileName="navigationObserver.js" Src="navigationObserver.js" />
+  </Items>
+</Package>

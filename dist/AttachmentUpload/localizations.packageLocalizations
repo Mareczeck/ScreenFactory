@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="addFileBtn">
+      <Values>
+        <LocaleValue Lang="en" Value="Add new attachment" />
+        <LocaleValue Lang="fi" Value="Lisää uusi liite" />
+        <LocaleValue Lang="sr" Value="Dodaj novi prilog" />
+        <LocaleValue Lang="cs" Value="Přidání nové přílohy" />
+        <LocaleValue Lang="sv" Value="Lägg till ny bifogad fil" />
+        <LocaleValue Lang="me" Value="Dodaj novi prilog" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="addFilesBtn">
+      <Values>
+        <LocaleValue Lang="en" Value="Add new attachments" />
+        <LocaleValue Lang="fi" Value="Uusien liitteiden lisääminen" />
+        <LocaleValue Lang="sr" Value="Dodaj nove priloge" />
+        <LocaleValue Lang="cs" Value="Přidání nových příloh" />
+        <LocaleValue Lang="sv" Value="Lägga till nya bifogade filer" />
+        <LocaleValue Lang="me" Value="Dodaj nove priloge" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="waitingForDetails">
+      <Values>
+        <LocaleValue Lang="en" Value="Waiting for details" />
+        <LocaleValue Lang="cs" Value="Čekání na podrobnosti" />
+        <LocaleValue Lang="fi" Value="Odotetaan yksityiskohtia" />
+        <LocaleValue Lang="sv" Value="Väntar på detaljer" />
+        <LocaleValue Lang="sr" Value="Čekanje na detalje" />
+        <LocaleValue Lang="me" Value="Čekanje na detalje" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="readyForUpload">
+      <Values>
+        <LocaleValue Lang="en" Value="Ready for upload" />
+        <LocaleValue Lang="cs" Value="Připraveno k nahrání" />
+        <LocaleValue Lang="fi" Value="Valmis ladattavaksi" />
+        <LocaleValue Lang="sv" Value="Redo för uppladdning" />
+        <LocaleValue Lang="sr" Value="Spremno za otpremanje" />
+        <LocaleValue Lang="me" Value="Spremno za otpremanje" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="uploading">
+      <Values>
+        <LocaleValue Lang="en" Value="Uploading" />
+        <LocaleValue Lang="cs" Value="Nahrávání" />
+        <LocaleValue Lang="fi" Value="Lataaminen" />
+        <LocaleValue Lang="sv" Value="Uppladdning" />
+        <LocaleValue Lang="sr" Value="Otpremanje" />
+        <LocaleValue Lang="me" Value="Otpremanje" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="uploadError">
+      <Values>
+        <LocaleValue Lang="en" Value="Upload error" />
+        <LocaleValue Lang="cs" Value="Chyba nahrávání" />
+        <LocaleValue Lang="fi" Value="Latausvirhe" />
+        <LocaleValue Lang="sv" Value="Uppladdningsfel" />
+        <LocaleValue Lang="sr" Value="Greška pri otpremi" />
+        <LocaleValue Lang="me" Value="Greška pri otpremi" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="choose">
+      <Values>
+        <LocaleValue Lang="en" Value="Choose..." />
+        <LocaleValue Lang="cs" Value="Vyberte..." />
+        <LocaleValue Lang="fi" Value="Valitse..." />
+        <LocaleValue Lang="sv" Value="Välj..." />
+        <LocaleValue Lang="sr" Value="Odaberite..." />
+        <LocaleValue Lang="me" Value="Odaberite..." />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="rejectFileDueToType">
+      <Values>
+        <LocaleValue Lang="en" Value="File &quot;{fileName}&quot; was rejected due to unallowed file type and cannot be added to the attachments collection." />
+        <LocaleValue Lang="cs" Value="Soubor &quot;{fileName}&quot; byl odmítnut kvůli nepovolenému typu souboru a nelze jej přidat do kolekce příloh." />
+        <LocaleValue Lang="fi" Value="Ladattavan tiedoston tyyppi ei ole sallittu." />
+        <LocaleValue Lang="sv" Value="Fil &quot;{fileName}&quot; avvisades på grund av otillåten filtyp och kan inte läggas till i bilagningssamlingen." />
+        <LocaleValue Lang="sr" Value="Datoteka &quot;{fileName}&quot; je odbijena zbog nedozvoljenog tipa datoteke i ne može se dodati u kolekciju priloga." />
+        <LocaleValue Lang="me" Value="Datoteka &quot;{fileName}&quot; je odbijena zbog nedozvoljenog tipa datoteke i ne može se dodati u kolekciju priloga." />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="rejectFileDueToSize">
+      <Values>
+        <LocaleValue Lang="en" Value="File &quot;{fileName}&quot; is larger ({fileSize}) than maximum file size {maxFileSize} and cannot be added to the attachments collection." />
+        <LocaleValue Lang="cs" Value="Soubor &quot;{fileName}&quot; je větší ({fileSize}) než maximální velikost souboru {maxFileSize} a nelze jej přidat do kolekce příloh." />
+        <LocaleValue Lang="sv" Value="Fil &quot;{fileName}&quot; är större ({fileSize}) än den maximala filstorleken {maxFileSize} och kan inte läggas till i samlingen bifogade filer." />
+        <LocaleValue Lang="sr" Value="Datoteka &quot;{fileName}&quot; je veća ({fileSize}) od maksimalne veličine datoteke {maxFileSize} i ne može se dodati kolekciji priloga." />
+        <LocaleValue Lang="me" Value="Datoteka &quot;{fileName}&quot; je veća ({fileSize}) od maksimalne veličine datoteke {maxFileSize} i ne može se dodati kolekciji priloga." />
+        <LocaleValue Lang="fi" Value="Ladattava tiedosto liian suuri." />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="fileName">
+      <Values>
+        <LocaleValue Lang="en" Value="File name" />
+        <LocaleValue Lang="cs" Value="Název souboru" />
+        <LocaleValue Lang="fi" Value="Tiedoston nimi" />
+        <LocaleValue Lang="sv" Value="Filnamn" />
+        <LocaleValue Lang="sr" Value="Ime datoteke" />
+        <LocaleValue Lang="me" Value="Ime datoteke" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="documentType">
+      <Values>
+        <LocaleValue Lang="en" Value="Document type" />
+        <LocaleValue Lang="cs" Value="Typ dokumentu" />
+        <LocaleValue Lang="fi" Value="Asiakirjan tyyppi" />
+        <LocaleValue Lang="sv" Value="Dokumenttyp" />
+        <LocaleValue Lang="sr" Value="Vrsta dokumenta" />
+        <LocaleValue Lang="me" Value="Vrsta dokumenta" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="newAttachmentStatus">
+      <Values>
+        <LocaleValue Lang="en" Value="Status" />
+        <LocaleValue Lang="cs" Value="Stav" />
+        <LocaleValue Lang="fi" Value="Tila" />
+        <LocaleValue Lang="sv" Value="Status" />
+        <LocaleValue Lang="sr" Value="Status" />
+        <LocaleValue Lang="me" Value="Status" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="removeBtn">
+      <Values>
+        <LocaleValue Lang="en" Value="Remove" />
+        <LocaleValue Lang="cs" Value="Odebrat" />
+        <LocaleValue Lang="fi" Value="Poistaa" />
+        <LocaleValue Lang="sv" Value="Ta bort" />
+        <LocaleValue Lang="sr" Value="Uklonite" />
+        <LocaleValue Lang="me" Value="Uklonite" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="cancelBtn">
+      <Values>
+        <LocaleValue Lang="en" Value="Cancel" />
+        <LocaleValue Lang="cs" Value="Zrušit" />
+        <LocaleValue Lang="fi" Value="Peruuta" />
+        <LocaleValue Lang="sv" Value="Avbryt" />
+        <LocaleValue Lang="sr" Value="Otkaži" />
+        <LocaleValue Lang="me" Value="Otkaži" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="dropAreaText">
+      <Values>
+        <LocaleValue Lang="en" Value="or attach a file by dragging it here" />
+        <LocaleValue Lang="fi" Value="tai liitä tiedosto raahaamalla se tähän" />
+        <LocaleValue Lang="cs" Value="nebo připojte soubor přetažením sem" />
+        <LocaleValue Lang="sr" Value="ili priložite datoteku tako što ćete je prevući ovde" />
+        <LocaleValue Lang="sv" Value="eller bifoga en fil genom att dra den här" />
+        <LocaleValue Lang="me" Value="ili priložite datoteku tako što ćete je prevući ovde" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="allowedFileTypes">
+      <Values>
+        <LocaleValue Lang="en" Value="Allowed file types:" />
+        <LocaleValue Lang="cs" Value="Povolené typy souborů:" />
+        <LocaleValue Lang="fi" Value="Sallitut tiedostotyypit:" />
+        <LocaleValue Lang="sv" Value="Tillåtna filtyper:" />
+        <LocaleValue Lang="sr" Value="Dozvoljeni tipovi datoteka:" />
+        <LocaleValue Lang="me" Value="Dozvoljeni tipovi datoteka:" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="addDetails">
+      <Values>
+        <LocaleValue Lang="en" Value="Add details" />
+        <LocaleValue Lang="cs" Value="Přidat podrobnosti" />
+        <LocaleValue Lang="fi" Value="Lisää tietoja" />
+        <LocaleValue Lang="sv" Value="Lägg till information" />
+        <LocaleValue Lang="sr" Value="Dodaj detalje" />
+        <LocaleValue Lang="me" Value="Dodaj detalje" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="removeAllBtn">
+      <Values>
+        <LocaleValue Lang="en" Value="Remove all" />
+        <LocaleValue Lang="cs" Value="Odstranit všechny" />
+        <LocaleValue Lang="sv" Value="Ta bort alla" />
+        <LocaleValue Lang="fi" Value="Poista kaikki" />
+        <LocaleValue Lang="sr" Value="Ukloni sve" />
+        <LocaleValue Lang="me" Value="Ukloni sve" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="uploadAllBtn">
+      <Values>
+        <LocaleValue Lang="en" Value="Upload all" />
+        <LocaleValue Lang="cs" Value="Nahrát vše" />
+        <LocaleValue Lang="sv" Value="Ladda upp alla" />
+        <LocaleValue Lang="fi" Value="Lataa kaikki" />
+        <LocaleValue Lang="sr" Value="Otpremi sve" />
+        <LocaleValue Lang="me" Value="Otpremi sve" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="moveUp">
+      <Values>
+        <LocaleValue Lang="en" Value="Move up" />
+        <LocaleValue Lang="cs" Value="Přesunout nahoru" />
+        <LocaleValue Lang="sv" Value="Flytta upp" />
+        <LocaleValue Lang="fi" Value="Siirrä ylös" />
+        <LocaleValue Lang="sr" Value="Premeštanje nagore" />
+        <LocaleValue Lang="me" Value="Premeštanje nagore" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="moveDown">
+      <Values>
+        <LocaleValue Lang="en" Value="Move down" />
+        <LocaleValue Lang="cs" Value="Přesunout dolů" />
+        <LocaleValue Lang="sv" Value="Flytta ned" />
+        <LocaleValue Lang="fi" Value="Siirrä alas" />
+        <LocaleValue Lang="sr" Value="Spusti se" />
+        <LocaleValue Lang="me" Value="Spusti se" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="uploadedAttachments">
+      <Values>
+        <LocaleValue Lang="en" Value="Uploaded attachments" />
+        <LocaleValue Lang="cs" Value="Nahrané přílohy" />
+        <LocaleValue Lang="fi" Value="Ladatut liitteet" />
+        <LocaleValue Lang="sv" Value="Uppladdade bilagor" />
+        <LocaleValue Lang="sr" Value="Otpremljene priloge" />
+        <LocaleValue Lang="me" Value="Otpremljene priloge" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="removeAttachment">
+      <Values>
+        <LocaleValue Lang="en" Value="Remove attachment" />
+        <LocaleValue Lang="fi" Value="Poista liite" />
+        <LocaleValue Lang="cs" Value="Odstranit přílohu" />
+        <LocaleValue Lang="sr" Value="Ukloni prilog" />
+        <LocaleValue Lang="sv" Value="Ta bort bifogad fil" />
+        <LocaleValue Lang="me" Value="Ukloni prilog" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="removeAttachmentConfirmText">
+      <Values>
+        <LocaleValue Lang="en" Value="Are you sure you want to remove the attachment?" />
+        <LocaleValue Lang="cs" Value="Opravdu chcete odstranit přílohu?" />
+        <LocaleValue Lang="fi" Value="Haluatko varmasti poistaa lisaamasi liiteen?" />
+        <LocaleValue Lang="sv" Value="Vill du ta bort den bifogade filen?" />
+        <LocaleValue Lang="sr" Value="Želite li zaista da izbrišete prilog?" />
+        <LocaleValue Lang="me" Value="Želite li zaista da izbrišete prilog?" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="removeAllAttachments">
+      <Values>
+        <LocaleValue Lang="en" Value="Remove all attachments" />
+        <LocaleValue Lang="cs" Value="Odstranit všechny přílohy" />
+        <LocaleValue Lang="fi" Value="Poista kaikki liitteet" />
+        <LocaleValue Lang="sv" Value="Ta bort alla bifogade filer" />
+        <LocaleValue Lang="sr" Value="Ukloni sve priloge" />
+        <LocaleValue Lang="me" Value="Ukloni sve priloge" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="removeAllAttachmentsConfirmText">
+      <Values>
+        <LocaleValue Lang="en" Value="Are you sure you want to remove all attachments?" />
+        <LocaleValue Lang="cs" Value="Opravdu chcete odstranit všechny přílohy?" />
+        <LocaleValue Lang="fi" Value="Haluatko varmasti poistaa kaikki liitteet?" />
+        <LocaleValue Lang="sv" Value="Vill du ta bort alla bifogade filer?" />
+        <LocaleValue Lang="sr" Value="Želite li zaista da izbrišete sve priloge?" />
+        <LocaleValue Lang="me" Value="Želite li zaista da izbrišete sve priloge?" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="cancelUploadConfirmText">
+      <Values>
+        <LocaleValue Lang="en" Value="Are you sure you want to cancel uploading?" />
+        <LocaleValue Lang="cs" Value="Opravdu chcete zrušit nahrávání?" />
+        <LocaleValue Lang="fi" Value="Haluatko varmasti peruuttaa lataamisen?" />
+        <LocaleValue Lang="sv" Value="Vill du avbryta uppladdningen?" />
+        <LocaleValue Lang="sr" Value="Želite li zaista da otkažete otpremanje?" />
+        <LocaleValue Lang="me" Value="Želite li zaista da otkažete otpremanje?" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="cancelUpload">
+      <Values>
+        <LocaleValue Lang="en" Value="Cancel uploading" />
+        <LocaleValue Lang="cs" Value="Zrušit nahrávání" />
+        <LocaleValue Lang="fi" Value="Peruuta lataaminen" />
+        <LocaleValue Lang="sv" Value="Avbryt uppladdning" />
+        <LocaleValue Lang="sr" Value="Otkaži otpremanje" />
+        <LocaleValue Lang="me" Value="Otkaži otpremanje" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="fileNameTruncated">
+      <Values>
+        <LocaleValue Lang="en" Value="File name longer than 100 characters was truncated to &quot;{fileName}&quot;." />
+        <LocaleValue Lang="cs" Value="Název souboru delší než 100 znaků byl zkrácen na &quot;{fileName}&quot;." />
+        <LocaleValue Lang="sv" Value="Filnamnet längre än 100 tecken trunkerades till &quot;{fileName}&quot;." />
+        <LocaleValue Lang="sr" Value="Ime datoteke duže od 100 znakova je skraćeno na &quot;{fileName}&quot;." />
+        <LocaleValue Lang="fi" Value="Tiedoston nimi liian pitkä. Tiedoston nimi lyhennetty maksimipituuteen." />
+        <LocaleValue Lang="me" Value="Ime datoteke duže od 100 znakova je skraćeno na &quot;{fileName}&quot;." />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="receivedUnexpectedUploadResponse">
+      <Values>
+        <LocaleValue Lang="en" Value="Received unexpected response ({msgType}) when uploading file &quot;{fileName}&quot;." />
+        <LocaleValue Lang="cs" Value="Byla přijata neočekávaná odpověď ({msgType}) při nahrávání souboru &quot;{fileName}&quot;." />
+        <LocaleValue Lang="sv" Value="Fick oväntat svar ({msgType}) vid uppladdning av fil &quot;{fileName}&quot;." />
+        <LocaleValue Lang="sr" Value="Primljen je neočekivani odgovor ({msgType}) prilikom otpremanja datoteke &quot;{fileName}&quot;." />
+        <LocaleValue Lang="me" Value="Primljen je neočekivani odgovor ({msgType}) prilikom otpremanja datoteke &quot;{fileName}&quot;." />
+        <LocaleValue Lang="fi" Value="Sait odottamattoman vastauksen ({msgType}) tiedostoa &quot;{fileName}&quot; ladattaessa." />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="receivedUnexpectedRemoveResponse">
+      <Values>
+        <LocaleValue Lang="en" Value="Received unexpected response ({msgType}) when removing file &quot;{fileName}&quot;." />
+        <LocaleValue Lang="cs" Value="Byla přijata neočekávaná odpověď ({msgType}) při odstranění souboru &quot;{fileName}&quot;." />
+        <LocaleValue Lang="fi" Value="Sait odottamattoman vastauksen ({msgType}) poistettaessa tiedostoa &quot;{fileName}&quot;." />
+        <LocaleValue Lang="sv" Value="Fick oväntat svar ({msgType}) när du tog bort fil &quot;{fileName}&quot;." />
+        <LocaleValue Lang="sr" Value="Primljen je neočekivani odgovor ({msgType}) prilikom uklanjanja datoteke &quot;{fileName}&quot;." />
+        <LocaleValue Lang="me" Value="Primljen je neočekivani odgovor ({msgType}) prilikom uklanjanja datoteke &quot;{fileName}&quot;." />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="description">
+      <Values>
+        <LocaleValue Lang="en" Value="Description" />
+        <LocaleValue Lang="cs" Value="Popis" />
+        <LocaleValue Lang="fi" Value="Kuvaus" />
+        <LocaleValue Lang="sv" Value="Beskrivning" />
+        <LocaleValue Lang="sr" Value="Opis" />
+        <LocaleValue Lang="me" Value="Opis" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="Geolocation.35da8268d7aa43e8af9983ac186b0aab" />
+  <Version value="1.0.1" />
+  <Items>
+    <PackageItem Src="Geolocation.apiObjectManifest" />
+    <ResourceItem ResourceName="geolocation.js" Action="None" OutputFileName="geolocation.js" Src="geolocation.js" />
+    <PackageItem Src="GeoResult.apiObjectManifest" />
+  </Items>
+</Package>
